@@ -1,5 +1,5 @@
-import * as _m0 from "protobufjs/minimal";
-import { DeepPartial, Long } from "../../helpers";
+import { BinaryReader, BinaryWriter } from "../../binary";
+import { DeepPartial } from "../../helpers";
 export declare enum FieldDescriptorProto_Type {
     /**
      * TYPE_DOUBLE - 0 is reserved for errors.
@@ -129,14 +129,14 @@ export interface FileDescriptorProto {
     enumType: EnumDescriptorProto[];
     service: ServiceDescriptorProto[];
     extension: FieldDescriptorProto[];
-    options?: FileOptions;
+    options: FileOptions;
     /**
      * This field contains optional information about the original source code.
      * You may safely remove this entire field without harming runtime
      * functionality of the descriptors -- the information is needed only by
      * development tools.
      */
-    sourceCodeInfo?: SourceCodeInfo;
+    sourceCodeInfo: SourceCodeInfo;
     /**
      * The syntax of the proto file.
      * The supported values are "proto2" and "proto3".
@@ -152,7 +152,7 @@ export interface DescriptorProto {
     enumType: EnumDescriptorProto[];
     extensionRange: DescriptorProto_ExtensionRange[];
     oneofDecl: OneofDescriptorProto[];
-    options?: MessageOptions;
+    options: MessageOptions;
     reservedRange: DescriptorProto_ReservedRange[];
     /**
      * Reserved field names, which may not be used by fields in the same message.
@@ -165,7 +165,7 @@ export interface DescriptorProto_ExtensionRange {
     start: number;
     /** Exclusive. */
     end: number;
-    options?: ExtensionRangeOptions;
+    options: ExtensionRangeOptions;
 }
 /**
  * Range of reserved tag numbers. Reserved tag numbers may not be used by
@@ -225,18 +225,18 @@ export interface FieldDescriptorProto {
      * it to camelCase.
      */
     jsonName: string;
-    options?: FieldOptions;
+    options: FieldOptions;
 }
 /** Describes a oneof. */
 export interface OneofDescriptorProto {
     name: string;
-    options?: OneofOptions;
+    options: OneofOptions;
 }
 /** Describes an enum type. */
 export interface EnumDescriptorProto {
     name: string;
     value: EnumValueDescriptorProto[];
-    options?: EnumOptions;
+    options: EnumOptions;
     /**
      * Range of reserved numeric values. Reserved numeric values may not be used
      * by enum values in the same enum declaration. Reserved ranges may not
@@ -267,13 +267,13 @@ export interface EnumDescriptorProto_EnumReservedRange {
 export interface EnumValueDescriptorProto {
     name: string;
     number: number;
-    options?: EnumValueOptions;
+    options: EnumValueOptions;
 }
 /** Describes a service. */
 export interface ServiceDescriptorProto {
     name: string;
     method: MethodDescriptorProto[];
-    options?: ServiceOptions;
+    options: ServiceOptions;
 }
 /** Describes a method of a service. */
 export interface MethodDescriptorProto {
@@ -284,7 +284,7 @@ export interface MethodDescriptorProto {
      */
     inputType: string;
     outputType: string;
-    options?: MethodOptions;
+    options: MethodOptions;
     /** Identifies if client streams multiple client messages */
     clientStreaming: boolean;
     /** Identifies if server streams multiple server messages */
@@ -611,8 +611,8 @@ export interface UninterpretedOption {
      * identified it as during parsing. Exactly one of these should be set.
      */
     identifierValue: string;
-    positiveIntValue: Long;
-    negativeIntValue: Long;
+    positiveIntValue: bigint;
+    negativeIntValue: bigint;
     doubleValue: number;
     stringValue: Uint8Array;
     aggregateValue: string;
@@ -801,190 +801,190 @@ export interface GeneratedCodeInfo_Annotation {
     end: number;
 }
 export declare const FileDescriptorSet: {
-    encode(message: FileDescriptorSet, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): FileDescriptorSet;
+    encode(message: FileDescriptorSet, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): FileDescriptorSet;
     fromJSON(object: any): FileDescriptorSet;
     toJSON(message: FileDescriptorSet): unknown;
     fromPartial(object: DeepPartial<FileDescriptorSet>): FileDescriptorSet;
 };
 export declare const FileDescriptorProto: {
-    encode(message: FileDescriptorProto, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): FileDescriptorProto;
+    encode(message: FileDescriptorProto, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): FileDescriptorProto;
     fromJSON(object: any): FileDescriptorProto;
     toJSON(message: FileDescriptorProto): unknown;
     fromPartial(object: DeepPartial<FileDescriptorProto>): FileDescriptorProto;
 };
 export declare const DescriptorProto: {
-    encode(message: DescriptorProto, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): DescriptorProto;
+    encode(message: DescriptorProto, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): DescriptorProto;
     fromJSON(object: any): DescriptorProto;
     toJSON(message: DescriptorProto): unknown;
     fromPartial(object: DeepPartial<DescriptorProto>): DescriptorProto;
 };
 export declare const DescriptorProto_ExtensionRange: {
-    encode(message: DescriptorProto_ExtensionRange, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): DescriptorProto_ExtensionRange;
+    encode(message: DescriptorProto_ExtensionRange, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): DescriptorProto_ExtensionRange;
     fromJSON(object: any): DescriptorProto_ExtensionRange;
     toJSON(message: DescriptorProto_ExtensionRange): unknown;
     fromPartial(object: DeepPartial<DescriptorProto_ExtensionRange>): DescriptorProto_ExtensionRange;
 };
 export declare const DescriptorProto_ReservedRange: {
-    encode(message: DescriptorProto_ReservedRange, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): DescriptorProto_ReservedRange;
+    encode(message: DescriptorProto_ReservedRange, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): DescriptorProto_ReservedRange;
     fromJSON(object: any): DescriptorProto_ReservedRange;
     toJSON(message: DescriptorProto_ReservedRange): unknown;
     fromPartial(object: DeepPartial<DescriptorProto_ReservedRange>): DescriptorProto_ReservedRange;
 };
 export declare const ExtensionRangeOptions: {
-    encode(message: ExtensionRangeOptions, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): ExtensionRangeOptions;
+    encode(message: ExtensionRangeOptions, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): ExtensionRangeOptions;
     fromJSON(object: any): ExtensionRangeOptions;
     toJSON(message: ExtensionRangeOptions): unknown;
     fromPartial(object: DeepPartial<ExtensionRangeOptions>): ExtensionRangeOptions;
 };
 export declare const FieldDescriptorProto: {
-    encode(message: FieldDescriptorProto, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): FieldDescriptorProto;
+    encode(message: FieldDescriptorProto, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): FieldDescriptorProto;
     fromJSON(object: any): FieldDescriptorProto;
     toJSON(message: FieldDescriptorProto): unknown;
     fromPartial(object: DeepPartial<FieldDescriptorProto>): FieldDescriptorProto;
 };
 export declare const OneofDescriptorProto: {
-    encode(message: OneofDescriptorProto, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): OneofDescriptorProto;
+    encode(message: OneofDescriptorProto, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): OneofDescriptorProto;
     fromJSON(object: any): OneofDescriptorProto;
     toJSON(message: OneofDescriptorProto): unknown;
     fromPartial(object: DeepPartial<OneofDescriptorProto>): OneofDescriptorProto;
 };
 export declare const EnumDescriptorProto: {
-    encode(message: EnumDescriptorProto, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EnumDescriptorProto;
+    encode(message: EnumDescriptorProto, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EnumDescriptorProto;
     fromJSON(object: any): EnumDescriptorProto;
     toJSON(message: EnumDescriptorProto): unknown;
     fromPartial(object: DeepPartial<EnumDescriptorProto>): EnumDescriptorProto;
 };
 export declare const EnumDescriptorProto_EnumReservedRange: {
-    encode(message: EnumDescriptorProto_EnumReservedRange, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EnumDescriptorProto_EnumReservedRange;
+    encode(message: EnumDescriptorProto_EnumReservedRange, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EnumDescriptorProto_EnumReservedRange;
     fromJSON(object: any): EnumDescriptorProto_EnumReservedRange;
     toJSON(message: EnumDescriptorProto_EnumReservedRange): unknown;
     fromPartial(object: DeepPartial<EnumDescriptorProto_EnumReservedRange>): EnumDescriptorProto_EnumReservedRange;
 };
 export declare const EnumValueDescriptorProto: {
-    encode(message: EnumValueDescriptorProto, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EnumValueDescriptorProto;
+    encode(message: EnumValueDescriptorProto, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EnumValueDescriptorProto;
     fromJSON(object: any): EnumValueDescriptorProto;
     toJSON(message: EnumValueDescriptorProto): unknown;
     fromPartial(object: DeepPartial<EnumValueDescriptorProto>): EnumValueDescriptorProto;
 };
 export declare const ServiceDescriptorProto: {
-    encode(message: ServiceDescriptorProto, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): ServiceDescriptorProto;
+    encode(message: ServiceDescriptorProto, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): ServiceDescriptorProto;
     fromJSON(object: any): ServiceDescriptorProto;
     toJSON(message: ServiceDescriptorProto): unknown;
     fromPartial(object: DeepPartial<ServiceDescriptorProto>): ServiceDescriptorProto;
 };
 export declare const MethodDescriptorProto: {
-    encode(message: MethodDescriptorProto, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MethodDescriptorProto;
+    encode(message: MethodDescriptorProto, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MethodDescriptorProto;
     fromJSON(object: any): MethodDescriptorProto;
     toJSON(message: MethodDescriptorProto): unknown;
     fromPartial(object: DeepPartial<MethodDescriptorProto>): MethodDescriptorProto;
 };
 export declare const FileOptions: {
-    encode(message: FileOptions, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): FileOptions;
+    encode(message: FileOptions, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): FileOptions;
     fromJSON(object: any): FileOptions;
     toJSON(message: FileOptions): unknown;
     fromPartial(object: DeepPartial<FileOptions>): FileOptions;
 };
 export declare const MessageOptions: {
-    encode(message: MessageOptions, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MessageOptions;
+    encode(message: MessageOptions, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MessageOptions;
     fromJSON(object: any): MessageOptions;
     toJSON(message: MessageOptions): unknown;
     fromPartial(object: DeepPartial<MessageOptions>): MessageOptions;
 };
 export declare const FieldOptions: {
-    encode(message: FieldOptions, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): FieldOptions;
+    encode(message: FieldOptions, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): FieldOptions;
     fromJSON(object: any): FieldOptions;
     toJSON(message: FieldOptions): unknown;
     fromPartial(object: DeepPartial<FieldOptions>): FieldOptions;
 };
 export declare const OneofOptions: {
-    encode(message: OneofOptions, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): OneofOptions;
+    encode(message: OneofOptions, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): OneofOptions;
     fromJSON(object: any): OneofOptions;
     toJSON(message: OneofOptions): unknown;
     fromPartial(object: DeepPartial<OneofOptions>): OneofOptions;
 };
 export declare const EnumOptions: {
-    encode(message: EnumOptions, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EnumOptions;
+    encode(message: EnumOptions, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EnumOptions;
     fromJSON(object: any): EnumOptions;
     toJSON(message: EnumOptions): unknown;
     fromPartial(object: DeepPartial<EnumOptions>): EnumOptions;
 };
 export declare const EnumValueOptions: {
-    encode(message: EnumValueOptions, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EnumValueOptions;
+    encode(message: EnumValueOptions, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EnumValueOptions;
     fromJSON(object: any): EnumValueOptions;
     toJSON(message: EnumValueOptions): unknown;
     fromPartial(object: DeepPartial<EnumValueOptions>): EnumValueOptions;
 };
 export declare const ServiceOptions: {
-    encode(message: ServiceOptions, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): ServiceOptions;
+    encode(message: ServiceOptions, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): ServiceOptions;
     fromJSON(object: any): ServiceOptions;
     toJSON(message: ServiceOptions): unknown;
     fromPartial(object: DeepPartial<ServiceOptions>): ServiceOptions;
 };
 export declare const MethodOptions: {
-    encode(message: MethodOptions, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MethodOptions;
+    encode(message: MethodOptions, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MethodOptions;
     fromJSON(object: any): MethodOptions;
     toJSON(message: MethodOptions): unknown;
     fromPartial(object: DeepPartial<MethodOptions>): MethodOptions;
 };
 export declare const UninterpretedOption: {
-    encode(message: UninterpretedOption, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): UninterpretedOption;
+    encode(message: UninterpretedOption, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): UninterpretedOption;
     fromJSON(object: any): UninterpretedOption;
     toJSON(message: UninterpretedOption): unknown;
     fromPartial(object: DeepPartial<UninterpretedOption>): UninterpretedOption;
 };
 export declare const UninterpretedOption_NamePart: {
-    encode(message: UninterpretedOption_NamePart, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): UninterpretedOption_NamePart;
+    encode(message: UninterpretedOption_NamePart, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): UninterpretedOption_NamePart;
     fromJSON(object: any): UninterpretedOption_NamePart;
     toJSON(message: UninterpretedOption_NamePart): unknown;
     fromPartial(object: DeepPartial<UninterpretedOption_NamePart>): UninterpretedOption_NamePart;
 };
 export declare const SourceCodeInfo: {
-    encode(message: SourceCodeInfo, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): SourceCodeInfo;
+    encode(message: SourceCodeInfo, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): SourceCodeInfo;
     fromJSON(object: any): SourceCodeInfo;
     toJSON(message: SourceCodeInfo): unknown;
     fromPartial(object: DeepPartial<SourceCodeInfo>): SourceCodeInfo;
 };
 export declare const SourceCodeInfo_Location: {
-    encode(message: SourceCodeInfo_Location, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): SourceCodeInfo_Location;
+    encode(message: SourceCodeInfo_Location, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): SourceCodeInfo_Location;
     fromJSON(object: any): SourceCodeInfo_Location;
     toJSON(message: SourceCodeInfo_Location): unknown;
     fromPartial(object: DeepPartial<SourceCodeInfo_Location>): SourceCodeInfo_Location;
 };
 export declare const GeneratedCodeInfo: {
-    encode(message: GeneratedCodeInfo, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): GeneratedCodeInfo;
+    encode(message: GeneratedCodeInfo, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): GeneratedCodeInfo;
     fromJSON(object: any): GeneratedCodeInfo;
     toJSON(message: GeneratedCodeInfo): unknown;
     fromPartial(object: DeepPartial<GeneratedCodeInfo>): GeneratedCodeInfo;
 };
 export declare const GeneratedCodeInfo_Annotation: {
-    encode(message: GeneratedCodeInfo_Annotation, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): GeneratedCodeInfo_Annotation;
+    encode(message: GeneratedCodeInfo_Annotation, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): GeneratedCodeInfo_Annotation;
     fromJSON(object: any): GeneratedCodeInfo_Annotation;
     toJSON(message: GeneratedCodeInfo_Annotation): unknown;
     fromPartial(object: DeepPartial<GeneratedCodeInfo_Annotation>): GeneratedCodeInfo_Annotation;

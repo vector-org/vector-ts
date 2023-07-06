@@ -1,12 +1,12 @@
-import { Long, DeepPartial } from "../../helpers";
-import * as _m0 from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "../../binary";
+import { DeepPartial } from "../../helpers";
 /**
  * App includes the protocol and software version for the application.
  * This information is included in ResponseInfo. The App.Protocol can be
  * updated in ResponseEndBlock.
  */
 export interface App {
-    protocol: Long;
+    protocol: bigint;
     software: string;
 }
 /**
@@ -15,19 +15,19 @@ export interface App {
  * state transition machine.
  */
 export interface Consensus {
-    block: Long;
-    app: Long;
+    block: bigint;
+    app: bigint;
 }
 export declare const App: {
-    encode(message: App, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): App;
+    encode(message: App, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): App;
     fromJSON(object: any): App;
     toJSON(message: App): unknown;
     fromPartial(object: DeepPartial<App>): App;
 };
 export declare const Consensus: {
-    encode(message: Consensus, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Consensus;
+    encode(message: Consensus, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Consensus;
     fromJSON(object: any): Consensus;
     toJSON(message: Consensus): unknown;
     fromPartial(object: DeepPartial<Consensus>): Consensus;

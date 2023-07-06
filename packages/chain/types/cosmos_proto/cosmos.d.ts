@@ -1,4 +1,4 @@
-import * as _m0 from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "../binary";
 import { DeepPartial } from "../helpers";
 export declare enum ScalarType {
     SCALAR_TYPE_UNSPECIFIED = 0,
@@ -58,15 +58,15 @@ export interface ScalarDescriptor {
     fieldType: ScalarType[];
 }
 export declare const InterfaceDescriptor: {
-    encode(message: InterfaceDescriptor, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): InterfaceDescriptor;
+    encode(message: InterfaceDescriptor, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): InterfaceDescriptor;
     fromJSON(object: any): InterfaceDescriptor;
     toJSON(message: InterfaceDescriptor): unknown;
     fromPartial(object: DeepPartial<InterfaceDescriptor>): InterfaceDescriptor;
 };
 export declare const ScalarDescriptor: {
-    encode(message: ScalarDescriptor, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): ScalarDescriptor;
+    encode(message: ScalarDescriptor, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): ScalarDescriptor;
     fromJSON(object: any): ScalarDescriptor;
     toJSON(message: ScalarDescriptor): unknown;
     fromPartial(object: DeepPartial<ScalarDescriptor>): ScalarDescriptor;

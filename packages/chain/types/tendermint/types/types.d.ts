@@ -2,8 +2,8 @@ import { Proof } from "../crypto/proof";
 import { Consensus } from "../version/types";
 import { Timestamp } from "../../google/protobuf/timestamp";
 import { ValidatorSet } from "./validator";
-import * as _m0 from "protobufjs/minimal";
-import { DeepPartial, Long } from "../../helpers";
+import { BinaryReader, BinaryWriter } from "../../binary";
+import { DeepPartial } from "../../helpers";
 /** BlockIdFlag indicates which BlcokID the signature is for */
 export declare enum BlockIDFlag {
     BLOCK_ID_FLAG_UNKNOWN = 0,
@@ -34,22 +34,22 @@ export interface PartSetHeader {
 export interface Part {
     index: number;
     bytes: Uint8Array;
-    proof?: Proof;
+    proof: Proof;
 }
 /** BlockID */
 export interface BlockID {
     hash: Uint8Array;
-    partSetHeader?: PartSetHeader;
+    partSetHeader: PartSetHeader;
 }
-/** Header defines the structure of a Tendermint block header. */
+/** Header defines the structure of a block header. */
 export interface Header {
     /** basic block info */
-    version?: Consensus;
+    version: Consensus;
     chainId: string;
-    height: Long;
-    time?: Timestamp;
+    height: bigint;
+    time: Timestamp;
     /** prev block info */
-    lastBlockId?: BlockID;
+    lastBlockId: BlockID;
     /** hashes of block data */
     lastCommitHash: Uint8Array;
     dataHash: Uint8Array;
@@ -82,145 +82,144 @@ export interface Data {
  */
 export interface Vote {
     type: SignedMsgType;
-    height: Long;
+    height: bigint;
     round: number;
-    /** zero if vote is nil. */
-    blockId?: BlockID;
-    timestamp?: Timestamp;
+    blockId: BlockID;
+    timestamp: Timestamp;
     validatorAddress: Uint8Array;
     validatorIndex: number;
     signature: Uint8Array;
 }
 /** Commit contains the evidence that a block was committed by a set of validators. */
 export interface Commit {
-    height: Long;
+    height: bigint;
     round: number;
-    blockId?: BlockID;
+    blockId: BlockID;
     signatures: CommitSig[];
 }
 /** CommitSig is a part of the Vote included in a Commit. */
 export interface CommitSig {
     blockIdFlag: BlockIDFlag;
     validatorAddress: Uint8Array;
-    timestamp?: Timestamp;
+    timestamp: Timestamp;
     signature: Uint8Array;
 }
 export interface Proposal {
     type: SignedMsgType;
-    height: Long;
+    height: bigint;
     round: number;
     polRound: number;
-    blockId?: BlockID;
-    timestamp?: Timestamp;
+    blockId: BlockID;
+    timestamp: Timestamp;
     signature: Uint8Array;
 }
 export interface SignedHeader {
-    header?: Header;
-    commit?: Commit;
+    header: Header;
+    commit: Commit;
 }
 export interface LightBlock {
-    signedHeader?: SignedHeader;
-    validatorSet?: ValidatorSet;
+    signedHeader: SignedHeader;
+    validatorSet: ValidatorSet;
 }
 export interface BlockMeta {
-    blockId?: BlockID;
-    blockSize: Long;
-    header?: Header;
-    numTxs: Long;
+    blockId: BlockID;
+    blockSize: bigint;
+    header: Header;
+    numTxs: bigint;
 }
 /** TxProof represents a Merkle proof of the presence of a transaction in the Merkle tree. */
 export interface TxProof {
     rootHash: Uint8Array;
     data: Uint8Array;
-    proof?: Proof;
+    proof: Proof;
 }
 export declare const PartSetHeader: {
-    encode(message: PartSetHeader, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): PartSetHeader;
+    encode(message: PartSetHeader, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): PartSetHeader;
     fromJSON(object: any): PartSetHeader;
     toJSON(message: PartSetHeader): unknown;
     fromPartial(object: DeepPartial<PartSetHeader>): PartSetHeader;
 };
 export declare const Part: {
-    encode(message: Part, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Part;
+    encode(message: Part, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Part;
     fromJSON(object: any): Part;
     toJSON(message: Part): unknown;
     fromPartial(object: DeepPartial<Part>): Part;
 };
 export declare const BlockID: {
-    encode(message: BlockID, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): BlockID;
+    encode(message: BlockID, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): BlockID;
     fromJSON(object: any): BlockID;
     toJSON(message: BlockID): unknown;
     fromPartial(object: DeepPartial<BlockID>): BlockID;
 };
 export declare const Header: {
-    encode(message: Header, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Header;
+    encode(message: Header, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Header;
     fromJSON(object: any): Header;
     toJSON(message: Header): unknown;
     fromPartial(object: DeepPartial<Header>): Header;
 };
 export declare const Data: {
-    encode(message: Data, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Data;
+    encode(message: Data, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Data;
     fromJSON(object: any): Data;
     toJSON(message: Data): unknown;
     fromPartial(object: DeepPartial<Data>): Data;
 };
 export declare const Vote: {
-    encode(message: Vote, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Vote;
+    encode(message: Vote, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Vote;
     fromJSON(object: any): Vote;
     toJSON(message: Vote): unknown;
     fromPartial(object: DeepPartial<Vote>): Vote;
 };
 export declare const Commit: {
-    encode(message: Commit, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Commit;
+    encode(message: Commit, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Commit;
     fromJSON(object: any): Commit;
     toJSON(message: Commit): unknown;
     fromPartial(object: DeepPartial<Commit>): Commit;
 };
 export declare const CommitSig: {
-    encode(message: CommitSig, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): CommitSig;
+    encode(message: CommitSig, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): CommitSig;
     fromJSON(object: any): CommitSig;
     toJSON(message: CommitSig): unknown;
     fromPartial(object: DeepPartial<CommitSig>): CommitSig;
 };
 export declare const Proposal: {
-    encode(message: Proposal, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Proposal;
+    encode(message: Proposal, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Proposal;
     fromJSON(object: any): Proposal;
     toJSON(message: Proposal): unknown;
     fromPartial(object: DeepPartial<Proposal>): Proposal;
 };
 export declare const SignedHeader: {
-    encode(message: SignedHeader, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): SignedHeader;
+    encode(message: SignedHeader, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): SignedHeader;
     fromJSON(object: any): SignedHeader;
     toJSON(message: SignedHeader): unknown;
     fromPartial(object: DeepPartial<SignedHeader>): SignedHeader;
 };
 export declare const LightBlock: {
-    encode(message: LightBlock, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): LightBlock;
+    encode(message: LightBlock, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): LightBlock;
     fromJSON(object: any): LightBlock;
     toJSON(message: LightBlock): unknown;
     fromPartial(object: DeepPartial<LightBlock>): LightBlock;
 };
 export declare const BlockMeta: {
-    encode(message: BlockMeta, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): BlockMeta;
+    encode(message: BlockMeta, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): BlockMeta;
     fromJSON(object: any): BlockMeta;
     toJSON(message: BlockMeta): unknown;
     fromPartial(object: DeepPartial<BlockMeta>): BlockMeta;
 };
 export declare const TxProof: {
-    encode(message: TxProof, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): TxProof;
+    encode(message: TxProof, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): TxProof;
     fromJSON(object: any): TxProof;
     toJSON(message: TxProof): unknown;
     fromPartial(object: DeepPartial<TxProof>): TxProof;

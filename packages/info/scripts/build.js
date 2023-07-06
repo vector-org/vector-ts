@@ -30,8 +30,8 @@ export default ${file};
   );
 };
 
-write(`chain`, chain, 'Chain');
-// write(`testnet`, testnet, 'Chain');
-write(`assets`, assetList, 'AssetList');
-// write(`testnet_assets`, testnetAssetList, 'AssetList');
-write(`asset_list`, asset_list[0], 'AssetList');
+// write(`chain`, chain, 'Chain');
+write(`chain`, testnet, 'Chain');
+write(`assets`, testnetAssetList, 'AssetList');
+write(`asset_list`, testnetAssetList[0], 'AssetList');
+// write(`asset_list`, asset_list[0], 'AssetList');

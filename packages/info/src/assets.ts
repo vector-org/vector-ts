@@ -1,7 +1,7 @@
 import { AssetList } from '@chain-registry/types';
 const assets: AssetList = {
-  $schema: '../assetlist.schema.json',
-  chain_name: 'coolcat',
+  $schema: '../../assetlist.schema.json',
+  chain_name: 'coolcattestnet',
   assets: [
     {
       description:
@@ -21,10 +21,9 @@ const assets: AssetList = {
       display: 'ccat',
       symbol: 'CCAT',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/DigitalKitchenLabs/branding/main/ccat.svg'
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/coolcattestnet/images/coolcat.svg',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/coolcattestnet/images/coolcat.png'
       },
-      coingecko_id: 'coolcat',
-      type_asset: 'native',
       keywords: ['nft', 'staking', 'games']
     }
   ]

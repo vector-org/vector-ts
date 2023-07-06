@@ -1,7 +1,7 @@
 import { Timestamp } from "../../../google/protobuf/timestamp";
 import { Any } from "../../../google/protobuf/any";
-import { Long, DeepPartial } from "../../../helpers";
-import * as _m0 from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { DeepPartial } from "../../../helpers";
 /** Plan specifies information about a planned upgrade and when it should occur. */
 export interface Plan {
     /**
@@ -20,12 +20,9 @@ export interface Plan {
      * If this field is not empty, an error will be thrown.
      */
     /** @deprecated */
-    time?: Timestamp;
-    /**
-     * The height at which the upgrade must be performed.
-     * Only used if Time is not set.
-     */
-    height: Long;
+    time: Timestamp;
+    /** The height at which the upgrade must be performed. */
+    height: bigint;
     /**
      * Any application specific upgrade info to be included on-chain
      * such as a git commit that validators could automatically upgrade to
@@ -37,7 +34,7 @@ export interface Plan {
      * If this field is not empty, an error will be thrown.
      */
     /** @deprecated */
-    upgradedClientState?: Any;
+    upgradedClientState: Any;
 }
 /**
  * SoftwareUpgradeProposal is a gov Content type for initiating a software
@@ -47,9 +44,12 @@ export interface Plan {
  */
 /** @deprecated */
 export interface SoftwareUpgradeProposal {
+    /** title of the proposal */
     title: string;
+    /** description of the proposal */
     description: string;
-    plan?: Plan;
+    /** plan of the proposal */
+    plan: Plan;
 }
 /**
  * CancelSoftwareUpgradeProposal is a gov Content type for cancelling a software
@@ -59,7 +59,9 @@ export interface SoftwareUpgradeProposal {
  */
 /** @deprecated */
 export interface CancelSoftwareUpgradeProposal {
+    /** title of the proposal */
     title: string;
+    /** description of the proposal */
     description: string;
 }
 /**
@@ -71,32 +73,32 @@ export interface ModuleVersion {
     /** name of the app module */
     name: string;
     /** consensus version of the app module */
-    version: Long;
+    version: bigint;
 }
 export declare const Plan: {
-    encode(message: Plan, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Plan;
+    encode(message: Plan, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Plan;
     fromJSON(object: any): Plan;
     toJSON(message: Plan): unknown;
     fromPartial(object: DeepPartial<Plan>): Plan;
 };
 export declare const SoftwareUpgradeProposal: {
-    encode(message: SoftwareUpgradeProposal, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): SoftwareUpgradeProposal;
+    encode(message: SoftwareUpgradeProposal, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): SoftwareUpgradeProposal;
     fromJSON(object: any): SoftwareUpgradeProposal;
     toJSON(message: SoftwareUpgradeProposal): unknown;
     fromPartial(object: DeepPartial<SoftwareUpgradeProposal>): SoftwareUpgradeProposal;
 };
 export declare const CancelSoftwareUpgradeProposal: {
-    encode(message: CancelSoftwareUpgradeProposal, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): CancelSoftwareUpgradeProposal;
+    encode(message: CancelSoftwareUpgradeProposal, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): CancelSoftwareUpgradeProposal;
     fromJSON(object: any): CancelSoftwareUpgradeProposal;
     toJSON(message: CancelSoftwareUpgradeProposal): unknown;
     fromPartial(object: DeepPartial<CancelSoftwareUpgradeProposal>): CancelSoftwareUpgradeProposal;
 };
 export declare const ModuleVersion: {
-    encode(message: ModuleVersion, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): ModuleVersion;
+    encode(message: ModuleVersion, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): ModuleVersion;
     fromJSON(object: any): ModuleVersion;
     toJSON(message: ModuleVersion): unknown;
     fromPartial(object: DeepPartial<ModuleVersion>): ModuleVersion;

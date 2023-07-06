@@ -1,4 +1,4 @@
-import * as _m0 from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "../../binary";
 import { DeepPartial } from "../../helpers";
 /**
  * `Any` contains an arbitrary serialized protocol buffer message along with a
@@ -116,8 +116,8 @@ export interface Any {
     value: Uint8Array;
 }
 export declare const Any: {
-    encode(message: Any, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Any;
+    encode(message: Any, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Any;
     fromJSON(object: any): Any;
     toJSON(message: Any): unknown;
     fromPartial(object: DeepPartial<Any>): Any;

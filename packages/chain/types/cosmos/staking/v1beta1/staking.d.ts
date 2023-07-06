@@ -3,8 +3,9 @@ import { Timestamp } from "../../../google/protobuf/timestamp";
 import { Any } from "../../../google/protobuf/any";
 import { Duration } from "../../../google/protobuf/duration";
 import { Coin } from "../../base/v1beta1/coin";
-import * as _m0 from "protobufjs/minimal";
-import { DeepPartial, Long } from "../../../helpers";
+import { ValidatorUpdate } from "../../../tendermint/abci/types";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { DeepPartial } from "../../../helpers";
 /** BondStatus is the status of a validator. */
 export declare enum BondStatus {
     /** BOND_STATUS_UNSPECIFIED - UNSPECIFIED defines an invalid validator status. */
@@ -19,6 +20,18 @@ export declare enum BondStatus {
 }
 export declare function bondStatusFromJSON(object: any): BondStatus;
 export declare function bondStatusToJSON(object: BondStatus): string;
+/** Infraction indicates the infraction a validator commited. */
+export declare enum Infraction {
+    /** INFRACTION_UNSPECIFIED - UNSPECIFIED defines an empty infraction. */
+    INFRACTION_UNSPECIFIED = 0,
+    /** INFRACTION_DOUBLE_SIGN - DOUBLE_SIGN defines a validator that double-signs a block. */
+    INFRACTION_DOUBLE_SIGN = 1,
+    /** INFRACTION_DOWNTIME - DOWNTIME defines a validator that missed signing too many blocks. */
+    INFRACTION_DOWNTIME = 2,
+    UNRECOGNIZED = -1
+}
+export declare function infractionFromJSON(object: any): Infraction;
+export declare function infractionToJSON(object: Infraction): string;
 /**
  * HistoricalInfo contains header and validator information for a given block.
  * It is stored as part of staking module's state, which persists the `n` most
@@ -26,7 +39,7 @@ export declare function bondStatusToJSON(object: BondStatus): string;
  * (`n` is set by the staking module's `historical_entries` parameter).
  */
 export interface HistoricalInfo {
-    header?: Header;
+    header: Header;
     valset: Validator[];
 }
 /**
@@ -44,9 +57,9 @@ export interface CommissionRates {
 /** Commission defines commission parameters for a given validator. */
 export interface Commission {
     /** commission_rates defines the initial commission rates to be used for creating a validator. */
-    commissionRates?: CommissionRates;
+    commissionRates: CommissionRates;
     /** update_time is the last time the commission rate was changed. */
-    updateTime?: Timestamp;
+    updateTime: Timestamp;
 }
 /** Description defines a validator description. */
 export interface Description {
@@ -75,7 +88,7 @@ export interface Validator {
     /** operator_address defines the address of the validator's operator; bech encoded in JSON. */
     operatorAddress: string;
     /** consensus_pubkey is the consensus public key of the validator, as a Protobuf Any. */
-    consensusPubkey?: Any | undefined;
+    consensusPubkey: Any | undefined;
     /** jailed defined whether the validator has been jailed from bonded status or not. */
     jailed: boolean;
     /** status is the validator status (bonded/unbonding/unbonded). */
@@ -85,15 +98,23 @@ export interface Validator {
     /** delegator_shares defines total shares issued to a validator's delegators. */
     delegatorShares: string;
     /** description defines the description terms for the validator. */
-    description?: Description;
+    description: Description;
     /** unbonding_height defines, if unbonding, the height at which this validator has begun unbonding. */
-    unbondingHeight: Long;
+    unbondingHeight: bigint;
     /** unbonding_time defines, if unbonding, the min time for the validator to complete unbonding. */
-    unbondingTime?: Timestamp;
+    unbondingTime: Timestamp;
     /** commission defines the commission parameters. */
-    commission?: Commission;
-    /** min_self_delegation is the validator's self declared minimum self delegation. */
+    commission: Commission;
+    /**
+     * min_self_delegation is the validator's self declared minimum self delegation.
+     *
+     * Since: cosmos-sdk 0.46
+     */
     minSelfDelegation: string;
+    /** strictly positive if this validator's unbonding has been stopped by external modules */
+    unbondingOnHoldRefCount: bigint;
+    /** list of unbonding ids, each uniquely identifing an unbonding of this validator */
+    unbondingIds: bigint[];
 }
 /** ValAddresses defines a repeated set of validator addresses. */
 export interface ValAddresses {
@@ -155,24 +176,32 @@ export interface UnbondingDelegation {
 /** UnbondingDelegationEntry defines an unbonding object with relevant metadata. */
 export interface UnbondingDelegationEntry {
     /** creation_height is the height which the unbonding took place. */
-    creationHeight: Long;
+    creationHeight: bigint;
     /** completion_time is the unix time for unbonding completion. */
-    completionTime?: Timestamp;
+    completionTime: Timestamp;
     /** initial_balance defines the tokens initially scheduled to receive at completion. */
     initialBalance: string;
     /** balance defines the tokens to receive at completion. */
     balance: string;
+    /** Incrementing id that uniquely identifies this entry */
+    unbondingId: bigint;
+    /** Strictly positive if this entry's unbonding has been stopped by external modules */
+    unbondingOnHoldRefCount: bigint;
 }
 /** RedelegationEntry defines a redelegation object with relevant metadata. */
 export interface RedelegationEntry {
     /** creation_height  defines the height which the redelegation took place. */
-    creationHeight: Long;
+    creationHeight: bigint;
     /** completion_time defines the unix time for redelegation completion. */
-    completionTime?: Timestamp;
+    completionTime: Timestamp;
     /** initial_balance defines the initial balance when redelegation started. */
     initialBalance: string;
     /** shares_dst is the amount of destination-validator shares created by redelegation. */
     sharesDst: string;
+    /** Incrementing id that uniquely identifies this entry */
+    unbondingId: bigint;
+    /** Strictly positive if this entry's unbonding has been stopped by external modules */
+    unbondingOnHoldRefCount: bigint;
 }
 /**
  * Redelegation contains the list of a particular delegator's redelegating bonds
@@ -188,10 +217,10 @@ export interface Redelegation {
     /** entries are the redelegation entries. */
     entries: RedelegationEntry[];
 }
-/** Params defines the parameters for the staking module. */
+/** Params defines the parameters for the x/staking module. */
 export interface Params {
     /** unbonding_time is the time duration of unbonding. */
-    unbondingTime?: Duration;
+    unbondingTime: Duration;
     /** max_validators is the maximum number of validators. */
     maxValidators: number;
     /** max_entries is the max entries for either unbonding delegation or redelegation (per pair/trio). */
@@ -208,8 +237,8 @@ export interface Params {
  * balance in addition to shares which is more suitable for client responses.
  */
 export interface DelegationResponse {
-    delegation?: Delegation;
-    balance?: Coin;
+    delegation: Delegation;
+    balance: Coin;
 }
 /**
  * RedelegationEntryResponse is equivalent to a RedelegationEntry except that it
@@ -217,7 +246,7 @@ export interface DelegationResponse {
  * responses.
  */
 export interface RedelegationEntryResponse {
-    redelegationEntry?: RedelegationEntry;
+    redelegationEntry: RedelegationEntry;
     balance: string;
 }
 /**
@@ -226,7 +255,7 @@ export interface RedelegationEntryResponse {
  * responses.
  */
 export interface RedelegationResponse {
-    redelegation?: Redelegation;
+    redelegation: Redelegation;
     entries: RedelegationEntryResponse[];
 }
 /**
@@ -237,144 +266,158 @@ export interface Pool {
     notBondedTokens: string;
     bondedTokens: string;
 }
+/**
+ * ValidatorUpdates defines an array of abci.ValidatorUpdate objects.
+ * TODO: explore moving this to proto/cosmos/base to separate modules from tendermint dependence
+ */
+export interface ValidatorUpdates {
+    updates: ValidatorUpdate[];
+}
 export declare const HistoricalInfo: {
-    encode(message: HistoricalInfo, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): HistoricalInfo;
+    encode(message: HistoricalInfo, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): HistoricalInfo;
     fromJSON(object: any): HistoricalInfo;
     toJSON(message: HistoricalInfo): unknown;
     fromPartial(object: DeepPartial<HistoricalInfo>): HistoricalInfo;
 };
 export declare const CommissionRates: {
-    encode(message: CommissionRates, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): CommissionRates;
+    encode(message: CommissionRates, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): CommissionRates;
     fromJSON(object: any): CommissionRates;
     toJSON(message: CommissionRates): unknown;
     fromPartial(object: DeepPartial<CommissionRates>): CommissionRates;
 };
 export declare const Commission: {
-    encode(message: Commission, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Commission;
+    encode(message: Commission, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Commission;
     fromJSON(object: any): Commission;
     toJSON(message: Commission): unknown;
     fromPartial(object: DeepPartial<Commission>): Commission;
 };
 export declare const Description: {
-    encode(message: Description, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Description;
+    encode(message: Description, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Description;
     fromJSON(object: any): Description;
     toJSON(message: Description): unknown;
     fromPartial(object: DeepPartial<Description>): Description;
 };
 export declare const Validator: {
-    encode(message: Validator, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Validator;
+    encode(message: Validator, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Validator;
     fromJSON(object: any): Validator;
     toJSON(message: Validator): unknown;
     fromPartial(object: DeepPartial<Validator>): Validator;
 };
 export declare const ValAddresses: {
-    encode(message: ValAddresses, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): ValAddresses;
+    encode(message: ValAddresses, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): ValAddresses;
     fromJSON(object: any): ValAddresses;
     toJSON(message: ValAddresses): unknown;
     fromPartial(object: DeepPartial<ValAddresses>): ValAddresses;
 };
 export declare const DVPair: {
-    encode(message: DVPair, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): DVPair;
+    encode(message: DVPair, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): DVPair;
     fromJSON(object: any): DVPair;
     toJSON(message: DVPair): unknown;
     fromPartial(object: DeepPartial<DVPair>): DVPair;
 };
 export declare const DVPairs: {
-    encode(message: DVPairs, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): DVPairs;
+    encode(message: DVPairs, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): DVPairs;
     fromJSON(object: any): DVPairs;
     toJSON(message: DVPairs): unknown;
     fromPartial(object: DeepPartial<DVPairs>): DVPairs;
 };
 export declare const DVVTriplet: {
-    encode(message: DVVTriplet, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): DVVTriplet;
+    encode(message: DVVTriplet, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): DVVTriplet;
     fromJSON(object: any): DVVTriplet;
     toJSON(message: DVVTriplet): unknown;
     fromPartial(object: DeepPartial<DVVTriplet>): DVVTriplet;
 };
 export declare const DVVTriplets: {
-    encode(message: DVVTriplets, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): DVVTriplets;
+    encode(message: DVVTriplets, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): DVVTriplets;
     fromJSON(object: any): DVVTriplets;
     toJSON(message: DVVTriplets): unknown;
     fromPartial(object: DeepPartial<DVVTriplets>): DVVTriplets;
 };
 export declare const Delegation: {
-    encode(message: Delegation, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Delegation;
+    encode(message: Delegation, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Delegation;
     fromJSON(object: any): Delegation;
     toJSON(message: Delegation): unknown;
     fromPartial(object: DeepPartial<Delegation>): Delegation;
 };
 export declare const UnbondingDelegation: {
-    encode(message: UnbondingDelegation, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): UnbondingDelegation;
+    encode(message: UnbondingDelegation, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): UnbondingDelegation;
     fromJSON(object: any): UnbondingDelegation;
     toJSON(message: UnbondingDelegation): unknown;
     fromPartial(object: DeepPartial<UnbondingDelegation>): UnbondingDelegation;
 };
 export declare const UnbondingDelegationEntry: {
-    encode(message: UnbondingDelegationEntry, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): UnbondingDelegationEntry;
+    encode(message: UnbondingDelegationEntry, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): UnbondingDelegationEntry;
     fromJSON(object: any): UnbondingDelegationEntry;
     toJSON(message: UnbondingDelegationEntry): unknown;
     fromPartial(object: DeepPartial<UnbondingDelegationEntry>): UnbondingDelegationEntry;
 };
 export declare const RedelegationEntry: {
-    encode(message: RedelegationEntry, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): RedelegationEntry;
+    encode(message: RedelegationEntry, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): RedelegationEntry;
     fromJSON(object: any): RedelegationEntry;
     toJSON(message: RedelegationEntry): unknown;
     fromPartial(object: DeepPartial<RedelegationEntry>): RedelegationEntry;
 };
 export declare const Redelegation: {
-    encode(message: Redelegation, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Redelegation;
+    encode(message: Redelegation, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Redelegation;
     fromJSON(object: any): Redelegation;
     toJSON(message: Redelegation): unknown;
     fromPartial(object: DeepPartial<Redelegation>): Redelegation;
 };
 export declare const Params: {
-    encode(message: Params, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Params;
+    encode(message: Params, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Params;
     fromJSON(object: any): Params;
     toJSON(message: Params): unknown;
     fromPartial(object: DeepPartial<Params>): Params;
 };
 export declare const DelegationResponse: {
-    encode(message: DelegationResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): DelegationResponse;
+    encode(message: DelegationResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): DelegationResponse;
     fromJSON(object: any): DelegationResponse;
     toJSON(message: DelegationResponse): unknown;
     fromPartial(object: DeepPartial<DelegationResponse>): DelegationResponse;
 };
 export declare const RedelegationEntryResponse: {
-    encode(message: RedelegationEntryResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): RedelegationEntryResponse;
+    encode(message: RedelegationEntryResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): RedelegationEntryResponse;
     fromJSON(object: any): RedelegationEntryResponse;
     toJSON(message: RedelegationEntryResponse): unknown;
     fromPartial(object: DeepPartial<RedelegationEntryResponse>): RedelegationEntryResponse;
 };
 export declare const RedelegationResponse: {
-    encode(message: RedelegationResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): RedelegationResponse;
+    encode(message: RedelegationResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): RedelegationResponse;
     fromJSON(object: any): RedelegationResponse;
     toJSON(message: RedelegationResponse): unknown;
     fromPartial(object: DeepPartial<RedelegationResponse>): RedelegationResponse;
 };
 export declare const Pool: {
-    encode(message: Pool, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Pool;
+    encode(message: Pool, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Pool;
     fromJSON(object: any): Pool;
     toJSON(message: Pool): unknown;
     fromPartial(object: DeepPartial<Pool>): Pool;
 };
-export declare const Cosmos_cryptoPubKey_InterfaceDecoder: (input: _m0.Reader | Uint8Array) => Any;
+export declare const ValidatorUpdates: {
+    encode(message: ValidatorUpdates, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): ValidatorUpdates;
+    fromJSON(object: any): ValidatorUpdates;
+    toJSON(message: ValidatorUpdates): unknown;
+    fromPartial(object: DeepPartial<ValidatorUpdates>): ValidatorUpdates;
+};
+export declare const Cosmos_cryptoPubKey_InterfaceDecoder: (input: BinaryReader | Uint8Array) => Any;

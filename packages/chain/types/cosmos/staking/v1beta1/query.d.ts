@@ -1,20 +1,20 @@
 import { PageRequest, PageResponse } from "../../base/query/v1beta1/pagination";
 import { Validator, DelegationResponse, UnbondingDelegation, RedelegationResponse, HistoricalInfo, Pool, Params } from "./staking";
-import * as _m0 from "protobufjs/minimal";
-import { DeepPartial, Long } from "../../../helpers";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { DeepPartial } from "../../../helpers";
 /** QueryValidatorsRequest is request type for Query/Validators RPC method. */
 export interface QueryValidatorsRequest {
     /** status enables to query for validators matching a given status. */
     status: string;
     /** pagination defines an optional pagination for the request. */
-    pagination?: PageRequest;
+    pagination: PageRequest;
 }
 /** QueryValidatorsResponse is response type for the Query/Validators RPC method */
 export interface QueryValidatorsResponse {
     /** validators contains all the queried validators. */
     validators: Validator[];
     /** pagination defines the pagination in the response. */
-    pagination?: PageResponse;
+    pagination: PageResponse;
 }
 /** QueryValidatorRequest is response type for the Query/Validator RPC method */
 export interface QueryValidatorRequest {
@@ -23,8 +23,8 @@ export interface QueryValidatorRequest {
 }
 /** QueryValidatorResponse is response type for the Query/Validator RPC method */
 export interface QueryValidatorResponse {
-    /** validator defines the the validator info. */
-    validator?: Validator;
+    /** validator defines the validator info. */
+    validator: Validator;
 }
 /**
  * QueryValidatorDelegationsRequest is request type for the
@@ -34,7 +34,7 @@ export interface QueryValidatorDelegationsRequest {
     /** validator_addr defines the validator address to query for. */
     validatorAddr: string;
     /** pagination defines an optional pagination for the request. */
-    pagination?: PageRequest;
+    pagination: PageRequest;
 }
 /**
  * QueryValidatorDelegationsResponse is response type for the
@@ -43,7 +43,7 @@ export interface QueryValidatorDelegationsRequest {
 export interface QueryValidatorDelegationsResponse {
     delegationResponses: DelegationResponse[];
     /** pagination defines the pagination in the response. */
-    pagination?: PageResponse;
+    pagination: PageResponse;
 }
 /**
  * QueryValidatorUnbondingDelegationsRequest is required type for the
@@ -53,7 +53,7 @@ export interface QueryValidatorUnbondingDelegationsRequest {
     /** validator_addr defines the validator address to query for. */
     validatorAddr: string;
     /** pagination defines an optional pagination for the request. */
-    pagination?: PageRequest;
+    pagination: PageRequest;
 }
 /**
  * QueryValidatorUnbondingDelegationsResponse is response type for the
@@ -62,7 +62,7 @@ export interface QueryValidatorUnbondingDelegationsRequest {
 export interface QueryValidatorUnbondingDelegationsResponse {
     unbondingResponses: UnbondingDelegation[];
     /** pagination defines the pagination in the response. */
-    pagination?: PageResponse;
+    pagination: PageResponse;
 }
 /** QueryDelegationRequest is request type for the Query/Delegation RPC method. */
 export interface QueryDelegationRequest {
@@ -74,7 +74,7 @@ export interface QueryDelegationRequest {
 /** QueryDelegationResponse is response type for the Query/Delegation RPC method. */
 export interface QueryDelegationResponse {
     /** delegation_responses defines the delegation info of a delegation. */
-    delegationResponse?: DelegationResponse;
+    delegationResponse: DelegationResponse;
 }
 /**
  * QueryUnbondingDelegationRequest is request type for the
@@ -92,7 +92,7 @@ export interface QueryUnbondingDelegationRequest {
  */
 export interface QueryUnbondingDelegationResponse {
     /** unbond defines the unbonding information of a delegation. */
-    unbond?: UnbondingDelegation;
+    unbond: UnbondingDelegation;
 }
 /**
  * QueryDelegatorDelegationsRequest is request type for the
@@ -102,7 +102,7 @@ export interface QueryDelegatorDelegationsRequest {
     /** delegator_addr defines the delegator address to query for. */
     delegatorAddr: string;
     /** pagination defines an optional pagination for the request. */
-    pagination?: PageRequest;
+    pagination: PageRequest;
 }
 /**
  * QueryDelegatorDelegationsResponse is response type for the
@@ -112,7 +112,7 @@ export interface QueryDelegatorDelegationsResponse {
     /** delegation_responses defines all the delegations' info of a delegator. */
     delegationResponses: DelegationResponse[];
     /** pagination defines the pagination in the response. */
-    pagination?: PageResponse;
+    pagination: PageResponse;
 }
 /**
  * QueryDelegatorUnbondingDelegationsRequest is request type for the
@@ -122,7 +122,7 @@ export interface QueryDelegatorUnbondingDelegationsRequest {
     /** delegator_addr defines the delegator address to query for. */
     delegatorAddr: string;
     /** pagination defines an optional pagination for the request. */
-    pagination?: PageRequest;
+    pagination: PageRequest;
 }
 /**
  * QueryUnbondingDelegatorDelegationsResponse is response type for the
@@ -131,7 +131,7 @@ export interface QueryDelegatorUnbondingDelegationsRequest {
 export interface QueryDelegatorUnbondingDelegationsResponse {
     unbondingResponses: UnbondingDelegation[];
     /** pagination defines the pagination in the response. */
-    pagination?: PageResponse;
+    pagination: PageResponse;
 }
 /**
  * QueryRedelegationsRequest is request type for the Query/Redelegations RPC
@@ -145,7 +145,7 @@ export interface QueryRedelegationsRequest {
     /** dst_validator_addr defines the validator address to redelegate to. */
     dstValidatorAddr: string;
     /** pagination defines an optional pagination for the request. */
-    pagination?: PageRequest;
+    pagination: PageRequest;
 }
 /**
  * QueryRedelegationsResponse is response type for the Query/Redelegations RPC
@@ -154,7 +154,7 @@ export interface QueryRedelegationsRequest {
 export interface QueryRedelegationsResponse {
     redelegationResponses: RedelegationResponse[];
     /** pagination defines the pagination in the response. */
-    pagination?: PageResponse;
+    pagination: PageResponse;
 }
 /**
  * QueryDelegatorValidatorsRequest is request type for the
@@ -164,17 +164,17 @@ export interface QueryDelegatorValidatorsRequest {
     /** delegator_addr defines the delegator address to query for. */
     delegatorAddr: string;
     /** pagination defines an optional pagination for the request. */
-    pagination?: PageRequest;
+    pagination: PageRequest;
 }
 /**
  * QueryDelegatorValidatorsResponse is response type for the
  * Query/DelegatorValidators RPC method.
  */
 export interface QueryDelegatorValidatorsResponse {
-    /** validators defines the the validators' info of a delegator. */
+    /** validators defines the validators' info of a delegator. */
     validators: Validator[];
     /** pagination defines the pagination in the response. */
-    pagination?: PageResponse;
+    pagination: PageResponse;
 }
 /**
  * QueryDelegatorValidatorRequest is request type for the
@@ -191,8 +191,8 @@ export interface QueryDelegatorValidatorRequest {
  * Query/DelegatorValidator RPC method.
  */
 export interface QueryDelegatorValidatorResponse {
-    /** validator defines the the validator info. */
-    validator?: Validator;
+    /** validator defines the validator info. */
+    validator: Validator;
 }
 /**
  * QueryHistoricalInfoRequest is request type for the Query/HistoricalInfo RPC
@@ -200,7 +200,7 @@ export interface QueryDelegatorValidatorResponse {
  */
 export interface QueryHistoricalInfoRequest {
     /** height defines at which height to query the historical info. */
-    height: Long;
+    height: bigint;
 }
 /**
  * QueryHistoricalInfoResponse is response type for the Query/HistoricalInfo RPC
@@ -208,7 +208,7 @@ export interface QueryHistoricalInfoRequest {
  */
 export interface QueryHistoricalInfoResponse {
     /** hist defines the historical info at the given height. */
-    hist?: HistoricalInfo;
+    hist: HistoricalInfo;
 }
 /** QueryPoolRequest is request type for the Query/Pool RPC method. */
 export interface QueryPoolRequest {
@@ -216,7 +216,7 @@ export interface QueryPoolRequest {
 /** QueryPoolResponse is response type for the Query/Pool RPC method. */
 export interface QueryPoolResponse {
     /** pool defines the pool info. */
-    pool?: Pool;
+    pool: Pool;
 }
 /** QueryParamsRequest is request type for the Query/Params RPC method. */
 export interface QueryParamsRequest {
@@ -224,200 +224,200 @@ export interface QueryParamsRequest {
 /** QueryParamsResponse is response type for the Query/Params RPC method. */
 export interface QueryParamsResponse {
     /** params holds all the parameters of this module. */
-    params?: Params;
+    params: Params;
 }
 export declare const QueryValidatorsRequest: {
-    encode(message: QueryValidatorsRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryValidatorsRequest;
+    encode(message: QueryValidatorsRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryValidatorsRequest;
     fromJSON(object: any): QueryValidatorsRequest;
     toJSON(message: QueryValidatorsRequest): unknown;
     fromPartial(object: DeepPartial<QueryValidatorsRequest>): QueryValidatorsRequest;
 };
 export declare const QueryValidatorsResponse: {
-    encode(message: QueryValidatorsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryValidatorsResponse;
+    encode(message: QueryValidatorsResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryValidatorsResponse;
     fromJSON(object: any): QueryValidatorsResponse;
     toJSON(message: QueryValidatorsResponse): unknown;
     fromPartial(object: DeepPartial<QueryValidatorsResponse>): QueryValidatorsResponse;
 };
 export declare const QueryValidatorRequest: {
-    encode(message: QueryValidatorRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryValidatorRequest;
+    encode(message: QueryValidatorRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryValidatorRequest;
     fromJSON(object: any): QueryValidatorRequest;
     toJSON(message: QueryValidatorRequest): unknown;
     fromPartial(object: DeepPartial<QueryValidatorRequest>): QueryValidatorRequest;
 };
 export declare const QueryValidatorResponse: {
-    encode(message: QueryValidatorResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryValidatorResponse;
+    encode(message: QueryValidatorResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryValidatorResponse;
     fromJSON(object: any): QueryValidatorResponse;
     toJSON(message: QueryValidatorResponse): unknown;
     fromPartial(object: DeepPartial<QueryValidatorResponse>): QueryValidatorResponse;
 };
 export declare const QueryValidatorDelegationsRequest: {
-    encode(message: QueryValidatorDelegationsRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryValidatorDelegationsRequest;
+    encode(message: QueryValidatorDelegationsRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryValidatorDelegationsRequest;
     fromJSON(object: any): QueryValidatorDelegationsRequest;
     toJSON(message: QueryValidatorDelegationsRequest): unknown;
     fromPartial(object: DeepPartial<QueryValidatorDelegationsRequest>): QueryValidatorDelegationsRequest;
 };
 export declare const QueryValidatorDelegationsResponse: {
-    encode(message: QueryValidatorDelegationsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryValidatorDelegationsResponse;
+    encode(message: QueryValidatorDelegationsResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryValidatorDelegationsResponse;
     fromJSON(object: any): QueryValidatorDelegationsResponse;
     toJSON(message: QueryValidatorDelegationsResponse): unknown;
     fromPartial(object: DeepPartial<QueryValidatorDelegationsResponse>): QueryValidatorDelegationsResponse;
 };
 export declare const QueryValidatorUnbondingDelegationsRequest: {
-    encode(message: QueryValidatorUnbondingDelegationsRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryValidatorUnbondingDelegationsRequest;
+    encode(message: QueryValidatorUnbondingDelegationsRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryValidatorUnbondingDelegationsRequest;
     fromJSON(object: any): QueryValidatorUnbondingDelegationsRequest;
     toJSON(message: QueryValidatorUnbondingDelegationsRequest): unknown;
     fromPartial(object: DeepPartial<QueryValidatorUnbondingDelegationsRequest>): QueryValidatorUnbondingDelegationsRequest;
 };
 export declare const QueryValidatorUnbondingDelegationsResponse: {
-    encode(message: QueryValidatorUnbondingDelegationsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryValidatorUnbondingDelegationsResponse;
+    encode(message: QueryValidatorUnbondingDelegationsResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryValidatorUnbondingDelegationsResponse;
     fromJSON(object: any): QueryValidatorUnbondingDelegationsResponse;
     toJSON(message: QueryValidatorUnbondingDelegationsResponse): unknown;
     fromPartial(object: DeepPartial<QueryValidatorUnbondingDelegationsResponse>): QueryValidatorUnbondingDelegationsResponse;
 };
 export declare const QueryDelegationRequest: {
-    encode(message: QueryDelegationRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryDelegationRequest;
+    encode(message: QueryDelegationRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryDelegationRequest;
     fromJSON(object: any): QueryDelegationRequest;
     toJSON(message: QueryDelegationRequest): unknown;
     fromPartial(object: DeepPartial<QueryDelegationRequest>): QueryDelegationRequest;
 };
 export declare const QueryDelegationResponse: {
-    encode(message: QueryDelegationResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryDelegationResponse;
+    encode(message: QueryDelegationResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryDelegationResponse;
     fromJSON(object: any): QueryDelegationResponse;
     toJSON(message: QueryDelegationResponse): unknown;
     fromPartial(object: DeepPartial<QueryDelegationResponse>): QueryDelegationResponse;
 };
 export declare const QueryUnbondingDelegationRequest: {
-    encode(message: QueryUnbondingDelegationRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryUnbondingDelegationRequest;
+    encode(message: QueryUnbondingDelegationRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryUnbondingDelegationRequest;
     fromJSON(object: any): QueryUnbondingDelegationRequest;
     toJSON(message: QueryUnbondingDelegationRequest): unknown;
     fromPartial(object: DeepPartial<QueryUnbondingDelegationRequest>): QueryUnbondingDelegationRequest;
 };
 export declare const QueryUnbondingDelegationResponse: {
-    encode(message: QueryUnbondingDelegationResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryUnbondingDelegationResponse;
+    encode(message: QueryUnbondingDelegationResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryUnbondingDelegationResponse;
     fromJSON(object: any): QueryUnbondingDelegationResponse;
     toJSON(message: QueryUnbondingDelegationResponse): unknown;
     fromPartial(object: DeepPartial<QueryUnbondingDelegationResponse>): QueryUnbondingDelegationResponse;
 };
 export declare const QueryDelegatorDelegationsRequest: {
-    encode(message: QueryDelegatorDelegationsRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryDelegatorDelegationsRequest;
+    encode(message: QueryDelegatorDelegationsRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryDelegatorDelegationsRequest;
     fromJSON(object: any): QueryDelegatorDelegationsRequest;
     toJSON(message: QueryDelegatorDelegationsRequest): unknown;
     fromPartial(object: DeepPartial<QueryDelegatorDelegationsRequest>): QueryDelegatorDelegationsRequest;
 };
 export declare const QueryDelegatorDelegationsResponse: {
-    encode(message: QueryDelegatorDelegationsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryDelegatorDelegationsResponse;
+    encode(message: QueryDelegatorDelegationsResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryDelegatorDelegationsResponse;
     fromJSON(object: any): QueryDelegatorDelegationsResponse;
     toJSON(message: QueryDelegatorDelegationsResponse): unknown;
     fromPartial(object: DeepPartial<QueryDelegatorDelegationsResponse>): QueryDelegatorDelegationsResponse;
 };
 export declare const QueryDelegatorUnbondingDelegationsRequest: {
-    encode(message: QueryDelegatorUnbondingDelegationsRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryDelegatorUnbondingDelegationsRequest;
+    encode(message: QueryDelegatorUnbondingDelegationsRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryDelegatorUnbondingDelegationsRequest;
     fromJSON(object: any): QueryDelegatorUnbondingDelegationsRequest;
     toJSON(message: QueryDelegatorUnbondingDelegationsRequest): unknown;
     fromPartial(object: DeepPartial<QueryDelegatorUnbondingDelegationsRequest>): QueryDelegatorUnbondingDelegationsRequest;
 };
 export declare const QueryDelegatorUnbondingDelegationsResponse: {
-    encode(message: QueryDelegatorUnbondingDelegationsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryDelegatorUnbondingDelegationsResponse;
+    encode(message: QueryDelegatorUnbondingDelegationsResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryDelegatorUnbondingDelegationsResponse;
     fromJSON(object: any): QueryDelegatorUnbondingDelegationsResponse;
     toJSON(message: QueryDelegatorUnbondingDelegationsResponse): unknown;
     fromPartial(object: DeepPartial<QueryDelegatorUnbondingDelegationsResponse>): QueryDelegatorUnbondingDelegationsResponse;
 };
 export declare const QueryRedelegationsRequest: {
-    encode(message: QueryRedelegationsRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryRedelegationsRequest;
+    encode(message: QueryRedelegationsRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryRedelegationsRequest;
     fromJSON(object: any): QueryRedelegationsRequest;
     toJSON(message: QueryRedelegationsRequest): unknown;
     fromPartial(object: DeepPartial<QueryRedelegationsRequest>): QueryRedelegationsRequest;
 };
 export declare const QueryRedelegationsResponse: {
-    encode(message: QueryRedelegationsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryRedelegationsResponse;
+    encode(message: QueryRedelegationsResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryRedelegationsResponse;
     fromJSON(object: any): QueryRedelegationsResponse;
     toJSON(message: QueryRedelegationsResponse): unknown;
     fromPartial(object: DeepPartial<QueryRedelegationsResponse>): QueryRedelegationsResponse;
 };
 export declare const QueryDelegatorValidatorsRequest: {
-    encode(message: QueryDelegatorValidatorsRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryDelegatorValidatorsRequest;
+    encode(message: QueryDelegatorValidatorsRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryDelegatorValidatorsRequest;
     fromJSON(object: any): QueryDelegatorValidatorsRequest;
     toJSON(message: QueryDelegatorValidatorsRequest): unknown;
     fromPartial(object: DeepPartial<QueryDelegatorValidatorsRequest>): QueryDelegatorValidatorsRequest;
 };
 export declare const QueryDelegatorValidatorsResponse: {
-    encode(message: QueryDelegatorValidatorsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryDelegatorValidatorsResponse;
+    encode(message: QueryDelegatorValidatorsResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryDelegatorValidatorsResponse;
     fromJSON(object: any): QueryDelegatorValidatorsResponse;
     toJSON(message: QueryDelegatorValidatorsResponse): unknown;
     fromPartial(object: DeepPartial<QueryDelegatorValidatorsResponse>): QueryDelegatorValidatorsResponse;
 };
 export declare const QueryDelegatorValidatorRequest: {
-    encode(message: QueryDelegatorValidatorRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryDelegatorValidatorRequest;
+    encode(message: QueryDelegatorValidatorRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryDelegatorValidatorRequest;
     fromJSON(object: any): QueryDelegatorValidatorRequest;
     toJSON(message: QueryDelegatorValidatorRequest): unknown;
     fromPartial(object: DeepPartial<QueryDelegatorValidatorRequest>): QueryDelegatorValidatorRequest;
 };
 export declare const QueryDelegatorValidatorResponse: {
-    encode(message: QueryDelegatorValidatorResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryDelegatorValidatorResponse;
+    encode(message: QueryDelegatorValidatorResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryDelegatorValidatorResponse;
     fromJSON(object: any): QueryDelegatorValidatorResponse;
     toJSON(message: QueryDelegatorValidatorResponse): unknown;
     fromPartial(object: DeepPartial<QueryDelegatorValidatorResponse>): QueryDelegatorValidatorResponse;
 };
 export declare const QueryHistoricalInfoRequest: {
-    encode(message: QueryHistoricalInfoRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryHistoricalInfoRequest;
+    encode(message: QueryHistoricalInfoRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryHistoricalInfoRequest;
     fromJSON(object: any): QueryHistoricalInfoRequest;
     toJSON(message: QueryHistoricalInfoRequest): unknown;
     fromPartial(object: DeepPartial<QueryHistoricalInfoRequest>): QueryHistoricalInfoRequest;
 };
 export declare const QueryHistoricalInfoResponse: {
-    encode(message: QueryHistoricalInfoResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryHistoricalInfoResponse;
+    encode(message: QueryHistoricalInfoResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryHistoricalInfoResponse;
     fromJSON(object: any): QueryHistoricalInfoResponse;
     toJSON(message: QueryHistoricalInfoResponse): unknown;
     fromPartial(object: DeepPartial<QueryHistoricalInfoResponse>): QueryHistoricalInfoResponse;
 };
 export declare const QueryPoolRequest: {
-    encode(_: QueryPoolRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryPoolRequest;
+    encode(_: QueryPoolRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryPoolRequest;
     fromJSON(_: any): QueryPoolRequest;
     toJSON(_: QueryPoolRequest): unknown;
     fromPartial(_: DeepPartial<QueryPoolRequest>): QueryPoolRequest;
 };
 export declare const QueryPoolResponse: {
-    encode(message: QueryPoolResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryPoolResponse;
+    encode(message: QueryPoolResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryPoolResponse;
     fromJSON(object: any): QueryPoolResponse;
     toJSON(message: QueryPoolResponse): unknown;
     fromPartial(object: DeepPartial<QueryPoolResponse>): QueryPoolResponse;
 };
 export declare const QueryParamsRequest: {
-    encode(_: QueryParamsRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsRequest;
+    encode(_: QueryParamsRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsRequest;
     fromJSON(_: any): QueryParamsRequest;
     toJSON(_: QueryParamsRequest): unknown;
     fromPartial(_: DeepPartial<QueryParamsRequest>): QueryParamsRequest;
 };
 export declare const QueryParamsResponse: {
-    encode(message: QueryParamsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryParamsResponse;
+    encode(message: QueryParamsResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryParamsResponse;
     fromJSON(object: any): QueryParamsResponse;
     toJSON(message: QueryParamsResponse): unknown;
     fromPartial(object: DeepPartial<QueryParamsResponse>): QueryParamsResponse;

@@ -5,11 +5,8 @@ export const createRPCMsgClient = async ({
   rpc: Rpc;
 }) => ({
   coolcat: {
-    alloc: {
-      v1beta1: new (await import("./alloc/v1beta1/tx.rpc.msg")).MsgClientImpl(rpc)
-    },
     catdrop: {
-      v1beta1: new (await import("./catdrop/v1beta1/tx.rpc.msg")).MsgClientImpl(rpc)
+      v1: new (await import("./catdrop/v1/tx.rpc.msg")).MsgClientImpl(rpc)
     }
   },
   cosmos: {
@@ -19,11 +16,21 @@ export const createRPCMsgClient = async ({
     bank: {
       v1beta1: new (await import("../cosmos/bank/v1beta1/tx.rpc.msg")).MsgClientImpl(rpc)
     },
+    consensus: {
+      v1: new (await import("../cosmos/consensus/v1/tx.rpc.msg")).MsgClientImpl(rpc)
+    },
     distribution: {
       v1beta1: new (await import("../cosmos/distribution/v1beta1/tx.rpc.msg")).MsgClientImpl(rpc)
     },
+    feegrant: {
+      v1beta1: new (await import("../cosmos/feegrant/v1beta1/tx.rpc.msg")).MsgClientImpl(rpc)
+    },
     gov: {
+      v1: new (await import("../cosmos/gov/v1/tx.rpc.msg")).MsgClientImpl(rpc),
       v1beta1: new (await import("../cosmos/gov/v1beta1/tx.rpc.msg")).MsgClientImpl(rpc)
+    },
+    nft: {
+      v1beta1: new (await import("../cosmos/nft/v1beta1/tx.rpc.msg")).MsgClientImpl(rpc)
     },
     staking: {
       v1beta1: new (await import("../cosmos/staking/v1beta1/tx.rpc.msg")).MsgClientImpl(rpc)

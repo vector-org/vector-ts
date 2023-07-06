@@ -1,68 +1,54 @@
-import { Timestamp } from "../../google/protobuf/timestamp";
-import { Long, DeepPartial } from "../../helpers";
-import * as _m0 from "protobufjs/minimal";
-export interface ProtocolVersion {
-    p2p: Long;
-    block: Long;
-    app: Long;
+import { BinaryReader, BinaryWriter } from "../../binary";
+import { DeepPartial } from "../../helpers";
+export interface NetAddress {
+    id: string;
+    ip: string;
+    port: number;
 }
-export interface NodeInfo {
-    protocolVersion?: ProtocolVersion;
-    nodeId: string;
+export interface ProtocolVersion {
+    p2p: bigint;
+    block: bigint;
+    app: bigint;
+}
+export interface DefaultNodeInfo {
+    protocolVersion: ProtocolVersion;
+    defaultNodeId: string;
     listenAddr: string;
     network: string;
     version: string;
     channels: Uint8Array;
     moniker: string;
-    other?: NodeInfoOther;
+    other: DefaultNodeInfoOther;
 }
-export interface NodeInfoOther {
+export interface DefaultNodeInfoOther {
     txIndex: string;
     rpcAddress: string;
 }
-export interface PeerInfo {
-    id: string;
-    addressInfo: PeerAddressInfo[];
-    lastConnected?: Timestamp;
-}
-export interface PeerAddressInfo {
-    address: string;
-    lastDialSuccess?: Timestamp;
-    lastDialFailure?: Timestamp;
-    dialFailures: number;
-}
+export declare const NetAddress: {
+    encode(message: NetAddress, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): NetAddress;
+    fromJSON(object: any): NetAddress;
+    toJSON(message: NetAddress): unknown;
+    fromPartial(object: DeepPartial<NetAddress>): NetAddress;
+};
 export declare const ProtocolVersion: {
-    encode(message: ProtocolVersion, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): ProtocolVersion;
+    encode(message: ProtocolVersion, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): ProtocolVersion;
     fromJSON(object: any): ProtocolVersion;
     toJSON(message: ProtocolVersion): unknown;
     fromPartial(object: DeepPartial<ProtocolVersion>): ProtocolVersion;
 };
-export declare const NodeInfo: {
-    encode(message: NodeInfo, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): NodeInfo;
-    fromJSON(object: any): NodeInfo;
-    toJSON(message: NodeInfo): unknown;
-    fromPartial(object: DeepPartial<NodeInfo>): NodeInfo;
+export declare const DefaultNodeInfo: {
+    encode(message: DefaultNodeInfo, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): DefaultNodeInfo;
+    fromJSON(object: any): DefaultNodeInfo;
+    toJSON(message: DefaultNodeInfo): unknown;
+    fromPartial(object: DeepPartial<DefaultNodeInfo>): DefaultNodeInfo;
 };
-export declare const NodeInfoOther: {
-    encode(message: NodeInfoOther, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): NodeInfoOther;
-    fromJSON(object: any): NodeInfoOther;
-    toJSON(message: NodeInfoOther): unknown;
-    fromPartial(object: DeepPartial<NodeInfoOther>): NodeInfoOther;
-};
-export declare const PeerInfo: {
-    encode(message: PeerInfo, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): PeerInfo;
-    fromJSON(object: any): PeerInfo;
-    toJSON(message: PeerInfo): unknown;
-    fromPartial(object: DeepPartial<PeerInfo>): PeerInfo;
-};
-export declare const PeerAddressInfo: {
-    encode(message: PeerAddressInfo, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): PeerAddressInfo;
-    fromJSON(object: any): PeerAddressInfo;
-    toJSON(message: PeerAddressInfo): unknown;
-    fromPartial(object: DeepPartial<PeerAddressInfo>): PeerAddressInfo;
+export declare const DefaultNodeInfoOther: {
+    encode(message: DefaultNodeInfoOther, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): DefaultNodeInfoOther;
+    fromJSON(object: any): DefaultNodeInfoOther;
+    toJSON(message: DefaultNodeInfoOther): unknown;
+    fromPartial(object: DeepPartial<DefaultNodeInfoOther>): DefaultNodeInfoOther;
 };

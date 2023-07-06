@@ -9,11 +9,21 @@ export declare const createRPCMsgClient: ({ rpc }: {
         bank: {
             v1beta1: import("./bank/v1beta1/tx.rpc.msg").MsgClientImpl;
         };
+        consensus: {
+            v1: import("./consensus/v1/tx.rpc.msg").MsgClientImpl;
+        };
         distribution: {
             v1beta1: import("./distribution/v1beta1/tx.rpc.msg").MsgClientImpl;
         };
+        feegrant: {
+            v1beta1: import("./feegrant/v1beta1/tx.rpc.msg").MsgClientImpl;
+        };
         gov: {
+            v1: import("./gov/v1/tx.rpc.msg").MsgClientImpl;
             v1beta1: import("./gov/v1beta1/tx.rpc.msg").MsgClientImpl;
+        };
+        nft: {
+            v1beta1: import("./nft/v1beta1/tx.rpc.msg").MsgClientImpl;
         };
         staking: {
             v1beta1: import("./staking/v1beta1/tx.rpc.msg").MsgClientImpl;

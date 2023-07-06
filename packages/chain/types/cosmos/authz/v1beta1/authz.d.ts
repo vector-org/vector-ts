@@ -2,7 +2,7 @@ import { Any } from "../../../google/protobuf/any";
 import { Timestamp } from "../../../google/protobuf/timestamp";
 import { SendAuthorization } from "../../bank/v1beta1/authz";
 import { StakeAuthorization } from "../../staking/v1beta1/authz";
-import * as _m0 from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 /**
  * GenericAuthorization gives the grantee unrestricted permissions to execute
@@ -17,7 +17,7 @@ export interface GenericAuthorization {
  * the provide method with expiration time.
  */
 export interface Grant {
-    authorization?: GenericAuthorization | SendAuthorization | StakeAuthorization | Any | undefined;
+    authorization: GenericAuthorization | SendAuthorization | StakeAuthorization | Any | undefined;
     /**
      * time when the grant will expire and will be pruned. If null, then the grant
      * doesn't have a time expiration (other conditions  in `authorization`
@@ -32,8 +32,8 @@ export interface Grant {
 export interface GrantAuthorization {
     granter: string;
     grantee: string;
-    authorization?: GenericAuthorization | SendAuthorization | StakeAuthorization | Any | undefined;
-    expiration?: Timestamp;
+    authorization: GenericAuthorization | SendAuthorization | StakeAuthorization | Any | undefined;
+    expiration: Timestamp;
 }
 /** GrantQueueItem contains the list of TypeURL of a sdk.Msg. */
 export interface GrantQueueItem {
@@ -41,31 +41,31 @@ export interface GrantQueueItem {
     msgTypeUrls: string[];
 }
 export declare const GenericAuthorization: {
-    encode(message: GenericAuthorization, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): GenericAuthorization;
+    encode(message: GenericAuthorization, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): GenericAuthorization;
     fromJSON(object: any): GenericAuthorization;
     toJSON(message: GenericAuthorization): unknown;
     fromPartial(object: DeepPartial<GenericAuthorization>): GenericAuthorization;
 };
 export declare const Grant: {
-    encode(message: Grant, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Grant;
+    encode(message: Grant, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Grant;
     fromJSON(object: any): Grant;
     toJSON(message: Grant): unknown;
     fromPartial(object: DeepPartial<Grant>): Grant;
 };
 export declare const GrantAuthorization: {
-    encode(message: GrantAuthorization, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): GrantAuthorization;
+    encode(message: GrantAuthorization, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): GrantAuthorization;
     fromJSON(object: any): GrantAuthorization;
     toJSON(message: GrantAuthorization): unknown;
     fromPartial(object: DeepPartial<GrantAuthorization>): GrantAuthorization;
 };
 export declare const GrantQueueItem: {
-    encode(message: GrantQueueItem, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): GrantQueueItem;
+    encode(message: GrantQueueItem, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): GrantQueueItem;
     fromJSON(object: any): GrantQueueItem;
     toJSON(message: GrantQueueItem): unknown;
     fromPartial(object: DeepPartial<GrantQueueItem>): GrantQueueItem;
 };
-export declare const Authorization_InterfaceDecoder: (input: _m0.Reader | Uint8Array) => GenericAuthorization | SendAuthorization | StakeAuthorization | Any;
+export declare const Cosmos_authzv1beta1Authorization_InterfaceDecoder: (input: BinaryReader | Uint8Array) => GenericAuthorization | SendAuthorization | StakeAuthorization | Any;

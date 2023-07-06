@@ -43,6 +43,30 @@ const contracts = [
     name: "Profiles",
     dir: join(contractsDir, "coolcat-profiles"),
   },
+    {
+    name: "CW721Base",
+    dir: join(contractsDir, "cw721-base"),
+  },
+  {
+    name: "CW721CharacterOnChain",
+    dir: join(contractsDir, "cw721-character-onchain"),
+  },
+  {
+    name: "CW721TraitOnChain",
+    dir: join(contractsDir, "cw721-trait-onchain"),
+  },
+  {
+    name: "CCATCharacterManager",
+    dir: join(contractsDir, "ccat-character-manager"),
+  },
+  {
+    name: "CCATTraitManager",
+    dir: join(contractsDir, "ccat-trait-manager"),
+  },
+  {
+    name: "CCATMintables",
+    dir: join(contractsDir, "ccat-mintables"),
+  },
 ];
 
 codegen({

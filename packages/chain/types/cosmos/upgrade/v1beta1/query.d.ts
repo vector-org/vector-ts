@@ -1,6 +1,6 @@
 import { Plan, ModuleVersion } from "./upgrade";
-import * as _m0 from "protobufjs/minimal";
-import { DeepPartial, Long } from "../../../helpers";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { DeepPartial } from "../../../helpers";
 /**
  * QueryCurrentPlanRequest is the request type for the Query/CurrentPlan RPC
  * method.
@@ -13,7 +13,7 @@ export interface QueryCurrentPlanRequest {
  */
 export interface QueryCurrentPlanResponse {
     /** plan is the current upgrade plan. */
-    plan?: Plan;
+    plan: Plan;
 }
 /**
  * QueryCurrentPlanRequest is the request type for the Query/AppliedPlan RPC
@@ -29,7 +29,7 @@ export interface QueryAppliedPlanRequest {
  */
 export interface QueryAppliedPlanResponse {
     /** height is the block height at which the plan was applied. */
-    height: Long;
+    height: bigint;
 }
 /**
  * QueryUpgradedConsensusStateRequest is the request type for the Query/UpgradedConsensusState
@@ -41,7 +41,7 @@ export interface QueryUpgradedConsensusStateRequest {
      * last height of the current chain must be sent in request
      * as this is the height under which next consensus state is stored
      */
-    lastHeight: Long;
+    lastHeight: bigint;
 }
 /**
  * QueryUpgradedConsensusStateResponse is the response type for the Query/UpgradedConsensusState
@@ -92,71 +92,71 @@ export interface QueryAuthorityResponse {
     address: string;
 }
 export declare const QueryCurrentPlanRequest: {
-    encode(_: QueryCurrentPlanRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryCurrentPlanRequest;
+    encode(_: QueryCurrentPlanRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryCurrentPlanRequest;
     fromJSON(_: any): QueryCurrentPlanRequest;
     toJSON(_: QueryCurrentPlanRequest): unknown;
     fromPartial(_: DeepPartial<QueryCurrentPlanRequest>): QueryCurrentPlanRequest;
 };
 export declare const QueryCurrentPlanResponse: {
-    encode(message: QueryCurrentPlanResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryCurrentPlanResponse;
+    encode(message: QueryCurrentPlanResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryCurrentPlanResponse;
     fromJSON(object: any): QueryCurrentPlanResponse;
     toJSON(message: QueryCurrentPlanResponse): unknown;
     fromPartial(object: DeepPartial<QueryCurrentPlanResponse>): QueryCurrentPlanResponse;
 };
 export declare const QueryAppliedPlanRequest: {
-    encode(message: QueryAppliedPlanRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAppliedPlanRequest;
+    encode(message: QueryAppliedPlanRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryAppliedPlanRequest;
     fromJSON(object: any): QueryAppliedPlanRequest;
     toJSON(message: QueryAppliedPlanRequest): unknown;
     fromPartial(object: DeepPartial<QueryAppliedPlanRequest>): QueryAppliedPlanRequest;
 };
 export declare const QueryAppliedPlanResponse: {
-    encode(message: QueryAppliedPlanResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAppliedPlanResponse;
+    encode(message: QueryAppliedPlanResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryAppliedPlanResponse;
     fromJSON(object: any): QueryAppliedPlanResponse;
     toJSON(message: QueryAppliedPlanResponse): unknown;
     fromPartial(object: DeepPartial<QueryAppliedPlanResponse>): QueryAppliedPlanResponse;
 };
 export declare const QueryUpgradedConsensusStateRequest: {
-    encode(message: QueryUpgradedConsensusStateRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryUpgradedConsensusStateRequest;
+    encode(message: QueryUpgradedConsensusStateRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryUpgradedConsensusStateRequest;
     fromJSON(object: any): QueryUpgradedConsensusStateRequest;
     toJSON(message: QueryUpgradedConsensusStateRequest): unknown;
     fromPartial(object: DeepPartial<QueryUpgradedConsensusStateRequest>): QueryUpgradedConsensusStateRequest;
 };
 export declare const QueryUpgradedConsensusStateResponse: {
-    encode(message: QueryUpgradedConsensusStateResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryUpgradedConsensusStateResponse;
+    encode(message: QueryUpgradedConsensusStateResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryUpgradedConsensusStateResponse;
     fromJSON(object: any): QueryUpgradedConsensusStateResponse;
     toJSON(message: QueryUpgradedConsensusStateResponse): unknown;
     fromPartial(object: DeepPartial<QueryUpgradedConsensusStateResponse>): QueryUpgradedConsensusStateResponse;
 };
 export declare const QueryModuleVersionsRequest: {
-    encode(message: QueryModuleVersionsRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryModuleVersionsRequest;
+    encode(message: QueryModuleVersionsRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryModuleVersionsRequest;
     fromJSON(object: any): QueryModuleVersionsRequest;
     toJSON(message: QueryModuleVersionsRequest): unknown;
     fromPartial(object: DeepPartial<QueryModuleVersionsRequest>): QueryModuleVersionsRequest;
 };
 export declare const QueryModuleVersionsResponse: {
-    encode(message: QueryModuleVersionsResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryModuleVersionsResponse;
+    encode(message: QueryModuleVersionsResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryModuleVersionsResponse;
     fromJSON(object: any): QueryModuleVersionsResponse;
     toJSON(message: QueryModuleVersionsResponse): unknown;
     fromPartial(object: DeepPartial<QueryModuleVersionsResponse>): QueryModuleVersionsResponse;
 };
 export declare const QueryAuthorityRequest: {
-    encode(_: QueryAuthorityRequest, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAuthorityRequest;
+    encode(_: QueryAuthorityRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryAuthorityRequest;
     fromJSON(_: any): QueryAuthorityRequest;
     toJSON(_: QueryAuthorityRequest): unknown;
     fromPartial(_: DeepPartial<QueryAuthorityRequest>): QueryAuthorityRequest;
 };
 export declare const QueryAuthorityResponse: {
-    encode(message: QueryAuthorityResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): QueryAuthorityResponse;
+    encode(message: QueryAuthorityResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryAuthorityResponse;
     fromJSON(object: any): QueryAuthorityResponse;
     toJSON(message: QueryAuthorityResponse): unknown;
     fromPartial(object: DeepPartial<QueryAuthorityResponse>): QueryAuthorityResponse;

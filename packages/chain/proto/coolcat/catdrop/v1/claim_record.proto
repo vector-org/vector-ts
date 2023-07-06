@@ -1,0 +1,39 @@
+syntax = "proto3";
+package coolcat.catdrop.v1;
+
+import "gogoproto/gogo.proto";
+import "cosmos/base/v1beta1/coin.proto";
+
+option go_package = "github.com/coolcat-network/coolcat/v1/x/catdrop/types";
+
+// Provides one of the 4 categories of the initial catdrop
+enum Action {
+  // Check if this address voted on a gov proposal
+  option (gogoproto.goproto_enum_prefix) = false;
+  // Check if this address voted on a gov proposal
+  ACTION_VOTE_UNSPECIFIED = 0;
+  // Check if this address staked some CoolCat
+  ACTION_STAKE = 1;
+  // Check if this address created a on-chain profile
+  ACTION_CREATEPROFILE = 2;
+  // Check if this address interacted with clowders in any way
+  ACTION_USECLOWDER = 3;
+}
+
+// Shows how many actions this user has completed.
+message ClaimRecord {
+  // address of claim user
+  string address = 1 [ (gogoproto.moretags) = "yaml:\"address\"" ];
+
+  // total initial claimable amount for the user
+  repeated cosmos.base.v1beta1.Coin initial_claimable_amount = 2 [
+    (gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins",
+    (gogoproto.nullable) = false,
+    (gogoproto.moretags) = "yaml:\"initial_claimable_amount\""
+  ];
+
+  // true if action is completed
+  // index of bool in array refers to action enum #
+  repeated bool action_completed = 3
+      [ (gogoproto.moretags) = "yaml:\"action_completed\"" ];
+}

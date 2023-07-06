@@ -1,4 +1,4 @@
-import * as _m0 from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "../../binary";
 import { DeepPartial } from "../../helpers";
 /**
  * A generic empty message that you can re-use to avoid defining duplicated
@@ -14,8 +14,8 @@ import { DeepPartial } from "../../helpers";
 export interface Empty {
 }
 export declare const Empty: {
-    encode(_: Empty, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Empty;
+    encode(_: Empty, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Empty;
     fromJSON(_: any): Empty;
     toJSON(_: Empty): unknown;
     fromPartial(_: DeepPartial<Empty>): Empty;

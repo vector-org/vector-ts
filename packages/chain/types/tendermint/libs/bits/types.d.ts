@@ -1,12 +1,12 @@
-import { Long, DeepPartial } from "../../../helpers";
-import * as _m0 from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { DeepPartial } from "../../../helpers";
 export interface BitArray {
-    bits: Long;
-    elems: Long[];
+    bits: bigint;
+    elems: bigint[];
 }
 export declare const BitArray: {
-    encode(message: BitArray, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): BitArray;
+    encode(message: BitArray, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): BitArray;
     fromJSON(object: any): BitArray;
     toJSON(message: BitArray): unknown;
     fromPartial(object: DeepPartial<BitArray>): BitArray;

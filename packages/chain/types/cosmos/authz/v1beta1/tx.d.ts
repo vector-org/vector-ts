@@ -1,6 +1,6 @@
 import { Grant } from "./authz";
 import { Any } from "../../../google/protobuf/any";
-import * as _m0 from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 /**
  * MsgGrant is a request type for Grant method. It declares authorization to the grantee
@@ -9,7 +9,7 @@ import { DeepPartial } from "../../../helpers";
 export interface MsgGrant {
     granter: string;
     grantee: string;
-    grant?: Grant;
+    grant: Grant;
 }
 /** MsgExecResponse defines the Msg/MsgExecResponse response type. */
 export interface MsgExecResponse {
@@ -23,7 +23,7 @@ export interface MsgExecResponse {
 export interface MsgExec {
     grantee: string;
     /**
-     * Authorization Msg requests to execute. Each msg must implement Authorization interface
+     * Execute Msg.
      * The x/authz will try to find a grant matching (msg.signers[0], grantee, MsgTypeURL(msg))
      * triple and validate it.
      */
@@ -45,46 +45,45 @@ export interface MsgRevoke {
 export interface MsgRevokeResponse {
 }
 export declare const MsgGrant: {
-    encode(message: MsgGrant, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgGrant;
+    encode(message: MsgGrant, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgGrant;
     fromJSON(object: any): MsgGrant;
     toJSON(message: MsgGrant): unknown;
     fromPartial(object: DeepPartial<MsgGrant>): MsgGrant;
 };
 export declare const MsgExecResponse: {
-    encode(message: MsgExecResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgExecResponse;
+    encode(message: MsgExecResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgExecResponse;
     fromJSON(object: any): MsgExecResponse;
     toJSON(message: MsgExecResponse): unknown;
     fromPartial(object: DeepPartial<MsgExecResponse>): MsgExecResponse;
 };
 export declare const MsgExec: {
-    encode(message: MsgExec, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgExec;
+    encode(message: MsgExec, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgExec;
     fromJSON(object: any): MsgExec;
     toJSON(message: MsgExec): unknown;
     fromPartial(object: DeepPartial<MsgExec>): MsgExec;
 };
 export declare const MsgGrantResponse: {
-    encode(_: MsgGrantResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgGrantResponse;
+    encode(_: MsgGrantResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgGrantResponse;
     fromJSON(_: any): MsgGrantResponse;
     toJSON(_: MsgGrantResponse): unknown;
     fromPartial(_: DeepPartial<MsgGrantResponse>): MsgGrantResponse;
 };
 export declare const MsgRevoke: {
-    encode(message: MsgRevoke, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgRevoke;
+    encode(message: MsgRevoke, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgRevoke;
     fromJSON(object: any): MsgRevoke;
     toJSON(message: MsgRevoke): unknown;
     fromPartial(object: DeepPartial<MsgRevoke>): MsgRevoke;
 };
 export declare const MsgRevokeResponse: {
-    encode(_: MsgRevokeResponse, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MsgRevokeResponse;
+    encode(_: MsgRevokeResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MsgRevokeResponse;
     fromJSON(_: any): MsgRevokeResponse;
     toJSON(_: MsgRevokeResponse): unknown;
     fromPartial(_: DeepPartial<MsgRevokeResponse>): MsgRevokeResponse;
 };
-export declare const Sdk_Msg_InterfaceDecoder: (input: _m0.Reader | Uint8Array) => Any;
-export declare const Authz_Authorization_InterfaceDecoder: (input: _m0.Reader | Uint8Array) => Any;
+export declare const Cosmos_basev1beta1Msg_InterfaceDecoder: (input: BinaryReader | Uint8Array) => Any;

@@ -1,4 +1,4 @@
-import * as _m0 from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 /**
  * PubKey is an ed25519 public key for handling Tendermint keys in SDK.
@@ -18,15 +18,15 @@ export interface PrivKey {
     key: Uint8Array;
 }
 export declare const PubKey: {
-    encode(message: PubKey, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): PubKey;
+    encode(message: PubKey, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): PubKey;
     fromJSON(object: any): PubKey;
     toJSON(message: PubKey): unknown;
     fromPartial(object: DeepPartial<PubKey>): PubKey;
 };
 export declare const PrivKey: {
-    encode(message: PrivKey, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): PrivKey;
+    encode(message: PrivKey, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): PrivKey;
     fromJSON(object: any): PrivKey;
     toJSON(message: PrivKey): unknown;
     fromPartial(object: DeepPartial<PrivKey>): PrivKey;

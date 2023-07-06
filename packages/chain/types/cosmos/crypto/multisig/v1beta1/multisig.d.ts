@@ -1,4 +1,4 @@
-import * as _m0 from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "../../../../binary";
 import { DeepPartial } from "../../../../helpers";
 /**
  * MultiSignature wraps the signatures from a multisig.LegacyAminoPubKey.
@@ -19,15 +19,15 @@ export interface CompactBitArray {
     elems: Uint8Array;
 }
 export declare const MultiSignature: {
-    encode(message: MultiSignature, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): MultiSignature;
+    encode(message: MultiSignature, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): MultiSignature;
     fromJSON(object: any): MultiSignature;
     toJSON(message: MultiSignature): unknown;
     fromPartial(object: DeepPartial<MultiSignature>): MultiSignature;
 };
 export declare const CompactBitArray: {
-    encode(message: CompactBitArray, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): CompactBitArray;
+    encode(message: CompactBitArray, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): CompactBitArray;
     fromJSON(object: any): CompactBitArray;
     toJSON(message: CompactBitArray): unknown;
     fromPartial(object: DeepPartial<CompactBitArray>): CompactBitArray;

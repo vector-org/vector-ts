@@ -1,10 +1,10 @@
 import { Params, Validator, Delegation, UnbondingDelegation, Redelegation } from "./staking";
-import * as _m0 from "protobufjs/minimal";
-import { DeepPartial, Long } from "../../../helpers";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { DeepPartial } from "../../../helpers";
 /** GenesisState defines the staking module's genesis state. */
 export interface GenesisState {
-    /** params defines all the paramaters of related to deposit. */
-    params?: Params;
+    /** params defines all the parameters of related to deposit. */
+    params: Params;
     /**
      * last_total_power tracks the total amounts of bonded tokens recorded during
      * the previous end block.
@@ -30,18 +30,18 @@ export interface LastValidatorPower {
     /** address is the address of the validator. */
     address: string;
     /** power defines the power of the validator. */
-    power: Long;
+    power: bigint;
 }
 export declare const GenesisState: {
-    encode(message: GenesisState, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): GenesisState;
+    encode(message: GenesisState, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): GenesisState;
     fromJSON(object: any): GenesisState;
     toJSON(message: GenesisState): unknown;
     fromPartial(object: DeepPartial<GenesisState>): GenesisState;
 };
 export declare const LastValidatorPower: {
-    encode(message: LastValidatorPower, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): LastValidatorPower;
+    encode(message: LastValidatorPower, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): LastValidatorPower;
     fromJSON(object: any): LastValidatorPower;
     toJSON(message: LastValidatorPower): unknown;
     fromPartial(object: DeepPartial<LastValidatorPower>): LastValidatorPower;

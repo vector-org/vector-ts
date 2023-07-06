@@ -2,17 +2,17 @@ import { Any } from "../../../google/protobuf/any";
 import { SignMode } from "../signing/v1beta1/signing";
 import { CompactBitArray } from "../../crypto/multisig/v1beta1/multisig";
 import { Coin } from "../../base/v1beta1/coin";
-import * as _m0 from "protobufjs/minimal";
-import { DeepPartial, Long } from "../../../helpers";
+import { BinaryReader, BinaryWriter } from "../../../binary";
+import { DeepPartial } from "../../../helpers";
 /** Tx is the standard type used for broadcasting transactions. */
 export interface Tx {
     /** body is the processable content of the transaction */
-    body?: TxBody;
+    body: TxBody;
     /**
      * auth_info is the authorization related content of the transaction,
      * specifically signers, signer modes and fee
      */
-    authInfo?: AuthInfo;
+    authInfo: AuthInfo;
     /**
      * signatures is a list of signatures that matches the length and order of
      * AuthInfo's signer_infos to allow connecting signature meta information like
@@ -64,7 +64,7 @@ export interface SignDoc {
      */
     chainId: string;
     /** account_number is the account number of the account in state */
-    accountNumber: Long;
+    accountNumber: bigint;
 }
 /**
  * SignDocDirectAux is the type used for generating sign bytes for
@@ -79,7 +79,7 @@ export interface SignDocDirectAux {
      */
     bodyBytes: Uint8Array;
     /** public_key is the public key of the signing account. */
-    publicKey?: Any;
+    publicKey: Any;
     /**
      * chain_id is the identifier of the chain this transaction targets.
      * It prevents signed transactions from being used on another chain by an
@@ -87,14 +87,18 @@ export interface SignDocDirectAux {
      */
     chainId: string;
     /** account_number is the account number of the account in state. */
-    accountNumber: Long;
+    accountNumber: bigint;
     /** sequence is the sequence number of the signing account. */
-    sequence: Long;
+    sequence: bigint;
     /**
-     * Tip is the optional tip used for meta-transactions. It should be left
-     * empty if the signer is not the tipper for this transaction.
+     * Tip is the optional tip used for transactions fees paid in another denom.
+     * It should be left empty if the signer is not the tipper for this
+     * transaction.
+     *
+     * This field is ignored if the chain didn't enable tips, i.e. didn't add the
+     * `TipDecorator` in its posthandler.
      */
-    tip?: Tip;
+    tip: Tip;
 }
 /** TxBody is the body of a transaction that all signers sign over. */
 export interface TxBody {
@@ -118,7 +122,7 @@ export interface TxBody {
      * timeout is the block height after which this transaction will not
      * be processed by the chain
      */
-    timeoutHeight: Long;
+    timeoutHeight: bigint;
     /**
      * extension_options are arbitrary options that can be added by chains
      * when the default options are not sufficient. If any of these are present
@@ -150,13 +154,16 @@ export interface AuthInfo {
      * based on the cost of evaluating the body and doing signature verification
      * of the signers. This can be estimated via simulation.
      */
-    fee?: Fee;
+    fee: Fee;
     /**
-     * Tip is the optional tip used for meta-transactions.
+     * Tip is the optional tip used for transactions fees paid in another denom.
+     *
+     * This field is ignored if the chain didn't enable tips, i.e. didn't add the
+     * `TipDecorator` in its posthandler.
      *
      * Since: cosmos-sdk 0.46
      */
-    tip?: Tip;
+    tip: Tip;
 }
 /**
  * SignerInfo describes the public key and signing mode of a single top-level
@@ -168,18 +175,18 @@ export interface SignerInfo {
      * that already exist in state. If unset, the verifier can use the required \
      * signer address for this position and lookup the public key.
      */
-    publicKey?: Any;
+    publicKey: Any;
     /**
      * mode_info describes the signing mode of the signer and is a nested
      * structure to support nested multisig pubkey's
      */
-    modeInfo?: ModeInfo;
+    modeInfo: ModeInfo;
     /**
      * sequence is the sequence of the account, which describes the
      * number of committed transactions signed by a given address. It is used to
      * prevent replay attacks.
      */
-    sequence: Long;
+    sequence: bigint;
 }
 /** ModeInfo describes the signing mode of a single or nested multisig signer. */
 export interface ModeInfo {
@@ -200,7 +207,7 @@ export interface ModeInfo_Single {
 /** Multi is the mode info for a multisig public key */
 export interface ModeInfo_Multi {
     /** bitarray specifies which keys within the multisig are signing */
-    bitarray?: CompactBitArray;
+    bitarray: CompactBitArray;
     /**
      * mode_infos is the corresponding modes of the signers of the multisig
      * which could include nested multisig public keys
@@ -219,7 +226,7 @@ export interface Fee {
      * gas_limit is the maximum gas that can be used in transaction processing
      * before an out of gas error occurs
      */
-    gasLimit: Long;
+    gasLimit: bigint;
     /**
      * if unset, the first signer is responsible for paying the fees. If set, the specified account must pay the fees.
      * the payer must be a tx signer (and thus have signed this field in AuthInfo).
@@ -260,103 +267,103 @@ export interface AuxSignerData {
      */
     address: string;
     /**
-     * sign_doc is the SIGN_MOD_DIRECT_AUX sign doc that the auxiliary signer
+     * sign_doc is the SIGN_MODE_DIRECT_AUX sign doc that the auxiliary signer
      * signs. Note: we use the same sign doc even if we're signing with
      * LEGACY_AMINO_JSON.
      */
-    signDoc?: SignDocDirectAux;
-    /** mode is the signing mode of the single signer */
+    signDoc: SignDocDirectAux;
+    /** mode is the signing mode of the single signer. */
     mode: SignMode;
     /** sig is the signature of the sign doc. */
     sig: Uint8Array;
 }
 export declare const Tx: {
-    encode(message: Tx, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Tx;
+    encode(message: Tx, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Tx;
     fromJSON(object: any): Tx;
     toJSON(message: Tx): unknown;
     fromPartial(object: DeepPartial<Tx>): Tx;
 };
 export declare const TxRaw: {
-    encode(message: TxRaw, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): TxRaw;
+    encode(message: TxRaw, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): TxRaw;
     fromJSON(object: any): TxRaw;
     toJSON(message: TxRaw): unknown;
     fromPartial(object: DeepPartial<TxRaw>): TxRaw;
 };
 export declare const SignDoc: {
-    encode(message: SignDoc, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): SignDoc;
+    encode(message: SignDoc, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): SignDoc;
     fromJSON(object: any): SignDoc;
     toJSON(message: SignDoc): unknown;
     fromPartial(object: DeepPartial<SignDoc>): SignDoc;
 };
 export declare const SignDocDirectAux: {
-    encode(message: SignDocDirectAux, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): SignDocDirectAux;
+    encode(message: SignDocDirectAux, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): SignDocDirectAux;
     fromJSON(object: any): SignDocDirectAux;
     toJSON(message: SignDocDirectAux): unknown;
     fromPartial(object: DeepPartial<SignDocDirectAux>): SignDocDirectAux;
 };
 export declare const TxBody: {
-    encode(message: TxBody, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): TxBody;
+    encode(message: TxBody, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): TxBody;
     fromJSON(object: any): TxBody;
     toJSON(message: TxBody): unknown;
     fromPartial(object: DeepPartial<TxBody>): TxBody;
 };
 export declare const AuthInfo: {
-    encode(message: AuthInfo, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): AuthInfo;
+    encode(message: AuthInfo, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): AuthInfo;
     fromJSON(object: any): AuthInfo;
     toJSON(message: AuthInfo): unknown;
     fromPartial(object: DeepPartial<AuthInfo>): AuthInfo;
 };
 export declare const SignerInfo: {
-    encode(message: SignerInfo, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): SignerInfo;
+    encode(message: SignerInfo, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): SignerInfo;
     fromJSON(object: any): SignerInfo;
     toJSON(message: SignerInfo): unknown;
     fromPartial(object: DeepPartial<SignerInfo>): SignerInfo;
 };
 export declare const ModeInfo: {
-    encode(message: ModeInfo, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): ModeInfo;
+    encode(message: ModeInfo, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): ModeInfo;
     fromJSON(object: any): ModeInfo;
     toJSON(message: ModeInfo): unknown;
     fromPartial(object: DeepPartial<ModeInfo>): ModeInfo;
 };
 export declare const ModeInfo_Single: {
-    encode(message: ModeInfo_Single, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): ModeInfo_Single;
+    encode(message: ModeInfo_Single, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): ModeInfo_Single;
     fromJSON(object: any): ModeInfo_Single;
     toJSON(message: ModeInfo_Single): unknown;
     fromPartial(object: DeepPartial<ModeInfo_Single>): ModeInfo_Single;
 };
 export declare const ModeInfo_Multi: {
-    encode(message: ModeInfo_Multi, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): ModeInfo_Multi;
+    encode(message: ModeInfo_Multi, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): ModeInfo_Multi;
     fromJSON(object: any): ModeInfo_Multi;
     toJSON(message: ModeInfo_Multi): unknown;
     fromPartial(object: DeepPartial<ModeInfo_Multi>): ModeInfo_Multi;
 };
 export declare const Fee: {
-    encode(message: Fee, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Fee;
+    encode(message: Fee, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Fee;
     fromJSON(object: any): Fee;
     toJSON(message: Fee): unknown;
     fromPartial(object: DeepPartial<Fee>): Fee;
 };
 export declare const Tip: {
-    encode(message: Tip, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): Tip;
+    encode(message: Tip, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): Tip;
     fromJSON(object: any): Tip;
     toJSON(message: Tip): unknown;
     fromPartial(object: DeepPartial<Tip>): Tip;
 };
 export declare const AuxSignerData: {
-    encode(message: AuxSignerData, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): AuxSignerData;
+    encode(message: AuxSignerData, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): AuxSignerData;
     fromJSON(object: any): AuxSignerData;
     toJSON(message: AuxSignerData): unknown;
     fromPartial(object: DeepPartial<AuxSignerData>): AuxSignerData;

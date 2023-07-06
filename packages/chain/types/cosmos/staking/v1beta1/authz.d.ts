@@ -1,5 +1,5 @@
 import { Coin } from "../../base/v1beta1/coin";
-import * as _m0 from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 /**
  * AuthorizationType defines the type of staking module authorization type
@@ -29,7 +29,7 @@ export interface StakeAuthorization {
      * max_tokens specifies the maximum amount of tokens can be delegate to a validator. If it is
      * empty, there is no spend limit and any amount of coins can be delegated.
      */
-    maxTokens?: Coin;
+    maxTokens: Coin;
     /**
      * allow_list specifies list of validator addresses to whom grantee can delegate tokens on behalf of granter's
      * account.
@@ -45,15 +45,15 @@ export interface StakeAuthorization_Validators {
     address: string[];
 }
 export declare const StakeAuthorization: {
-    encode(message: StakeAuthorization, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): StakeAuthorization;
+    encode(message: StakeAuthorization, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): StakeAuthorization;
     fromJSON(object: any): StakeAuthorization;
     toJSON(message: StakeAuthorization): unknown;
     fromPartial(object: DeepPartial<StakeAuthorization>): StakeAuthorization;
 };
 export declare const StakeAuthorization_Validators: {
-    encode(message: StakeAuthorization_Validators, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): StakeAuthorization_Validators;
+    encode(message: StakeAuthorization_Validators, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): StakeAuthorization_Validators;
     fromJSON(object: any): StakeAuthorization_Validators;
     toJSON(message: StakeAuthorization_Validators): unknown;
     fromPartial(object: DeepPartial<StakeAuthorization_Validators>): StakeAuthorization_Validators;

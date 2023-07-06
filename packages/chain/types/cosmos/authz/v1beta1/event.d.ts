@@ -1,4 +1,4 @@
-import * as _m0 from "protobufjs/minimal";
+import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 /** EventGrant is emitted on Msg/Grant */
 export interface EventGrant {
@@ -19,15 +19,15 @@ export interface EventRevoke {
     grantee: string;
 }
 export declare const EventGrant: {
-    encode(message: EventGrant, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventGrant;
+    encode(message: EventGrant, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventGrant;
     fromJSON(object: any): EventGrant;
     toJSON(message: EventGrant): unknown;
     fromPartial(object: DeepPartial<EventGrant>): EventGrant;
 };
 export declare const EventRevoke: {
-    encode(message: EventRevoke, writer?: _m0.Writer): _m0.Writer;
-    decode(input: _m0.Reader | Uint8Array, length?: number): EventRevoke;
+    encode(message: EventRevoke, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): EventRevoke;
     fromJSON(object: any): EventRevoke;
     toJSON(message: EventRevoke): unknown;
     fromPartial(object: DeepPartial<EventRevoke>): EventRevoke;
