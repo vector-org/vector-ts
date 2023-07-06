@@ -21,7 +21,7 @@ const write = (file, json, TypeName, isArray = false) => {
   const strfy = JSON.stringify(json, null, 2);
   const exportType = isArray ? TypeName + '[]' : TypeName;
   writeFileSync(
-    `${__dirname}/../src/${file}.ts`,
+    `${__dirname}/../src/build/${file}.ts`,
     `import { ${TypeName} } from '@chain-registry/types';
 const ${file}: ${exportType} = ${strfy};
 export default ${file};
