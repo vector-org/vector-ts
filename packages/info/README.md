@@ -1,13 +1,13 @@
-# @coolcatchain/chain
+# @coolcatnetwork/info
 
 Chain Registry info for CoolCat, including assets.
 
 ```sh
-yarn add @coolcatchain/info
+yarn add @coolcatnetwork/info
 ```
 
 ```js
-import { chain, assets } from '@coolcatchain/chain';
+import { chain, assets } from '@coolcatnetwork/info';
 ```
 
 ## assets
