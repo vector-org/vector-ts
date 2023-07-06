@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://github.com/coolcat-network/coolcat-ts/compare/@coolcatnetwork/chain@0.10.7...@coolcatnetwork/chain@0.13.0) (2023-07-06)
+
+**Note:** Version bump only for package @coolcatnetwork/chain
+
+
+
+
+
 ## [0.10.7](https://github.com/DigitalKitchenLabs/interface/compare/@coolcatnetwork/chain@0.10.6...@coolcatnetwork/chain@0.10.7) (2023-03-28)
 
 **Note:** Version bump only for package @coolcatnetwork/chain

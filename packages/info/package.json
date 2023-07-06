@@ -1,6 +1,6 @@
 {
   "name": "@coolcatnetwork/info",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "Chain Registry information for CoolCat",
   "author": "Marius Modlich <marius@digitalkitchen.zone>",
   "homepage": "https://github.com/coolcat-network/coolcat-ts",
