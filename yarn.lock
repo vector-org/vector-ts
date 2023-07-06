@@ -3655,6 +3655,7 @@ __metadata:
     "@cosmjs/proto-signing": 0.31.0
     "@cosmjs/stargate": 0.31.0
     "@cosmjs/tendermint-rpc": ^0.31.0
+    "@osmonauts/lcd": ^0.11.1
     "@osmonauts/telescope": ^0.99.2
     "@protobufs/cosmos": ^0.1.0
     "@protobufs/cosmwasm": ^0.1.1
@@ -5841,6 +5842,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@osmonauts/lcd@npm:^0.11.1":
+  version: 0.11.1
+  resolution: "@osmonauts/lcd@npm:0.11.1"
+  dependencies:
+    "@babel/runtime": ^7.21.0
+    axios: 0.27.2
+  checksum: d2c92a7030cd04c95c1ad0155c7bc24824a85c57cda20d7be27b1c079bda639cfc3ef16797dfaf8f0a41681f56b32dd35e5ee689790fba32e4510e75492f10d7
+  languageName: node
+  linkType: hard
+
 "@osmonauts/proto-parser@npm:^0.45.1":
   version: 0.45.1
   resolution: "@osmonauts/proto-parser@npm:0.45.1"
@@ -6929,6 +6940,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:0.27.2":
+  version: 0.27.2
+  resolution: "axios@npm:0.27.2"
+  dependencies:
+    follow-redirects: ^1.14.9
+    form-data: ^4.0.0
+  checksum: 38cb7540465fe8c4102850c4368053c21683af85c5fdf0ea619f9628abbcb59415d1e22ebc8a6390d2bbc9b58a9806c874f139767389c862ec9b772235f06854
+  languageName: node
+  linkType: hard
+
 "axios@npm:^0.21.2":
   version: 0.21.4
   resolution: "axios@npm:0.21.4"
@@ -7760,7 +7781,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"combined-stream@npm:^1.0.6, combined-stream@npm:~1.0.6":
+"combined-stream@npm:^1.0.6, combined-stream@npm:^1.0.8, combined-stream@npm:~1.0.6":
   version: 1.0.8
   resolution: "combined-stream@npm:1.0.8"
   dependencies:
@@ -9080,6 +9101,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"follow-redirects@npm:^1.14.9":
+  version: 1.15.2
+  resolution: "follow-redirects@npm:1.15.2"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: faa66059b66358ba65c234c2f2a37fcec029dc22775f35d9ad6abac56003268baf41e55f9ee645957b32c7d9f62baf1f0b906e68267276f54ec4b4c597c2b190
+  languageName: node
+  linkType: hard
+
 "foreground-child@npm:^3.1.0":
   version: 3.1.1
   resolution: "foreground-child@npm:3.1.1"
@@ -9094,6 +9125,17 @@ __metadata:
   version: 0.6.1
   resolution: "forever-agent@npm:0.6.1"
   checksum: 766ae6e220f5fe23676bb4c6a99387cec5b7b62ceb99e10923376e27bfea72f3c3aeec2ba5f45f3f7ba65d6616965aa7c20b15002b6860833bb6e394dea546a8
+  languageName: node
+  linkType: hard
+
+"form-data@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "form-data@npm:4.0.0"
+  dependencies:
+    asynckit: ^0.4.0
+    combined-stream: ^1.0.8
+    mime-types: ^2.1.12
+  checksum: 01135bf8675f9d5c61ff18e2e2932f719ca4de964e3be90ef4c36aacfc7b9cb2fceb5eca0b7e0190e3383fe51c5b37f4cb80b62ca06a99aaabfcfd6ac7c9328c
   languageName: node
   linkType: hard
 

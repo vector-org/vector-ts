@@ -1,6 +1,6 @@
 {
   "name": "@coolcatnetwork/chain",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "description": "An interface to connect any TypeScript application to the CoolCat network.",
   "author": "Marius Modlich <marius@digitalkitchen.zone>",
   "homepage": "https://github.com/coolcat-network/coolcat-ts#readme",
@@ -85,6 +85,7 @@
     "@cosmjs/proto-signing": "0.31.0",
     "@cosmjs/stargate": "0.31.0",
     "@cosmjs/tendermint-rpc": "^0.31.0",
+    "@osmonauts/lcd": "^0.11.1",
     "protobufjs": "^7.2.4"
   },
   "gitHead": "12bfe381b99f0cb6ce5e9cc46118742e93411cb4"
