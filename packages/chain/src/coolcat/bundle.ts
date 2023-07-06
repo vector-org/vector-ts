@@ -9,26 +9,26 @@ import * as _8 from "./catdrop/v1/tx";
 import * as _9 from "./mint/v1/genesis";
 import * as _10 from "./mint/v1/mint";
 import * as _11 from "./mint/v1/query";
-import * as _147 from "./catdrop/v1/tx.amino";
-import * as _148 from "./catdrop/v1/tx.registry";
-import * as _149 from "./alloc/v1/query.lcd";
-import * as _150 from "./catdrop/v1/query.lcd";
-import * as _151 from "./mint/v1/query.lcd";
-import * as _152 from "./alloc/v1/query.rpc.Query";
-import * as _153 from "./catdrop/v1/query.rpc.Query";
-import * as _154 from "./mint/v1/query.rpc.Query";
-import * as _155 from "./catdrop/v1/tx.rpc.msg";
-import * as _210 from "./lcd";
-import * as _211 from "./rpc.query";
-import * as _212 from "./rpc.tx";
+import * as _151 from "./catdrop/v1/tx.amino";
+import * as _152 from "./catdrop/v1/tx.registry";
+import * as _153 from "./alloc/v1/query.lcd";
+import * as _154 from "./catdrop/v1/query.lcd";
+import * as _155 from "./mint/v1/query.lcd";
+import * as _156 from "./alloc/v1/query.rpc.Query";
+import * as _157 from "./catdrop/v1/query.rpc.Query";
+import * as _158 from "./mint/v1/query.rpc.Query";
+import * as _159 from "./catdrop/v1/tx.rpc.msg";
+import * as _219 from "./lcd";
+import * as _220 from "./rpc.query";
+import * as _221 from "./rpc.tx";
 export namespace coolcat {
   export namespace alloc {
     export const v1 = {
       ..._1,
       ..._2,
       ..._3,
-      ..._149,
-      ..._152
+      ..._153,
+      ..._156
     };
   }
   export namespace catdrop {
@@ -38,11 +38,11 @@ export namespace coolcat {
       ..._6,
       ..._7,
       ..._8,
-      ..._147,
-      ..._148,
-      ..._150,
-      ..._153,
-      ..._155
+      ..._151,
+      ..._152,
+      ..._154,
+      ..._157,
+      ..._159
     };
   }
   export namespace mint {
@@ -50,13 +50,13 @@ export namespace coolcat {
       ..._9,
       ..._10,
       ..._11,
-      ..._151,
-      ..._154
+      ..._155,
+      ..._158
     };
   }
   export const ClientFactory = {
-    ..._210,
-    ..._211,
-    ..._212
+    ..._219,
+    ..._220,
+    ..._221
   };
 }

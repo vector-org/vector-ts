@@ -9,21 +9,21 @@ import * as _8 from "./catdrop/v1/tx";
 import * as _9 from "./mint/v1/genesis";
 import * as _10 from "./mint/v1/mint";
 import * as _11 from "./mint/v1/query";
-import * as _149 from "./alloc/v1/query.lcd";
-import * as _150 from "./catdrop/v1/query.lcd";
-import * as _151 from "./mint/v1/query.lcd";
-import * as _152 from "./alloc/v1/query.rpc.Query";
-import * as _153 from "./catdrop/v1/query.rpc.Query";
-import * as _154 from "./mint/v1/query.rpc.Query";
-import * as _155 from "./catdrop/v1/tx.rpc.msg";
+import * as _153 from "./alloc/v1/query.lcd";
+import * as _154 from "./catdrop/v1/query.lcd";
+import * as _155 from "./mint/v1/query.lcd";
+import * as _156 from "./alloc/v1/query.rpc.Query";
+import * as _157 from "./catdrop/v1/query.rpc.Query";
+import * as _158 from "./mint/v1/query.rpc.Query";
+import * as _159 from "./catdrop/v1/tx.rpc.msg";
 export declare namespace coolcat {
     namespace alloc {
         const v1: {
-            QueryClientImpl: typeof _152.QueryClientImpl;
+            QueryClientImpl: typeof _156.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 params(request?: _3.QueryParamsRequest): Promise<_3.QueryParamsResponse>;
             };
-            LCDQueryClient: typeof _149.LCDQueryClient;
+            LCDQueryClient: typeof _153.LCDQueryClient;
             QueryParamsRequest: {
                 encode(_: _3.QueryParamsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
                 decode(input: Uint8Array | import("..").BinaryReader, length?: number): _3.QueryParamsRequest;
@@ -81,8 +81,8 @@ export declare namespace coolcat {
     }
     namespace catdrop {
         const v1: {
-            MsgClientImpl: typeof _155.MsgClientImpl;
-            QueryClientImpl: typeof _153.QueryClientImpl;
+            MsgClientImpl: typeof _159.MsgClientImpl;
+            QueryClientImpl: typeof _157.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 moduleAccountBalance(request?: _7.QueryModuleAccountBalanceRequest): Promise<_7.QueryModuleAccountBalanceResponse>;
                 params(request?: _7.QueryParamsRequest): Promise<_7.QueryParamsResponse>;
@@ -90,7 +90,7 @@ export declare namespace coolcat {
                 claimableForAction(request: _7.QueryClaimableForActionRequest): Promise<_7.QueryClaimableForActionResponse>;
                 totalClaimable(request: _7.QueryTotalClaimableRequest): Promise<_7.QueryTotalClaimableResponse>;
             };
-            LCDQueryClient: typeof _150.LCDQueryClient;
+            LCDQueryClient: typeof _154.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
             load: (protoRegistry: import("@cosmjs/proto-signing").Registry) => void;
             MessageComposer: {
@@ -383,13 +383,13 @@ export declare namespace coolcat {
     }
     namespace mint {
         const v1: {
-            QueryClientImpl: typeof _154.QueryClientImpl;
+            QueryClientImpl: typeof _158.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 params(request?: _11.QueryParamsRequest): Promise<_11.QueryParamsResponse>;
                 inflation(request?: _11.QueryInflationRequest): Promise<_11.QueryInflationResponse>;
                 annualProvisions(request?: _11.QueryAnnualProvisionsRequest): Promise<_11.QueryAnnualProvisionsResponse>;
             };
-            LCDQueryClient: typeof _151.LCDQueryClient;
+            LCDQueryClient: typeof _155.LCDQueryClient;
             QueryParamsRequest: {
                 encode(_: _11.QueryParamsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
                 decode(input: Uint8Array | import("..").BinaryReader, length?: number): _11.QueryParamsRequest;
@@ -489,10 +489,13 @@ export declare namespace coolcat {
         }) => Promise<{
             coolcat: {
                 catdrop: {
-                    v1: _155.MsgClientImpl;
+                    v1: _159.MsgClientImpl;
                 };
             };
             cosmos: {
+                auth: {
+                    v1beta1: import("../cosmos/auth/v1beta1/tx.rpc.msg").MsgClientImpl;
+                };
                 authz: {
                     v1beta1: import("../cosmos/authz/v1beta1/tx.rpc.msg").MsgClientImpl;
                 };
@@ -550,6 +553,20 @@ export declare namespace coolcat {
                 };
             };
             cosmos: {
+                auth: {
+                    v1beta1: {
+                        accounts(request?: import("../cosmos/auth/v1beta1/query").QueryAccountsRequest): Promise<import("../cosmos/auth/v1beta1/query").QueryAccountsResponse>;
+                        account(request: import("../cosmos/auth/v1beta1/query").QueryAccountRequest): Promise<import("../cosmos/auth/v1beta1/query").QueryAccountResponse>;
+                        accountAddressByID(request: import("../cosmos/auth/v1beta1/query").QueryAccountAddressByIDRequest): Promise<import("../cosmos/auth/v1beta1/query").QueryAccountAddressByIDResponse>;
+                        params(request?: import("../cosmos/auth/v1beta1/query").QueryParamsRequest): Promise<import("../cosmos/auth/v1beta1/query").QueryParamsResponse>;
+                        moduleAccounts(request?: import("../cosmos/auth/v1beta1/query").QueryModuleAccountsRequest): Promise<import("../cosmos/auth/v1beta1/query").QueryModuleAccountsResponse>;
+                        moduleAccountByName(request: import("../cosmos/auth/v1beta1/query").QueryModuleAccountByNameRequest): Promise<import("../cosmos/auth/v1beta1/query").QueryModuleAccountByNameResponse>;
+                        bech32Prefix(request?: import("../cosmos/auth/v1beta1/query").Bech32PrefixRequest): Promise<import("../cosmos/auth/v1beta1/query").Bech32PrefixResponse>;
+                        addressBytesToString(request: import("../cosmos/auth/v1beta1/query").AddressBytesToStringRequest): Promise<import("../cosmos/auth/v1beta1/query").AddressBytesToStringResponse>;
+                        addressStringToBytes(request: import("../cosmos/auth/v1beta1/query").AddressStringToBytesRequest): Promise<import("../cosmos/auth/v1beta1/query").AddressStringToBytesResponse>;
+                        accountInfo(request: import("../cosmos/auth/v1beta1/query").QueryAccountInfoRequest): Promise<import("../cosmos/auth/v1beta1/query").QueryAccountInfoResponse>;
+                    };
+                };
                 authz: {
                     v1beta1: {
                         grants(request: import("../cosmos/authz/v1beta1/query").QueryGrantsRequest): Promise<import("../cosmos/authz/v1beta1/query").QueryGrantsResponse>;
@@ -698,16 +715,19 @@ export declare namespace coolcat {
         }) => Promise<{
             coolcat: {
                 alloc: {
-                    v1: _149.LCDQueryClient;
+                    v1: _153.LCDQueryClient;
                 };
                 catdrop: {
-                    v1: _150.LCDQueryClient;
+                    v1: _154.LCDQueryClient;
                 };
                 mint: {
-                    v1: _151.LCDQueryClient;
+                    v1: _155.LCDQueryClient;
                 };
             };
             cosmos: {
+                auth: {
+                    v1beta1: import("../cosmos/auth/v1beta1/query.lcd").LCDQueryClient;
+                };
                 authz: {
                     v1beta1: import("../cosmos/authz/v1beta1/query.lcd").LCDQueryClient;
                 };

@@ -26,6 +26,11 @@ export const createLCDClient = async ({
       }
     },
     cosmos: {
+      auth: {
+        v1beta1: new (await import("../cosmos/auth/v1beta1/query.lcd")).LCDQueryClient({
+          requestClient
+        })
+      },
       authz: {
         v1beta1: new (await import("../cosmos/authz/v1beta1/query.lcd")).LCDQueryClient({
           requestClient

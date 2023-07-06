@@ -735,6 +735,29 @@ export declare const cosmosAminoConverters: {
             use_default_for: string[];
         }) => import("./bank/v1beta1/tx").MsgSetSendEnabled;
     };
+    "/cosmos.auth.v1beta1.MsgUpdateParams": {
+        aminoType: string;
+        toAmino: ({ authority, params }: import("./auth/v1beta1/tx").MsgUpdateParams) => {
+            authority: string;
+            params: {
+                max_memo_characters: string;
+                tx_sig_limit: string;
+                tx_size_cost_per_byte: string;
+                sig_verify_cost_ed25519: string;
+                sig_verify_cost_secp256k1: string;
+            };
+        };
+        fromAmino: ({ authority, params }: {
+            authority: string;
+            params: {
+                max_memo_characters: string;
+                tx_sig_limit: string;
+                tx_size_cost_per_byte: string;
+                sig_verify_cost_ed25519: string;
+                sig_verify_cost_secp256k1: string;
+            };
+        }) => import("./auth/v1beta1/tx").MsgUpdateParams;
+    };
 };
 export declare const cosmosProtoRegistry: ReadonlyArray<[string, GeneratedType]>;
 export declare const getSigningCosmosClientOptions: () => {

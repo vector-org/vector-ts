@@ -8,6 +8,9 @@ export declare const createRPCMsgClient: ({ rpc }: {
         };
     };
     cosmos: {
+        auth: {
+            v1beta1: import("../cosmos/auth/v1beta1/tx.rpc.msg").MsgClientImpl;
+        };
         authz: {
             v1beta1: import("../cosmos/authz/v1beta1/tx.rpc.msg").MsgClientImpl;
         };
