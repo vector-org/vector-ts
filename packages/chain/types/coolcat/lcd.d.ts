@@ -43,6 +43,9 @@ export declare const createLCDClient: ({ restEndpoint }: {
         nft: {
             v1beta1: import("../cosmos/nft/v1beta1/query.lcd").LCDQueryClient;
         };
+        params: {
+            v1beta1: import("../cosmos/params/v1beta1/query.lcd").LCDQueryClient;
+        };
         staking: {
             v1beta1: import("../cosmos/staking/v1beta1/query.lcd").LCDQueryClient;
         };

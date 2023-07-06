@@ -32,6 +32,9 @@ export declare const createLCDClient: ({ restEndpoint }: {
         nft: {
             v1beta1: import("./nft/v1beta1/query.lcd").LCDQueryClient;
         };
+        params: {
+            v1beta1: import("./params/v1beta1/query.lcd").LCDQueryClient;
+        };
         staking: {
             v1beta1: import("./staking/v1beta1/query.lcd").LCDQueryClient;
         };
