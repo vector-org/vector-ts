@@ -1,16 +1,15 @@
-import { getAssetLists } from '@chain-registry/utils';
-import { assets, chains, ibc } from 'chain-registry';
+import { assets, chains } from 'chain-registry';
 import { writeFileSync } from 'fs';
 
 const chainName = 'coolcat';
 
-const asset_list = assets.reduce((m, { chain_name }) => {
-  if (chain_name !== chainName) return m;
-  return [...m, ...getAssetLists(chain_name, ibc, assets)];
-}, []);
+// const asset_list = assets.reduce((m, { chain_name }) => {
+//   if (chain_name !== chainName) return m;
+//   return [...m, ...getAssetLists(chain_name + 'testnet', ibc, assets)];
+// }, []);
 
-const assetList = assets.find((list) => list.chain_name === chainName);
-const chain = chains.find((chain) => chain.chain_name === chainName);
+// const assetList = assets.find((list) => list.chain_name === chainName);
+// const chain = chains.find((chain) => chain.chain_name === chainName);
 const testnet = chains.find(
   (chain) => chain.chain_name === chainName + 'testnet'
 );
