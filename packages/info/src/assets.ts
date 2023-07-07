@@ -24,7 +24,8 @@ const assets: AssetList = {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/coolcattestnet/images/coolcat.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/coolcattestnet/images/coolcat.png'
       },
-      keywords: ['nft', 'staking', 'games']
+      keywords: ['nft', 'staking', 'games'],
+      type_asset: 'native'
     }
   ]
 };
