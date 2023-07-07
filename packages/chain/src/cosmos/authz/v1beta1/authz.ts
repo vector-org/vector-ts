@@ -2,6 +2,7 @@ import { Any } from "../../../google/protobuf/any";
 import { Timestamp } from "../../../google/protobuf/timestamp";
 import { SendAuthorization } from "../../bank/v1beta1/authz";
 import { StakeAuthorization } from "../../staking/v1beta1/authz";
+import { ContractExecutionAuthorization, ContractMigrationAuthorization } from "../../../cosmwasm/wasm/v1/authz";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial, fromJsonTimestamp, fromTimestamp } from "../../../helpers";
 /**
@@ -17,7 +18,7 @@ export interface GenericAuthorization {
  * the provide method with expiration time.
  */
 export interface Grant {
-  authorization: GenericAuthorization | SendAuthorization | StakeAuthorization | Any | undefined;
+  authorization: GenericAuthorization | SendAuthorization | StakeAuthorization | ContractExecutionAuthorization | ContractMigrationAuthorization | Any | undefined;
   /**
    * time when the grant will expire and will be pruned. If null, then the grant
    * doesn't have a time expiration (other conditions  in `authorization`
@@ -32,7 +33,7 @@ export interface Grant {
 export interface GrantAuthorization {
   granter: string;
   grantee: string;
-  authorization: GenericAuthorization | SendAuthorization | StakeAuthorization | Any | undefined;
+  authorization: GenericAuthorization | SendAuthorization | StakeAuthorization | ContractExecutionAuthorization | ContractMigrationAuthorization | Any | undefined;
   expiration: Timestamp;
 }
 /** GrantQueueItem contains the list of TypeURL of a sdk.Msg. */
@@ -264,7 +265,7 @@ export const GrantQueueItem = {
     return message;
   }
 };
-export const Cosmos_authzv1beta1Authorization_InterfaceDecoder = (input: BinaryReader | Uint8Array): GenericAuthorization | SendAuthorization | StakeAuthorization | Any => {
+export const Cosmos_authzv1beta1Authorization_InterfaceDecoder = (input: BinaryReader | Uint8Array): GenericAuthorization | SendAuthorization | StakeAuthorization | ContractExecutionAuthorization | ContractMigrationAuthorization | Any => {
   const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
   const data = Any.decode(reader, reader.uint32());
   switch (data.typeUrl) {
@@ -274,6 +275,10 @@ export const Cosmos_authzv1beta1Authorization_InterfaceDecoder = (input: BinaryR
       return SendAuthorization.decode(data.value);
     case "/cosmos.staking.v1beta1.StakeAuthorization":
       return StakeAuthorization.decode(data.value);
+    case "/cosmwasm.wasm.v1.ContractExecutionAuthorization":
+      return ContractExecutionAuthorization.decode(data.value);
+    case "/cosmwasm.wasm.v1.ContractMigrationAuthorization":
+      return ContractMigrationAuthorization.decode(data.value);
     default:
       return data;
   }

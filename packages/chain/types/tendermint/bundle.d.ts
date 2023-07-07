@@ -1,36 +1,36 @@
-import * as _142 from "./abci/types";
-import * as _143 from "./crypto/keys";
-import * as _144 from "./crypto/proof";
-import * as _145 from "./libs/bits/types";
-import * as _146 from "./p2p/types";
-import * as _147 from "./types/block";
-import * as _148 from "./types/evidence";
-import * as _149 from "./types/params";
-import * as _150 from "./types/types";
-import * as _151 from "./types/validator";
-import * as _152 from "./version/types";
+import * as _149 from "./abci/types";
+import * as _150 from "./crypto/keys";
+import * as _151 from "./crypto/proof";
+import * as _152 from "./libs/bits/types";
+import * as _153 from "./p2p/types";
+import * as _154 from "./types/block";
+import * as _155 from "./types/evidence";
+import * as _156 from "./types/params";
+import * as _157 from "./types/types";
+import * as _158 from "./types/validator";
+import * as _159 from "./version/types";
 export declare namespace tendermint {
     const abci: {
-        checkTxTypeFromJSON(object: any): _142.CheckTxType;
-        checkTxTypeToJSON(object: _142.CheckTxType): string;
-        responseOfferSnapshot_ResultFromJSON(object: any): _142.ResponseOfferSnapshot_Result;
-        responseOfferSnapshot_ResultToJSON(object: _142.ResponseOfferSnapshot_Result): string;
-        responseApplySnapshotChunk_ResultFromJSON(object: any): _142.ResponseApplySnapshotChunk_Result;
-        responseApplySnapshotChunk_ResultToJSON(object: _142.ResponseApplySnapshotChunk_Result): string;
-        responseProcessProposal_ProposalStatusFromJSON(object: any): _142.ResponseProcessProposal_ProposalStatus;
-        responseProcessProposal_ProposalStatusToJSON(object: _142.ResponseProcessProposal_ProposalStatus): string;
-        misbehaviorTypeFromJSON(object: any): _142.MisbehaviorType;
-        misbehaviorTypeToJSON(object: _142.MisbehaviorType): string;
-        CheckTxType: typeof _142.CheckTxType;
-        ResponseOfferSnapshot_Result: typeof _142.ResponseOfferSnapshot_Result;
-        ResponseApplySnapshotChunk_Result: typeof _142.ResponseApplySnapshotChunk_Result;
-        ResponseProcessProposal_ProposalStatus: typeof _142.ResponseProcessProposal_ProposalStatus;
-        MisbehaviorType: typeof _142.MisbehaviorType;
+        checkTxTypeFromJSON(object: any): _149.CheckTxType;
+        checkTxTypeToJSON(object: _149.CheckTxType): string;
+        responseOfferSnapshot_ResultFromJSON(object: any): _149.ResponseOfferSnapshot_Result;
+        responseOfferSnapshot_ResultToJSON(object: _149.ResponseOfferSnapshot_Result): string;
+        responseApplySnapshotChunk_ResultFromJSON(object: any): _149.ResponseApplySnapshotChunk_Result;
+        responseApplySnapshotChunk_ResultToJSON(object: _149.ResponseApplySnapshotChunk_Result): string;
+        responseProcessProposal_ProposalStatusFromJSON(object: any): _149.ResponseProcessProposal_ProposalStatus;
+        responseProcessProposal_ProposalStatusToJSON(object: _149.ResponseProcessProposal_ProposalStatus): string;
+        misbehaviorTypeFromJSON(object: any): _149.MisbehaviorType;
+        misbehaviorTypeToJSON(object: _149.MisbehaviorType): string;
+        CheckTxType: typeof _149.CheckTxType;
+        ResponseOfferSnapshot_Result: typeof _149.ResponseOfferSnapshot_Result;
+        ResponseApplySnapshotChunk_Result: typeof _149.ResponseApplySnapshotChunk_Result;
+        ResponseProcessProposal_ProposalStatus: typeof _149.ResponseProcessProposal_ProposalStatus;
+        MisbehaviorType: typeof _149.MisbehaviorType;
         Request: {
-            encode(message: _142.Request, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.Request;
-            fromJSON(object: any): _142.Request;
-            toJSON(message: _142.Request): unknown;
+            encode(message: _149.Request, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.Request;
+            fromJSON(object: any): _149.Request;
+            toJSON(message: _149.Request): unknown;
             fromPartial(object: {
                 echo?: {
                     message?: string;
@@ -125,7 +125,7 @@ export declare namespace tendermint {
                         }[];
                     };
                     byzantineValidators?: {
-                        type?: _142.MisbehaviorType;
+                        type?: _149.MisbehaviorType;
                         validator?: {
                             address?: Uint8Array;
                             power?: bigint;
@@ -140,7 +140,7 @@ export declare namespace tendermint {
                 };
                 checkTx?: {
                     tx?: Uint8Array;
-                    type?: _142.CheckTxType;
+                    type?: _149.CheckTxType;
                 };
                 deliverTx?: {
                     tx?: Uint8Array;
@@ -185,7 +185,7 @@ export declare namespace tendermint {
                         }[];
                     };
                     misbehavior?: {
-                        type?: _142.MisbehaviorType;
+                        type?: _149.MisbehaviorType;
                         validator?: {
                             address?: Uint8Array;
                             power?: bigint;
@@ -218,7 +218,7 @@ export declare namespace tendermint {
                         }[];
                     };
                     misbehavior?: {
-                        type?: _142.MisbehaviorType;
+                        type?: _149.MisbehaviorType;
                         validator?: {
                             address?: Uint8Array;
                             power?: bigint;
@@ -239,41 +239,41 @@ export declare namespace tendermint {
                     nextValidatorsHash?: Uint8Array;
                     proposerAddress?: Uint8Array;
                 };
-            }): _142.Request;
+            }): _149.Request;
         };
         RequestEcho: {
-            encode(message: _142.RequestEcho, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.RequestEcho;
-            fromJSON(object: any): _142.RequestEcho;
-            toJSON(message: _142.RequestEcho): unknown;
+            encode(message: _149.RequestEcho, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.RequestEcho;
+            fromJSON(object: any): _149.RequestEcho;
+            toJSON(message: _149.RequestEcho): unknown;
             fromPartial(object: {
                 message?: string;
-            }): _142.RequestEcho;
+            }): _149.RequestEcho;
         };
         RequestFlush: {
-            encode(_: _142.RequestFlush, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.RequestFlush;
-            fromJSON(_: any): _142.RequestFlush;
-            toJSON(_: _142.RequestFlush): unknown;
-            fromPartial(_: {}): _142.RequestFlush;
+            encode(_: _149.RequestFlush, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.RequestFlush;
+            fromJSON(_: any): _149.RequestFlush;
+            toJSON(_: _149.RequestFlush): unknown;
+            fromPartial(_: {}): _149.RequestFlush;
         };
         RequestInfo: {
-            encode(message: _142.RequestInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.RequestInfo;
-            fromJSON(object: any): _142.RequestInfo;
-            toJSON(message: _142.RequestInfo): unknown;
+            encode(message: _149.RequestInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.RequestInfo;
+            fromJSON(object: any): _149.RequestInfo;
+            toJSON(message: _149.RequestInfo): unknown;
             fromPartial(object: {
                 version?: string;
                 blockVersion?: bigint;
                 p2pVersion?: bigint;
                 abciVersion?: string;
-            }): _142.RequestInfo;
+            }): _149.RequestInfo;
         };
         RequestInitChain: {
-            encode(message: _142.RequestInitChain, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.RequestInitChain;
-            fromJSON(object: any): _142.RequestInitChain;
-            toJSON(message: _142.RequestInitChain): unknown;
+            encode(message: _149.RequestInitChain, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.RequestInitChain;
+            fromJSON(object: any): _149.RequestInitChain;
+            toJSON(message: _149.RequestInitChain): unknown;
             fromPartial(object: {
                 time?: {
                     seconds?: bigint;
@@ -309,25 +309,25 @@ export declare namespace tendermint {
                 }[];
                 appStateBytes?: Uint8Array;
                 initialHeight?: bigint;
-            }): _142.RequestInitChain;
+            }): _149.RequestInitChain;
         };
         RequestQuery: {
-            encode(message: _142.RequestQuery, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.RequestQuery;
-            fromJSON(object: any): _142.RequestQuery;
-            toJSON(message: _142.RequestQuery): unknown;
+            encode(message: _149.RequestQuery, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.RequestQuery;
+            fromJSON(object: any): _149.RequestQuery;
+            toJSON(message: _149.RequestQuery): unknown;
             fromPartial(object: {
                 data?: Uint8Array;
                 path?: string;
                 height?: bigint;
                 prove?: boolean;
-            }): _142.RequestQuery;
+            }): _149.RequestQuery;
         };
         RequestBeginBlock: {
-            encode(message: _142.RequestBeginBlock, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.RequestBeginBlock;
-            fromJSON(object: any): _142.RequestBeginBlock;
-            toJSON(message: _142.RequestBeginBlock): unknown;
+            encode(message: _149.RequestBeginBlock, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.RequestBeginBlock;
+            fromJSON(object: any): _149.RequestBeginBlock;
+            toJSON(message: _149.RequestBeginBlock): unknown;
             fromPartial(object: {
                 hash?: Uint8Array;
                 header?: {
@@ -369,7 +369,7 @@ export declare namespace tendermint {
                     }[];
                 };
                 byzantineValidators?: {
-                    type?: _142.MisbehaviorType;
+                    type?: _149.MisbehaviorType;
                     validator?: {
                         address?: Uint8Array;
                         power?: bigint;
@@ -381,55 +381,55 @@ export declare namespace tendermint {
                     };
                     totalVotingPower?: bigint;
                 }[];
-            }): _142.RequestBeginBlock;
+            }): _149.RequestBeginBlock;
         };
         RequestCheckTx: {
-            encode(message: _142.RequestCheckTx, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.RequestCheckTx;
-            fromJSON(object: any): _142.RequestCheckTx;
-            toJSON(message: _142.RequestCheckTx): unknown;
+            encode(message: _149.RequestCheckTx, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.RequestCheckTx;
+            fromJSON(object: any): _149.RequestCheckTx;
+            toJSON(message: _149.RequestCheckTx): unknown;
             fromPartial(object: {
                 tx?: Uint8Array;
-                type?: _142.CheckTxType;
-            }): _142.RequestCheckTx;
+                type?: _149.CheckTxType;
+            }): _149.RequestCheckTx;
         };
         RequestDeliverTx: {
-            encode(message: _142.RequestDeliverTx, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.RequestDeliverTx;
-            fromJSON(object: any): _142.RequestDeliverTx;
-            toJSON(message: _142.RequestDeliverTx): unknown;
+            encode(message: _149.RequestDeliverTx, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.RequestDeliverTx;
+            fromJSON(object: any): _149.RequestDeliverTx;
+            toJSON(message: _149.RequestDeliverTx): unknown;
             fromPartial(object: {
                 tx?: Uint8Array;
-            }): _142.RequestDeliverTx;
+            }): _149.RequestDeliverTx;
         };
         RequestEndBlock: {
-            encode(message: _142.RequestEndBlock, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.RequestEndBlock;
-            fromJSON(object: any): _142.RequestEndBlock;
-            toJSON(message: _142.RequestEndBlock): unknown;
+            encode(message: _149.RequestEndBlock, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.RequestEndBlock;
+            fromJSON(object: any): _149.RequestEndBlock;
+            toJSON(message: _149.RequestEndBlock): unknown;
             fromPartial(object: {
                 height?: bigint;
-            }): _142.RequestEndBlock;
+            }): _149.RequestEndBlock;
         };
         RequestCommit: {
-            encode(_: _142.RequestCommit, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.RequestCommit;
-            fromJSON(_: any): _142.RequestCommit;
-            toJSON(_: _142.RequestCommit): unknown;
-            fromPartial(_: {}): _142.RequestCommit;
+            encode(_: _149.RequestCommit, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.RequestCommit;
+            fromJSON(_: any): _149.RequestCommit;
+            toJSON(_: _149.RequestCommit): unknown;
+            fromPartial(_: {}): _149.RequestCommit;
         };
         RequestListSnapshots: {
-            encode(_: _142.RequestListSnapshots, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.RequestListSnapshots;
-            fromJSON(_: any): _142.RequestListSnapshots;
-            toJSON(_: _142.RequestListSnapshots): unknown;
-            fromPartial(_: {}): _142.RequestListSnapshots;
+            encode(_: _149.RequestListSnapshots, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.RequestListSnapshots;
+            fromJSON(_: any): _149.RequestListSnapshots;
+            toJSON(_: _149.RequestListSnapshots): unknown;
+            fromPartial(_: {}): _149.RequestListSnapshots;
         };
         RequestOfferSnapshot: {
-            encode(message: _142.RequestOfferSnapshot, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.RequestOfferSnapshot;
-            fromJSON(object: any): _142.RequestOfferSnapshot;
-            toJSON(message: _142.RequestOfferSnapshot): unknown;
+            encode(message: _149.RequestOfferSnapshot, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.RequestOfferSnapshot;
+            fromJSON(object: any): _149.RequestOfferSnapshot;
+            toJSON(message: _149.RequestOfferSnapshot): unknown;
             fromPartial(object: {
                 snapshot?: {
                     height?: bigint;
@@ -439,35 +439,35 @@ export declare namespace tendermint {
                     metadata?: Uint8Array;
                 };
                 appHash?: Uint8Array;
-            }): _142.RequestOfferSnapshot;
+            }): _149.RequestOfferSnapshot;
         };
         RequestLoadSnapshotChunk: {
-            encode(message: _142.RequestLoadSnapshotChunk, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.RequestLoadSnapshotChunk;
-            fromJSON(object: any): _142.RequestLoadSnapshotChunk;
-            toJSON(message: _142.RequestLoadSnapshotChunk): unknown;
+            encode(message: _149.RequestLoadSnapshotChunk, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.RequestLoadSnapshotChunk;
+            fromJSON(object: any): _149.RequestLoadSnapshotChunk;
+            toJSON(message: _149.RequestLoadSnapshotChunk): unknown;
             fromPartial(object: {
                 height?: bigint;
                 format?: number;
                 chunk?: number;
-            }): _142.RequestLoadSnapshotChunk;
+            }): _149.RequestLoadSnapshotChunk;
         };
         RequestApplySnapshotChunk: {
-            encode(message: _142.RequestApplySnapshotChunk, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.RequestApplySnapshotChunk;
-            fromJSON(object: any): _142.RequestApplySnapshotChunk;
-            toJSON(message: _142.RequestApplySnapshotChunk): unknown;
+            encode(message: _149.RequestApplySnapshotChunk, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.RequestApplySnapshotChunk;
+            fromJSON(object: any): _149.RequestApplySnapshotChunk;
+            toJSON(message: _149.RequestApplySnapshotChunk): unknown;
             fromPartial(object: {
                 index?: number;
                 chunk?: Uint8Array;
                 sender?: string;
-            }): _142.RequestApplySnapshotChunk;
+            }): _149.RequestApplySnapshotChunk;
         };
         RequestPrepareProposal: {
-            encode(message: _142.RequestPrepareProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.RequestPrepareProposal;
-            fromJSON(object: any): _142.RequestPrepareProposal;
-            toJSON(message: _142.RequestPrepareProposal): unknown;
+            encode(message: _149.RequestPrepareProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.RequestPrepareProposal;
+            fromJSON(object: any): _149.RequestPrepareProposal;
+            toJSON(message: _149.RequestPrepareProposal): unknown;
             fromPartial(object: {
                 maxTxBytes?: bigint;
                 txs?: Uint8Array[];
@@ -483,7 +483,7 @@ export declare namespace tendermint {
                     }[];
                 };
                 misbehavior?: {
-                    type?: _142.MisbehaviorType;
+                    type?: _149.MisbehaviorType;
                     validator?: {
                         address?: Uint8Array;
                         power?: bigint;
@@ -502,13 +502,13 @@ export declare namespace tendermint {
                 };
                 nextValidatorsHash?: Uint8Array;
                 proposerAddress?: Uint8Array;
-            }): _142.RequestPrepareProposal;
+            }): _149.RequestPrepareProposal;
         };
         RequestProcessProposal: {
-            encode(message: _142.RequestProcessProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.RequestProcessProposal;
-            fromJSON(object: any): _142.RequestProcessProposal;
-            toJSON(message: _142.RequestProcessProposal): unknown;
+            encode(message: _149.RequestProcessProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.RequestProcessProposal;
+            fromJSON(object: any): _149.RequestProcessProposal;
+            toJSON(message: _149.RequestProcessProposal): unknown;
             fromPartial(object: {
                 txs?: Uint8Array[];
                 proposedLastCommit?: {
@@ -522,7 +522,7 @@ export declare namespace tendermint {
                     }[];
                 };
                 misbehavior?: {
-                    type?: _142.MisbehaviorType;
+                    type?: _149.MisbehaviorType;
                     validator?: {
                         address?: Uint8Array;
                         power?: bigint;
@@ -542,13 +542,13 @@ export declare namespace tendermint {
                 };
                 nextValidatorsHash?: Uint8Array;
                 proposerAddress?: Uint8Array;
-            }): _142.RequestProcessProposal;
+            }): _149.RequestProcessProposal;
         };
         Response: {
-            encode(message: _142.Response, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.Response;
-            fromJSON(object: any): _142.Response;
-            toJSON(message: _142.Response): unknown;
+            encode(message: _149.Response, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.Response;
+            fromJSON(object: any): _149.Response;
+            toJSON(message: _149.Response): unknown;
             fromPartial(object: {
                 exception?: {
                     error?: string;
@@ -709,13 +709,13 @@ export declare namespace tendermint {
                     }[];
                 };
                 offerSnapshot?: {
-                    result?: _142.ResponseOfferSnapshot_Result;
+                    result?: _149.ResponseOfferSnapshot_Result;
                 };
                 loadSnapshotChunk?: {
                     chunk?: Uint8Array;
                 };
                 applySnapshotChunk?: {
-                    result?: _142.ResponseApplySnapshotChunk_Result;
+                    result?: _149.ResponseApplySnapshotChunk_Result;
                     refetchChunks?: number[];
                     rejectSenders?: string[];
                 };
@@ -723,53 +723,53 @@ export declare namespace tendermint {
                     txs?: Uint8Array[];
                 };
                 processProposal?: {
-                    status?: _142.ResponseProcessProposal_ProposalStatus;
+                    status?: _149.ResponseProcessProposal_ProposalStatus;
                 };
-            }): _142.Response;
+            }): _149.Response;
         };
         ResponseException: {
-            encode(message: _142.ResponseException, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponseException;
-            fromJSON(object: any): _142.ResponseException;
-            toJSON(message: _142.ResponseException): unknown;
+            encode(message: _149.ResponseException, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponseException;
+            fromJSON(object: any): _149.ResponseException;
+            toJSON(message: _149.ResponseException): unknown;
             fromPartial(object: {
                 error?: string;
-            }): _142.ResponseException;
+            }): _149.ResponseException;
         };
         ResponseEcho: {
-            encode(message: _142.ResponseEcho, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponseEcho;
-            fromJSON(object: any): _142.ResponseEcho;
-            toJSON(message: _142.ResponseEcho): unknown;
+            encode(message: _149.ResponseEcho, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponseEcho;
+            fromJSON(object: any): _149.ResponseEcho;
+            toJSON(message: _149.ResponseEcho): unknown;
             fromPartial(object: {
                 message?: string;
-            }): _142.ResponseEcho;
+            }): _149.ResponseEcho;
         };
         ResponseFlush: {
-            encode(_: _142.ResponseFlush, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponseFlush;
-            fromJSON(_: any): _142.ResponseFlush;
-            toJSON(_: _142.ResponseFlush): unknown;
-            fromPartial(_: {}): _142.ResponseFlush;
+            encode(_: _149.ResponseFlush, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponseFlush;
+            fromJSON(_: any): _149.ResponseFlush;
+            toJSON(_: _149.ResponseFlush): unknown;
+            fromPartial(_: {}): _149.ResponseFlush;
         };
         ResponseInfo: {
-            encode(message: _142.ResponseInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponseInfo;
-            fromJSON(object: any): _142.ResponseInfo;
-            toJSON(message: _142.ResponseInfo): unknown;
+            encode(message: _149.ResponseInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponseInfo;
+            fromJSON(object: any): _149.ResponseInfo;
+            toJSON(message: _149.ResponseInfo): unknown;
             fromPartial(object: {
                 data?: string;
                 version?: string;
                 appVersion?: bigint;
                 lastBlockHeight?: bigint;
                 lastBlockAppHash?: Uint8Array;
-            }): _142.ResponseInfo;
+            }): _149.ResponseInfo;
         };
         ResponseInitChain: {
-            encode(message: _142.ResponseInitChain, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponseInitChain;
-            fromJSON(object: any): _142.ResponseInitChain;
-            toJSON(message: _142.ResponseInitChain): unknown;
+            encode(message: _149.ResponseInitChain, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponseInitChain;
+            fromJSON(object: any): _149.ResponseInitChain;
+            toJSON(message: _149.ResponseInitChain): unknown;
             fromPartial(object: {
                 consensusParams?: {
                     block?: {
@@ -799,13 +799,13 @@ export declare namespace tendermint {
                     power?: bigint;
                 }[];
                 appHash?: Uint8Array;
-            }): _142.ResponseInitChain;
+            }): _149.ResponseInitChain;
         };
         ResponseQuery: {
-            encode(message: _142.ResponseQuery, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponseQuery;
-            fromJSON(object: any): _142.ResponseQuery;
-            toJSON(message: _142.ResponseQuery): unknown;
+            encode(message: _149.ResponseQuery, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponseQuery;
+            fromJSON(object: any): _149.ResponseQuery;
+            toJSON(message: _149.ResponseQuery): unknown;
             fromPartial(object: {
                 code?: number;
                 log?: string;
@@ -822,13 +822,13 @@ export declare namespace tendermint {
                 };
                 height?: bigint;
                 codespace?: string;
-            }): _142.ResponseQuery;
+            }): _149.ResponseQuery;
         };
         ResponseBeginBlock: {
-            encode(message: _142.ResponseBeginBlock, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponseBeginBlock;
-            fromJSON(object: any): _142.ResponseBeginBlock;
-            toJSON(message: _142.ResponseBeginBlock): unknown;
+            encode(message: _149.ResponseBeginBlock, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponseBeginBlock;
+            fromJSON(object: any): _149.ResponseBeginBlock;
+            toJSON(message: _149.ResponseBeginBlock): unknown;
             fromPartial(object: {
                 events?: {
                     type?: string;
@@ -838,13 +838,13 @@ export declare namespace tendermint {
                         index?: boolean;
                     }[];
                 }[];
-            }): _142.ResponseBeginBlock;
+            }): _149.ResponseBeginBlock;
         };
         ResponseCheckTx: {
-            encode(message: _142.ResponseCheckTx, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponseCheckTx;
-            fromJSON(object: any): _142.ResponseCheckTx;
-            toJSON(message: _142.ResponseCheckTx): unknown;
+            encode(message: _149.ResponseCheckTx, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponseCheckTx;
+            fromJSON(object: any): _149.ResponseCheckTx;
+            toJSON(message: _149.ResponseCheckTx): unknown;
             fromPartial(object: {
                 code?: number;
                 data?: Uint8Array;
@@ -864,13 +864,13 @@ export declare namespace tendermint {
                 sender?: string;
                 priority?: bigint;
                 mempoolError?: string;
-            }): _142.ResponseCheckTx;
+            }): _149.ResponseCheckTx;
         };
         ResponseDeliverTx: {
-            encode(message: _142.ResponseDeliverTx, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponseDeliverTx;
-            fromJSON(object: any): _142.ResponseDeliverTx;
-            toJSON(message: _142.ResponseDeliverTx): unknown;
+            encode(message: _149.ResponseDeliverTx, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponseDeliverTx;
+            fromJSON(object: any): _149.ResponseDeliverTx;
+            toJSON(message: _149.ResponseDeliverTx): unknown;
             fromPartial(object: {
                 code?: number;
                 data?: Uint8Array;
@@ -887,13 +887,13 @@ export declare namespace tendermint {
                     }[];
                 }[];
                 codespace?: string;
-            }): _142.ResponseDeliverTx;
+            }): _149.ResponseDeliverTx;
         };
         ResponseEndBlock: {
-            encode(message: _142.ResponseEndBlock, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponseEndBlock;
-            fromJSON(object: any): _142.ResponseEndBlock;
-            toJSON(message: _142.ResponseEndBlock): unknown;
+            encode(message: _149.ResponseEndBlock, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponseEndBlock;
+            fromJSON(object: any): _149.ResponseEndBlock;
+            toJSON(message: _149.ResponseEndBlock): unknown;
             fromPartial(object: {
                 validatorUpdates?: {
                     pubKey?: {
@@ -930,23 +930,23 @@ export declare namespace tendermint {
                         index?: boolean;
                     }[];
                 }[];
-            }): _142.ResponseEndBlock;
+            }): _149.ResponseEndBlock;
         };
         ResponseCommit: {
-            encode(message: _142.ResponseCommit, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponseCommit;
-            fromJSON(object: any): _142.ResponseCommit;
-            toJSON(message: _142.ResponseCommit): unknown;
+            encode(message: _149.ResponseCommit, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponseCommit;
+            fromJSON(object: any): _149.ResponseCommit;
+            toJSON(message: _149.ResponseCommit): unknown;
             fromPartial(object: {
                 data?: Uint8Array;
                 retainHeight?: bigint;
-            }): _142.ResponseCommit;
+            }): _149.ResponseCommit;
         };
         ResponseListSnapshots: {
-            encode(message: _142.ResponseListSnapshots, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponseListSnapshots;
-            fromJSON(object: any): _142.ResponseListSnapshots;
-            toJSON(message: _142.ResponseListSnapshots): unknown;
+            encode(message: _149.ResponseListSnapshots, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponseListSnapshots;
+            fromJSON(object: any): _149.ResponseListSnapshots;
+            toJSON(message: _149.ResponseListSnapshots): unknown;
             fromPartial(object: {
                 snapshots?: {
                     height?: bigint;
@@ -955,60 +955,60 @@ export declare namespace tendermint {
                     hash?: Uint8Array;
                     metadata?: Uint8Array;
                 }[];
-            }): _142.ResponseListSnapshots;
+            }): _149.ResponseListSnapshots;
         };
         ResponseOfferSnapshot: {
-            encode(message: _142.ResponseOfferSnapshot, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponseOfferSnapshot;
-            fromJSON(object: any): _142.ResponseOfferSnapshot;
-            toJSON(message: _142.ResponseOfferSnapshot): unknown;
+            encode(message: _149.ResponseOfferSnapshot, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponseOfferSnapshot;
+            fromJSON(object: any): _149.ResponseOfferSnapshot;
+            toJSON(message: _149.ResponseOfferSnapshot): unknown;
             fromPartial(object: {
-                result?: _142.ResponseOfferSnapshot_Result;
-            }): _142.ResponseOfferSnapshot;
+                result?: _149.ResponseOfferSnapshot_Result;
+            }): _149.ResponseOfferSnapshot;
         };
         ResponseLoadSnapshotChunk: {
-            encode(message: _142.ResponseLoadSnapshotChunk, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponseLoadSnapshotChunk;
-            fromJSON(object: any): _142.ResponseLoadSnapshotChunk;
-            toJSON(message: _142.ResponseLoadSnapshotChunk): unknown;
+            encode(message: _149.ResponseLoadSnapshotChunk, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponseLoadSnapshotChunk;
+            fromJSON(object: any): _149.ResponseLoadSnapshotChunk;
+            toJSON(message: _149.ResponseLoadSnapshotChunk): unknown;
             fromPartial(object: {
                 chunk?: Uint8Array;
-            }): _142.ResponseLoadSnapshotChunk;
+            }): _149.ResponseLoadSnapshotChunk;
         };
         ResponseApplySnapshotChunk: {
-            encode(message: _142.ResponseApplySnapshotChunk, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponseApplySnapshotChunk;
-            fromJSON(object: any): _142.ResponseApplySnapshotChunk;
-            toJSON(message: _142.ResponseApplySnapshotChunk): unknown;
+            encode(message: _149.ResponseApplySnapshotChunk, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponseApplySnapshotChunk;
+            fromJSON(object: any): _149.ResponseApplySnapshotChunk;
+            toJSON(message: _149.ResponseApplySnapshotChunk): unknown;
             fromPartial(object: {
-                result?: _142.ResponseApplySnapshotChunk_Result;
+                result?: _149.ResponseApplySnapshotChunk_Result;
                 refetchChunks?: number[];
                 rejectSenders?: string[];
-            }): _142.ResponseApplySnapshotChunk;
+            }): _149.ResponseApplySnapshotChunk;
         };
         ResponsePrepareProposal: {
-            encode(message: _142.ResponsePrepareProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponsePrepareProposal;
-            fromJSON(object: any): _142.ResponsePrepareProposal;
-            toJSON(message: _142.ResponsePrepareProposal): unknown;
+            encode(message: _149.ResponsePrepareProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponsePrepareProposal;
+            fromJSON(object: any): _149.ResponsePrepareProposal;
+            toJSON(message: _149.ResponsePrepareProposal): unknown;
             fromPartial(object: {
                 txs?: Uint8Array[];
-            }): _142.ResponsePrepareProposal;
+            }): _149.ResponsePrepareProposal;
         };
         ResponseProcessProposal: {
-            encode(message: _142.ResponseProcessProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ResponseProcessProposal;
-            fromJSON(object: any): _142.ResponseProcessProposal;
-            toJSON(message: _142.ResponseProcessProposal): unknown;
+            encode(message: _149.ResponseProcessProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ResponseProcessProposal;
+            fromJSON(object: any): _149.ResponseProcessProposal;
+            toJSON(message: _149.ResponseProcessProposal): unknown;
             fromPartial(object: {
-                status?: _142.ResponseProcessProposal_ProposalStatus;
-            }): _142.ResponseProcessProposal;
+                status?: _149.ResponseProcessProposal_ProposalStatus;
+            }): _149.ResponseProcessProposal;
         };
         CommitInfo: {
-            encode(message: _142.CommitInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.CommitInfo;
-            fromJSON(object: any): _142.CommitInfo;
-            toJSON(message: _142.CommitInfo): unknown;
+            encode(message: _149.CommitInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.CommitInfo;
+            fromJSON(object: any): _149.CommitInfo;
+            toJSON(message: _149.CommitInfo): unknown;
             fromPartial(object: {
                 round?: number;
                 votes?: {
@@ -1018,13 +1018,13 @@ export declare namespace tendermint {
                     };
                     signedLastBlock?: boolean;
                 }[];
-            }): _142.CommitInfo;
+            }): _149.CommitInfo;
         };
         ExtendedCommitInfo: {
-            encode(message: _142.ExtendedCommitInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ExtendedCommitInfo;
-            fromJSON(object: any): _142.ExtendedCommitInfo;
-            toJSON(message: _142.ExtendedCommitInfo): unknown;
+            encode(message: _149.ExtendedCommitInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ExtendedCommitInfo;
+            fromJSON(object: any): _149.ExtendedCommitInfo;
+            toJSON(message: _149.ExtendedCommitInfo): unknown;
             fromPartial(object: {
                 round?: number;
                 votes?: {
@@ -1035,13 +1035,13 @@ export declare namespace tendermint {
                     signedLastBlock?: boolean;
                     voteExtension?: Uint8Array;
                 }[];
-            }): _142.ExtendedCommitInfo;
+            }): _149.ExtendedCommitInfo;
         };
         Event: {
-            encode(message: _142.Event, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.Event;
-            fromJSON(object: any): _142.Event;
-            toJSON(message: _142.Event): unknown;
+            encode(message: _149.Event, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.Event;
+            fromJSON(object: any): _149.Event;
+            toJSON(message: _149.Event): unknown;
             fromPartial(object: {
                 type?: string;
                 attributes?: {
@@ -1049,24 +1049,24 @@ export declare namespace tendermint {
                     value?: string;
                     index?: boolean;
                 }[];
-            }): _142.Event;
+            }): _149.Event;
         };
         EventAttribute: {
-            encode(message: _142.EventAttribute, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.EventAttribute;
-            fromJSON(object: any): _142.EventAttribute;
-            toJSON(message: _142.EventAttribute): unknown;
+            encode(message: _149.EventAttribute, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.EventAttribute;
+            fromJSON(object: any): _149.EventAttribute;
+            toJSON(message: _149.EventAttribute): unknown;
             fromPartial(object: {
                 key?: string;
                 value?: string;
                 index?: boolean;
-            }): _142.EventAttribute;
+            }): _149.EventAttribute;
         };
         TxResult: {
-            encode(message: _142.TxResult, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.TxResult;
-            fromJSON(object: any): _142.TxResult;
-            toJSON(message: _142.TxResult): unknown;
+            encode(message: _149.TxResult, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.TxResult;
+            fromJSON(object: any): _149.TxResult;
+            toJSON(message: _149.TxResult): unknown;
             fromPartial(object: {
                 height?: bigint;
                 index?: number;
@@ -1088,49 +1088,49 @@ export declare namespace tendermint {
                     }[];
                     codespace?: string;
                 };
-            }): _142.TxResult;
+            }): _149.TxResult;
         };
         Validator: {
-            encode(message: _142.Validator, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.Validator;
-            fromJSON(object: any): _142.Validator;
-            toJSON(message: _142.Validator): unknown;
+            encode(message: _149.Validator, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.Validator;
+            fromJSON(object: any): _149.Validator;
+            toJSON(message: _149.Validator): unknown;
             fromPartial(object: {
                 address?: Uint8Array;
                 power?: bigint;
-            }): _142.Validator;
+            }): _149.Validator;
         };
         ValidatorUpdate: {
-            encode(message: _142.ValidatorUpdate, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ValidatorUpdate;
-            fromJSON(object: any): _142.ValidatorUpdate;
-            toJSON(message: _142.ValidatorUpdate): unknown;
+            encode(message: _149.ValidatorUpdate, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ValidatorUpdate;
+            fromJSON(object: any): _149.ValidatorUpdate;
+            toJSON(message: _149.ValidatorUpdate): unknown;
             fromPartial(object: {
                 pubKey?: {
                     ed25519?: Uint8Array;
                     secp256k1?: Uint8Array;
                 };
                 power?: bigint;
-            }): _142.ValidatorUpdate;
+            }): _149.ValidatorUpdate;
         };
         VoteInfo: {
-            encode(message: _142.VoteInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.VoteInfo;
-            fromJSON(object: any): _142.VoteInfo;
-            toJSON(message: _142.VoteInfo): unknown;
+            encode(message: _149.VoteInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.VoteInfo;
+            fromJSON(object: any): _149.VoteInfo;
+            toJSON(message: _149.VoteInfo): unknown;
             fromPartial(object: {
                 validator?: {
                     address?: Uint8Array;
                     power?: bigint;
                 };
                 signedLastBlock?: boolean;
-            }): _142.VoteInfo;
+            }): _149.VoteInfo;
         };
         ExtendedVoteInfo: {
-            encode(message: _142.ExtendedVoteInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ExtendedVoteInfo;
-            fromJSON(object: any): _142.ExtendedVoteInfo;
-            toJSON(message: _142.ExtendedVoteInfo): unknown;
+            encode(message: _149.ExtendedVoteInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ExtendedVoteInfo;
+            fromJSON(object: any): _149.ExtendedVoteInfo;
+            toJSON(message: _149.ExtendedVoteInfo): unknown;
             fromPartial(object: {
                 validator?: {
                     address?: Uint8Array;
@@ -1138,15 +1138,15 @@ export declare namespace tendermint {
                 };
                 signedLastBlock?: boolean;
                 voteExtension?: Uint8Array;
-            }): _142.ExtendedVoteInfo;
+            }): _149.ExtendedVoteInfo;
         };
         Misbehavior: {
-            encode(message: _142.Misbehavior, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.Misbehavior;
-            fromJSON(object: any): _142.Misbehavior;
-            toJSON(message: _142.Misbehavior): unknown;
+            encode(message: _149.Misbehavior, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.Misbehavior;
+            fromJSON(object: any): _149.Misbehavior;
+            toJSON(message: _149.Misbehavior): unknown;
             fromPartial(object: {
-                type?: _142.MisbehaviorType;
+                type?: _149.MisbehaviorType;
                 validator?: {
                     address?: Uint8Array;
                     power?: bigint;
@@ -1157,40 +1157,40 @@ export declare namespace tendermint {
                     nanos?: number;
                 };
                 totalVotingPower?: bigint;
-            }): _142.Misbehavior;
+            }): _149.Misbehavior;
         };
         Snapshot: {
-            encode(message: _142.Snapshot, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.Snapshot;
-            fromJSON(object: any): _142.Snapshot;
-            toJSON(message: _142.Snapshot): unknown;
+            encode(message: _149.Snapshot, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.Snapshot;
+            fromJSON(object: any): _149.Snapshot;
+            toJSON(message: _149.Snapshot): unknown;
             fromPartial(object: {
                 height?: bigint;
                 format?: number;
                 chunks?: number;
                 hash?: Uint8Array;
                 metadata?: Uint8Array;
-            }): _142.Snapshot;
+            }): _149.Snapshot;
         };
     };
     const crypto: {
         Proof: {
-            encode(message: _144.Proof, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _144.Proof;
-            fromJSON(object: any): _144.Proof;
-            toJSON(message: _144.Proof): unknown;
+            encode(message: _151.Proof, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _151.Proof;
+            fromJSON(object: any): _151.Proof;
+            toJSON(message: _151.Proof): unknown;
             fromPartial(object: {
                 total?: bigint;
                 index?: bigint;
                 leafHash?: Uint8Array;
                 aunts?: Uint8Array[];
-            }): _144.Proof;
+            }): _151.Proof;
         };
         ValueOp: {
-            encode(message: _144.ValueOp, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _144.ValueOp;
-            fromJSON(object: any): _144.ValueOp;
-            toJSON(message: _144.ValueOp): unknown;
+            encode(message: _151.ValueOp, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _151.ValueOp;
+            fromJSON(object: any): _151.ValueOp;
+            toJSON(message: _151.ValueOp): unknown;
             fromPartial(object: {
                 key?: Uint8Array;
                 proof?: {
@@ -1199,96 +1199,96 @@ export declare namespace tendermint {
                     leafHash?: Uint8Array;
                     aunts?: Uint8Array[];
                 };
-            }): _144.ValueOp;
+            }): _151.ValueOp;
         };
         DominoOp: {
-            encode(message: _144.DominoOp, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _144.DominoOp;
-            fromJSON(object: any): _144.DominoOp;
-            toJSON(message: _144.DominoOp): unknown;
+            encode(message: _151.DominoOp, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _151.DominoOp;
+            fromJSON(object: any): _151.DominoOp;
+            toJSON(message: _151.DominoOp): unknown;
             fromPartial(object: {
                 key?: string;
                 input?: string;
                 output?: string;
-            }): _144.DominoOp;
+            }): _151.DominoOp;
         };
         ProofOp: {
-            encode(message: _144.ProofOp, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _144.ProofOp;
-            fromJSON(object: any): _144.ProofOp;
-            toJSON(message: _144.ProofOp): unknown;
+            encode(message: _151.ProofOp, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _151.ProofOp;
+            fromJSON(object: any): _151.ProofOp;
+            toJSON(message: _151.ProofOp): unknown;
             fromPartial(object: {
                 type?: string;
                 key?: Uint8Array;
                 data?: Uint8Array;
-            }): _144.ProofOp;
+            }): _151.ProofOp;
         };
         ProofOps: {
-            encode(message: _144.ProofOps, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _144.ProofOps;
-            fromJSON(object: any): _144.ProofOps;
-            toJSON(message: _144.ProofOps): unknown;
+            encode(message: _151.ProofOps, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _151.ProofOps;
+            fromJSON(object: any): _151.ProofOps;
+            toJSON(message: _151.ProofOps): unknown;
             fromPartial(object: {
                 ops?: {
                     type?: string;
                     key?: Uint8Array;
                     data?: Uint8Array;
                 }[];
-            }): _144.ProofOps;
+            }): _151.ProofOps;
         };
         PublicKey: {
-            encode(message: _143.PublicKey, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.PublicKey;
-            fromJSON(object: any): _143.PublicKey;
-            toJSON(message: _143.PublicKey): unknown;
+            encode(message: _150.PublicKey, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _150.PublicKey;
+            fromJSON(object: any): _150.PublicKey;
+            toJSON(message: _150.PublicKey): unknown;
             fromPartial(object: {
                 ed25519?: Uint8Array;
                 secp256k1?: Uint8Array;
-            }): _143.PublicKey;
+            }): _150.PublicKey;
         };
     };
     namespace libs {
         const bits: {
             BitArray: {
-                encode(message: _145.BitArray, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _145.BitArray;
-                fromJSON(object: any): _145.BitArray;
-                toJSON(message: _145.BitArray): unknown;
+                encode(message: _152.BitArray, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _152.BitArray;
+                fromJSON(object: any): _152.BitArray;
+                toJSON(message: _152.BitArray): unknown;
                 fromPartial(object: {
                     bits?: bigint;
                     elems?: bigint[];
-                }): _145.BitArray;
+                }): _152.BitArray;
             };
         };
     }
     const p2p: {
         NetAddress: {
-            encode(message: _146.NetAddress, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _146.NetAddress;
-            fromJSON(object: any): _146.NetAddress;
-            toJSON(message: _146.NetAddress): unknown;
+            encode(message: _153.NetAddress, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _153.NetAddress;
+            fromJSON(object: any): _153.NetAddress;
+            toJSON(message: _153.NetAddress): unknown;
             fromPartial(object: {
                 id?: string;
                 ip?: string;
                 port?: number;
-            }): _146.NetAddress;
+            }): _153.NetAddress;
         };
         ProtocolVersion: {
-            encode(message: _146.ProtocolVersion, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _146.ProtocolVersion;
-            fromJSON(object: any): _146.ProtocolVersion;
-            toJSON(message: _146.ProtocolVersion): unknown;
+            encode(message: _153.ProtocolVersion, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _153.ProtocolVersion;
+            fromJSON(object: any): _153.ProtocolVersion;
+            toJSON(message: _153.ProtocolVersion): unknown;
             fromPartial(object: {
                 p2p?: bigint;
                 block?: bigint;
                 app?: bigint;
-            }): _146.ProtocolVersion;
+            }): _153.ProtocolVersion;
         };
         DefaultNodeInfo: {
-            encode(message: _146.DefaultNodeInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _146.DefaultNodeInfo;
-            fromJSON(object: any): _146.DefaultNodeInfo;
-            toJSON(message: _146.DefaultNodeInfo): unknown;
+            encode(message: _153.DefaultNodeInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _153.DefaultNodeInfo;
+            fromJSON(object: any): _153.DefaultNodeInfo;
+            toJSON(message: _153.DefaultNodeInfo): unknown;
             fromPartial(object: {
                 protocolVersion?: {
                     p2p?: bigint;
@@ -1305,25 +1305,25 @@ export declare namespace tendermint {
                     txIndex?: string;
                     rpcAddress?: string;
                 };
-            }): _146.DefaultNodeInfo;
+            }): _153.DefaultNodeInfo;
         };
         DefaultNodeInfoOther: {
-            encode(message: _146.DefaultNodeInfoOther, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _146.DefaultNodeInfoOther;
-            fromJSON(object: any): _146.DefaultNodeInfoOther;
-            toJSON(message: _146.DefaultNodeInfoOther): unknown;
+            encode(message: _153.DefaultNodeInfoOther, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _153.DefaultNodeInfoOther;
+            fromJSON(object: any): _153.DefaultNodeInfoOther;
+            toJSON(message: _153.DefaultNodeInfoOther): unknown;
             fromPartial(object: {
                 txIndex?: string;
                 rpcAddress?: string;
-            }): _146.DefaultNodeInfoOther;
+            }): _153.DefaultNodeInfoOther;
         };
     };
     const types: {
         ValidatorSet: {
-            encode(message: _151.ValidatorSet, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _151.ValidatorSet;
-            fromJSON(object: any): _151.ValidatorSet;
-            toJSON(message: _151.ValidatorSet): unknown;
+            encode(message: _158.ValidatorSet, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _158.ValidatorSet;
+            fromJSON(object: any): _158.ValidatorSet;
+            toJSON(message: _158.ValidatorSet): unknown;
             fromPartial(object: {
                 validators?: {
                     address?: Uint8Array;
@@ -1344,13 +1344,13 @@ export declare namespace tendermint {
                     proposerPriority?: bigint;
                 };
                 totalVotingPower?: bigint;
-            }): _151.ValidatorSet;
+            }): _158.ValidatorSet;
         };
         Validator: {
-            encode(message: _151.Validator, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _151.Validator;
-            fromJSON(object: any): _151.Validator;
-            toJSON(message: _151.Validator): unknown;
+            encode(message: _158.Validator, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _158.Validator;
+            fromJSON(object: any): _158.Validator;
+            toJSON(message: _158.Validator): unknown;
             fromPartial(object: {
                 address?: Uint8Array;
                 pubKey?: {
@@ -1359,42 +1359,42 @@ export declare namespace tendermint {
                 };
                 votingPower?: bigint;
                 proposerPriority?: bigint;
-            }): _151.Validator;
+            }): _158.Validator;
         };
         SimpleValidator: {
-            encode(message: _151.SimpleValidator, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _151.SimpleValidator;
-            fromJSON(object: any): _151.SimpleValidator;
-            toJSON(message: _151.SimpleValidator): unknown;
+            encode(message: _158.SimpleValidator, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _158.SimpleValidator;
+            fromJSON(object: any): _158.SimpleValidator;
+            toJSON(message: _158.SimpleValidator): unknown;
             fromPartial(object: {
                 pubKey?: {
                     ed25519?: Uint8Array;
                     secp256k1?: Uint8Array;
                 };
                 votingPower?: bigint;
-            }): _151.SimpleValidator;
+            }): _158.SimpleValidator;
         };
-        blockIDFlagFromJSON(object: any): _150.BlockIDFlag;
-        blockIDFlagToJSON(object: _150.BlockIDFlag): string;
-        signedMsgTypeFromJSON(object: any): _150.SignedMsgType;
-        signedMsgTypeToJSON(object: _150.SignedMsgType): string;
-        BlockIDFlag: typeof _150.BlockIDFlag;
-        SignedMsgType: typeof _150.SignedMsgType;
+        blockIDFlagFromJSON(object: any): _157.BlockIDFlag;
+        blockIDFlagToJSON(object: _157.BlockIDFlag): string;
+        signedMsgTypeFromJSON(object: any): _157.SignedMsgType;
+        signedMsgTypeToJSON(object: _157.SignedMsgType): string;
+        BlockIDFlag: typeof _157.BlockIDFlag;
+        SignedMsgType: typeof _157.SignedMsgType;
         PartSetHeader: {
-            encode(message: _150.PartSetHeader, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _150.PartSetHeader;
-            fromJSON(object: any): _150.PartSetHeader;
-            toJSON(message: _150.PartSetHeader): unknown;
+            encode(message: _157.PartSetHeader, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _157.PartSetHeader;
+            fromJSON(object: any): _157.PartSetHeader;
+            toJSON(message: _157.PartSetHeader): unknown;
             fromPartial(object: {
                 total?: number;
                 hash?: Uint8Array;
-            }): _150.PartSetHeader;
+            }): _157.PartSetHeader;
         };
         Part: {
-            encode(message: _150.Part, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _150.Part;
-            fromJSON(object: any): _150.Part;
-            toJSON(message: _150.Part): unknown;
+            encode(message: _157.Part, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _157.Part;
+            fromJSON(object: any): _157.Part;
+            toJSON(message: _157.Part): unknown;
             fromPartial(object: {
                 index?: number;
                 bytes?: Uint8Array;
@@ -1404,26 +1404,26 @@ export declare namespace tendermint {
                     leafHash?: Uint8Array;
                     aunts?: Uint8Array[];
                 };
-            }): _150.Part;
+            }): _157.Part;
         };
         BlockID: {
-            encode(message: _150.BlockID, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _150.BlockID;
-            fromJSON(object: any): _150.BlockID;
-            toJSON(message: _150.BlockID): unknown;
+            encode(message: _157.BlockID, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _157.BlockID;
+            fromJSON(object: any): _157.BlockID;
+            toJSON(message: _157.BlockID): unknown;
             fromPartial(object: {
                 hash?: Uint8Array;
                 partSetHeader?: {
                     total?: number;
                     hash?: Uint8Array;
                 };
-            }): _150.BlockID;
+            }): _157.BlockID;
         };
         Header: {
-            encode(message: _150.Header, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _150.Header;
-            fromJSON(object: any): _150.Header;
-            toJSON(message: _150.Header): unknown;
+            encode(message: _157.Header, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _157.Header;
+            fromJSON(object: any): _157.Header;
+            toJSON(message: _157.Header): unknown;
             fromPartial(object: {
                 version?: {
                     block?: bigint;
@@ -1451,24 +1451,24 @@ export declare namespace tendermint {
                 lastResultsHash?: Uint8Array;
                 evidenceHash?: Uint8Array;
                 proposerAddress?: Uint8Array;
-            }): _150.Header;
+            }): _157.Header;
         };
         Data: {
-            encode(message: _150.Data, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _150.Data;
-            fromJSON(object: any): _150.Data;
-            toJSON(message: _150.Data): unknown;
+            encode(message: _157.Data, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _157.Data;
+            fromJSON(object: any): _157.Data;
+            toJSON(message: _157.Data): unknown;
             fromPartial(object: {
                 txs?: Uint8Array[];
-            }): _150.Data;
+            }): _157.Data;
         };
         Vote: {
-            encode(message: _150.Vote, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _150.Vote;
-            fromJSON(object: any): _150.Vote;
-            toJSON(message: _150.Vote): unknown;
+            encode(message: _157.Vote, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _157.Vote;
+            fromJSON(object: any): _157.Vote;
+            toJSON(message: _157.Vote): unknown;
             fromPartial(object: {
-                type?: _150.SignedMsgType;
+                type?: _157.SignedMsgType;
                 height?: bigint;
                 round?: number;
                 blockId?: {
@@ -1485,13 +1485,13 @@ export declare namespace tendermint {
                 validatorAddress?: Uint8Array;
                 validatorIndex?: number;
                 signature?: Uint8Array;
-            }): _150.Vote;
+            }): _157.Vote;
         };
         Commit: {
-            encode(message: _150.Commit, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _150.Commit;
-            fromJSON(object: any): _150.Commit;
-            toJSON(message: _150.Commit): unknown;
+            encode(message: _157.Commit, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _157.Commit;
+            fromJSON(object: any): _157.Commit;
+            toJSON(message: _157.Commit): unknown;
             fromPartial(object: {
                 height?: bigint;
                 round?: number;
@@ -1503,7 +1503,7 @@ export declare namespace tendermint {
                     };
                 };
                 signatures?: {
-                    blockIdFlag?: _150.BlockIDFlag;
+                    blockIdFlag?: _157.BlockIDFlag;
                     validatorAddress?: Uint8Array;
                     timestamp?: {
                         seconds?: bigint;
@@ -1511,30 +1511,30 @@ export declare namespace tendermint {
                     };
                     signature?: Uint8Array;
                 }[];
-            }): _150.Commit;
+            }): _157.Commit;
         };
         CommitSig: {
-            encode(message: _150.CommitSig, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _150.CommitSig;
-            fromJSON(object: any): _150.CommitSig;
-            toJSON(message: _150.CommitSig): unknown;
+            encode(message: _157.CommitSig, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _157.CommitSig;
+            fromJSON(object: any): _157.CommitSig;
+            toJSON(message: _157.CommitSig): unknown;
             fromPartial(object: {
-                blockIdFlag?: _150.BlockIDFlag;
+                blockIdFlag?: _157.BlockIDFlag;
                 validatorAddress?: Uint8Array;
                 timestamp?: {
                     seconds?: bigint;
                     nanos?: number;
                 };
                 signature?: Uint8Array;
-            }): _150.CommitSig;
+            }): _157.CommitSig;
         };
         Proposal: {
-            encode(message: _150.Proposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _150.Proposal;
-            fromJSON(object: any): _150.Proposal;
-            toJSON(message: _150.Proposal): unknown;
+            encode(message: _157.Proposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _157.Proposal;
+            fromJSON(object: any): _157.Proposal;
+            toJSON(message: _157.Proposal): unknown;
             fromPartial(object: {
-                type?: _150.SignedMsgType;
+                type?: _157.SignedMsgType;
                 height?: bigint;
                 round?: number;
                 polRound?: number;
@@ -1550,13 +1550,13 @@ export declare namespace tendermint {
                     nanos?: number;
                 };
                 signature?: Uint8Array;
-            }): _150.Proposal;
+            }): _157.Proposal;
         };
         SignedHeader: {
-            encode(message: _150.SignedHeader, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _150.SignedHeader;
-            fromJSON(object: any): _150.SignedHeader;
-            toJSON(message: _150.SignedHeader): unknown;
+            encode(message: _157.SignedHeader, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _157.SignedHeader;
+            fromJSON(object: any): _157.SignedHeader;
+            toJSON(message: _157.SignedHeader): unknown;
             fromPartial(object: {
                 header?: {
                     version?: {
@@ -1597,7 +1597,7 @@ export declare namespace tendermint {
                         };
                     };
                     signatures?: {
-                        blockIdFlag?: _150.BlockIDFlag;
+                        blockIdFlag?: _157.BlockIDFlag;
                         validatorAddress?: Uint8Array;
                         timestamp?: {
                             seconds?: bigint;
@@ -1606,13 +1606,13 @@ export declare namespace tendermint {
                         signature?: Uint8Array;
                     }[];
                 };
-            }): _150.SignedHeader;
+            }): _157.SignedHeader;
         };
         LightBlock: {
-            encode(message: _150.LightBlock, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _150.LightBlock;
-            fromJSON(object: any): _150.LightBlock;
-            toJSON(message: _150.LightBlock): unknown;
+            encode(message: _157.LightBlock, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _157.LightBlock;
+            fromJSON(object: any): _157.LightBlock;
+            toJSON(message: _157.LightBlock): unknown;
             fromPartial(object: {
                 signedHeader?: {
                     header?: {
@@ -1654,7 +1654,7 @@ export declare namespace tendermint {
                             };
                         };
                         signatures?: {
-                            blockIdFlag?: _150.BlockIDFlag;
+                            blockIdFlag?: _157.BlockIDFlag;
                             validatorAddress?: Uint8Array;
                             timestamp?: {
                                 seconds?: bigint;
@@ -1685,13 +1685,13 @@ export declare namespace tendermint {
                     };
                     totalVotingPower?: bigint;
                 };
-            }): _150.LightBlock;
+            }): _157.LightBlock;
         };
         BlockMeta: {
-            encode(message: _150.BlockMeta, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _150.BlockMeta;
-            fromJSON(object: any): _150.BlockMeta;
-            toJSON(message: _150.BlockMeta): unknown;
+            encode(message: _157.BlockMeta, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _157.BlockMeta;
+            fromJSON(object: any): _157.BlockMeta;
+            toJSON(message: _157.BlockMeta): unknown;
             fromPartial(object: {
                 blockId?: {
                     hash?: Uint8Array;
@@ -1730,13 +1730,13 @@ export declare namespace tendermint {
                     proposerAddress?: Uint8Array;
                 };
                 numTxs?: bigint;
-            }): _150.BlockMeta;
+            }): _157.BlockMeta;
         };
         TxProof: {
-            encode(message: _150.TxProof, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _150.TxProof;
-            fromJSON(object: any): _150.TxProof;
-            toJSON(message: _150.TxProof): unknown;
+            encode(message: _157.TxProof, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _157.TxProof;
+            fromJSON(object: any): _157.TxProof;
+            toJSON(message: _157.TxProof): unknown;
             fromPartial(object: {
                 rootHash?: Uint8Array;
                 data?: Uint8Array;
@@ -1746,13 +1746,13 @@ export declare namespace tendermint {
                     leafHash?: Uint8Array;
                     aunts?: Uint8Array[];
                 };
-            }): _150.TxProof;
+            }): _157.TxProof;
         };
         ConsensusParams: {
-            encode(message: _149.ConsensusParams, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ConsensusParams;
-            fromJSON(object: any): _149.ConsensusParams;
-            toJSON(message: _149.ConsensusParams): unknown;
+            encode(message: _156.ConsensusParams, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _156.ConsensusParams;
+            fromJSON(object: any): _156.ConsensusParams;
+            toJSON(message: _156.ConsensusParams): unknown;
             fromPartial(object: {
                 block?: {
                     maxBytes?: bigint;
@@ -1772,23 +1772,23 @@ export declare namespace tendermint {
                 version?: {
                     app?: bigint;
                 };
-            }): _149.ConsensusParams;
+            }): _156.ConsensusParams;
         };
         BlockParams: {
-            encode(message: _149.BlockParams, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.BlockParams;
-            fromJSON(object: any): _149.BlockParams;
-            toJSON(message: _149.BlockParams): unknown;
+            encode(message: _156.BlockParams, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _156.BlockParams;
+            fromJSON(object: any): _156.BlockParams;
+            toJSON(message: _156.BlockParams): unknown;
             fromPartial(object: {
                 maxBytes?: bigint;
                 maxGas?: bigint;
-            }): _149.BlockParams;
+            }): _156.BlockParams;
         };
         EvidenceParams: {
-            encode(message: _149.EvidenceParams, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.EvidenceParams;
-            fromJSON(object: any): _149.EvidenceParams;
-            toJSON(message: _149.EvidenceParams): unknown;
+            encode(message: _156.EvidenceParams, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _156.EvidenceParams;
+            fromJSON(object: any): _156.EvidenceParams;
+            toJSON(message: _156.EvidenceParams): unknown;
             fromPartial(object: {
                 maxAgeNumBlocks?: bigint;
                 maxAgeDuration?: {
@@ -1796,45 +1796,45 @@ export declare namespace tendermint {
                     nanos?: number;
                 };
                 maxBytes?: bigint;
-            }): _149.EvidenceParams;
+            }): _156.EvidenceParams;
         };
         ValidatorParams: {
-            encode(message: _149.ValidatorParams, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.ValidatorParams;
-            fromJSON(object: any): _149.ValidatorParams;
-            toJSON(message: _149.ValidatorParams): unknown;
+            encode(message: _156.ValidatorParams, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _156.ValidatorParams;
+            fromJSON(object: any): _156.ValidatorParams;
+            toJSON(message: _156.ValidatorParams): unknown;
             fromPartial(object: {
                 pubKeyTypes?: string[];
-            }): _149.ValidatorParams;
+            }): _156.ValidatorParams;
         };
         VersionParams: {
-            encode(message: _149.VersionParams, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.VersionParams;
-            fromJSON(object: any): _149.VersionParams;
-            toJSON(message: _149.VersionParams): unknown;
+            encode(message: _156.VersionParams, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _156.VersionParams;
+            fromJSON(object: any): _156.VersionParams;
+            toJSON(message: _156.VersionParams): unknown;
             fromPartial(object: {
                 app?: bigint;
-            }): _149.VersionParams;
+            }): _156.VersionParams;
         };
         HashedParams: {
-            encode(message: _149.HashedParams, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.HashedParams;
-            fromJSON(object: any): _149.HashedParams;
-            toJSON(message: _149.HashedParams): unknown;
+            encode(message: _156.HashedParams, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _156.HashedParams;
+            fromJSON(object: any): _156.HashedParams;
+            toJSON(message: _156.HashedParams): unknown;
             fromPartial(object: {
                 blockMaxBytes?: bigint;
                 blockMaxGas?: bigint;
-            }): _149.HashedParams;
+            }): _156.HashedParams;
         };
         Evidence: {
-            encode(message: _148.Evidence, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.Evidence;
-            fromJSON(object: any): _148.Evidence;
-            toJSON(message: _148.Evidence): unknown;
+            encode(message: _155.Evidence, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _155.Evidence;
+            fromJSON(object: any): _155.Evidence;
+            toJSON(message: _155.Evidence): unknown;
             fromPartial(object: {
                 duplicateVoteEvidence?: {
                     voteA?: {
-                        type?: _150.SignedMsgType;
+                        type?: _157.SignedMsgType;
                         height?: bigint;
                         round?: number;
                         blockId?: {
@@ -1853,7 +1853,7 @@ export declare namespace tendermint {
                         signature?: Uint8Array;
                     };
                     voteB?: {
-                        type?: _150.SignedMsgType;
+                        type?: _157.SignedMsgType;
                         height?: bigint;
                         round?: number;
                         blockId?: {
@@ -1920,7 +1920,7 @@ export declare namespace tendermint {
                                     };
                                 };
                                 signatures?: {
-                                    blockIdFlag?: _150.BlockIDFlag;
+                                    blockIdFlag?: _157.BlockIDFlag;
                                     validatorAddress?: Uint8Array;
                                     timestamp?: {
                                         seconds?: bigint;
@@ -1968,16 +1968,16 @@ export declare namespace tendermint {
                         nanos?: number;
                     };
                 };
-            }): _148.Evidence;
+            }): _155.Evidence;
         };
         DuplicateVoteEvidence: {
-            encode(message: _148.DuplicateVoteEvidence, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.DuplicateVoteEvidence;
-            fromJSON(object: any): _148.DuplicateVoteEvidence;
-            toJSON(message: _148.DuplicateVoteEvidence): unknown;
+            encode(message: _155.DuplicateVoteEvidence, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _155.DuplicateVoteEvidence;
+            fromJSON(object: any): _155.DuplicateVoteEvidence;
+            toJSON(message: _155.DuplicateVoteEvidence): unknown;
             fromPartial(object: {
                 voteA?: {
-                    type?: _150.SignedMsgType;
+                    type?: _157.SignedMsgType;
                     height?: bigint;
                     round?: number;
                     blockId?: {
@@ -1996,7 +1996,7 @@ export declare namespace tendermint {
                     signature?: Uint8Array;
                 };
                 voteB?: {
-                    type?: _150.SignedMsgType;
+                    type?: _157.SignedMsgType;
                     height?: bigint;
                     round?: number;
                     blockId?: {
@@ -2020,13 +2020,13 @@ export declare namespace tendermint {
                     seconds?: bigint;
                     nanos?: number;
                 };
-            }): _148.DuplicateVoteEvidence;
+            }): _155.DuplicateVoteEvidence;
         };
         LightClientAttackEvidence: {
-            encode(message: _148.LightClientAttackEvidence, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.LightClientAttackEvidence;
-            fromJSON(object: any): _148.LightClientAttackEvidence;
-            toJSON(message: _148.LightClientAttackEvidence): unknown;
+            encode(message: _155.LightClientAttackEvidence, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _155.LightClientAttackEvidence;
+            fromJSON(object: any): _155.LightClientAttackEvidence;
+            toJSON(message: _155.LightClientAttackEvidence): unknown;
             fromPartial(object: {
                 conflictingBlock?: {
                     signedHeader?: {
@@ -2069,7 +2069,7 @@ export declare namespace tendermint {
                                 };
                             };
                             signatures?: {
-                                blockIdFlag?: _150.BlockIDFlag;
+                                blockIdFlag?: _157.BlockIDFlag;
                                 validatorAddress?: Uint8Array;
                                 timestamp?: {
                                     seconds?: bigint;
@@ -2116,18 +2116,18 @@ export declare namespace tendermint {
                     seconds?: bigint;
                     nanos?: number;
                 };
-            }): _148.LightClientAttackEvidence;
+            }): _155.LightClientAttackEvidence;
         };
         EvidenceList: {
-            encode(message: _148.EvidenceList, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.EvidenceList;
-            fromJSON(object: any): _148.EvidenceList;
-            toJSON(message: _148.EvidenceList): unknown;
+            encode(message: _155.EvidenceList, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _155.EvidenceList;
+            fromJSON(object: any): _155.EvidenceList;
+            toJSON(message: _155.EvidenceList): unknown;
             fromPartial(object: {
                 evidence?: {
                     duplicateVoteEvidence?: {
                         voteA?: {
-                            type?: _150.SignedMsgType;
+                            type?: _157.SignedMsgType;
                             height?: bigint;
                             round?: number;
                             blockId?: {
@@ -2146,7 +2146,7 @@ export declare namespace tendermint {
                             signature?: Uint8Array;
                         };
                         voteB?: {
-                            type?: _150.SignedMsgType;
+                            type?: _157.SignedMsgType;
                             height?: bigint;
                             round?: number;
                             blockId?: {
@@ -2213,7 +2213,7 @@ export declare namespace tendermint {
                                         };
                                     };
                                     signatures?: {
-                                        blockIdFlag?: _150.BlockIDFlag;
+                                        blockIdFlag?: _157.BlockIDFlag;
                                         validatorAddress?: Uint8Array;
                                         timestamp?: {
                                             seconds?: bigint;
@@ -2262,13 +2262,13 @@ export declare namespace tendermint {
                         };
                     };
                 }[];
-            }): _148.EvidenceList;
+            }): _155.EvidenceList;
         };
         Block: {
-            encode(message: _147.Block, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _147.Block;
-            fromJSON(object: any): _147.Block;
-            toJSON(message: _147.Block): unknown;
+            encode(message: _154.Block, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _154.Block;
+            fromJSON(object: any): _154.Block;
+            toJSON(message: _154.Block): unknown;
             fromPartial(object: {
                 header?: {
                     version?: {
@@ -2305,7 +2305,7 @@ export declare namespace tendermint {
                     evidence?: {
                         duplicateVoteEvidence?: {
                             voteA?: {
-                                type?: _150.SignedMsgType;
+                                type?: _157.SignedMsgType;
                                 height?: bigint;
                                 round?: number;
                                 blockId?: {
@@ -2324,7 +2324,7 @@ export declare namespace tendermint {
                                 signature?: Uint8Array;
                             };
                             voteB?: {
-                                type?: _150.SignedMsgType;
+                                type?: _157.SignedMsgType;
                                 height?: bigint;
                                 round?: number;
                                 blockId?: {
@@ -2391,7 +2391,7 @@ export declare namespace tendermint {
                                             };
                                         };
                                         signatures?: {
-                                            blockIdFlag?: _150.BlockIDFlag;
+                                            blockIdFlag?: _157.BlockIDFlag;
                                             validatorAddress?: Uint8Array;
                                             timestamp?: {
                                                 seconds?: bigint;
@@ -2452,7 +2452,7 @@ export declare namespace tendermint {
                         };
                     };
                     signatures?: {
-                        blockIdFlag?: _150.BlockIDFlag;
+                        blockIdFlag?: _157.BlockIDFlag;
                         validatorAddress?: Uint8Array;
                         timestamp?: {
                             seconds?: bigint;
@@ -2461,29 +2461,29 @@ export declare namespace tendermint {
                         signature?: Uint8Array;
                     }[];
                 };
-            }): _147.Block;
+            }): _154.Block;
         };
     };
     const version: {
         App: {
-            encode(message: _152.App, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _152.App;
-            fromJSON(object: any): _152.App;
-            toJSON(message: _152.App): unknown;
+            encode(message: _159.App, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _159.App;
+            fromJSON(object: any): _159.App;
+            toJSON(message: _159.App): unknown;
             fromPartial(object: {
                 protocol?: bigint;
                 software?: string;
-            }): _152.App;
+            }): _159.App;
         };
         Consensus: {
-            encode(message: _152.Consensus, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _152.Consensus;
-            fromJSON(object: any): _152.Consensus;
-            toJSON(message: _152.Consensus): unknown;
+            encode(message: _159.Consensus, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _159.Consensus;
+            fromJSON(object: any): _159.Consensus;
+            toJSON(message: _159.Consensus): unknown;
             fromPartial(object: {
                 block?: bigint;
                 app?: bigint;
-            }): _152.Consensus;
+            }): _159.Consensus;
         };
     };
 }

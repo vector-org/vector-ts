@@ -2,6 +2,7 @@ import { Any } from "../../../google/protobuf/any";
 import { Timestamp } from "../../../google/protobuf/timestamp";
 import { SendAuthorization } from "../../bank/v1beta1/authz";
 import { StakeAuthorization } from "../../staking/v1beta1/authz";
+import { ContractExecutionAuthorization, ContractMigrationAuthorization } from "../../../cosmwasm/wasm/v1/authz";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 /**
@@ -17,7 +18,7 @@ export interface GenericAuthorization {
  * the provide method with expiration time.
  */
 export interface Grant {
-    authorization: GenericAuthorization | SendAuthorization | StakeAuthorization | Any | undefined;
+    authorization: GenericAuthorization | SendAuthorization | StakeAuthorization | ContractExecutionAuthorization | ContractMigrationAuthorization | Any | undefined;
     /**
      * time when the grant will expire and will be pruned. If null, then the grant
      * doesn't have a time expiration (other conditions  in `authorization`
@@ -32,7 +33,7 @@ export interface Grant {
 export interface GrantAuthorization {
     granter: string;
     grantee: string;
-    authorization: GenericAuthorization | SendAuthorization | StakeAuthorization | Any | undefined;
+    authorization: GenericAuthorization | SendAuthorization | StakeAuthorization | ContractExecutionAuthorization | ContractMigrationAuthorization | Any | undefined;
     expiration: Timestamp;
 }
 /** GrantQueueItem contains the list of TypeURL of a sdk.Msg. */
@@ -68,4 +69,4 @@ export declare const GrantQueueItem: {
     toJSON(message: GrantQueueItem): unknown;
     fromPartial(object: DeepPartial<GrantQueueItem>): GrantQueueItem;
 };
-export declare const Cosmos_authzv1beta1Authorization_InterfaceDecoder: (input: BinaryReader | Uint8Array) => GenericAuthorization | SendAuthorization | StakeAuthorization | Any;
+export declare const Cosmos_authzv1beta1Authorization_InterfaceDecoder: (input: BinaryReader | Uint8Array) => GenericAuthorization | SendAuthorization | StakeAuthorization | ContractExecutionAuthorization | ContractMigrationAuthorization | Any;

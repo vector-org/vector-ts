@@ -9,21 +9,21 @@ import * as _8 from "./catdrop/v1/tx";
 import * as _9 from "./mint/v1/genesis";
 import * as _10 from "./mint/v1/mint";
 import * as _11 from "./mint/v1/query";
-import * as _155 from "./alloc/v1/query.lcd";
-import * as _156 from "./catdrop/v1/query.lcd";
-import * as _157 from "./mint/v1/query.lcd";
-import * as _158 from "./alloc/v1/query.rpc.Query";
-import * as _159 from "./catdrop/v1/query.rpc.Query";
-import * as _160 from "./mint/v1/query.rpc.Query";
-import * as _161 from "./catdrop/v1/tx.rpc.msg";
+import * as _162 from "./alloc/v1/query.lcd";
+import * as _163 from "./catdrop/v1/query.lcd";
+import * as _164 from "./mint/v1/query.lcd";
+import * as _165 from "./alloc/v1/query.rpc.Query";
+import * as _166 from "./catdrop/v1/query.rpc.Query";
+import * as _167 from "./mint/v1/query.rpc.Query";
+import * as _168 from "./catdrop/v1/tx.rpc.msg";
 export declare namespace coolcat {
     namespace alloc {
         const v1: {
-            QueryClientImpl: typeof _158.QueryClientImpl;
+            QueryClientImpl: typeof _165.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 params(request?: _3.QueryParamsRequest): Promise<_3.QueryParamsResponse>;
             };
-            LCDQueryClient: typeof _155.LCDQueryClient;
+            LCDQueryClient: typeof _162.LCDQueryClient;
             QueryParamsRequest: {
                 encode(_: _3.QueryParamsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
                 decode(input: Uint8Array | import("..").BinaryReader, length?: number): _3.QueryParamsRequest;
@@ -81,8 +81,8 @@ export declare namespace coolcat {
     }
     namespace catdrop {
         const v1: {
-            MsgClientImpl: typeof _161.MsgClientImpl;
-            QueryClientImpl: typeof _159.QueryClientImpl;
+            MsgClientImpl: typeof _168.MsgClientImpl;
+            QueryClientImpl: typeof _166.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 moduleAccountBalance(request?: _7.QueryModuleAccountBalanceRequest): Promise<_7.QueryModuleAccountBalanceResponse>;
                 params(request?: _7.QueryParamsRequest): Promise<_7.QueryParamsResponse>;
@@ -90,7 +90,7 @@ export declare namespace coolcat {
                 claimableForAction(request: _7.QueryClaimableForActionRequest): Promise<_7.QueryClaimableForActionResponse>;
                 totalClaimable(request: _7.QueryTotalClaimableRequest): Promise<_7.QueryTotalClaimableResponse>;
             };
-            LCDQueryClient: typeof _156.LCDQueryClient;
+            LCDQueryClient: typeof _163.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
             load: (protoRegistry: import("@cosmjs/proto-signing").Registry) => void;
             MessageComposer: {
@@ -383,13 +383,13 @@ export declare namespace coolcat {
     }
     namespace mint {
         const v1: {
-            QueryClientImpl: typeof _160.QueryClientImpl;
+            QueryClientImpl: typeof _167.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 params(request?: _11.QueryParamsRequest): Promise<_11.QueryParamsResponse>;
                 inflation(request?: _11.QueryInflationRequest): Promise<_11.QueryInflationResponse>;
                 annualProvisions(request?: _11.QueryAnnualProvisionsRequest): Promise<_11.QueryAnnualProvisionsResponse>;
             };
-            LCDQueryClient: typeof _157.LCDQueryClient;
+            LCDQueryClient: typeof _164.LCDQueryClient;
             QueryParamsRequest: {
                 encode(_: _11.QueryParamsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
                 decode(input: Uint8Array | import("..").BinaryReader, length?: number): _11.QueryParamsRequest;
@@ -489,7 +489,7 @@ export declare namespace coolcat {
         }) => Promise<{
             coolcat: {
                 catdrop: {
-                    v1: _161.MsgClientImpl;
+                    v1: _168.MsgClientImpl;
                 };
             };
             cosmos: {
@@ -721,13 +721,13 @@ export declare namespace coolcat {
         }) => Promise<{
             coolcat: {
                 alloc: {
-                    v1: _155.LCDQueryClient;
+                    v1: _162.LCDQueryClient;
                 };
                 catdrop: {
-                    v1: _156.LCDQueryClient;
+                    v1: _163.LCDQueryClient;
                 };
                 mint: {
-                    v1: _157.LCDQueryClient;
+                    v1: _164.LCDQueryClient;
                 };
             };
             cosmos: {

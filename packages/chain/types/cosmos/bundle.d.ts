@@ -85,47 +85,47 @@ import * as _97 from "./upgrade/v1beta1/query";
 import * as _98 from "./upgrade/v1beta1/tx";
 import * as _99 from "./upgrade/v1beta1/upgrade";
 import * as _100 from "./vesting/module/v1/module";
-import * as _182 from "./auth/v1beta1/query.lcd";
-import * as _183 from "./authz/v1beta1/query.lcd";
-import * as _184 from "./bank/v1beta1/query.lcd";
-import * as _185 from "./base/node/v1beta1/query.lcd";
-import * as _186 from "./consensus/v1/query.lcd";
-import * as _187 from "./distribution/v1beta1/query.lcd";
-import * as _188 from "./feegrant/v1beta1/query.lcd";
-import * as _189 from "./gov/v1/query.lcd";
-import * as _190 from "./gov/v1beta1/query.lcd";
-import * as _191 from "./nft/v1beta1/query.lcd";
-import * as _192 from "./params/v1beta1/query.lcd";
-import * as _193 from "./staking/v1beta1/query.lcd";
-import * as _194 from "./tx/v1beta1/service.lcd";
-import * as _195 from "./upgrade/v1beta1/query.lcd";
-import * as _196 from "./auth/v1beta1/query.rpc.Query";
-import * as _197 from "./authz/v1beta1/query.rpc.Query";
-import * as _198 from "./autocli/v1/query.rpc.Query";
-import * as _199 from "./bank/v1beta1/query.rpc.Query";
-import * as _200 from "./base/node/v1beta1/query.rpc.Service";
-import * as _201 from "./consensus/v1/query.rpc.Query";
-import * as _202 from "./distribution/v1beta1/query.rpc.Query";
-import * as _203 from "./feegrant/v1beta1/query.rpc.Query";
-import * as _204 from "./gov/v1/query.rpc.Query";
-import * as _205 from "./gov/v1beta1/query.rpc.Query";
-import * as _206 from "./nft/v1beta1/query.rpc.Query";
-import * as _207 from "./orm/query/v1alpha1/query.rpc.Query";
-import * as _208 from "./params/v1beta1/query.rpc.Query";
-import * as _209 from "./staking/v1beta1/query.rpc.Query";
-import * as _210 from "./tx/v1beta1/service.rpc.Service";
-import * as _211 from "./upgrade/v1beta1/query.rpc.Query";
-import * as _212 from "./auth/v1beta1/tx.rpc.msg";
-import * as _213 from "./authz/v1beta1/tx.rpc.msg";
-import * as _214 from "./bank/v1beta1/tx.rpc.msg";
-import * as _215 from "./consensus/v1/tx.rpc.msg";
-import * as _216 from "./distribution/v1beta1/tx.rpc.msg";
-import * as _217 from "./feegrant/v1beta1/tx.rpc.msg";
-import * as _218 from "./gov/v1/tx.rpc.msg";
-import * as _219 from "./gov/v1beta1/tx.rpc.msg";
-import * as _220 from "./nft/v1beta1/tx.rpc.msg";
-import * as _221 from "./staking/v1beta1/tx.rpc.msg";
-import * as _222 from "./upgrade/v1beta1/tx.rpc.msg";
+import * as _189 from "./auth/v1beta1/query.lcd";
+import * as _190 from "./authz/v1beta1/query.lcd";
+import * as _191 from "./bank/v1beta1/query.lcd";
+import * as _192 from "./base/node/v1beta1/query.lcd";
+import * as _193 from "./consensus/v1/query.lcd";
+import * as _194 from "./distribution/v1beta1/query.lcd";
+import * as _195 from "./feegrant/v1beta1/query.lcd";
+import * as _196 from "./gov/v1/query.lcd";
+import * as _197 from "./gov/v1beta1/query.lcd";
+import * as _198 from "./nft/v1beta1/query.lcd";
+import * as _199 from "./params/v1beta1/query.lcd";
+import * as _200 from "./staking/v1beta1/query.lcd";
+import * as _201 from "./tx/v1beta1/service.lcd";
+import * as _202 from "./upgrade/v1beta1/query.lcd";
+import * as _203 from "./auth/v1beta1/query.rpc.Query";
+import * as _204 from "./authz/v1beta1/query.rpc.Query";
+import * as _205 from "./autocli/v1/query.rpc.Query";
+import * as _206 from "./bank/v1beta1/query.rpc.Query";
+import * as _207 from "./base/node/v1beta1/query.rpc.Service";
+import * as _208 from "./consensus/v1/query.rpc.Query";
+import * as _209 from "./distribution/v1beta1/query.rpc.Query";
+import * as _210 from "./feegrant/v1beta1/query.rpc.Query";
+import * as _211 from "./gov/v1/query.rpc.Query";
+import * as _212 from "./gov/v1beta1/query.rpc.Query";
+import * as _213 from "./nft/v1beta1/query.rpc.Query";
+import * as _214 from "./orm/query/v1alpha1/query.rpc.Query";
+import * as _215 from "./params/v1beta1/query.rpc.Query";
+import * as _216 from "./staking/v1beta1/query.rpc.Query";
+import * as _217 from "./tx/v1beta1/service.rpc.Service";
+import * as _218 from "./upgrade/v1beta1/query.rpc.Query";
+import * as _219 from "./auth/v1beta1/tx.rpc.msg";
+import * as _220 from "./authz/v1beta1/tx.rpc.msg";
+import * as _221 from "./bank/v1beta1/tx.rpc.msg";
+import * as _222 from "./consensus/v1/tx.rpc.msg";
+import * as _223 from "./distribution/v1beta1/tx.rpc.msg";
+import * as _224 from "./feegrant/v1beta1/tx.rpc.msg";
+import * as _225 from "./gov/v1/tx.rpc.msg";
+import * as _226 from "./gov/v1beta1/tx.rpc.msg";
+import * as _227 from "./nft/v1beta1/tx.rpc.msg";
+import * as _228 from "./staking/v1beta1/tx.rpc.msg";
+import * as _229 from "./upgrade/v1beta1/tx.rpc.msg";
 export declare namespace cosmos {
     namespace app {
         namespace runtime {
@@ -190,8 +190,8 @@ export declare namespace cosmos {
             };
         }
         const v1beta1: {
-            MsgClientImpl: typeof _212.MsgClientImpl;
-            QueryClientImpl: typeof _196.QueryClientImpl;
+            MsgClientImpl: typeof _219.MsgClientImpl;
+            QueryClientImpl: typeof _203.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 accounts(request?: _17.QueryAccountsRequest): Promise<_17.QueryAccountsResponse>;
                 account(request: _17.QueryAccountRequest): Promise<_17.QueryAccountResponse>;
@@ -204,7 +204,7 @@ export declare namespace cosmos {
                 addressStringToBytes(request: _17.AddressStringToBytesRequest): Promise<_17.AddressStringToBytesResponse>;
                 accountInfo(request: _17.QueryAccountInfoRequest): Promise<_17.QueryAccountInfoResponse>;
             };
-            LCDQueryClient: typeof _182.LCDQueryClient;
+            LCDQueryClient: typeof _189.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
             load: (protoRegistry: import("@cosmjs/proto-signing").Registry) => void;
             MessageComposer: {
@@ -637,14 +637,14 @@ export declare namespace cosmos {
             };
         }
         const v1beta1: {
-            MsgClientImpl: typeof _213.MsgClientImpl;
-            QueryClientImpl: typeof _197.QueryClientImpl;
+            MsgClientImpl: typeof _220.MsgClientImpl;
+            QueryClientImpl: typeof _204.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 grants(request: _23.QueryGrantsRequest): Promise<_23.QueryGrantsResponse>;
                 granterGrants(request: _23.QueryGranterGrantsRequest): Promise<_23.QueryGranterGrantsResponse>;
                 granteeGrants(request: _23.QueryGranteeGrantsRequest): Promise<_23.QueryGranteeGrantsResponse>;
             };
-            LCDQueryClient: typeof _183.LCDQueryClient;
+            LCDQueryClient: typeof _190.LCDQueryClient;
             MsgGrant: {
                 encode(message: _24.MsgGrant, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
                 decode(input: Uint8Array | import("..").BinaryReader, length?: number): _24.MsgGrant;
@@ -675,6 +675,64 @@ export declare namespace cosmos {
                                 address?: string[];
                             };
                             authorizationType?: _87.AuthorizationType;
+                        } | {
+                            grants?: {
+                                contract?: string;
+                                limit?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {
+                                    remaining?: bigint;
+                                } | {
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                } | {
+                                    callsRemaining?: bigint;
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                };
+                                filter?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {} | {
+                                    keys?: string[];
+                                } | {
+                                    messages?: Uint8Array[];
+                                };
+                            }[];
+                        } | {
+                            grants?: {
+                                contract?: string;
+                                limit?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {
+                                    remaining?: bigint;
+                                } | {
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                } | {
+                                    callsRemaining?: bigint;
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                };
+                                filter?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {} | {
+                                    keys?: string[];
+                                } | {
+                                    messages?: Uint8Array[];
+                                };
+                            }[];
                         } | {
                             msg?: string;
                         };
@@ -780,6 +838,64 @@ export declare namespace cosmos {
                             };
                             authorizationType?: _87.AuthorizationType;
                         } | {
+                            grants?: {
+                                contract?: string;
+                                limit?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {
+                                    remaining?: bigint;
+                                } | {
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                } | {
+                                    callsRemaining?: bigint;
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                };
+                                filter?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {} | {
+                                    keys?: string[];
+                                } | {
+                                    messages?: Uint8Array[];
+                                };
+                            }[];
+                        } | {
+                            grants?: {
+                                contract?: string;
+                                limit?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {
+                                    remaining?: bigint;
+                                } | {
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                } | {
+                                    callsRemaining?: bigint;
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                };
+                                filter?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {} | {
+                                    keys?: string[];
+                                } | {
+                                    messages?: Uint8Array[];
+                                };
+                            }[];
+                        } | {
                             msg?: string;
                         };
                         expiration?: {
@@ -839,6 +955,64 @@ export declare namespace cosmos {
                                 address?: string[];
                             };
                             authorizationType?: _87.AuthorizationType;
+                        } | {
+                            grants?: {
+                                contract?: string;
+                                limit?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {
+                                    remaining?: bigint;
+                                } | {
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                } | {
+                                    callsRemaining?: bigint;
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                };
+                                filter?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {} | {
+                                    keys?: string[];
+                                } | {
+                                    messages?: Uint8Array[];
+                                };
+                            }[];
+                        } | {
+                            grants?: {
+                                contract?: string;
+                                limit?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {
+                                    remaining?: bigint;
+                                } | {
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                } | {
+                                    callsRemaining?: bigint;
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                };
+                                filter?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {} | {
+                                    keys?: string[];
+                                } | {
+                                    messages?: Uint8Array[];
+                                };
+                            }[];
                         } | {
                             msg?: string;
                         };
@@ -900,6 +1074,64 @@ export declare namespace cosmos {
                             };
                             authorizationType?: _87.AuthorizationType;
                         } | {
+                            grants?: {
+                                contract?: string;
+                                limit?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {
+                                    remaining?: bigint;
+                                } | {
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                } | {
+                                    callsRemaining?: bigint;
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                };
+                                filter?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {} | {
+                                    keys?: string[];
+                                } | {
+                                    messages?: Uint8Array[];
+                                };
+                            }[];
+                        } | {
+                            grants?: {
+                                contract?: string;
+                                limit?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {
+                                    remaining?: bigint;
+                                } | {
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                } | {
+                                    callsRemaining?: bigint;
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                };
+                                filter?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {} | {
+                                    keys?: string[];
+                                } | {
+                                    messages?: Uint8Array[];
+                                };
+                            }[];
+                        } | {
                             msg?: string;
                         };
                         expiration?: {
@@ -943,6 +1175,64 @@ export declare namespace cosmos {
                                 address?: string[];
                             };
                             authorizationType?: _87.AuthorizationType;
+                        } | {
+                            grants?: {
+                                contract?: string;
+                                limit?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {
+                                    remaining?: bigint;
+                                } | {
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                } | {
+                                    callsRemaining?: bigint;
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                };
+                                filter?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {} | {
+                                    keys?: string[];
+                                } | {
+                                    messages?: Uint8Array[];
+                                };
+                            }[];
+                        } | {
+                            grants?: {
+                                contract?: string;
+                                limit?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {
+                                    remaining?: bigint;
+                                } | {
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                } | {
+                                    callsRemaining?: bigint;
+                                    amounts?: {
+                                        denom?: string;
+                                        amount?: string;
+                                    }[];
+                                };
+                                filter?: {
+                                    typeUrl?: string;
+                                    value?: Uint8Array;
+                                } | {} | {
+                                    keys?: string[];
+                                } | {
+                                    messages?: Uint8Array[];
+                                };
+                            }[];
                         } | {
                             msg?: string;
                         };
@@ -1012,6 +1302,64 @@ export declare namespace cosmos {
                         };
                         authorizationType?: _87.AuthorizationType;
                     } | {
+                        grants?: {
+                            contract?: string;
+                            limit?: {
+                                typeUrl?: string;
+                                value?: Uint8Array;
+                            } | {
+                                remaining?: bigint;
+                            } | {
+                                amounts?: {
+                                    denom?: string;
+                                    amount?: string;
+                                }[];
+                            } | {
+                                callsRemaining?: bigint;
+                                amounts?: {
+                                    denom?: string;
+                                    amount?: string;
+                                }[];
+                            };
+                            filter?: {
+                                typeUrl?: string;
+                                value?: Uint8Array;
+                            } | {} | {
+                                keys?: string[];
+                            } | {
+                                messages?: Uint8Array[];
+                            };
+                        }[];
+                    } | {
+                        grants?: {
+                            contract?: string;
+                            limit?: {
+                                typeUrl?: string;
+                                value?: Uint8Array;
+                            } | {
+                                remaining?: bigint;
+                            } | {
+                                amounts?: {
+                                    denom?: string;
+                                    amount?: string;
+                                }[];
+                            } | {
+                                callsRemaining?: bigint;
+                                amounts?: {
+                                    denom?: string;
+                                    amount?: string;
+                                }[];
+                            };
+                            filter?: {
+                                typeUrl?: string;
+                                value?: Uint8Array;
+                            } | {} | {
+                                keys?: string[];
+                            } | {
+                                messages?: Uint8Array[];
+                            };
+                        }[];
+                    } | {
                         msg?: string;
                     };
                     expiration?: {
@@ -1050,6 +1398,64 @@ export declare namespace cosmos {
                         };
                         authorizationType?: _87.AuthorizationType;
                     } | {
+                        grants?: {
+                            contract?: string;
+                            limit?: {
+                                typeUrl?: string;
+                                value?: Uint8Array;
+                            } | {
+                                remaining?: bigint;
+                            } | {
+                                amounts?: {
+                                    denom?: string;
+                                    amount?: string;
+                                }[];
+                            } | {
+                                callsRemaining?: bigint;
+                                amounts?: {
+                                    denom?: string;
+                                    amount?: string;
+                                }[];
+                            };
+                            filter?: {
+                                typeUrl?: string;
+                                value?: Uint8Array;
+                            } | {} | {
+                                keys?: string[];
+                            } | {
+                                messages?: Uint8Array[];
+                            };
+                        }[];
+                    } | {
+                        grants?: {
+                            contract?: string;
+                            limit?: {
+                                typeUrl?: string;
+                                value?: Uint8Array;
+                            } | {
+                                remaining?: bigint;
+                            } | {
+                                amounts?: {
+                                    denom?: string;
+                                    amount?: string;
+                                }[];
+                            } | {
+                                callsRemaining?: bigint;
+                                amounts?: {
+                                    denom?: string;
+                                    amount?: string;
+                                }[];
+                            };
+                            filter?: {
+                                typeUrl?: string;
+                                value?: Uint8Array;
+                            } | {} | {
+                                keys?: string[];
+                            } | {
+                                messages?: Uint8Array[];
+                            };
+                        }[];
+                    } | {
                         msg?: string;
                     };
                     expiration?: {
@@ -1067,12 +1473,12 @@ export declare namespace cosmos {
                     msgTypeUrls?: string[];
                 }): _20.GrantQueueItem;
             };
-            Cosmos_authzv1beta1Authorization_InterfaceDecoder: (input: Uint8Array | import("..").BinaryReader) => import("../google/protobuf/any").Any | _28.SendAuthorization | _87.StakeAuthorization | _20.GenericAuthorization;
+            Cosmos_authzv1beta1Authorization_InterfaceDecoder: (input: Uint8Array | import("..").BinaryReader) => import("../google/protobuf/any").Any | _28.SendAuthorization | _87.StakeAuthorization | import("../cosmwasm/wasm/v1/authz").ContractExecutionAuthorization | import("../cosmwasm/wasm/v1/authz").ContractMigrationAuthorization | _20.GenericAuthorization;
         };
     }
     namespace autocli {
         const v1: {
-            QueryClientImpl: typeof _198.QueryClientImpl;
+            QueryClientImpl: typeof _205.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 appOptions(request?: _26.AppOptionsRequest): Promise<_26.AppOptionsResponse>;
             };
@@ -1498,8 +1904,8 @@ export declare namespace cosmos {
             };
         }
         const v1beta1: {
-            MsgClientImpl: typeof _214.MsgClientImpl;
-            QueryClientImpl: typeof _199.QueryClientImpl;
+            MsgClientImpl: typeof _221.MsgClientImpl;
+            QueryClientImpl: typeof _206.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 balance(request: _31.QueryBalanceRequest): Promise<_31.QueryBalanceResponse>;
                 allBalances(request: _31.QueryAllBalancesRequest): Promise<_31.QueryAllBalancesResponse>;
@@ -1513,7 +1919,7 @@ export declare namespace cosmos {
                 denomOwners(request: _31.QueryDenomOwnersRequest): Promise<_31.QueryDenomOwnersResponse>;
                 sendEnabled(request: _31.QuerySendEnabledRequest): Promise<_31.QuerySendEnabledResponse>;
             };
-            LCDQueryClient: typeof _184.LCDQueryClient;
+            LCDQueryClient: typeof _191.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
             load: (protoRegistry: import("@cosmjs/proto-signing").Registry) => void;
             MessageComposer: {
@@ -2520,11 +2926,11 @@ export declare namespace cosmos {
         }
         namespace node {
             const v1beta1: {
-                ServiceClientImpl: typeof _200.ServiceClientImpl;
+                ServiceClientImpl: typeof _207.ServiceClientImpl;
                 createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                     config(request?: _34.ConfigRequest): Promise<_34.ConfigResponse>;
                 };
-                LCDQueryClient: typeof _185.LCDQueryClient;
+                LCDQueryClient: typeof _192.LCDQueryClient;
                 ConfigRequest: {
                     encode(_: _34.ConfigRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
                     decode(input: Uint8Array | import("..").BinaryReader, length?: number): _34.ConfigRequest;
@@ -2986,12 +3392,12 @@ export declare namespace cosmos {
             };
         }
         const v1: {
-            MsgClientImpl: typeof _215.MsgClientImpl;
-            QueryClientImpl: typeof _201.QueryClientImpl;
+            MsgClientImpl: typeof _222.MsgClientImpl;
+            QueryClientImpl: typeof _208.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 params(request?: _40.QueryParamsRequest): Promise<_40.QueryParamsResponse>;
             };
-            LCDQueryClient: typeof _186.LCDQueryClient;
+            LCDQueryClient: typeof _193.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
             load: (protoRegistry: import("@cosmjs/proto-signing").Registry) => void;
             MessageComposer: {
@@ -3336,8 +3742,8 @@ export declare namespace cosmos {
             };
         }
         const v1beta1: {
-            MsgClientImpl: typeof _216.MsgClientImpl;
-            QueryClientImpl: typeof _202.QueryClientImpl;
+            MsgClientImpl: typeof _223.MsgClientImpl;
+            QueryClientImpl: typeof _209.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 params(request?: _52.QueryParamsRequest): Promise<_52.QueryParamsResponse>;
                 validatorDistributionInfo(request: _52.QueryValidatorDistributionInfoRequest): Promise<_52.QueryValidatorDistributionInfoResponse>;
@@ -3350,7 +3756,7 @@ export declare namespace cosmos {
                 delegatorWithdrawAddress(request: _52.QueryDelegatorWithdrawAddressRequest): Promise<_52.QueryDelegatorWithdrawAddressResponse>;
                 communityPool(request?: _52.QueryCommunityPoolRequest): Promise<_52.QueryCommunityPoolResponse>;
             };
-            LCDQueryClient: typeof _187.LCDQueryClient;
+            LCDQueryClient: typeof _194.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
             load: (protoRegistry: import("@cosmjs/proto-signing").Registry) => void;
             MessageComposer: {
@@ -4287,14 +4693,14 @@ export declare namespace cosmos {
             };
         }
         const v1beta1: {
-            MsgClientImpl: typeof _217.MsgClientImpl;
-            QueryClientImpl: typeof _203.QueryClientImpl;
+            MsgClientImpl: typeof _224.MsgClientImpl;
+            QueryClientImpl: typeof _210.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 allowance(request: _58.QueryAllowanceRequest): Promise<_58.QueryAllowanceResponse>;
                 allowances(request: _58.QueryAllowancesRequest): Promise<_58.QueryAllowancesResponse>;
                 allowancesByGranter(request: _58.QueryAllowancesByGranterRequest): Promise<_58.QueryAllowancesByGranterResponse>;
             };
-            LCDQueryClient: typeof _188.LCDQueryClient;
+            LCDQueryClient: typeof _195.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
             load: (protoRegistry: import("@cosmjs/proto-signing").Registry) => void;
             MessageComposer: {
@@ -5146,8 +5552,8 @@ export declare namespace cosmos {
             };
         }
         const v1: {
-            MsgClientImpl: typeof _218.MsgClientImpl;
-            QueryClientImpl: typeof _204.QueryClientImpl;
+            MsgClientImpl: typeof _225.MsgClientImpl;
+            QueryClientImpl: typeof _211.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 proposal(request: _64.QueryProposalRequest): Promise<_64.QueryProposalResponse>;
                 proposals(request: _64.QueryProposalsRequest): Promise<_64.QueryProposalsResponse>;
@@ -5158,7 +5564,7 @@ export declare namespace cosmos {
                 deposits(request: _64.QueryDepositsRequest): Promise<_64.QueryDepositsResponse>;
                 tallyResult(request: _64.QueryTallyResultRequest): Promise<_64.QueryTallyResultResponse>;
             };
-            LCDQueryClient: typeof _189.LCDQueryClient;
+            LCDQueryClient: typeof _196.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
             load: (protoRegistry: import("@cosmjs/proto-signing").Registry) => void;
             MessageComposer: {
@@ -5531,6 +5937,113 @@ export declare namespace cosmos {
                     } | {
                         title?: string;
                         description?: string;
+                        runAs?: string;
+                        wasmByteCode?: Uint8Array;
+                        instantiatePermission?: {
+                            permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                            addresses?: string[];
+                        };
+                        unpinCode?: boolean;
+                        source?: string;
+                        builder?: string;
+                        codeHash?: Uint8Array;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        runAs?: string;
+                        admin?: string;
+                        codeId?: bigint;
+                        label?: string;
+                        msg?: Uint8Array;
+                        funds?: {
+                            denom?: string;
+                            amount?: string;
+                        }[];
+                    } | {
+                        title?: string;
+                        description?: string;
+                        runAs?: string;
+                        admin?: string;
+                        codeId?: bigint;
+                        label?: string;
+                        msg?: Uint8Array;
+                        funds?: {
+                            denom?: string;
+                            amount?: string;
+                        }[];
+                        salt?: Uint8Array;
+                        fixMsg?: boolean;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        contract?: string;
+                        codeId?: bigint;
+                        msg?: Uint8Array;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        contract?: string;
+                        msg?: Uint8Array;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        runAs?: string;
+                        contract?: string;
+                        msg?: Uint8Array;
+                        funds?: {
+                            denom?: string;
+                            amount?: string;
+                        }[];
+                    } | {
+                        title?: string;
+                        description?: string;
+                        newAdmin?: string;
+                        contract?: string;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        contract?: string;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        codeIds?: bigint[];
+                    } | {
+                        title?: string;
+                        description?: string;
+                        codeIds?: bigint[];
+                    } | {
+                        title?: string;
+                        description?: string;
+                        accessConfigUpdates?: {
+                            codeId?: bigint;
+                            instantiatePermission?: {
+                                permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                                addresses?: string[];
+                            };
+                        }[];
+                    } | {
+                        title?: string;
+                        description?: string;
+                        runAs?: string;
+                        wasmByteCode?: Uint8Array;
+                        instantiatePermission?: {
+                            permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                            addresses?: string[];
+                        };
+                        unpinCode?: boolean;
+                        admin?: string;
+                        label?: string;
+                        msg?: Uint8Array;
+                        funds?: {
+                            denom?: string;
+                            amount?: string;
+                        }[];
+                        source?: string;
+                        builder?: string;
+                        codeHash?: Uint8Array;
+                    } | {
+                        title?: string;
+                        description?: string;
                     };
                     authority?: string;
                 }): _65.MsgExecLegacyContent;
@@ -5641,7 +6154,7 @@ export declare namespace cosmos {
                 toJSON(_: _65.MsgUpdateParamsResponse): unknown;
                 fromPartial(_: {}): _65.MsgUpdateParamsResponse;
             };
-            Cosmos_govv1beta1Content_InterfaceDecoder: (input: Uint8Array | import("..").BinaryReader) => import("../google/protobuf/any").Any | _50.CommunityPoolSpendProposal | _50.CommunityPoolSpendProposalWithDeposit | _81.ParameterChangeProposal | _99.SoftwareUpgradeProposal | _99.CancelSoftwareUpgradeProposal | _67.TextProposal;
+            Cosmos_govv1beta1Content_InterfaceDecoder: (input: Uint8Array | import("..").BinaryReader) => import("../google/protobuf/any").Any | _50.CommunityPoolSpendProposal | _50.CommunityPoolSpendProposalWithDeposit | _81.ParameterChangeProposal | _99.SoftwareUpgradeProposal | _99.CancelSoftwareUpgradeProposal | import("../cosmwasm/wasm/v1/proposal").StoreCodeProposal | import("../cosmwasm/wasm/v1/proposal").InstantiateContractProposal | import("../cosmwasm/wasm/v1/proposal").InstantiateContract2Proposal | import("../cosmwasm/wasm/v1/proposal").MigrateContractProposal | import("../cosmwasm/wasm/v1/proposal").SudoContractProposal | import("../cosmwasm/wasm/v1/proposal").ExecuteContractProposal | import("../cosmwasm/wasm/v1/proposal").UpdateAdminProposal | import("../cosmwasm/wasm/v1/proposal").ClearAdminProposal | import("../cosmwasm/wasm/v1/proposal").PinCodesProposal | import("../cosmwasm/wasm/v1/proposal").UnpinCodesProposal | import("../cosmwasm/wasm/v1/proposal").UpdateInstantiateConfigProposal | import("../cosmwasm/wasm/v1/proposal").StoreAndInstantiateContractProposal | _67.TextProposal;
             QueryProposalRequest: {
                 encode(message: _64.QueryProposalRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
                 decode(input: Uint8Array | import("..").BinaryReader, length?: number): _64.QueryProposalRequest;
@@ -6248,8 +6761,8 @@ export declare namespace cosmos {
             };
         };
         const v1beta1: {
-            MsgClientImpl: typeof _219.MsgClientImpl;
-            QueryClientImpl: typeof _205.QueryClientImpl;
+            MsgClientImpl: typeof _226.MsgClientImpl;
+            QueryClientImpl: typeof _212.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 proposal(request: _68.QueryProposalRequest): Promise<_68.QueryProposalResponse>;
                 proposals(request: _68.QueryProposalsRequest): Promise<_68.QueryProposalsResponse>;
@@ -6260,7 +6773,7 @@ export declare namespace cosmos {
                 deposits(request: _68.QueryDepositsRequest): Promise<_68.QueryDepositsResponse>;
                 tallyResult(request: _68.QueryTallyResultRequest): Promise<_68.QueryTallyResultResponse>;
             };
-            LCDQueryClient: typeof _190.LCDQueryClient;
+            LCDQueryClient: typeof _197.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
             load: (protoRegistry: import("@cosmjs/proto-signing").Registry) => void;
             MessageComposer: {
@@ -6486,6 +6999,113 @@ export declare namespace cosmos {
                     } | {
                         title?: string;
                         description?: string;
+                        runAs?: string;
+                        wasmByteCode?: Uint8Array;
+                        instantiatePermission?: {
+                            permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                            addresses?: string[];
+                        };
+                        unpinCode?: boolean;
+                        source?: string;
+                        builder?: string;
+                        codeHash?: Uint8Array;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        runAs?: string;
+                        admin?: string;
+                        codeId?: bigint;
+                        label?: string;
+                        msg?: Uint8Array;
+                        funds?: {
+                            denom?: string;
+                            amount?: string;
+                        }[];
+                    } | {
+                        title?: string;
+                        description?: string;
+                        runAs?: string;
+                        admin?: string;
+                        codeId?: bigint;
+                        label?: string;
+                        msg?: Uint8Array;
+                        funds?: {
+                            denom?: string;
+                            amount?: string;
+                        }[];
+                        salt?: Uint8Array;
+                        fixMsg?: boolean;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        contract?: string;
+                        codeId?: bigint;
+                        msg?: Uint8Array;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        contract?: string;
+                        msg?: Uint8Array;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        runAs?: string;
+                        contract?: string;
+                        msg?: Uint8Array;
+                        funds?: {
+                            denom?: string;
+                            amount?: string;
+                        }[];
+                    } | {
+                        title?: string;
+                        description?: string;
+                        newAdmin?: string;
+                        contract?: string;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        contract?: string;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        codeIds?: bigint[];
+                    } | {
+                        title?: string;
+                        description?: string;
+                        codeIds?: bigint[];
+                    } | {
+                        title?: string;
+                        description?: string;
+                        accessConfigUpdates?: {
+                            codeId?: bigint;
+                            instantiatePermission?: {
+                                permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                                addresses?: string[];
+                            };
+                        }[];
+                    } | {
+                        title?: string;
+                        description?: string;
+                        runAs?: string;
+                        wasmByteCode?: Uint8Array;
+                        instantiatePermission?: {
+                            permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                            addresses?: string[];
+                        };
+                        unpinCode?: boolean;
+                        admin?: string;
+                        label?: string;
+                        msg?: Uint8Array;
+                        funds?: {
+                            denom?: string;
+                            amount?: string;
+                        }[];
+                        source?: string;
+                        builder?: string;
+                        codeHash?: Uint8Array;
+                    } | {
+                        title?: string;
+                        description?: string;
                     };
                     initialDeposit?: {
                         denom?: string;
@@ -6563,7 +7183,7 @@ export declare namespace cosmos {
                 toJSON(_: _69.MsgDepositResponse): unknown;
                 fromPartial(_: {}): _69.MsgDepositResponse;
             };
-            Cosmos_govv1beta1Content_InterfaceDecoder: (input: Uint8Array | import("..").BinaryReader) => import("../google/protobuf/any").Any | _50.CommunityPoolSpendProposal | _50.CommunityPoolSpendProposalWithDeposit | _81.ParameterChangeProposal | _99.SoftwareUpgradeProposal | _99.CancelSoftwareUpgradeProposal | _67.TextProposal;
+            Cosmos_govv1beta1Content_InterfaceDecoder: (input: Uint8Array | import("..").BinaryReader) => import("../google/protobuf/any").Any | _50.CommunityPoolSpendProposal | _50.CommunityPoolSpendProposalWithDeposit | _81.ParameterChangeProposal | _99.SoftwareUpgradeProposal | _99.CancelSoftwareUpgradeProposal | import("../cosmwasm/wasm/v1/proposal").StoreCodeProposal | import("../cosmwasm/wasm/v1/proposal").InstantiateContractProposal | import("../cosmwasm/wasm/v1/proposal").InstantiateContract2Proposal | import("../cosmwasm/wasm/v1/proposal").MigrateContractProposal | import("../cosmwasm/wasm/v1/proposal").SudoContractProposal | import("../cosmwasm/wasm/v1/proposal").ExecuteContractProposal | import("../cosmwasm/wasm/v1/proposal").UpdateAdminProposal | import("../cosmwasm/wasm/v1/proposal").ClearAdminProposal | import("../cosmwasm/wasm/v1/proposal").PinCodesProposal | import("../cosmwasm/wasm/v1/proposal").UnpinCodesProposal | import("../cosmwasm/wasm/v1/proposal").UpdateInstantiateConfigProposal | import("../cosmwasm/wasm/v1/proposal").StoreAndInstantiateContractProposal | _67.TextProposal;
             QueryProposalRequest: {
                 encode(message: _68.QueryProposalRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
                 decode(input: Uint8Array | import("..").BinaryReader, length?: number): _68.QueryProposalRequest;
@@ -6625,6 +7245,113 @@ export declare namespace cosmos {
                         } | {
                             title?: string;
                             description?: string;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            runAs?: string;
+                            wasmByteCode?: Uint8Array;
+                            instantiatePermission?: {
+                                permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                                addresses?: string[];
+                            };
+                            unpinCode?: boolean;
+                            source?: string;
+                            builder?: string;
+                            codeHash?: Uint8Array;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            runAs?: string;
+                            admin?: string;
+                            codeId?: bigint;
+                            label?: string;
+                            msg?: Uint8Array;
+                            funds?: {
+                                denom?: string;
+                                amount?: string;
+                            }[];
+                        } | {
+                            title?: string;
+                            description?: string;
+                            runAs?: string;
+                            admin?: string;
+                            codeId?: bigint;
+                            label?: string;
+                            msg?: Uint8Array;
+                            funds?: {
+                                denom?: string;
+                                amount?: string;
+                            }[];
+                            salt?: Uint8Array;
+                            fixMsg?: boolean;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            contract?: string;
+                            codeId?: bigint;
+                            msg?: Uint8Array;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            contract?: string;
+                            msg?: Uint8Array;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            runAs?: string;
+                            contract?: string;
+                            msg?: Uint8Array;
+                            funds?: {
+                                denom?: string;
+                                amount?: string;
+                            }[];
+                        } | {
+                            title?: string;
+                            description?: string;
+                            newAdmin?: string;
+                            contract?: string;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            contract?: string;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            codeIds?: bigint[];
+                        } | {
+                            title?: string;
+                            description?: string;
+                            codeIds?: bigint[];
+                        } | {
+                            title?: string;
+                            description?: string;
+                            accessConfigUpdates?: {
+                                codeId?: bigint;
+                                instantiatePermission?: {
+                                    permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                                    addresses?: string[];
+                                };
+                            }[];
+                        } | {
+                            title?: string;
+                            description?: string;
+                            runAs?: string;
+                            wasmByteCode?: Uint8Array;
+                            instantiatePermission?: {
+                                permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                                addresses?: string[];
+                            };
+                            unpinCode?: boolean;
+                            admin?: string;
+                            label?: string;
+                            msg?: Uint8Array;
+                            funds?: {
+                                denom?: string;
+                                amount?: string;
+                            }[];
+                            source?: string;
+                            builder?: string;
+                            codeHash?: Uint8Array;
                         } | {
                             title?: string;
                             description?: string;
@@ -6729,6 +7456,113 @@ export declare namespace cosmos {
                         } | {
                             title?: string;
                             description?: string;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            runAs?: string;
+                            wasmByteCode?: Uint8Array;
+                            instantiatePermission?: {
+                                permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                                addresses?: string[];
+                            };
+                            unpinCode?: boolean;
+                            source?: string;
+                            builder?: string;
+                            codeHash?: Uint8Array;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            runAs?: string;
+                            admin?: string;
+                            codeId?: bigint;
+                            label?: string;
+                            msg?: Uint8Array;
+                            funds?: {
+                                denom?: string;
+                                amount?: string;
+                            }[];
+                        } | {
+                            title?: string;
+                            description?: string;
+                            runAs?: string;
+                            admin?: string;
+                            codeId?: bigint;
+                            label?: string;
+                            msg?: Uint8Array;
+                            funds?: {
+                                denom?: string;
+                                amount?: string;
+                            }[];
+                            salt?: Uint8Array;
+                            fixMsg?: boolean;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            contract?: string;
+                            codeId?: bigint;
+                            msg?: Uint8Array;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            contract?: string;
+                            msg?: Uint8Array;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            runAs?: string;
+                            contract?: string;
+                            msg?: Uint8Array;
+                            funds?: {
+                                denom?: string;
+                                amount?: string;
+                            }[];
+                        } | {
+                            title?: string;
+                            description?: string;
+                            newAdmin?: string;
+                            contract?: string;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            contract?: string;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            codeIds?: bigint[];
+                        } | {
+                            title?: string;
+                            description?: string;
+                            codeIds?: bigint[];
+                        } | {
+                            title?: string;
+                            description?: string;
+                            accessConfigUpdates?: {
+                                codeId?: bigint;
+                                instantiatePermission?: {
+                                    permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                                    addresses?: string[];
+                                };
+                            }[];
+                        } | {
+                            title?: string;
+                            description?: string;
+                            runAs?: string;
+                            wasmByteCode?: Uint8Array;
+                            instantiatePermission?: {
+                                permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                                addresses?: string[];
+                            };
+                            unpinCode?: boolean;
+                            admin?: string;
+                            label?: string;
+                            msg?: Uint8Array;
+                            funds?: {
+                                denom?: string;
+                                amount?: string;
+                            }[];
+                            source?: string;
+                            builder?: string;
+                            codeHash?: Uint8Array;
                         } | {
                             title?: string;
                             description?: string;
@@ -7048,6 +7882,113 @@ export declare namespace cosmos {
                     } | {
                         title?: string;
                         description?: string;
+                        runAs?: string;
+                        wasmByteCode?: Uint8Array;
+                        instantiatePermission?: {
+                            permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                            addresses?: string[];
+                        };
+                        unpinCode?: boolean;
+                        source?: string;
+                        builder?: string;
+                        codeHash?: Uint8Array;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        runAs?: string;
+                        admin?: string;
+                        codeId?: bigint;
+                        label?: string;
+                        msg?: Uint8Array;
+                        funds?: {
+                            denom?: string;
+                            amount?: string;
+                        }[];
+                    } | {
+                        title?: string;
+                        description?: string;
+                        runAs?: string;
+                        admin?: string;
+                        codeId?: bigint;
+                        label?: string;
+                        msg?: Uint8Array;
+                        funds?: {
+                            denom?: string;
+                            amount?: string;
+                        }[];
+                        salt?: Uint8Array;
+                        fixMsg?: boolean;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        contract?: string;
+                        codeId?: bigint;
+                        msg?: Uint8Array;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        contract?: string;
+                        msg?: Uint8Array;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        runAs?: string;
+                        contract?: string;
+                        msg?: Uint8Array;
+                        funds?: {
+                            denom?: string;
+                            amount?: string;
+                        }[];
+                    } | {
+                        title?: string;
+                        description?: string;
+                        newAdmin?: string;
+                        contract?: string;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        contract?: string;
+                    } | {
+                        title?: string;
+                        description?: string;
+                        codeIds?: bigint[];
+                    } | {
+                        title?: string;
+                        description?: string;
+                        codeIds?: bigint[];
+                    } | {
+                        title?: string;
+                        description?: string;
+                        accessConfigUpdates?: {
+                            codeId?: bigint;
+                            instantiatePermission?: {
+                                permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                                addresses?: string[];
+                            };
+                        }[];
+                    } | {
+                        title?: string;
+                        description?: string;
+                        runAs?: string;
+                        wasmByteCode?: Uint8Array;
+                        instantiatePermission?: {
+                            permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                            addresses?: string[];
+                        };
+                        unpinCode?: boolean;
+                        admin?: string;
+                        label?: string;
+                        msg?: Uint8Array;
+                        funds?: {
+                            denom?: string;
+                            amount?: string;
+                        }[];
+                        source?: string;
+                        builder?: string;
+                        codeHash?: Uint8Array;
+                    } | {
+                        title?: string;
+                        description?: string;
                     };
                     status?: _67.ProposalStatus;
                     finalTallyResult?: {
@@ -7217,6 +8158,113 @@ export declare namespace cosmos {
                         } | {
                             title?: string;
                             description?: string;
+                            runAs?: string;
+                            wasmByteCode?: Uint8Array;
+                            instantiatePermission?: {
+                                permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                                addresses?: string[];
+                            };
+                            unpinCode?: boolean;
+                            source?: string;
+                            builder?: string;
+                            codeHash?: Uint8Array;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            runAs?: string;
+                            admin?: string;
+                            codeId?: bigint;
+                            label?: string;
+                            msg?: Uint8Array;
+                            funds?: {
+                                denom?: string;
+                                amount?: string;
+                            }[];
+                        } | {
+                            title?: string;
+                            description?: string;
+                            runAs?: string;
+                            admin?: string;
+                            codeId?: bigint;
+                            label?: string;
+                            msg?: Uint8Array;
+                            funds?: {
+                                denom?: string;
+                                amount?: string;
+                            }[];
+                            salt?: Uint8Array;
+                            fixMsg?: boolean;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            contract?: string;
+                            codeId?: bigint;
+                            msg?: Uint8Array;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            contract?: string;
+                            msg?: Uint8Array;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            runAs?: string;
+                            contract?: string;
+                            msg?: Uint8Array;
+                            funds?: {
+                                denom?: string;
+                                amount?: string;
+                            }[];
+                        } | {
+                            title?: string;
+                            description?: string;
+                            newAdmin?: string;
+                            contract?: string;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            contract?: string;
+                        } | {
+                            title?: string;
+                            description?: string;
+                            codeIds?: bigint[];
+                        } | {
+                            title?: string;
+                            description?: string;
+                            codeIds?: bigint[];
+                        } | {
+                            title?: string;
+                            description?: string;
+                            accessConfigUpdates?: {
+                                codeId?: bigint;
+                                instantiatePermission?: {
+                                    permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                                    addresses?: string[];
+                                };
+                            }[];
+                        } | {
+                            title?: string;
+                            description?: string;
+                            runAs?: string;
+                            wasmByteCode?: Uint8Array;
+                            instantiatePermission?: {
+                                permission?: import("../cosmwasm/wasm/v1/types").AccessType;
+                                addresses?: string[];
+                            };
+                            unpinCode?: boolean;
+                            admin?: string;
+                            label?: string;
+                            msg?: Uint8Array;
+                            funds?: {
+                                denom?: string;
+                                amount?: string;
+                            }[];
+                            source?: string;
+                            builder?: string;
+                            codeHash?: Uint8Array;
+                        } | {
+                            title?: string;
+                            description?: string;
                         };
                         status?: _67.ProposalStatus;
                         finalTallyResult?: {
@@ -7319,8 +8367,8 @@ export declare namespace cosmos {
             };
         }
         const v1beta1: {
-            MsgClientImpl: typeof _220.MsgClientImpl;
-            QueryClientImpl: typeof _206.QueryClientImpl;
+            MsgClientImpl: typeof _227.MsgClientImpl;
+            QueryClientImpl: typeof _213.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 balance(request: _76.QueryBalanceRequest): Promise<_76.QueryBalanceResponse>;
                 owner(request: _76.QueryOwnerRequest): Promise<_76.QueryOwnerResponse>;
@@ -7330,7 +8378,7 @@ export declare namespace cosmos {
                 class(request: _76.QueryClassRequest): Promise<_76.QueryClassResponse>;
                 classes(request?: _76.QueryClassesRequest): Promise<_76.QueryClassesResponse>;
             };
-            LCDQueryClient: typeof _191.LCDQueryClient;
+            LCDQueryClient: typeof _198.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
             load: (protoRegistry: import("@cosmjs/proto-signing").Registry) => void;
             MessageComposer: {
@@ -7728,7 +8776,7 @@ export declare namespace cosmos {
         }
         namespace query {
             const v1alpha1: {
-                QueryClientImpl: typeof _207.QueryClientImpl;
+                QueryClientImpl: typeof _214.QueryClientImpl;
                 createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                     get(request: _79.GetRequest): Promise<_79.GetResponse>;
                     list(request: _79.ListRequest): Promise<_79.ListResponse>;
@@ -7958,12 +9006,12 @@ export declare namespace cosmos {
             };
         }
         const v1beta1: {
-            QueryClientImpl: typeof _208.QueryClientImpl;
+            QueryClientImpl: typeof _215.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 params(request: _82.QueryParamsRequest): Promise<_82.QueryParamsResponse>;
                 subspaces(request?: _82.QuerySubspacesRequest): Promise<_82.QuerySubspacesResponse>;
             };
-            LCDQueryClient: typeof _192.LCDQueryClient;
+            LCDQueryClient: typeof _199.LCDQueryClient;
             QueryParamsRequest: {
                 encode(message: _82.QueryParamsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
                 decode(input: Uint8Array | import("..").BinaryReader, length?: number): _82.QueryParamsRequest;
@@ -8430,8 +9478,8 @@ export declare namespace cosmos {
             };
         }
         const v1beta1: {
-            MsgClientImpl: typeof _221.MsgClientImpl;
-            QueryClientImpl: typeof _209.QueryClientImpl;
+            MsgClientImpl: typeof _228.MsgClientImpl;
+            QueryClientImpl: typeof _216.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 validators(request: _89.QueryValidatorsRequest): Promise<_89.QueryValidatorsResponse>;
                 validator(request: _89.QueryValidatorRequest): Promise<_89.QueryValidatorResponse>;
@@ -8448,7 +9496,7 @@ export declare namespace cosmos {
                 pool(request?: _89.QueryPoolRequest): Promise<_89.QueryPoolResponse>;
                 params(request?: _89.QueryParamsRequest): Promise<_89.QueryParamsResponse>;
             };
-            LCDQueryClient: typeof _193.LCDQueryClient;
+            LCDQueryClient: typeof _200.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
             load: (protoRegistry: import("@cosmjs/proto-signing").Registry) => void;
             MessageComposer: {
@@ -10328,7 +11376,7 @@ export declare namespace cosmos {
             };
         }
         const v1beta1: {
-            ServiceClientImpl: typeof _210.ServiceClientImpl;
+            ServiceClientImpl: typeof _217.ServiceClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 simulate(request: _94.SimulateRequest): Promise<_94.SimulateResponse>;
                 getTx(request: _94.GetTxRequest): Promise<_94.GetTxResponse>;
@@ -10340,7 +11388,7 @@ export declare namespace cosmos {
                 txEncodeAmino(request: _94.TxEncodeAminoRequest): Promise<_94.TxEncodeAminoResponse>;
                 txDecodeAmino(request: _94.TxDecodeAminoRequest): Promise<_94.TxDecodeAminoResponse>;
             };
-            LCDQueryClient: typeof _194.LCDQueryClient;
+            LCDQueryClient: typeof _201.LCDQueryClient;
             Tx: {
                 encode(message: _95.Tx, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
                 decode(input: Uint8Array | import("..").BinaryReader, length?: number): _95.Tx;
@@ -11506,8 +12554,8 @@ export declare namespace cosmos {
             };
         }
         const v1beta1: {
-            MsgClientImpl: typeof _222.MsgClientImpl;
-            QueryClientImpl: typeof _211.QueryClientImpl;
+            MsgClientImpl: typeof _229.MsgClientImpl;
+            QueryClientImpl: typeof _218.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 currentPlan(request?: _97.QueryCurrentPlanRequest): Promise<_97.QueryCurrentPlanResponse>;
                 appliedPlan(request: _97.QueryAppliedPlanRequest): Promise<_97.QueryAppliedPlanResponse>;
@@ -11515,7 +12563,7 @@ export declare namespace cosmos {
                 moduleVersions(request: _97.QueryModuleVersionsRequest): Promise<_97.QueryModuleVersionsResponse>;
                 authority(request?: _97.QueryAuthorityRequest): Promise<_97.QueryAuthorityResponse>;
             };
-            LCDQueryClient: typeof _195.LCDQueryClient;
+            LCDQueryClient: typeof _202.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
             load: (protoRegistry: import("@cosmjs/proto-signing").Registry) => void;
             MessageComposer: {
@@ -11845,35 +12893,35 @@ export declare namespace cosmos {
         }) => Promise<{
             cosmos: {
                 auth: {
-                    v1beta1: _212.MsgClientImpl;
-                };
-                authz: {
-                    v1beta1: _213.MsgClientImpl;
-                };
-                bank: {
-                    v1beta1: _214.MsgClientImpl;
-                };
-                consensus: {
-                    v1: _215.MsgClientImpl;
-                };
-                distribution: {
-                    v1beta1: _216.MsgClientImpl;
-                };
-                feegrant: {
-                    v1beta1: _217.MsgClientImpl;
-                };
-                gov: {
-                    v1: _218.MsgClientImpl;
                     v1beta1: _219.MsgClientImpl;
                 };
-                nft: {
+                authz: {
                     v1beta1: _220.MsgClientImpl;
                 };
-                staking: {
+                bank: {
                     v1beta1: _221.MsgClientImpl;
                 };
+                consensus: {
+                    v1: _222.MsgClientImpl;
+                };
+                distribution: {
+                    v1beta1: _223.MsgClientImpl;
+                };
+                feegrant: {
+                    v1beta1: _224.MsgClientImpl;
+                };
+                gov: {
+                    v1: _225.MsgClientImpl;
+                    v1beta1: _226.MsgClientImpl;
+                };
+                nft: {
+                    v1beta1: _227.MsgClientImpl;
+                };
+                staking: {
+                    v1beta1: _228.MsgClientImpl;
+                };
                 upgrade: {
-                    v1beta1: _222.MsgClientImpl;
+                    v1beta1: _229.MsgClientImpl;
                 };
             };
         }>;
@@ -12049,46 +13097,46 @@ export declare namespace cosmos {
         }) => Promise<{
             cosmos: {
                 auth: {
-                    v1beta1: _182.LCDQueryClient;
+                    v1beta1: _189.LCDQueryClient;
                 };
                 authz: {
-                    v1beta1: _183.LCDQueryClient;
+                    v1beta1: _190.LCDQueryClient;
                 };
                 bank: {
-                    v1beta1: _184.LCDQueryClient;
+                    v1beta1: _191.LCDQueryClient;
                 };
                 base: {
                     node: {
-                        v1beta1: _185.LCDQueryClient;
+                        v1beta1: _192.LCDQueryClient;
                     };
                 };
                 consensus: {
-                    v1: _186.LCDQueryClient;
+                    v1: _193.LCDQueryClient;
                 };
                 distribution: {
-                    v1beta1: _187.LCDQueryClient;
-                };
-                feegrant: {
-                    v1beta1: _188.LCDQueryClient;
-                };
-                gov: {
-                    v1: _189.LCDQueryClient;
-                    v1beta1: _190.LCDQueryClient;
-                };
-                nft: {
-                    v1beta1: _191.LCDQueryClient;
-                };
-                params: {
-                    v1beta1: _192.LCDQueryClient;
-                };
-                staking: {
-                    v1beta1: _193.LCDQueryClient;
-                };
-                tx: {
                     v1beta1: _194.LCDQueryClient;
                 };
-                upgrade: {
+                feegrant: {
                     v1beta1: _195.LCDQueryClient;
+                };
+                gov: {
+                    v1: _196.LCDQueryClient;
+                    v1beta1: _197.LCDQueryClient;
+                };
+                nft: {
+                    v1beta1: _198.LCDQueryClient;
+                };
+                params: {
+                    v1beta1: _199.LCDQueryClient;
+                };
+                staking: {
+                    v1beta1: _200.LCDQueryClient;
+                };
+                tx: {
+                    v1beta1: _201.LCDQueryClient;
+                };
+                upgrade: {
+                    v1beta1: _202.LCDQueryClient;
                 };
             };
         }>;

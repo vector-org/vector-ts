@@ -4,6 +4,7 @@ import { VoteOption, WeightedVoteOption, TextProposal, voteOptionFromJSON, voteO
 import { CommunityPoolSpendProposal, CommunityPoolSpendProposalWithDeposit } from "../../distribution/v1beta1/distribution";
 import { ParameterChangeProposal } from "../../params/v1beta1/params";
 import { SoftwareUpgradeProposal, CancelSoftwareUpgradeProposal } from "../../upgrade/v1beta1/upgrade";
+import { StoreCodeProposal, InstantiateContractProposal, InstantiateContract2Proposal, MigrateContractProposal, SudoContractProposal, ExecuteContractProposal, UpdateAdminProposal, ClearAdminProposal, PinCodesProposal, UnpinCodesProposal, UpdateInstantiateConfigProposal, StoreAndInstantiateContractProposal } from "../../../cosmwasm/wasm/v1/proposal";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 /**
@@ -12,7 +13,7 @@ import { isSet, DeepPartial } from "../../../helpers";
  */
 export interface MsgSubmitProposal {
   /** content is the proposal's content. */
-  content: CommunityPoolSpendProposal | CommunityPoolSpendProposalWithDeposit | TextProposal | ParameterChangeProposal | SoftwareUpgradeProposal | CancelSoftwareUpgradeProposal | Any | undefined;
+  content: CommunityPoolSpendProposal | CommunityPoolSpendProposalWithDeposit | TextProposal | ParameterChangeProposal | SoftwareUpgradeProposal | CancelSoftwareUpgradeProposal | StoreCodeProposal | InstantiateContractProposal | InstantiateContract2Proposal | MigrateContractProposal | SudoContractProposal | ExecuteContractProposal | UpdateAdminProposal | ClearAdminProposal | PinCodesProposal | UnpinCodesProposal | UpdateInstantiateConfigProposal | StoreAndInstantiateContractProposal | Any | undefined;
   /** initial_deposit is the deposit value that must be paid at proposal submission. */
   initialDeposit: Coin[];
   /** proposer is the account address of the proposer. */
@@ -480,7 +481,7 @@ export const MsgDepositResponse = {
     return message;
   }
 };
-export const Cosmos_govv1beta1Content_InterfaceDecoder = (input: BinaryReader | Uint8Array): CommunityPoolSpendProposal | CommunityPoolSpendProposalWithDeposit | TextProposal | ParameterChangeProposal | SoftwareUpgradeProposal | CancelSoftwareUpgradeProposal | Any => {
+export const Cosmos_govv1beta1Content_InterfaceDecoder = (input: BinaryReader | Uint8Array): CommunityPoolSpendProposal | CommunityPoolSpendProposalWithDeposit | TextProposal | ParameterChangeProposal | SoftwareUpgradeProposal | CancelSoftwareUpgradeProposal | StoreCodeProposal | InstantiateContractProposal | InstantiateContract2Proposal | MigrateContractProposal | SudoContractProposal | ExecuteContractProposal | UpdateAdminProposal | ClearAdminProposal | PinCodesProposal | UnpinCodesProposal | UpdateInstantiateConfigProposal | StoreAndInstantiateContractProposal | Any => {
   const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
   const data = Any.decode(reader, reader.uint32());
   switch (data.typeUrl) {
@@ -496,6 +497,30 @@ export const Cosmos_govv1beta1Content_InterfaceDecoder = (input: BinaryReader | 
       return SoftwareUpgradeProposal.decode(data.value);
     case "/cosmos.upgrade.v1beta1.CancelSoftwareUpgradeProposal":
       return CancelSoftwareUpgradeProposal.decode(data.value);
+    case "/cosmwasm.wasm.v1.StoreCodeProposal":
+      return StoreCodeProposal.decode(data.value);
+    case "/cosmwasm.wasm.v1.InstantiateContractProposal":
+      return InstantiateContractProposal.decode(data.value);
+    case "/cosmwasm.wasm.v1.InstantiateContract2Proposal":
+      return InstantiateContract2Proposal.decode(data.value);
+    case "/cosmwasm.wasm.v1.MigrateContractProposal":
+      return MigrateContractProposal.decode(data.value);
+    case "/cosmwasm.wasm.v1.SudoContractProposal":
+      return SudoContractProposal.decode(data.value);
+    case "/cosmwasm.wasm.v1.ExecuteContractProposal":
+      return ExecuteContractProposal.decode(data.value);
+    case "/cosmwasm.wasm.v1.UpdateAdminProposal":
+      return UpdateAdminProposal.decode(data.value);
+    case "/cosmwasm.wasm.v1.ClearAdminProposal":
+      return ClearAdminProposal.decode(data.value);
+    case "/cosmwasm.wasm.v1.PinCodesProposal":
+      return PinCodesProposal.decode(data.value);
+    case "/cosmwasm.wasm.v1.UnpinCodesProposal":
+      return UnpinCodesProposal.decode(data.value);
+    case "/cosmwasm.wasm.v1.UpdateInstantiateConfigProposal":
+      return UpdateInstantiateConfigProposal.decode(data.value);
+    case "/cosmwasm.wasm.v1.StoreAndInstantiateContractProposal":
+      return StoreAndInstantiateContractProposal.decode(data.value);
     default:
       return data;
   }
