@@ -16,6 +16,8 @@ const assets: AssetList = {
           exponent: 6
         }
       ],
+      type_asset: 'native',
+      coingecko_id: 'coolcat',
       base: 'uccat',
       name: 'CoolCat',
       display: 'ccat',
@@ -24,8 +26,7 @@ const assets: AssetList = {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/coolcattestnet/images/coolcat.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/coolcattestnet/images/coolcat.png'
       },
-      keywords: ['nft', 'staking', 'games'],
-      type_asset: 'native'
+      keywords: ['nft', 'staking', 'games']
     }
   ]
 };

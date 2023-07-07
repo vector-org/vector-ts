@@ -35,5 +35,8 @@
     "type": "git",
     "url": "https://github.com/CosmosContracts/typescript"
   },
-  "packageManager": "yarn@3.6.1"
+  "packageManager": "yarn@3.6.1",
+  "dependencies": {
+    "@chain-registry/utils": "^1.11.0"
+  }
 }

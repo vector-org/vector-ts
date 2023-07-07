@@ -3729,6 +3729,7 @@ __metadata:
     "@babel/cli": 7.22.6
     "@babel/core": 7.22.7
     "@babel/eslint-parser": ^7.22.7
+    "@chain-registry/utils": ^1.11.0
     "@pyramation/babel-preset-env": 0.2.0
     babel-core: 7.0.0-bridge.0
     babel-jest: ^29.6.0
