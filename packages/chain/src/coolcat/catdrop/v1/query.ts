@@ -1,6 +1,7 @@
 import { Action, ClaimRecord, actionFromJSON, actionToJSON } from "./claim_record";
 import { Coin } from "../../../cosmos/base/v1beta1/coin";
 import { Params } from "./params";
+import { HookRecord } from "./hook_record";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial, isSet } from "../../../helpers";
 /** QueryParamsRequest is the request type for the Query/Params RPC method. */
@@ -30,6 +31,20 @@ export interface QueryClaimRecordRequest {
  */
 export interface QueryClaimRecordResponse {
   claimRecord: ClaimRecord;
+}
+/**
+ * QueryClaimRecordRequest is the request type for the Query/ClaimRecord RPC
+ * method.
+ */
+export interface QueryHookRecordRequest {
+  address: string;
+}
+/**
+ * QueryClaimRecordResponse is the response type for the Query/ClaimRecord RPC
+ * method.
+ */
+export interface QueryHookRecordResponse {
+  hookRecord: HookRecord;
 }
 /**
  * QueryClaimableForActionRequest is the request type for the
@@ -307,6 +322,96 @@ export const QueryClaimRecordResponse = {
   fromPartial(object: DeepPartial<QueryClaimRecordResponse>): QueryClaimRecordResponse {
     const message = createBaseQueryClaimRecordResponse();
     message.claimRecord = object.claimRecord !== undefined && object.claimRecord !== null ? ClaimRecord.fromPartial(object.claimRecord) : undefined;
+    return message;
+  }
+};
+function createBaseQueryHookRecordRequest(): QueryHookRecordRequest {
+  return {
+    address: ""
+  };
+}
+export const QueryHookRecordRequest = {
+  encode(message: QueryHookRecordRequest, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.address !== "") {
+      writer.uint32(10).string(message.address);
+    }
+    return writer;
+  },
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryHookRecordRequest {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseQueryHookRecordRequest();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.address = reader.string();
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+  fromJSON(object: any): QueryHookRecordRequest {
+    return {
+      address: isSet(object.address) ? String(object.address) : ""
+    };
+  },
+  toJSON(message: QueryHookRecordRequest): unknown {
+    const obj: any = {};
+    message.address !== undefined && (obj.address = message.address);
+    return obj;
+  },
+  fromPartial(object: DeepPartial<QueryHookRecordRequest>): QueryHookRecordRequest {
+    const message = createBaseQueryHookRecordRequest();
+    message.address = object.address ?? "";
+    return message;
+  }
+};
+function createBaseQueryHookRecordResponse(): QueryHookRecordResponse {
+  return {
+    hookRecord: HookRecord.fromPartial({})
+  };
+}
+export const QueryHookRecordResponse = {
+  encode(message: QueryHookRecordResponse, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+    if (message.hookRecord !== undefined) {
+      HookRecord.encode(message.hookRecord, writer.uint32(10).fork()).ldelim();
+    }
+    return writer;
+  },
+  decode(input: BinaryReader | Uint8Array, length?: number): QueryHookRecordResponse {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseQueryHookRecordResponse();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.hookRecord = HookRecord.decode(reader, reader.uint32());
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+  fromJSON(object: any): QueryHookRecordResponse {
+    return {
+      hookRecord: isSet(object.hookRecord) ? HookRecord.fromJSON(object.hookRecord) : undefined
+    };
+  },
+  toJSON(message: QueryHookRecordResponse): unknown {
+    const obj: any = {};
+    message.hookRecord !== undefined && (obj.hookRecord = message.hookRecord ? HookRecord.toJSON(message.hookRecord) : undefined);
+    return obj;
+  },
+  fromPartial(object: DeepPartial<QueryHookRecordResponse>): QueryHookRecordResponse {
+    const message = createBaseQueryHookRecordResponse();
+    message.hookRecord = object.hookRecord !== undefined && object.hookRecord !== null ? HookRecord.fromPartial(object.hookRecord) : undefined;
     return message;
   }
 };

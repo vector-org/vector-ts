@@ -1,193 +1,193 @@
-import * as _101 from "./wasm/v1/authz";
-import * as _102 from "./wasm/v1/genesis";
-import * as _103 from "./wasm/v1/ibc";
-import * as _104 from "./wasm/v1/proposal";
-import * as _105 from "./wasm/v1/query";
-import * as _106 from "./wasm/v1/tx";
-import * as _107 from "./wasm/v1/types";
-import * as _232 from "./wasm/v1/query.lcd";
-import * as _233 from "./wasm/v1/query.rpc.Query";
-import * as _234 from "./wasm/v1/tx.rpc.msg";
+import * as _102 from "./wasm/v1/authz";
+import * as _103 from "./wasm/v1/genesis";
+import * as _104 from "./wasm/v1/ibc";
+import * as _105 from "./wasm/v1/proposal";
+import * as _106 from "./wasm/v1/query";
+import * as _107 from "./wasm/v1/tx";
+import * as _108 from "./wasm/v1/types";
+import * as _233 from "./wasm/v1/query.lcd";
+import * as _234 from "./wasm/v1/query.rpc.Query";
+import * as _235 from "./wasm/v1/tx.rpc.msg";
 export declare namespace cosmwasm {
     namespace wasm {
         const v1: {
-            MsgClientImpl: typeof _234.MsgClientImpl;
-            QueryClientImpl: typeof _233.QueryClientImpl;
+            MsgClientImpl: typeof _235.MsgClientImpl;
+            QueryClientImpl: typeof _234.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                contractInfo(request: _105.QueryContractInfoRequest): Promise<_105.QueryContractInfoResponse>;
-                contractHistory(request: _105.QueryContractHistoryRequest): Promise<_105.QueryContractHistoryResponse>;
-                contractsByCode(request: _105.QueryContractsByCodeRequest): Promise<_105.QueryContractsByCodeResponse>;
-                allContractState(request: _105.QueryAllContractStateRequest): Promise<_105.QueryAllContractStateResponse>;
-                rawContractState(request: _105.QueryRawContractStateRequest): Promise<_105.QueryRawContractStateResponse>;
-                smartContractState(request: _105.QuerySmartContractStateRequest): Promise<_105.QuerySmartContractStateResponse>;
-                code(request: _105.QueryCodeRequest): Promise<_105.QueryCodeResponse>;
-                codes(request?: _105.QueryCodesRequest): Promise<_105.QueryCodesResponse>;
-                pinnedCodes(request?: _105.QueryPinnedCodesRequest): Promise<_105.QueryPinnedCodesResponse>;
-                params(request?: _105.QueryParamsRequest): Promise<_105.QueryParamsResponse>;
-                contractsByCreator(request: _105.QueryContractsByCreatorRequest): Promise<_105.QueryContractsByCreatorResponse>;
+                contractInfo(request: _106.QueryContractInfoRequest): Promise<_106.QueryContractInfoResponse>;
+                contractHistory(request: _106.QueryContractHistoryRequest): Promise<_106.QueryContractHistoryResponse>;
+                contractsByCode(request: _106.QueryContractsByCodeRequest): Promise<_106.QueryContractsByCodeResponse>;
+                allContractState(request: _106.QueryAllContractStateRequest): Promise<_106.QueryAllContractStateResponse>;
+                rawContractState(request: _106.QueryRawContractStateRequest): Promise<_106.QueryRawContractStateResponse>;
+                smartContractState(request: _106.QuerySmartContractStateRequest): Promise<_106.QuerySmartContractStateResponse>;
+                code(request: _106.QueryCodeRequest): Promise<_106.QueryCodeResponse>;
+                codes(request?: _106.QueryCodesRequest): Promise<_106.QueryCodesResponse>;
+                pinnedCodes(request?: _106.QueryPinnedCodesRequest): Promise<_106.QueryPinnedCodesResponse>;
+                params(request?: _106.QueryParamsRequest): Promise<_106.QueryParamsResponse>;
+                contractsByCreator(request: _106.QueryContractsByCreatorRequest): Promise<_106.QueryContractsByCreatorResponse>;
             };
-            LCDQueryClient: typeof _232.LCDQueryClient;
+            LCDQueryClient: typeof _233.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
             load: (protoRegistry: import("@cosmjs/proto-signing").Registry) => void;
             MessageComposer: {
                 encoded: {
-                    storeCode(value: _106.MsgStoreCode): {
+                    storeCode(value: _107.MsgStoreCode): {
                         typeUrl: string;
                         value: Uint8Array;
                     };
-                    instantiateContract(value: _106.MsgInstantiateContract): {
+                    instantiateContract(value: _107.MsgInstantiateContract): {
                         typeUrl: string;
                         value: Uint8Array;
                     };
-                    instantiateContract2(value: _106.MsgInstantiateContract2): {
+                    instantiateContract2(value: _107.MsgInstantiateContract2): {
                         typeUrl: string;
                         value: Uint8Array;
                     };
-                    executeContract(value: _106.MsgExecuteContract): {
+                    executeContract(value: _107.MsgExecuteContract): {
                         typeUrl: string;
                         value: Uint8Array;
                     };
-                    migrateContract(value: _106.MsgMigrateContract): {
+                    migrateContract(value: _107.MsgMigrateContract): {
                         typeUrl: string;
                         value: Uint8Array;
                     };
-                    updateAdmin(value: _106.MsgUpdateAdmin): {
+                    updateAdmin(value: _107.MsgUpdateAdmin): {
                         typeUrl: string;
                         value: Uint8Array;
                     };
-                    clearAdmin(value: _106.MsgClearAdmin): {
+                    clearAdmin(value: _107.MsgClearAdmin): {
                         typeUrl: string;
                         value: Uint8Array;
                     };
-                    updateInstantiateConfig(value: _106.MsgUpdateInstantiateConfig): {
+                    updateInstantiateConfig(value: _107.MsgUpdateInstantiateConfig): {
                         typeUrl: string;
                         value: Uint8Array;
                     };
-                    updateParams(value: _106.MsgUpdateParams): {
+                    updateParams(value: _107.MsgUpdateParams): {
                         typeUrl: string;
                         value: Uint8Array;
                     };
-                    sudoContract(value: _106.MsgSudoContract): {
+                    sudoContract(value: _107.MsgSudoContract): {
                         typeUrl: string;
                         value: Uint8Array;
                     };
-                    pinCodes(value: _106.MsgPinCodes): {
+                    pinCodes(value: _107.MsgPinCodes): {
                         typeUrl: string;
                         value: Uint8Array;
                     };
-                    unpinCodes(value: _106.MsgUnpinCodes): {
+                    unpinCodes(value: _107.MsgUnpinCodes): {
                         typeUrl: string;
                         value: Uint8Array;
                     };
-                    storeAndInstantiateContract(value: _106.MsgStoreAndInstantiateContract): {
+                    storeAndInstantiateContract(value: _107.MsgStoreAndInstantiateContract): {
                         typeUrl: string;
                         value: Uint8Array;
                     };
                 };
                 withTypeUrl: {
-                    storeCode(value: _106.MsgStoreCode): {
+                    storeCode(value: _107.MsgStoreCode): {
                         typeUrl: string;
-                        value: _106.MsgStoreCode;
+                        value: _107.MsgStoreCode;
                     };
-                    instantiateContract(value: _106.MsgInstantiateContract): {
+                    instantiateContract(value: _107.MsgInstantiateContract): {
                         typeUrl: string;
-                        value: _106.MsgInstantiateContract;
+                        value: _107.MsgInstantiateContract;
                     };
-                    instantiateContract2(value: _106.MsgInstantiateContract2): {
+                    instantiateContract2(value: _107.MsgInstantiateContract2): {
                         typeUrl: string;
-                        value: _106.MsgInstantiateContract2;
+                        value: _107.MsgInstantiateContract2;
                     };
-                    executeContract(value: _106.MsgExecuteContract): {
+                    executeContract(value: _107.MsgExecuteContract): {
                         typeUrl: string;
-                        value: _106.MsgExecuteContract;
+                        value: _107.MsgExecuteContract;
                     };
-                    migrateContract(value: _106.MsgMigrateContract): {
+                    migrateContract(value: _107.MsgMigrateContract): {
                         typeUrl: string;
-                        value: _106.MsgMigrateContract;
+                        value: _107.MsgMigrateContract;
                     };
-                    updateAdmin(value: _106.MsgUpdateAdmin): {
+                    updateAdmin(value: _107.MsgUpdateAdmin): {
                         typeUrl: string;
-                        value: _106.MsgUpdateAdmin;
+                        value: _107.MsgUpdateAdmin;
                     };
-                    clearAdmin(value: _106.MsgClearAdmin): {
+                    clearAdmin(value: _107.MsgClearAdmin): {
                         typeUrl: string;
-                        value: _106.MsgClearAdmin;
+                        value: _107.MsgClearAdmin;
                     };
-                    updateInstantiateConfig(value: _106.MsgUpdateInstantiateConfig): {
+                    updateInstantiateConfig(value: _107.MsgUpdateInstantiateConfig): {
                         typeUrl: string;
-                        value: _106.MsgUpdateInstantiateConfig;
+                        value: _107.MsgUpdateInstantiateConfig;
                     };
-                    updateParams(value: _106.MsgUpdateParams): {
+                    updateParams(value: _107.MsgUpdateParams): {
                         typeUrl: string;
-                        value: _106.MsgUpdateParams;
+                        value: _107.MsgUpdateParams;
                     };
-                    sudoContract(value: _106.MsgSudoContract): {
+                    sudoContract(value: _107.MsgSudoContract): {
                         typeUrl: string;
-                        value: _106.MsgSudoContract;
+                        value: _107.MsgSudoContract;
                     };
-                    pinCodes(value: _106.MsgPinCodes): {
+                    pinCodes(value: _107.MsgPinCodes): {
                         typeUrl: string;
-                        value: _106.MsgPinCodes;
+                        value: _107.MsgPinCodes;
                     };
-                    unpinCodes(value: _106.MsgUnpinCodes): {
+                    unpinCodes(value: _107.MsgUnpinCodes): {
                         typeUrl: string;
-                        value: _106.MsgUnpinCodes;
+                        value: _107.MsgUnpinCodes;
                     };
-                    storeAndInstantiateContract(value: _106.MsgStoreAndInstantiateContract): {
+                    storeAndInstantiateContract(value: _107.MsgStoreAndInstantiateContract): {
                         typeUrl: string;
-                        value: _106.MsgStoreAndInstantiateContract;
+                        value: _107.MsgStoreAndInstantiateContract;
                     };
                 };
                 toJSON: {
-                    storeCode(value: _106.MsgStoreCode): {
+                    storeCode(value: _107.MsgStoreCode): {
                         typeUrl: string;
                         value: unknown;
                     };
-                    instantiateContract(value: _106.MsgInstantiateContract): {
+                    instantiateContract(value: _107.MsgInstantiateContract): {
                         typeUrl: string;
                         value: unknown;
                     };
-                    instantiateContract2(value: _106.MsgInstantiateContract2): {
+                    instantiateContract2(value: _107.MsgInstantiateContract2): {
                         typeUrl: string;
                         value: unknown;
                     };
-                    executeContract(value: _106.MsgExecuteContract): {
+                    executeContract(value: _107.MsgExecuteContract): {
                         typeUrl: string;
                         value: unknown;
                     };
-                    migrateContract(value: _106.MsgMigrateContract): {
+                    migrateContract(value: _107.MsgMigrateContract): {
                         typeUrl: string;
                         value: unknown;
                     };
-                    updateAdmin(value: _106.MsgUpdateAdmin): {
+                    updateAdmin(value: _107.MsgUpdateAdmin): {
                         typeUrl: string;
                         value: unknown;
                     };
-                    clearAdmin(value: _106.MsgClearAdmin): {
+                    clearAdmin(value: _107.MsgClearAdmin): {
                         typeUrl: string;
                         value: unknown;
                     };
-                    updateInstantiateConfig(value: _106.MsgUpdateInstantiateConfig): {
+                    updateInstantiateConfig(value: _107.MsgUpdateInstantiateConfig): {
                         typeUrl: string;
                         value: unknown;
                     };
-                    updateParams(value: _106.MsgUpdateParams): {
+                    updateParams(value: _107.MsgUpdateParams): {
                         typeUrl: string;
                         value: unknown;
                     };
-                    sudoContract(value: _106.MsgSudoContract): {
+                    sudoContract(value: _107.MsgSudoContract): {
                         typeUrl: string;
                         value: unknown;
                     };
-                    pinCodes(value: _106.MsgPinCodes): {
+                    pinCodes(value: _107.MsgPinCodes): {
                         typeUrl: string;
                         value: unknown;
                     };
-                    unpinCodes(value: _106.MsgUnpinCodes): {
+                    unpinCodes(value: _107.MsgUnpinCodes): {
                         typeUrl: string;
                         value: unknown;
                     };
-                    storeAndInstantiateContract(value: _106.MsgStoreAndInstantiateContract): {
+                    storeAndInstantiateContract(value: _107.MsgStoreAndInstantiateContract): {
                         typeUrl: string;
                         value: unknown;
                     };
@@ -195,116 +195,116 @@ export declare namespace cosmwasm {
                 fromJSON: {
                     storeCode(value: any): {
                         typeUrl: string;
-                        value: _106.MsgStoreCode;
+                        value: _107.MsgStoreCode;
                     };
                     instantiateContract(value: any): {
                         typeUrl: string;
-                        value: _106.MsgInstantiateContract;
+                        value: _107.MsgInstantiateContract;
                     };
                     instantiateContract2(value: any): {
                         typeUrl: string;
-                        value: _106.MsgInstantiateContract2;
+                        value: _107.MsgInstantiateContract2;
                     };
                     executeContract(value: any): {
                         typeUrl: string;
-                        value: _106.MsgExecuteContract;
+                        value: _107.MsgExecuteContract;
                     };
                     migrateContract(value: any): {
                         typeUrl: string;
-                        value: _106.MsgMigrateContract;
+                        value: _107.MsgMigrateContract;
                     };
                     updateAdmin(value: any): {
                         typeUrl: string;
-                        value: _106.MsgUpdateAdmin;
+                        value: _107.MsgUpdateAdmin;
                     };
                     clearAdmin(value: any): {
                         typeUrl: string;
-                        value: _106.MsgClearAdmin;
+                        value: _107.MsgClearAdmin;
                     };
                     updateInstantiateConfig(value: any): {
                         typeUrl: string;
-                        value: _106.MsgUpdateInstantiateConfig;
+                        value: _107.MsgUpdateInstantiateConfig;
                     };
                     updateParams(value: any): {
                         typeUrl: string;
-                        value: _106.MsgUpdateParams;
+                        value: _107.MsgUpdateParams;
                     };
                     sudoContract(value: any): {
                         typeUrl: string;
-                        value: _106.MsgSudoContract;
+                        value: _107.MsgSudoContract;
                     };
                     pinCodes(value: any): {
                         typeUrl: string;
-                        value: _106.MsgPinCodes;
+                        value: _107.MsgPinCodes;
                     };
                     unpinCodes(value: any): {
                         typeUrl: string;
-                        value: _106.MsgUnpinCodes;
+                        value: _107.MsgUnpinCodes;
                     };
                     storeAndInstantiateContract(value: any): {
                         typeUrl: string;
-                        value: _106.MsgStoreAndInstantiateContract;
+                        value: _107.MsgStoreAndInstantiateContract;
                     };
                 };
                 fromPartial: {
-                    storeCode(value: _106.MsgStoreCode): {
+                    storeCode(value: _107.MsgStoreCode): {
                         typeUrl: string;
-                        value: _106.MsgStoreCode;
+                        value: _107.MsgStoreCode;
                     };
-                    instantiateContract(value: _106.MsgInstantiateContract): {
+                    instantiateContract(value: _107.MsgInstantiateContract): {
                         typeUrl: string;
-                        value: _106.MsgInstantiateContract;
+                        value: _107.MsgInstantiateContract;
                     };
-                    instantiateContract2(value: _106.MsgInstantiateContract2): {
+                    instantiateContract2(value: _107.MsgInstantiateContract2): {
                         typeUrl: string;
-                        value: _106.MsgInstantiateContract2;
+                        value: _107.MsgInstantiateContract2;
                     };
-                    executeContract(value: _106.MsgExecuteContract): {
+                    executeContract(value: _107.MsgExecuteContract): {
                         typeUrl: string;
-                        value: _106.MsgExecuteContract;
+                        value: _107.MsgExecuteContract;
                     };
-                    migrateContract(value: _106.MsgMigrateContract): {
+                    migrateContract(value: _107.MsgMigrateContract): {
                         typeUrl: string;
-                        value: _106.MsgMigrateContract;
+                        value: _107.MsgMigrateContract;
                     };
-                    updateAdmin(value: _106.MsgUpdateAdmin): {
+                    updateAdmin(value: _107.MsgUpdateAdmin): {
                         typeUrl: string;
-                        value: _106.MsgUpdateAdmin;
+                        value: _107.MsgUpdateAdmin;
                     };
-                    clearAdmin(value: _106.MsgClearAdmin): {
+                    clearAdmin(value: _107.MsgClearAdmin): {
                         typeUrl: string;
-                        value: _106.MsgClearAdmin;
+                        value: _107.MsgClearAdmin;
                     };
-                    updateInstantiateConfig(value: _106.MsgUpdateInstantiateConfig): {
+                    updateInstantiateConfig(value: _107.MsgUpdateInstantiateConfig): {
                         typeUrl: string;
-                        value: _106.MsgUpdateInstantiateConfig;
+                        value: _107.MsgUpdateInstantiateConfig;
                     };
-                    updateParams(value: _106.MsgUpdateParams): {
+                    updateParams(value: _107.MsgUpdateParams): {
                         typeUrl: string;
-                        value: _106.MsgUpdateParams;
+                        value: _107.MsgUpdateParams;
                     };
-                    sudoContract(value: _106.MsgSudoContract): {
+                    sudoContract(value: _107.MsgSudoContract): {
                         typeUrl: string;
-                        value: _106.MsgSudoContract;
+                        value: _107.MsgSudoContract;
                     };
-                    pinCodes(value: _106.MsgPinCodes): {
+                    pinCodes(value: _107.MsgPinCodes): {
                         typeUrl: string;
-                        value: _106.MsgPinCodes;
+                        value: _107.MsgPinCodes;
                     };
-                    unpinCodes(value: _106.MsgUnpinCodes): {
+                    unpinCodes(value: _107.MsgUnpinCodes): {
                         typeUrl: string;
-                        value: _106.MsgUnpinCodes;
+                        value: _107.MsgUnpinCodes;
                     };
-                    storeAndInstantiateContract(value: _106.MsgStoreAndInstantiateContract): {
+                    storeAndInstantiateContract(value: _107.MsgStoreAndInstantiateContract): {
                         typeUrl: string;
-                        value: _106.MsgStoreAndInstantiateContract;
+                        value: _107.MsgStoreAndInstantiateContract;
                     };
                 };
             };
             AminoConverter: {
                 "/cosmwasm.wasm.v1.MsgStoreCode": {
                     aminoType: string;
-                    toAmino: ({ sender, wasmByteCode, instantiatePermission }: _106.MsgStoreCode) => {
+                    toAmino: ({ sender, wasmByteCode, instantiatePermission }: _107.MsgStoreCode) => {
                         sender: string;
                         wasm_byte_code: string;
                         instantiate_permission: {
@@ -319,11 +319,11 @@ export declare namespace cosmwasm {
                             permission: number;
                             addresses: string[];
                         };
-                    }) => _106.MsgStoreCode;
+                    }) => _107.MsgStoreCode;
                 };
                 "/cosmwasm.wasm.v1.MsgInstantiateContract": {
                     aminoType: string;
-                    toAmino: ({ sender, admin, codeId, label, msg, funds }: _106.MsgInstantiateContract) => {
+                    toAmino: ({ sender, admin, codeId, label, msg, funds }: _107.MsgInstantiateContract) => {
                         sender: string;
                         admin: string;
                         code_id: string;
@@ -344,11 +344,11 @@ export declare namespace cosmwasm {
                             denom: string;
                             amount: string;
                         }[];
-                    }) => _106.MsgInstantiateContract;
+                    }) => _107.MsgInstantiateContract;
                 };
                 "/cosmwasm.wasm.v1.MsgInstantiateContract2": {
                     aminoType: string;
-                    toAmino: ({ sender, admin, codeId, label, msg, funds, salt, fixMsg }: _106.MsgInstantiateContract2) => {
+                    toAmino: ({ sender, admin, codeId, label, msg, funds, salt, fixMsg }: _107.MsgInstantiateContract2) => {
                         sender: string;
                         admin: string;
                         code_id: string;
@@ -373,11 +373,11 @@ export declare namespace cosmwasm {
                         }[];
                         salt: Uint8Array;
                         fix_msg: boolean;
-                    }) => _106.MsgInstantiateContract2;
+                    }) => _107.MsgInstantiateContract2;
                 };
                 "/cosmwasm.wasm.v1.MsgExecuteContract": {
                     aminoType: string;
-                    toAmino: ({ sender, contract, msg, funds }: _106.MsgExecuteContract) => {
+                    toAmino: ({ sender, contract, msg, funds }: _107.MsgExecuteContract) => {
                         sender: string;
                         contract: string;
                         msg: Uint8Array;
@@ -394,11 +394,11 @@ export declare namespace cosmwasm {
                             denom: string;
                             amount: string;
                         }[];
-                    }) => _106.MsgExecuteContract;
+                    }) => _107.MsgExecuteContract;
                 };
                 "/cosmwasm.wasm.v1.MsgMigrateContract": {
                     aminoType: string;
-                    toAmino: ({ sender, contract, codeId, msg }: _106.MsgMigrateContract) => {
+                    toAmino: ({ sender, contract, codeId, msg }: _107.MsgMigrateContract) => {
                         sender: string;
                         contract: string;
                         code_id: string;
@@ -409,11 +409,11 @@ export declare namespace cosmwasm {
                         contract: string;
                         code_id: string;
                         msg: Uint8Array;
-                    }) => _106.MsgMigrateContract;
+                    }) => _107.MsgMigrateContract;
                 };
                 "/cosmwasm.wasm.v1.MsgUpdateAdmin": {
                     aminoType: string;
-                    toAmino: ({ sender, newAdmin, contract }: _106.MsgUpdateAdmin) => {
+                    toAmino: ({ sender, newAdmin, contract }: _107.MsgUpdateAdmin) => {
                         sender: string;
                         new_admin: string;
                         contract: string;
@@ -422,22 +422,22 @@ export declare namespace cosmwasm {
                         sender: string;
                         new_admin: string;
                         contract: string;
-                    }) => _106.MsgUpdateAdmin;
+                    }) => _107.MsgUpdateAdmin;
                 };
                 "/cosmwasm.wasm.v1.MsgClearAdmin": {
                     aminoType: string;
-                    toAmino: ({ sender, contract }: _106.MsgClearAdmin) => {
+                    toAmino: ({ sender, contract }: _107.MsgClearAdmin) => {
                         sender: string;
                         contract: string;
                     };
                     fromAmino: ({ sender, contract }: {
                         sender: string;
                         contract: string;
-                    }) => _106.MsgClearAdmin;
+                    }) => _107.MsgClearAdmin;
                 };
                 "/cosmwasm.wasm.v1.MsgUpdateInstantiateConfig": {
                     aminoType: string;
-                    toAmino: ({ sender, codeId, newInstantiatePermission }: _106.MsgUpdateInstantiateConfig) => {
+                    toAmino: ({ sender, codeId, newInstantiatePermission }: _107.MsgUpdateInstantiateConfig) => {
                         sender: string;
                         code_id: string;
                         new_instantiate_permission: {
@@ -452,11 +452,11 @@ export declare namespace cosmwasm {
                             permission: number;
                             addresses: string[];
                         };
-                    }) => _106.MsgUpdateInstantiateConfig;
+                    }) => _107.MsgUpdateInstantiateConfig;
                 };
                 "/cosmwasm.wasm.v1.MsgUpdateParams": {
                     aminoType: string;
-                    toAmino: ({ authority, params }: _106.MsgUpdateParams) => {
+                    toAmino: ({ authority, params }: _107.MsgUpdateParams) => {
                         authority: string;
                         params: {
                             code_upload_access: {
@@ -475,11 +475,11 @@ export declare namespace cosmwasm {
                             };
                             instantiate_default_permission: number;
                         };
-                    }) => _106.MsgUpdateParams;
+                    }) => _107.MsgUpdateParams;
                 };
                 "/cosmwasm.wasm.v1.MsgSudoContract": {
                     aminoType: string;
-                    toAmino: ({ authority, contract, msg }: _106.MsgSudoContract) => {
+                    toAmino: ({ authority, contract, msg }: _107.MsgSudoContract) => {
                         authority: string;
                         contract: string;
                         msg: Uint8Array;
@@ -488,33 +488,33 @@ export declare namespace cosmwasm {
                         authority: string;
                         contract: string;
                         msg: Uint8Array;
-                    }) => _106.MsgSudoContract;
+                    }) => _107.MsgSudoContract;
                 };
                 "/cosmwasm.wasm.v1.MsgPinCodes": {
                     aminoType: string;
-                    toAmino: ({ authority, codeIds }: _106.MsgPinCodes) => {
+                    toAmino: ({ authority, codeIds }: _107.MsgPinCodes) => {
                         authority: string;
                         code_ids: string[];
                     };
                     fromAmino: ({ authority, code_ids }: {
                         authority: string;
                         code_ids: string[];
-                    }) => _106.MsgPinCodes;
+                    }) => _107.MsgPinCodes;
                 };
                 "/cosmwasm.wasm.v1.MsgUnpinCodes": {
                     aminoType: string;
-                    toAmino: ({ authority, codeIds }: _106.MsgUnpinCodes) => {
+                    toAmino: ({ authority, codeIds }: _107.MsgUnpinCodes) => {
                         authority: string;
                         code_ids: string[];
                     };
                     fromAmino: ({ authority, code_ids }: {
                         authority: string;
                         code_ids: string[];
-                    }) => _106.MsgUnpinCodes;
+                    }) => _107.MsgUnpinCodes;
                 };
                 "/cosmwasm.wasm.v1.MsgStoreAndInstantiateContract": {
                     aminoType: string;
-                    toAmino: ({ authority, wasmByteCode, instantiatePermission, unpinCode, admin, label, msg, funds, source, builder, codeHash }: _106.MsgStoreAndInstantiateContract) => {
+                    toAmino: ({ authority, wasmByteCode, instantiatePermission, unpinCode, admin, label, msg, funds, source, builder, codeHash }: _107.MsgStoreAndInstantiateContract) => {
                         authority: string;
                         wasm_byte_code: string;
                         instantiate_permission: {
@@ -551,66 +551,66 @@ export declare namespace cosmwasm {
                         source: string;
                         builder: string;
                         code_hash: Uint8Array;
-                    }) => _106.MsgStoreAndInstantiateContract;
+                    }) => _107.MsgStoreAndInstantiateContract;
                 };
             };
-            accessTypeFromJSON(object: any): _107.AccessType;
-            accessTypeToJSON(object: _107.AccessType): string;
-            contractCodeHistoryOperationTypeFromJSON(object: any): _107.ContractCodeHistoryOperationType;
-            contractCodeHistoryOperationTypeToJSON(object: _107.ContractCodeHistoryOperationType): string;
-            AccessType: typeof _107.AccessType;
-            ContractCodeHistoryOperationType: typeof _107.ContractCodeHistoryOperationType;
+            accessTypeFromJSON(object: any): _108.AccessType;
+            accessTypeToJSON(object: _108.AccessType): string;
+            contractCodeHistoryOperationTypeFromJSON(object: any): _108.ContractCodeHistoryOperationType;
+            contractCodeHistoryOperationTypeToJSON(object: _108.ContractCodeHistoryOperationType): string;
+            AccessType: typeof _108.AccessType;
+            ContractCodeHistoryOperationType: typeof _108.ContractCodeHistoryOperationType;
             AccessTypeParam: {
-                encode(message: _107.AccessTypeParam, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.AccessTypeParam;
-                fromJSON(object: any): _107.AccessTypeParam;
-                toJSON(message: _107.AccessTypeParam): unknown;
+                encode(message: _108.AccessTypeParam, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _108.AccessTypeParam;
+                fromJSON(object: any): _108.AccessTypeParam;
+                toJSON(message: _108.AccessTypeParam): unknown;
                 fromPartial(object: {
-                    value?: _107.AccessType;
-                }): _107.AccessTypeParam;
+                    value?: _108.AccessType;
+                }): _108.AccessTypeParam;
             };
             AccessConfig: {
-                encode(message: _107.AccessConfig, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.AccessConfig;
-                fromJSON(object: any): _107.AccessConfig;
-                toJSON(message: _107.AccessConfig): unknown;
+                encode(message: _108.AccessConfig, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _108.AccessConfig;
+                fromJSON(object: any): _108.AccessConfig;
+                toJSON(message: _108.AccessConfig): unknown;
                 fromPartial(object: {
-                    permission?: _107.AccessType;
+                    permission?: _108.AccessType;
                     addresses?: string[];
-                }): _107.AccessConfig;
+                }): _108.AccessConfig;
             };
             Params: {
-                encode(message: _107.Params, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.Params;
-                fromJSON(object: any): _107.Params;
-                toJSON(message: _107.Params): unknown;
+                encode(message: _108.Params, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _108.Params;
+                fromJSON(object: any): _108.Params;
+                toJSON(message: _108.Params): unknown;
                 fromPartial(object: {
                     codeUploadAccess?: {
-                        permission?: _107.AccessType;
+                        permission?: _108.AccessType;
                         addresses?: string[];
                     };
-                    instantiateDefaultPermission?: _107.AccessType;
-                }): _107.Params;
+                    instantiateDefaultPermission?: _108.AccessType;
+                }): _108.Params;
             };
             CodeInfo: {
-                encode(message: _107.CodeInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.CodeInfo;
-                fromJSON(object: any): _107.CodeInfo;
-                toJSON(message: _107.CodeInfo): unknown;
+                encode(message: _108.CodeInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _108.CodeInfo;
+                fromJSON(object: any): _108.CodeInfo;
+                toJSON(message: _108.CodeInfo): unknown;
                 fromPartial(object: {
                     codeHash?: Uint8Array;
                     creator?: string;
                     instantiateConfig?: {
-                        permission?: _107.AccessType;
+                        permission?: _108.AccessType;
                         addresses?: string[];
                     };
-                }): _107.CodeInfo;
+                }): _108.CodeInfo;
             };
             ContractInfo: {
-                encode(message: _107.ContractInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.ContractInfo;
-                fromJSON(object: any): _107.ContractInfo;
-                toJSON(message: _107.ContractInfo): unknown;
+                encode(message: _108.ContractInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _108.ContractInfo;
+                fromJSON(object: any): _108.ContractInfo;
+                toJSON(message: _108.ContractInfo): unknown;
                 fromPartial(object: {
                     codeId?: bigint;
                     creator?: string;
@@ -625,73 +625,73 @@ export declare namespace cosmwasm {
                         typeUrl?: string;
                         value?: Uint8Array;
                     };
-                }): _107.ContractInfo;
+                }): _108.ContractInfo;
             };
             ContractCodeHistoryEntry: {
-                encode(message: _107.ContractCodeHistoryEntry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.ContractCodeHistoryEntry;
-                fromJSON(object: any): _107.ContractCodeHistoryEntry;
-                toJSON(message: _107.ContractCodeHistoryEntry): unknown;
+                encode(message: _108.ContractCodeHistoryEntry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _108.ContractCodeHistoryEntry;
+                fromJSON(object: any): _108.ContractCodeHistoryEntry;
+                toJSON(message: _108.ContractCodeHistoryEntry): unknown;
                 fromPartial(object: {
-                    operation?: _107.ContractCodeHistoryOperationType;
+                    operation?: _108.ContractCodeHistoryOperationType;
                     codeId?: bigint;
                     updated?: {
                         blockHeight?: bigint;
                         txIndex?: bigint;
                     };
                     msg?: Uint8Array;
-                }): _107.ContractCodeHistoryEntry;
+                }): _108.ContractCodeHistoryEntry;
             };
             AbsoluteTxPosition: {
-                encode(message: _107.AbsoluteTxPosition, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.AbsoluteTxPosition;
-                fromJSON(object: any): _107.AbsoluteTxPosition;
-                toJSON(message: _107.AbsoluteTxPosition): unknown;
+                encode(message: _108.AbsoluteTxPosition, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _108.AbsoluteTxPosition;
+                fromJSON(object: any): _108.AbsoluteTxPosition;
+                toJSON(message: _108.AbsoluteTxPosition): unknown;
                 fromPartial(object: {
                     blockHeight?: bigint;
                     txIndex?: bigint;
-                }): _107.AbsoluteTxPosition;
+                }): _108.AbsoluteTxPosition;
             };
             Model: {
-                encode(message: _107.Model, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.Model;
-                fromJSON(object: any): _107.Model;
-                toJSON(message: _107.Model): unknown;
+                encode(message: _108.Model, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _108.Model;
+                fromJSON(object: any): _108.Model;
+                toJSON(message: _108.Model): unknown;
                 fromPartial(object: {
                     key?: Uint8Array;
                     value?: Uint8Array;
-                }): _107.Model;
+                }): _108.Model;
             };
             Cosmwasm_wasmv1ContractInfoExtension_InterfaceDecoder: (input: Uint8Array | import("..").BinaryReader) => import("../google/protobuf/any").Any;
             MsgStoreCode: {
-                encode(message: _106.MsgStoreCode, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgStoreCode;
-                fromJSON(object: any): _106.MsgStoreCode;
-                toJSON(message: _106.MsgStoreCode): unknown;
+                encode(message: _107.MsgStoreCode, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgStoreCode;
+                fromJSON(object: any): _107.MsgStoreCode;
+                toJSON(message: _107.MsgStoreCode): unknown;
                 fromPartial(object: {
                     sender?: string;
                     wasmByteCode?: Uint8Array;
                     instantiatePermission?: {
-                        permission?: _107.AccessType;
+                        permission?: _108.AccessType;
                         addresses?: string[];
                     };
-                }): _106.MsgStoreCode;
+                }): _107.MsgStoreCode;
             };
             MsgStoreCodeResponse: {
-                encode(message: _106.MsgStoreCodeResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgStoreCodeResponse;
-                fromJSON(object: any): _106.MsgStoreCodeResponse;
-                toJSON(message: _106.MsgStoreCodeResponse): unknown;
+                encode(message: _107.MsgStoreCodeResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgStoreCodeResponse;
+                fromJSON(object: any): _107.MsgStoreCodeResponse;
+                toJSON(message: _107.MsgStoreCodeResponse): unknown;
                 fromPartial(object: {
                     codeId?: bigint;
                     checksum?: Uint8Array;
-                }): _106.MsgStoreCodeResponse;
+                }): _107.MsgStoreCodeResponse;
             };
             MsgInstantiateContract: {
-                encode(message: _106.MsgInstantiateContract, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgInstantiateContract;
-                fromJSON(object: any): _106.MsgInstantiateContract;
-                toJSON(message: _106.MsgInstantiateContract): unknown;
+                encode(message: _107.MsgInstantiateContract, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgInstantiateContract;
+                fromJSON(object: any): _107.MsgInstantiateContract;
+                toJSON(message: _107.MsgInstantiateContract): unknown;
                 fromPartial(object: {
                     sender?: string;
                     admin?: string;
@@ -702,23 +702,23 @@ export declare namespace cosmwasm {
                         denom?: string;
                         amount?: string;
                     }[];
-                }): _106.MsgInstantiateContract;
+                }): _107.MsgInstantiateContract;
             };
             MsgInstantiateContractResponse: {
-                encode(message: _106.MsgInstantiateContractResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgInstantiateContractResponse;
-                fromJSON(object: any): _106.MsgInstantiateContractResponse;
-                toJSON(message: _106.MsgInstantiateContractResponse): unknown;
+                encode(message: _107.MsgInstantiateContractResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgInstantiateContractResponse;
+                fromJSON(object: any): _107.MsgInstantiateContractResponse;
+                toJSON(message: _107.MsgInstantiateContractResponse): unknown;
                 fromPartial(object: {
                     address?: string;
                     data?: Uint8Array;
-                }): _106.MsgInstantiateContractResponse;
+                }): _107.MsgInstantiateContractResponse;
             };
             MsgInstantiateContract2: {
-                encode(message: _106.MsgInstantiateContract2, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgInstantiateContract2;
-                fromJSON(object: any): _106.MsgInstantiateContract2;
-                toJSON(message: _106.MsgInstantiateContract2): unknown;
+                encode(message: _107.MsgInstantiateContract2, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgInstantiateContract2;
+                fromJSON(object: any): _107.MsgInstantiateContract2;
+                toJSON(message: _107.MsgInstantiateContract2): unknown;
                 fromPartial(object: {
                     sender?: string;
                     admin?: string;
@@ -731,23 +731,23 @@ export declare namespace cosmwasm {
                     }[];
                     salt?: Uint8Array;
                     fixMsg?: boolean;
-                }): _106.MsgInstantiateContract2;
+                }): _107.MsgInstantiateContract2;
             };
             MsgInstantiateContract2Response: {
-                encode(message: _106.MsgInstantiateContract2Response, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgInstantiateContract2Response;
-                fromJSON(object: any): _106.MsgInstantiateContract2Response;
-                toJSON(message: _106.MsgInstantiateContract2Response): unknown;
+                encode(message: _107.MsgInstantiateContract2Response, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgInstantiateContract2Response;
+                fromJSON(object: any): _107.MsgInstantiateContract2Response;
+                toJSON(message: _107.MsgInstantiateContract2Response): unknown;
                 fromPartial(object: {
                     address?: string;
                     data?: Uint8Array;
-                }): _106.MsgInstantiateContract2Response;
+                }): _107.MsgInstantiateContract2Response;
             };
             MsgExecuteContract: {
-                encode(message: _106.MsgExecuteContract, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgExecuteContract;
-                fromJSON(object: any): _106.MsgExecuteContract;
-                toJSON(message: _106.MsgExecuteContract): unknown;
+                encode(message: _107.MsgExecuteContract, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgExecuteContract;
+                fromJSON(object: any): _107.MsgExecuteContract;
+                toJSON(message: _107.MsgExecuteContract): unknown;
                 fromPartial(object: {
                     sender?: string;
                     contract?: string;
@@ -756,181 +756,181 @@ export declare namespace cosmwasm {
                         denom?: string;
                         amount?: string;
                     }[];
-                }): _106.MsgExecuteContract;
+                }): _107.MsgExecuteContract;
             };
             MsgExecuteContractResponse: {
-                encode(message: _106.MsgExecuteContractResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgExecuteContractResponse;
-                fromJSON(object: any): _106.MsgExecuteContractResponse;
-                toJSON(message: _106.MsgExecuteContractResponse): unknown;
+                encode(message: _107.MsgExecuteContractResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgExecuteContractResponse;
+                fromJSON(object: any): _107.MsgExecuteContractResponse;
+                toJSON(message: _107.MsgExecuteContractResponse): unknown;
                 fromPartial(object: {
                     data?: Uint8Array;
-                }): _106.MsgExecuteContractResponse;
+                }): _107.MsgExecuteContractResponse;
             };
             MsgMigrateContract: {
-                encode(message: _106.MsgMigrateContract, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgMigrateContract;
-                fromJSON(object: any): _106.MsgMigrateContract;
-                toJSON(message: _106.MsgMigrateContract): unknown;
+                encode(message: _107.MsgMigrateContract, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgMigrateContract;
+                fromJSON(object: any): _107.MsgMigrateContract;
+                toJSON(message: _107.MsgMigrateContract): unknown;
                 fromPartial(object: {
                     sender?: string;
                     contract?: string;
                     codeId?: bigint;
                     msg?: Uint8Array;
-                }): _106.MsgMigrateContract;
+                }): _107.MsgMigrateContract;
             };
             MsgMigrateContractResponse: {
-                encode(message: _106.MsgMigrateContractResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgMigrateContractResponse;
-                fromJSON(object: any): _106.MsgMigrateContractResponse;
-                toJSON(message: _106.MsgMigrateContractResponse): unknown;
+                encode(message: _107.MsgMigrateContractResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgMigrateContractResponse;
+                fromJSON(object: any): _107.MsgMigrateContractResponse;
+                toJSON(message: _107.MsgMigrateContractResponse): unknown;
                 fromPartial(object: {
                     data?: Uint8Array;
-                }): _106.MsgMigrateContractResponse;
+                }): _107.MsgMigrateContractResponse;
             };
             MsgUpdateAdmin: {
-                encode(message: _106.MsgUpdateAdmin, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgUpdateAdmin;
-                fromJSON(object: any): _106.MsgUpdateAdmin;
-                toJSON(message: _106.MsgUpdateAdmin): unknown;
+                encode(message: _107.MsgUpdateAdmin, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgUpdateAdmin;
+                fromJSON(object: any): _107.MsgUpdateAdmin;
+                toJSON(message: _107.MsgUpdateAdmin): unknown;
                 fromPartial(object: {
                     sender?: string;
                     newAdmin?: string;
                     contract?: string;
-                }): _106.MsgUpdateAdmin;
+                }): _107.MsgUpdateAdmin;
             };
             MsgUpdateAdminResponse: {
-                encode(_: _106.MsgUpdateAdminResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgUpdateAdminResponse;
-                fromJSON(_: any): _106.MsgUpdateAdminResponse;
-                toJSON(_: _106.MsgUpdateAdminResponse): unknown;
-                fromPartial(_: {}): _106.MsgUpdateAdminResponse;
+                encode(_: _107.MsgUpdateAdminResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgUpdateAdminResponse;
+                fromJSON(_: any): _107.MsgUpdateAdminResponse;
+                toJSON(_: _107.MsgUpdateAdminResponse): unknown;
+                fromPartial(_: {}): _107.MsgUpdateAdminResponse;
             };
             MsgClearAdmin: {
-                encode(message: _106.MsgClearAdmin, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgClearAdmin;
-                fromJSON(object: any): _106.MsgClearAdmin;
-                toJSON(message: _106.MsgClearAdmin): unknown;
+                encode(message: _107.MsgClearAdmin, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgClearAdmin;
+                fromJSON(object: any): _107.MsgClearAdmin;
+                toJSON(message: _107.MsgClearAdmin): unknown;
                 fromPartial(object: {
                     sender?: string;
                     contract?: string;
-                }): _106.MsgClearAdmin;
+                }): _107.MsgClearAdmin;
             };
             MsgClearAdminResponse: {
-                encode(_: _106.MsgClearAdminResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgClearAdminResponse;
-                fromJSON(_: any): _106.MsgClearAdminResponse;
-                toJSON(_: _106.MsgClearAdminResponse): unknown;
-                fromPartial(_: {}): _106.MsgClearAdminResponse;
+                encode(_: _107.MsgClearAdminResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgClearAdminResponse;
+                fromJSON(_: any): _107.MsgClearAdminResponse;
+                toJSON(_: _107.MsgClearAdminResponse): unknown;
+                fromPartial(_: {}): _107.MsgClearAdminResponse;
             };
             MsgUpdateInstantiateConfig: {
-                encode(message: _106.MsgUpdateInstantiateConfig, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgUpdateInstantiateConfig;
-                fromJSON(object: any): _106.MsgUpdateInstantiateConfig;
-                toJSON(message: _106.MsgUpdateInstantiateConfig): unknown;
+                encode(message: _107.MsgUpdateInstantiateConfig, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgUpdateInstantiateConfig;
+                fromJSON(object: any): _107.MsgUpdateInstantiateConfig;
+                toJSON(message: _107.MsgUpdateInstantiateConfig): unknown;
                 fromPartial(object: {
                     sender?: string;
                     codeId?: bigint;
                     newInstantiatePermission?: {
-                        permission?: _107.AccessType;
+                        permission?: _108.AccessType;
                         addresses?: string[];
                     };
-                }): _106.MsgUpdateInstantiateConfig;
+                }): _107.MsgUpdateInstantiateConfig;
             };
             MsgUpdateInstantiateConfigResponse: {
-                encode(_: _106.MsgUpdateInstantiateConfigResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgUpdateInstantiateConfigResponse;
-                fromJSON(_: any): _106.MsgUpdateInstantiateConfigResponse;
-                toJSON(_: _106.MsgUpdateInstantiateConfigResponse): unknown;
-                fromPartial(_: {}): _106.MsgUpdateInstantiateConfigResponse;
+                encode(_: _107.MsgUpdateInstantiateConfigResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgUpdateInstantiateConfigResponse;
+                fromJSON(_: any): _107.MsgUpdateInstantiateConfigResponse;
+                toJSON(_: _107.MsgUpdateInstantiateConfigResponse): unknown;
+                fromPartial(_: {}): _107.MsgUpdateInstantiateConfigResponse;
             };
             MsgUpdateParams: {
-                encode(message: _106.MsgUpdateParams, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgUpdateParams;
-                fromJSON(object: any): _106.MsgUpdateParams;
-                toJSON(message: _106.MsgUpdateParams): unknown;
+                encode(message: _107.MsgUpdateParams, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgUpdateParams;
+                fromJSON(object: any): _107.MsgUpdateParams;
+                toJSON(message: _107.MsgUpdateParams): unknown;
                 fromPartial(object: {
                     authority?: string;
                     params?: {
                         codeUploadAccess?: {
-                            permission?: _107.AccessType;
+                            permission?: _108.AccessType;
                             addresses?: string[];
                         };
-                        instantiateDefaultPermission?: _107.AccessType;
+                        instantiateDefaultPermission?: _108.AccessType;
                     };
-                }): _106.MsgUpdateParams;
+                }): _107.MsgUpdateParams;
             };
             MsgUpdateParamsResponse: {
-                encode(_: _106.MsgUpdateParamsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgUpdateParamsResponse;
-                fromJSON(_: any): _106.MsgUpdateParamsResponse;
-                toJSON(_: _106.MsgUpdateParamsResponse): unknown;
-                fromPartial(_: {}): _106.MsgUpdateParamsResponse;
+                encode(_: _107.MsgUpdateParamsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgUpdateParamsResponse;
+                fromJSON(_: any): _107.MsgUpdateParamsResponse;
+                toJSON(_: _107.MsgUpdateParamsResponse): unknown;
+                fromPartial(_: {}): _107.MsgUpdateParamsResponse;
             };
             MsgSudoContract: {
-                encode(message: _106.MsgSudoContract, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgSudoContract;
-                fromJSON(object: any): _106.MsgSudoContract;
-                toJSON(message: _106.MsgSudoContract): unknown;
+                encode(message: _107.MsgSudoContract, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgSudoContract;
+                fromJSON(object: any): _107.MsgSudoContract;
+                toJSON(message: _107.MsgSudoContract): unknown;
                 fromPartial(object: {
                     authority?: string;
                     contract?: string;
                     msg?: Uint8Array;
-                }): _106.MsgSudoContract;
+                }): _107.MsgSudoContract;
             };
             MsgSudoContractResponse: {
-                encode(message: _106.MsgSudoContractResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgSudoContractResponse;
-                fromJSON(object: any): _106.MsgSudoContractResponse;
-                toJSON(message: _106.MsgSudoContractResponse): unknown;
+                encode(message: _107.MsgSudoContractResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgSudoContractResponse;
+                fromJSON(object: any): _107.MsgSudoContractResponse;
+                toJSON(message: _107.MsgSudoContractResponse): unknown;
                 fromPartial(object: {
                     data?: Uint8Array;
-                }): _106.MsgSudoContractResponse;
+                }): _107.MsgSudoContractResponse;
             };
             MsgPinCodes: {
-                encode(message: _106.MsgPinCodes, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgPinCodes;
-                fromJSON(object: any): _106.MsgPinCodes;
-                toJSON(message: _106.MsgPinCodes): unknown;
+                encode(message: _107.MsgPinCodes, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgPinCodes;
+                fromJSON(object: any): _107.MsgPinCodes;
+                toJSON(message: _107.MsgPinCodes): unknown;
                 fromPartial(object: {
                     authority?: string;
                     codeIds?: bigint[];
-                }): _106.MsgPinCodes;
+                }): _107.MsgPinCodes;
             };
             MsgPinCodesResponse: {
-                encode(_: _106.MsgPinCodesResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgPinCodesResponse;
-                fromJSON(_: any): _106.MsgPinCodesResponse;
-                toJSON(_: _106.MsgPinCodesResponse): unknown;
-                fromPartial(_: {}): _106.MsgPinCodesResponse;
+                encode(_: _107.MsgPinCodesResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgPinCodesResponse;
+                fromJSON(_: any): _107.MsgPinCodesResponse;
+                toJSON(_: _107.MsgPinCodesResponse): unknown;
+                fromPartial(_: {}): _107.MsgPinCodesResponse;
             };
             MsgUnpinCodes: {
-                encode(message: _106.MsgUnpinCodes, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgUnpinCodes;
-                fromJSON(object: any): _106.MsgUnpinCodes;
-                toJSON(message: _106.MsgUnpinCodes): unknown;
+                encode(message: _107.MsgUnpinCodes, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgUnpinCodes;
+                fromJSON(object: any): _107.MsgUnpinCodes;
+                toJSON(message: _107.MsgUnpinCodes): unknown;
                 fromPartial(object: {
                     authority?: string;
                     codeIds?: bigint[];
-                }): _106.MsgUnpinCodes;
+                }): _107.MsgUnpinCodes;
             };
             MsgUnpinCodesResponse: {
-                encode(_: _106.MsgUnpinCodesResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgUnpinCodesResponse;
-                fromJSON(_: any): _106.MsgUnpinCodesResponse;
-                toJSON(_: _106.MsgUnpinCodesResponse): unknown;
-                fromPartial(_: {}): _106.MsgUnpinCodesResponse;
+                encode(_: _107.MsgUnpinCodesResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgUnpinCodesResponse;
+                fromJSON(_: any): _107.MsgUnpinCodesResponse;
+                toJSON(_: _107.MsgUnpinCodesResponse): unknown;
+                fromPartial(_: {}): _107.MsgUnpinCodesResponse;
             };
             MsgStoreAndInstantiateContract: {
-                encode(message: _106.MsgStoreAndInstantiateContract, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgStoreAndInstantiateContract;
-                fromJSON(object: any): _106.MsgStoreAndInstantiateContract;
-                toJSON(message: _106.MsgStoreAndInstantiateContract): unknown;
+                encode(message: _107.MsgStoreAndInstantiateContract, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgStoreAndInstantiateContract;
+                fromJSON(object: any): _107.MsgStoreAndInstantiateContract;
+                toJSON(message: _107.MsgStoreAndInstantiateContract): unknown;
                 fromPartial(object: {
                     authority?: string;
                     wasmByteCode?: Uint8Array;
                     instantiatePermission?: {
-                        permission?: _107.AccessType;
+                        permission?: _108.AccessType;
                         addresses?: string[];
                     };
                     unpinCode?: boolean;
@@ -944,32 +944,32 @@ export declare namespace cosmwasm {
                     source?: string;
                     builder?: string;
                     codeHash?: Uint8Array;
-                }): _106.MsgStoreAndInstantiateContract;
+                }): _107.MsgStoreAndInstantiateContract;
             };
             MsgStoreAndInstantiateContractResponse: {
-                encode(message: _106.MsgStoreAndInstantiateContractResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.MsgStoreAndInstantiateContractResponse;
-                fromJSON(object: any): _106.MsgStoreAndInstantiateContractResponse;
-                toJSON(message: _106.MsgStoreAndInstantiateContractResponse): unknown;
+                encode(message: _107.MsgStoreAndInstantiateContractResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _107.MsgStoreAndInstantiateContractResponse;
+                fromJSON(object: any): _107.MsgStoreAndInstantiateContractResponse;
+                toJSON(message: _107.MsgStoreAndInstantiateContractResponse): unknown;
                 fromPartial(object: {
                     address?: string;
                     data?: Uint8Array;
-                }): _106.MsgStoreAndInstantiateContractResponse;
+                }): _107.MsgStoreAndInstantiateContractResponse;
             };
             QueryContractInfoRequest: {
-                encode(message: _105.QueryContractInfoRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryContractInfoRequest;
-                fromJSON(object: any): _105.QueryContractInfoRequest;
-                toJSON(message: _105.QueryContractInfoRequest): unknown;
+                encode(message: _106.QueryContractInfoRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryContractInfoRequest;
+                fromJSON(object: any): _106.QueryContractInfoRequest;
+                toJSON(message: _106.QueryContractInfoRequest): unknown;
                 fromPartial(object: {
                     address?: string;
-                }): _105.QueryContractInfoRequest;
+                }): _106.QueryContractInfoRequest;
             };
             QueryContractInfoResponse: {
-                encode(message: _105.QueryContractInfoResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryContractInfoResponse;
-                fromJSON(object: any): _105.QueryContractInfoResponse;
-                toJSON(message: _105.QueryContractInfoResponse): unknown;
+                encode(message: _106.QueryContractInfoResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryContractInfoResponse;
+                fromJSON(object: any): _106.QueryContractInfoResponse;
+                toJSON(message: _106.QueryContractInfoResponse): unknown;
                 fromPartial(object: {
                     address?: string;
                     contractInfo?: {
@@ -987,13 +987,13 @@ export declare namespace cosmwasm {
                             value?: Uint8Array;
                         };
                     };
-                }): _105.QueryContractInfoResponse;
+                }): _106.QueryContractInfoResponse;
             };
             QueryContractHistoryRequest: {
-                encode(message: _105.QueryContractHistoryRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryContractHistoryRequest;
-                fromJSON(object: any): _105.QueryContractHistoryRequest;
-                toJSON(message: _105.QueryContractHistoryRequest): unknown;
+                encode(message: _106.QueryContractHistoryRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryContractHistoryRequest;
+                fromJSON(object: any): _106.QueryContractHistoryRequest;
+                toJSON(message: _106.QueryContractHistoryRequest): unknown;
                 fromPartial(object: {
                     address?: string;
                     pagination?: {
@@ -1003,16 +1003,16 @@ export declare namespace cosmwasm {
                         countTotal?: boolean;
                         reverse?: boolean;
                     };
-                }): _105.QueryContractHistoryRequest;
+                }): _106.QueryContractHistoryRequest;
             };
             QueryContractHistoryResponse: {
-                encode(message: _105.QueryContractHistoryResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryContractHistoryResponse;
-                fromJSON(object: any): _105.QueryContractHistoryResponse;
-                toJSON(message: _105.QueryContractHistoryResponse): unknown;
+                encode(message: _106.QueryContractHistoryResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryContractHistoryResponse;
+                fromJSON(object: any): _106.QueryContractHistoryResponse;
+                toJSON(message: _106.QueryContractHistoryResponse): unknown;
                 fromPartial(object: {
                     entries?: {
-                        operation?: _107.ContractCodeHistoryOperationType;
+                        operation?: _108.ContractCodeHistoryOperationType;
                         codeId?: bigint;
                         updated?: {
                             blockHeight?: bigint;
@@ -1024,13 +1024,13 @@ export declare namespace cosmwasm {
                         nextKey?: Uint8Array;
                         total?: bigint;
                     };
-                }): _105.QueryContractHistoryResponse;
+                }): _106.QueryContractHistoryResponse;
             };
             QueryContractsByCodeRequest: {
-                encode(message: _105.QueryContractsByCodeRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryContractsByCodeRequest;
-                fromJSON(object: any): _105.QueryContractsByCodeRequest;
-                toJSON(message: _105.QueryContractsByCodeRequest): unknown;
+                encode(message: _106.QueryContractsByCodeRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryContractsByCodeRequest;
+                fromJSON(object: any): _106.QueryContractsByCodeRequest;
+                toJSON(message: _106.QueryContractsByCodeRequest): unknown;
                 fromPartial(object: {
                     codeId?: bigint;
                     pagination?: {
@@ -1040,26 +1040,26 @@ export declare namespace cosmwasm {
                         countTotal?: boolean;
                         reverse?: boolean;
                     };
-                }): _105.QueryContractsByCodeRequest;
+                }): _106.QueryContractsByCodeRequest;
             };
             QueryContractsByCodeResponse: {
-                encode(message: _105.QueryContractsByCodeResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryContractsByCodeResponse;
-                fromJSON(object: any): _105.QueryContractsByCodeResponse;
-                toJSON(message: _105.QueryContractsByCodeResponse): unknown;
+                encode(message: _106.QueryContractsByCodeResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryContractsByCodeResponse;
+                fromJSON(object: any): _106.QueryContractsByCodeResponse;
+                toJSON(message: _106.QueryContractsByCodeResponse): unknown;
                 fromPartial(object: {
                     contracts?: string[];
                     pagination?: {
                         nextKey?: Uint8Array;
                         total?: bigint;
                     };
-                }): _105.QueryContractsByCodeResponse;
+                }): _106.QueryContractsByCodeResponse;
             };
             QueryAllContractStateRequest: {
-                encode(message: _105.QueryAllContractStateRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryAllContractStateRequest;
-                fromJSON(object: any): _105.QueryAllContractStateRequest;
-                toJSON(message: _105.QueryAllContractStateRequest): unknown;
+                encode(message: _106.QueryAllContractStateRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryAllContractStateRequest;
+                fromJSON(object: any): _106.QueryAllContractStateRequest;
+                toJSON(message: _106.QueryAllContractStateRequest): unknown;
                 fromPartial(object: {
                     address?: string;
                     pagination?: {
@@ -1069,13 +1069,13 @@ export declare namespace cosmwasm {
                         countTotal?: boolean;
                         reverse?: boolean;
                     };
-                }): _105.QueryAllContractStateRequest;
+                }): _106.QueryAllContractStateRequest;
             };
             QueryAllContractStateResponse: {
-                encode(message: _105.QueryAllContractStateResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryAllContractStateResponse;
-                fromJSON(object: any): _105.QueryAllContractStateResponse;
-                toJSON(message: _105.QueryAllContractStateResponse): unknown;
+                encode(message: _106.QueryAllContractStateResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryAllContractStateResponse;
+                fromJSON(object: any): _106.QueryAllContractStateResponse;
+                toJSON(message: _106.QueryAllContractStateResponse): unknown;
                 fromPartial(object: {
                     models?: {
                         key?: Uint8Array;
@@ -1085,93 +1085,93 @@ export declare namespace cosmwasm {
                         nextKey?: Uint8Array;
                         total?: bigint;
                     };
-                }): _105.QueryAllContractStateResponse;
+                }): _106.QueryAllContractStateResponse;
             };
             QueryRawContractStateRequest: {
-                encode(message: _105.QueryRawContractStateRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryRawContractStateRequest;
-                fromJSON(object: any): _105.QueryRawContractStateRequest;
-                toJSON(message: _105.QueryRawContractStateRequest): unknown;
+                encode(message: _106.QueryRawContractStateRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryRawContractStateRequest;
+                fromJSON(object: any): _106.QueryRawContractStateRequest;
+                toJSON(message: _106.QueryRawContractStateRequest): unknown;
                 fromPartial(object: {
                     address?: string;
                     queryData?: Uint8Array;
-                }): _105.QueryRawContractStateRequest;
+                }): _106.QueryRawContractStateRequest;
             };
             QueryRawContractStateResponse: {
-                encode(message: _105.QueryRawContractStateResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryRawContractStateResponse;
-                fromJSON(object: any): _105.QueryRawContractStateResponse;
-                toJSON(message: _105.QueryRawContractStateResponse): unknown;
+                encode(message: _106.QueryRawContractStateResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryRawContractStateResponse;
+                fromJSON(object: any): _106.QueryRawContractStateResponse;
+                toJSON(message: _106.QueryRawContractStateResponse): unknown;
                 fromPartial(object: {
                     data?: Uint8Array;
-                }): _105.QueryRawContractStateResponse;
+                }): _106.QueryRawContractStateResponse;
             };
             QuerySmartContractStateRequest: {
-                encode(message: _105.QuerySmartContractStateRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QuerySmartContractStateRequest;
-                fromJSON(object: any): _105.QuerySmartContractStateRequest;
-                toJSON(message: _105.QuerySmartContractStateRequest): unknown;
+                encode(message: _106.QuerySmartContractStateRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QuerySmartContractStateRequest;
+                fromJSON(object: any): _106.QuerySmartContractStateRequest;
+                toJSON(message: _106.QuerySmartContractStateRequest): unknown;
                 fromPartial(object: {
                     address?: string;
                     queryData?: Uint8Array;
-                }): _105.QuerySmartContractStateRequest;
+                }): _106.QuerySmartContractStateRequest;
             };
             QuerySmartContractStateResponse: {
-                encode(message: _105.QuerySmartContractStateResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QuerySmartContractStateResponse;
-                fromJSON(object: any): _105.QuerySmartContractStateResponse;
-                toJSON(message: _105.QuerySmartContractStateResponse): unknown;
+                encode(message: _106.QuerySmartContractStateResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QuerySmartContractStateResponse;
+                fromJSON(object: any): _106.QuerySmartContractStateResponse;
+                toJSON(message: _106.QuerySmartContractStateResponse): unknown;
                 fromPartial(object: {
                     data?: Uint8Array;
-                }): _105.QuerySmartContractStateResponse;
+                }): _106.QuerySmartContractStateResponse;
             };
             QueryCodeRequest: {
-                encode(message: _105.QueryCodeRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryCodeRequest;
-                fromJSON(object: any): _105.QueryCodeRequest;
-                toJSON(message: _105.QueryCodeRequest): unknown;
+                encode(message: _106.QueryCodeRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryCodeRequest;
+                fromJSON(object: any): _106.QueryCodeRequest;
+                toJSON(message: _106.QueryCodeRequest): unknown;
                 fromPartial(object: {
                     codeId?: bigint;
-                }): _105.QueryCodeRequest;
+                }): _106.QueryCodeRequest;
             };
             CodeInfoResponse: {
-                encode(message: _105.CodeInfoResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.CodeInfoResponse;
-                fromJSON(object: any): _105.CodeInfoResponse;
-                toJSON(message: _105.CodeInfoResponse): unknown;
+                encode(message: _106.CodeInfoResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.CodeInfoResponse;
+                fromJSON(object: any): _106.CodeInfoResponse;
+                toJSON(message: _106.CodeInfoResponse): unknown;
                 fromPartial(object: {
                     codeId?: bigint;
                     creator?: string;
                     dataHash?: Uint8Array;
                     instantiatePermission?: {
-                        permission?: _107.AccessType;
+                        permission?: _108.AccessType;
                         addresses?: string[];
                     };
-                }): _105.CodeInfoResponse;
+                }): _106.CodeInfoResponse;
             };
             QueryCodeResponse: {
-                encode(message: _105.QueryCodeResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryCodeResponse;
-                fromJSON(object: any): _105.QueryCodeResponse;
-                toJSON(message: _105.QueryCodeResponse): unknown;
+                encode(message: _106.QueryCodeResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryCodeResponse;
+                fromJSON(object: any): _106.QueryCodeResponse;
+                toJSON(message: _106.QueryCodeResponse): unknown;
                 fromPartial(object: {
                     codeInfo?: {
                         codeId?: bigint;
                         creator?: string;
                         dataHash?: Uint8Array;
                         instantiatePermission?: {
-                            permission?: _107.AccessType;
+                            permission?: _108.AccessType;
                             addresses?: string[];
                         };
                     };
                     data?: Uint8Array;
-                }): _105.QueryCodeResponse;
+                }): _106.QueryCodeResponse;
             };
             QueryCodesRequest: {
-                encode(message: _105.QueryCodesRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryCodesRequest;
-                fromJSON(object: any): _105.QueryCodesRequest;
-                toJSON(message: _105.QueryCodesRequest): unknown;
+                encode(message: _106.QueryCodesRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryCodesRequest;
+                fromJSON(object: any): _106.QueryCodesRequest;
+                toJSON(message: _106.QueryCodesRequest): unknown;
                 fromPartial(object: {
                     pagination?: {
                         key?: Uint8Array;
@@ -1180,20 +1180,20 @@ export declare namespace cosmwasm {
                         countTotal?: boolean;
                         reverse?: boolean;
                     };
-                }): _105.QueryCodesRequest;
+                }): _106.QueryCodesRequest;
             };
             QueryCodesResponse: {
-                encode(message: _105.QueryCodesResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryCodesResponse;
-                fromJSON(object: any): _105.QueryCodesResponse;
-                toJSON(message: _105.QueryCodesResponse): unknown;
+                encode(message: _106.QueryCodesResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryCodesResponse;
+                fromJSON(object: any): _106.QueryCodesResponse;
+                toJSON(message: _106.QueryCodesResponse): unknown;
                 fromPartial(object: {
                     codeInfos?: {
                         codeId?: bigint;
                         creator?: string;
                         dataHash?: Uint8Array;
                         instantiatePermission?: {
-                            permission?: _107.AccessType;
+                            permission?: _108.AccessType;
                             addresses?: string[];
                         };
                     }[];
@@ -1201,13 +1201,13 @@ export declare namespace cosmwasm {
                         nextKey?: Uint8Array;
                         total?: bigint;
                     };
-                }): _105.QueryCodesResponse;
+                }): _106.QueryCodesResponse;
             };
             QueryPinnedCodesRequest: {
-                encode(message: _105.QueryPinnedCodesRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryPinnedCodesRequest;
-                fromJSON(object: any): _105.QueryPinnedCodesRequest;
-                toJSON(message: _105.QueryPinnedCodesRequest): unknown;
+                encode(message: _106.QueryPinnedCodesRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryPinnedCodesRequest;
+                fromJSON(object: any): _106.QueryPinnedCodesRequest;
+                toJSON(message: _106.QueryPinnedCodesRequest): unknown;
                 fromPartial(object: {
                     pagination?: {
                         key?: Uint8Array;
@@ -1216,48 +1216,48 @@ export declare namespace cosmwasm {
                         countTotal?: boolean;
                         reverse?: boolean;
                     };
-                }): _105.QueryPinnedCodesRequest;
+                }): _106.QueryPinnedCodesRequest;
             };
             QueryPinnedCodesResponse: {
-                encode(message: _105.QueryPinnedCodesResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryPinnedCodesResponse;
-                fromJSON(object: any): _105.QueryPinnedCodesResponse;
-                toJSON(message: _105.QueryPinnedCodesResponse): unknown;
+                encode(message: _106.QueryPinnedCodesResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryPinnedCodesResponse;
+                fromJSON(object: any): _106.QueryPinnedCodesResponse;
+                toJSON(message: _106.QueryPinnedCodesResponse): unknown;
                 fromPartial(object: {
                     codeIds?: bigint[];
                     pagination?: {
                         nextKey?: Uint8Array;
                         total?: bigint;
                     };
-                }): _105.QueryPinnedCodesResponse;
+                }): _106.QueryPinnedCodesResponse;
             };
             QueryParamsRequest: {
-                encode(_: _105.QueryParamsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryParamsRequest;
-                fromJSON(_: any): _105.QueryParamsRequest;
-                toJSON(_: _105.QueryParamsRequest): unknown;
-                fromPartial(_: {}): _105.QueryParamsRequest;
+                encode(_: _106.QueryParamsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryParamsRequest;
+                fromJSON(_: any): _106.QueryParamsRequest;
+                toJSON(_: _106.QueryParamsRequest): unknown;
+                fromPartial(_: {}): _106.QueryParamsRequest;
             };
             QueryParamsResponse: {
-                encode(message: _105.QueryParamsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryParamsResponse;
-                fromJSON(object: any): _105.QueryParamsResponse;
-                toJSON(message: _105.QueryParamsResponse): unknown;
+                encode(message: _106.QueryParamsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryParamsResponse;
+                fromJSON(object: any): _106.QueryParamsResponse;
+                toJSON(message: _106.QueryParamsResponse): unknown;
                 fromPartial(object: {
                     params?: {
                         codeUploadAccess?: {
-                            permission?: _107.AccessType;
+                            permission?: _108.AccessType;
                             addresses?: string[];
                         };
-                        instantiateDefaultPermission?: _107.AccessType;
+                        instantiateDefaultPermission?: _108.AccessType;
                     };
-                }): _105.QueryParamsResponse;
+                }): _106.QueryParamsResponse;
             };
             QueryContractsByCreatorRequest: {
-                encode(message: _105.QueryContractsByCreatorRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryContractsByCreatorRequest;
-                fromJSON(object: any): _105.QueryContractsByCreatorRequest;
-                toJSON(message: _105.QueryContractsByCreatorRequest): unknown;
+                encode(message: _106.QueryContractsByCreatorRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryContractsByCreatorRequest;
+                fromJSON(object: any): _106.QueryContractsByCreatorRequest;
+                toJSON(message: _106.QueryContractsByCreatorRequest): unknown;
                 fromPartial(object: {
                     creatorAddress?: string;
                     pagination?: {
@@ -1267,46 +1267,46 @@ export declare namespace cosmwasm {
                         countTotal?: boolean;
                         reverse?: boolean;
                     };
-                }): _105.QueryContractsByCreatorRequest;
+                }): _106.QueryContractsByCreatorRequest;
             };
             QueryContractsByCreatorResponse: {
-                encode(message: _105.QueryContractsByCreatorResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.QueryContractsByCreatorResponse;
-                fromJSON(object: any): _105.QueryContractsByCreatorResponse;
-                toJSON(message: _105.QueryContractsByCreatorResponse): unknown;
+                encode(message: _106.QueryContractsByCreatorResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _106.QueryContractsByCreatorResponse;
+                fromJSON(object: any): _106.QueryContractsByCreatorResponse;
+                toJSON(message: _106.QueryContractsByCreatorResponse): unknown;
                 fromPartial(object: {
                     contractAddresses?: string[];
                     pagination?: {
                         nextKey?: Uint8Array;
                         total?: bigint;
                     };
-                }): _105.QueryContractsByCreatorResponse;
+                }): _106.QueryContractsByCreatorResponse;
             };
             StoreCodeProposal: {
-                encode(message: _104.StoreCodeProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _104.StoreCodeProposal;
-                fromJSON(object: any): _104.StoreCodeProposal;
-                toJSON(message: _104.StoreCodeProposal): unknown;
+                encode(message: _105.StoreCodeProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.StoreCodeProposal;
+                fromJSON(object: any): _105.StoreCodeProposal;
+                toJSON(message: _105.StoreCodeProposal): unknown;
                 fromPartial(object: {
                     title?: string;
                     description?: string;
                     runAs?: string;
                     wasmByteCode?: Uint8Array;
                     instantiatePermission?: {
-                        permission?: _107.AccessType;
+                        permission?: _108.AccessType;
                         addresses?: string[];
                     };
                     unpinCode?: boolean;
                     source?: string;
                     builder?: string;
                     codeHash?: Uint8Array;
-                }): _104.StoreCodeProposal;
+                }): _105.StoreCodeProposal;
             };
             InstantiateContractProposal: {
-                encode(message: _104.InstantiateContractProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _104.InstantiateContractProposal;
-                fromJSON(object: any): _104.InstantiateContractProposal;
-                toJSON(message: _104.InstantiateContractProposal): unknown;
+                encode(message: _105.InstantiateContractProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.InstantiateContractProposal;
+                fromJSON(object: any): _105.InstantiateContractProposal;
+                toJSON(message: _105.InstantiateContractProposal): unknown;
                 fromPartial(object: {
                     title?: string;
                     description?: string;
@@ -1319,13 +1319,13 @@ export declare namespace cosmwasm {
                         denom?: string;
                         amount?: string;
                     }[];
-                }): _104.InstantiateContractProposal;
+                }): _105.InstantiateContractProposal;
             };
             InstantiateContract2Proposal: {
-                encode(message: _104.InstantiateContract2Proposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _104.InstantiateContract2Proposal;
-                fromJSON(object: any): _104.InstantiateContract2Proposal;
-                toJSON(message: _104.InstantiateContract2Proposal): unknown;
+                encode(message: _105.InstantiateContract2Proposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.InstantiateContract2Proposal;
+                fromJSON(object: any): _105.InstantiateContract2Proposal;
+                toJSON(message: _105.InstantiateContract2Proposal): unknown;
                 fromPartial(object: {
                     title?: string;
                     description?: string;
@@ -1340,38 +1340,38 @@ export declare namespace cosmwasm {
                     }[];
                     salt?: Uint8Array;
                     fixMsg?: boolean;
-                }): _104.InstantiateContract2Proposal;
+                }): _105.InstantiateContract2Proposal;
             };
             MigrateContractProposal: {
-                encode(message: _104.MigrateContractProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _104.MigrateContractProposal;
-                fromJSON(object: any): _104.MigrateContractProposal;
-                toJSON(message: _104.MigrateContractProposal): unknown;
+                encode(message: _105.MigrateContractProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.MigrateContractProposal;
+                fromJSON(object: any): _105.MigrateContractProposal;
+                toJSON(message: _105.MigrateContractProposal): unknown;
                 fromPartial(object: {
                     title?: string;
                     description?: string;
                     contract?: string;
                     codeId?: bigint;
                     msg?: Uint8Array;
-                }): _104.MigrateContractProposal;
+                }): _105.MigrateContractProposal;
             };
             SudoContractProposal: {
-                encode(message: _104.SudoContractProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _104.SudoContractProposal;
-                fromJSON(object: any): _104.SudoContractProposal;
-                toJSON(message: _104.SudoContractProposal): unknown;
+                encode(message: _105.SudoContractProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.SudoContractProposal;
+                fromJSON(object: any): _105.SudoContractProposal;
+                toJSON(message: _105.SudoContractProposal): unknown;
                 fromPartial(object: {
                     title?: string;
                     description?: string;
                     contract?: string;
                     msg?: Uint8Array;
-                }): _104.SudoContractProposal;
+                }): _105.SudoContractProposal;
             };
             ExecuteContractProposal: {
-                encode(message: _104.ExecuteContractProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _104.ExecuteContractProposal;
-                fromJSON(object: any): _104.ExecuteContractProposal;
-                toJSON(message: _104.ExecuteContractProposal): unknown;
+                encode(message: _105.ExecuteContractProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.ExecuteContractProposal;
+                fromJSON(object: any): _105.ExecuteContractProposal;
+                toJSON(message: _105.ExecuteContractProposal): unknown;
                 fromPartial(object: {
                     title?: string;
                     description?: string;
@@ -1382,95 +1382,95 @@ export declare namespace cosmwasm {
                         denom?: string;
                         amount?: string;
                     }[];
-                }): _104.ExecuteContractProposal;
+                }): _105.ExecuteContractProposal;
             };
             UpdateAdminProposal: {
-                encode(message: _104.UpdateAdminProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _104.UpdateAdminProposal;
-                fromJSON(object: any): _104.UpdateAdminProposal;
-                toJSON(message: _104.UpdateAdminProposal): unknown;
+                encode(message: _105.UpdateAdminProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.UpdateAdminProposal;
+                fromJSON(object: any): _105.UpdateAdminProposal;
+                toJSON(message: _105.UpdateAdminProposal): unknown;
                 fromPartial(object: {
                     title?: string;
                     description?: string;
                     newAdmin?: string;
                     contract?: string;
-                }): _104.UpdateAdminProposal;
+                }): _105.UpdateAdminProposal;
             };
             ClearAdminProposal: {
-                encode(message: _104.ClearAdminProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _104.ClearAdminProposal;
-                fromJSON(object: any): _104.ClearAdminProposal;
-                toJSON(message: _104.ClearAdminProposal): unknown;
+                encode(message: _105.ClearAdminProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.ClearAdminProposal;
+                fromJSON(object: any): _105.ClearAdminProposal;
+                toJSON(message: _105.ClearAdminProposal): unknown;
                 fromPartial(object: {
                     title?: string;
                     description?: string;
                     contract?: string;
-                }): _104.ClearAdminProposal;
+                }): _105.ClearAdminProposal;
             };
             PinCodesProposal: {
-                encode(message: _104.PinCodesProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _104.PinCodesProposal;
-                fromJSON(object: any): _104.PinCodesProposal;
-                toJSON(message: _104.PinCodesProposal): unknown;
+                encode(message: _105.PinCodesProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.PinCodesProposal;
+                fromJSON(object: any): _105.PinCodesProposal;
+                toJSON(message: _105.PinCodesProposal): unknown;
                 fromPartial(object: {
                     title?: string;
                     description?: string;
                     codeIds?: bigint[];
-                }): _104.PinCodesProposal;
+                }): _105.PinCodesProposal;
             };
             UnpinCodesProposal: {
-                encode(message: _104.UnpinCodesProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _104.UnpinCodesProposal;
-                fromJSON(object: any): _104.UnpinCodesProposal;
-                toJSON(message: _104.UnpinCodesProposal): unknown;
+                encode(message: _105.UnpinCodesProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.UnpinCodesProposal;
+                fromJSON(object: any): _105.UnpinCodesProposal;
+                toJSON(message: _105.UnpinCodesProposal): unknown;
                 fromPartial(object: {
                     title?: string;
                     description?: string;
                     codeIds?: bigint[];
-                }): _104.UnpinCodesProposal;
+                }): _105.UnpinCodesProposal;
             };
             AccessConfigUpdate: {
-                encode(message: _104.AccessConfigUpdate, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _104.AccessConfigUpdate;
-                fromJSON(object: any): _104.AccessConfigUpdate;
-                toJSON(message: _104.AccessConfigUpdate): unknown;
+                encode(message: _105.AccessConfigUpdate, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.AccessConfigUpdate;
+                fromJSON(object: any): _105.AccessConfigUpdate;
+                toJSON(message: _105.AccessConfigUpdate): unknown;
                 fromPartial(object: {
                     codeId?: bigint;
                     instantiatePermission?: {
-                        permission?: _107.AccessType;
+                        permission?: _108.AccessType;
                         addresses?: string[];
                     };
-                }): _104.AccessConfigUpdate;
+                }): _105.AccessConfigUpdate;
             };
             UpdateInstantiateConfigProposal: {
-                encode(message: _104.UpdateInstantiateConfigProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _104.UpdateInstantiateConfigProposal;
-                fromJSON(object: any): _104.UpdateInstantiateConfigProposal;
-                toJSON(message: _104.UpdateInstantiateConfigProposal): unknown;
+                encode(message: _105.UpdateInstantiateConfigProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.UpdateInstantiateConfigProposal;
+                fromJSON(object: any): _105.UpdateInstantiateConfigProposal;
+                toJSON(message: _105.UpdateInstantiateConfigProposal): unknown;
                 fromPartial(object: {
                     title?: string;
                     description?: string;
                     accessConfigUpdates?: {
                         codeId?: bigint;
                         instantiatePermission?: {
-                            permission?: _107.AccessType;
+                            permission?: _108.AccessType;
                             addresses?: string[];
                         };
                     }[];
-                }): _104.UpdateInstantiateConfigProposal;
+                }): _105.UpdateInstantiateConfigProposal;
             };
             StoreAndInstantiateContractProposal: {
-                encode(message: _104.StoreAndInstantiateContractProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _104.StoreAndInstantiateContractProposal;
-                fromJSON(object: any): _104.StoreAndInstantiateContractProposal;
-                toJSON(message: _104.StoreAndInstantiateContractProposal): unknown;
+                encode(message: _105.StoreAndInstantiateContractProposal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _105.StoreAndInstantiateContractProposal;
+                fromJSON(object: any): _105.StoreAndInstantiateContractProposal;
+                toJSON(message: _105.StoreAndInstantiateContractProposal): unknown;
                 fromPartial(object: {
                     title?: string;
                     description?: string;
                     runAs?: string;
                     wasmByteCode?: Uint8Array;
                     instantiatePermission?: {
-                        permission?: _107.AccessType;
+                        permission?: _108.AccessType;
                         addresses?: string[];
                     };
                     unpinCode?: boolean;
@@ -1484,50 +1484,50 @@ export declare namespace cosmwasm {
                     source?: string;
                     builder?: string;
                     codeHash?: Uint8Array;
-                }): _104.StoreAndInstantiateContractProposal;
+                }): _105.StoreAndInstantiateContractProposal;
             };
             MsgIBCSend: {
-                encode(message: _103.MsgIBCSend, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _103.MsgIBCSend;
-                fromJSON(object: any): _103.MsgIBCSend;
-                toJSON(message: _103.MsgIBCSend): unknown;
+                encode(message: _104.MsgIBCSend, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _104.MsgIBCSend;
+                fromJSON(object: any): _104.MsgIBCSend;
+                toJSON(message: _104.MsgIBCSend): unknown;
                 fromPartial(object: {
                     channel?: string;
                     timeoutHeight?: bigint;
                     timeoutTimestamp?: bigint;
                     data?: Uint8Array;
-                }): _103.MsgIBCSend;
+                }): _104.MsgIBCSend;
             };
             MsgIBCSendResponse: {
-                encode(message: _103.MsgIBCSendResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _103.MsgIBCSendResponse;
-                fromJSON(object: any): _103.MsgIBCSendResponse;
-                toJSON(message: _103.MsgIBCSendResponse): unknown;
+                encode(message: _104.MsgIBCSendResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _104.MsgIBCSendResponse;
+                fromJSON(object: any): _104.MsgIBCSendResponse;
+                toJSON(message: _104.MsgIBCSendResponse): unknown;
                 fromPartial(object: {
                     sequence?: bigint;
-                }): _103.MsgIBCSendResponse;
+                }): _104.MsgIBCSendResponse;
             };
             MsgIBCCloseChannel: {
-                encode(message: _103.MsgIBCCloseChannel, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _103.MsgIBCCloseChannel;
-                fromJSON(object: any): _103.MsgIBCCloseChannel;
-                toJSON(message: _103.MsgIBCCloseChannel): unknown;
+                encode(message: _104.MsgIBCCloseChannel, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _104.MsgIBCCloseChannel;
+                fromJSON(object: any): _104.MsgIBCCloseChannel;
+                toJSON(message: _104.MsgIBCCloseChannel): unknown;
                 fromPartial(object: {
                     channel?: string;
-                }): _103.MsgIBCCloseChannel;
+                }): _104.MsgIBCCloseChannel;
             };
             GenesisState: {
-                encode(message: _102.GenesisState, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _102.GenesisState;
-                fromJSON(object: any): _102.GenesisState;
-                toJSON(message: _102.GenesisState): unknown;
+                encode(message: _103.GenesisState, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _103.GenesisState;
+                fromJSON(object: any): _103.GenesisState;
+                toJSON(message: _103.GenesisState): unknown;
                 fromPartial(object: {
                     params?: {
                         codeUploadAccess?: {
-                            permission?: _107.AccessType;
+                            permission?: _108.AccessType;
                             addresses?: string[];
                         };
-                        instantiateDefaultPermission?: _107.AccessType;
+                        instantiateDefaultPermission?: _108.AccessType;
                     };
                     codes?: {
                         codeId?: bigint;
@@ -1535,7 +1535,7 @@ export declare namespace cosmwasm {
                             codeHash?: Uint8Array;
                             creator?: string;
                             instantiateConfig?: {
-                                permission?: _107.AccessType;
+                                permission?: _108.AccessType;
                                 addresses?: string[];
                             };
                         };
@@ -1564,7 +1564,7 @@ export declare namespace cosmwasm {
                             value?: Uint8Array;
                         }[];
                         contractCodeHistory?: {
-                            operation?: _107.ContractCodeHistoryOperationType;
+                            operation?: _108.ContractCodeHistoryOperationType;
                             codeId?: bigint;
                             updated?: {
                                 blockHeight?: bigint;
@@ -1577,32 +1577,32 @@ export declare namespace cosmwasm {
                         idKey?: Uint8Array;
                         value?: bigint;
                     }[];
-                }): _102.GenesisState;
+                }): _103.GenesisState;
             };
             Code: {
-                encode(message: _102.Code, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _102.Code;
-                fromJSON(object: any): _102.Code;
-                toJSON(message: _102.Code): unknown;
+                encode(message: _103.Code, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _103.Code;
+                fromJSON(object: any): _103.Code;
+                toJSON(message: _103.Code): unknown;
                 fromPartial(object: {
                     codeId?: bigint;
                     codeInfo?: {
                         codeHash?: Uint8Array;
                         creator?: string;
                         instantiateConfig?: {
-                            permission?: _107.AccessType;
+                            permission?: _108.AccessType;
                             addresses?: string[];
                         };
                     };
                     codeBytes?: Uint8Array;
                     pinned?: boolean;
-                }): _102.Code;
+                }): _103.Code;
             };
             Contract: {
-                encode(message: _102.Contract, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _102.Contract;
-                fromJSON(object: any): _102.Contract;
-                toJSON(message: _102.Contract): unknown;
+                encode(message: _103.Contract, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _103.Contract;
+                fromJSON(object: any): _103.Contract;
+                toJSON(message: _103.Contract): unknown;
                 fromPartial(object: {
                     contractAddress?: string;
                     contractInfo?: {
@@ -1625,7 +1625,7 @@ export declare namespace cosmwasm {
                         value?: Uint8Array;
                     }[];
                     contractCodeHistory?: {
-                        operation?: _107.ContractCodeHistoryOperationType;
+                        operation?: _108.ContractCodeHistoryOperationType;
                         codeId?: bigint;
                         updated?: {
                             blockHeight?: bigint;
@@ -1633,23 +1633,23 @@ export declare namespace cosmwasm {
                         };
                         msg?: Uint8Array;
                     }[];
-                }): _102.Contract;
+                }): _103.Contract;
             };
             Sequence: {
-                encode(message: _102.Sequence, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _102.Sequence;
-                fromJSON(object: any): _102.Sequence;
-                toJSON(message: _102.Sequence): unknown;
+                encode(message: _103.Sequence, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _103.Sequence;
+                fromJSON(object: any): _103.Sequence;
+                toJSON(message: _103.Sequence): unknown;
                 fromPartial(object: {
                     idKey?: Uint8Array;
                     value?: bigint;
-                }): _102.Sequence;
+                }): _103.Sequence;
             };
             ContractExecutionAuthorization: {
-                encode(message: _101.ContractExecutionAuthorization, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _101.ContractExecutionAuthorization;
-                fromJSON(object: any): _101.ContractExecutionAuthorization;
-                toJSON(message: _101.ContractExecutionAuthorization): unknown;
+                encode(message: _102.ContractExecutionAuthorization, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _102.ContractExecutionAuthorization;
+                fromJSON(object: any): _102.ContractExecutionAuthorization;
+                toJSON(message: _102.ContractExecutionAuthorization): unknown;
                 fromPartial(object: {
                     grants?: {
                         contract?: string;
@@ -1679,13 +1679,13 @@ export declare namespace cosmwasm {
                             messages?: Uint8Array[];
                         };
                     }[];
-                }): _101.ContractExecutionAuthorization;
+                }): _102.ContractExecutionAuthorization;
             };
             ContractMigrationAuthorization: {
-                encode(message: _101.ContractMigrationAuthorization, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _101.ContractMigrationAuthorization;
-                fromJSON(object: any): _101.ContractMigrationAuthorization;
-                toJSON(message: _101.ContractMigrationAuthorization): unknown;
+                encode(message: _102.ContractMigrationAuthorization, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _102.ContractMigrationAuthorization;
+                fromJSON(object: any): _102.ContractMigrationAuthorization;
+                toJSON(message: _102.ContractMigrationAuthorization): unknown;
                 fromPartial(object: {
                     grants?: {
                         contract?: string;
@@ -1715,13 +1715,13 @@ export declare namespace cosmwasm {
                             messages?: Uint8Array[];
                         };
                     }[];
-                }): _101.ContractMigrationAuthorization;
+                }): _102.ContractMigrationAuthorization;
             };
             ContractGrant: {
-                encode(message: _101.ContractGrant, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _101.ContractGrant;
-                fromJSON(object: any): _101.ContractGrant;
-                toJSON(message: _101.ContractGrant): unknown;
+                encode(message: _102.ContractGrant, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _102.ContractGrant;
+                fromJSON(object: any): _102.ContractGrant;
+                toJSON(message: _102.ContractGrant): unknown;
                 fromPartial(object: {
                     contract?: string;
                     limit?: {
@@ -1749,69 +1749,69 @@ export declare namespace cosmwasm {
                     } | {
                         messages?: Uint8Array[];
                     };
-                }): _101.ContractGrant;
+                }): _102.ContractGrant;
             };
             MaxCallsLimit: {
-                encode(message: _101.MaxCallsLimit, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _101.MaxCallsLimit;
-                fromJSON(object: any): _101.MaxCallsLimit;
-                toJSON(message: _101.MaxCallsLimit): unknown;
+                encode(message: _102.MaxCallsLimit, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _102.MaxCallsLimit;
+                fromJSON(object: any): _102.MaxCallsLimit;
+                toJSON(message: _102.MaxCallsLimit): unknown;
                 fromPartial(object: {
                     remaining?: bigint;
-                }): _101.MaxCallsLimit;
+                }): _102.MaxCallsLimit;
             };
             MaxFundsLimit: {
-                encode(message: _101.MaxFundsLimit, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _101.MaxFundsLimit;
-                fromJSON(object: any): _101.MaxFundsLimit;
-                toJSON(message: _101.MaxFundsLimit): unknown;
+                encode(message: _102.MaxFundsLimit, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _102.MaxFundsLimit;
+                fromJSON(object: any): _102.MaxFundsLimit;
+                toJSON(message: _102.MaxFundsLimit): unknown;
                 fromPartial(object: {
                     amounts?: {
                         denom?: string;
                         amount?: string;
                     }[];
-                }): _101.MaxFundsLimit;
+                }): _102.MaxFundsLimit;
             };
             CombinedLimit: {
-                encode(message: _101.CombinedLimit, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _101.CombinedLimit;
-                fromJSON(object: any): _101.CombinedLimit;
-                toJSON(message: _101.CombinedLimit): unknown;
+                encode(message: _102.CombinedLimit, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _102.CombinedLimit;
+                fromJSON(object: any): _102.CombinedLimit;
+                toJSON(message: _102.CombinedLimit): unknown;
                 fromPartial(object: {
                     callsRemaining?: bigint;
                     amounts?: {
                         denom?: string;
                         amount?: string;
                     }[];
-                }): _101.CombinedLimit;
+                }): _102.CombinedLimit;
             };
             AllowAllMessagesFilter: {
-                encode(_: _101.AllowAllMessagesFilter, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _101.AllowAllMessagesFilter;
-                fromJSON(_: any): _101.AllowAllMessagesFilter;
-                toJSON(_: _101.AllowAllMessagesFilter): unknown;
-                fromPartial(_: {}): _101.AllowAllMessagesFilter;
+                encode(_: _102.AllowAllMessagesFilter, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _102.AllowAllMessagesFilter;
+                fromJSON(_: any): _102.AllowAllMessagesFilter;
+                toJSON(_: _102.AllowAllMessagesFilter): unknown;
+                fromPartial(_: {}): _102.AllowAllMessagesFilter;
             };
             AcceptedMessageKeysFilter: {
-                encode(message: _101.AcceptedMessageKeysFilter, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _101.AcceptedMessageKeysFilter;
-                fromJSON(object: any): _101.AcceptedMessageKeysFilter;
-                toJSON(message: _101.AcceptedMessageKeysFilter): unknown;
+                encode(message: _102.AcceptedMessageKeysFilter, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _102.AcceptedMessageKeysFilter;
+                fromJSON(object: any): _102.AcceptedMessageKeysFilter;
+                toJSON(message: _102.AcceptedMessageKeysFilter): unknown;
                 fromPartial(object: {
                     keys?: string[];
-                }): _101.AcceptedMessageKeysFilter;
+                }): _102.AcceptedMessageKeysFilter;
             };
             AcceptedMessagesFilter: {
-                encode(message: _101.AcceptedMessagesFilter, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _101.AcceptedMessagesFilter;
-                fromJSON(object: any): _101.AcceptedMessagesFilter;
-                toJSON(message: _101.AcceptedMessagesFilter): unknown;
+                encode(message: _102.AcceptedMessagesFilter, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _102.AcceptedMessagesFilter;
+                fromJSON(object: any): _102.AcceptedMessagesFilter;
+                toJSON(message: _102.AcceptedMessagesFilter): unknown;
                 fromPartial(object: {
                     messages?: Uint8Array[];
-                }): _101.AcceptedMessagesFilter;
+                }): _102.AcceptedMessagesFilter;
             };
-            Cosmwasm_wasmv1ContractAuthzLimitX_InterfaceDecoder: (input: Uint8Array | import("..").BinaryReader) => import("../google/protobuf/any").Any | _101.MaxCallsLimit | _101.MaxFundsLimit | _101.CombinedLimit;
-            Cosmwasm_wasmv1ContractAuthzFilterX_InterfaceDecoder: (input: Uint8Array | import("..").BinaryReader) => import("../google/protobuf/any").Any | _101.AllowAllMessagesFilter | _101.AcceptedMessageKeysFilter | _101.AcceptedMessagesFilter;
+            Cosmwasm_wasmv1ContractAuthzLimitX_InterfaceDecoder: (input: Uint8Array | import("..").BinaryReader) => import("../google/protobuf/any").Any | _102.MaxCallsLimit | _102.MaxFundsLimit | _102.CombinedLimit;
+            Cosmwasm_wasmv1ContractAuthzFilterX_InterfaceDecoder: (input: Uint8Array | import("..").BinaryReader) => import("../google/protobuf/any").Any | _102.AllowAllMessagesFilter | _102.AcceptedMessageKeysFilter | _102.AcceptedMessagesFilter;
         };
     }
     const ClientFactory: {
@@ -1853,7 +1853,7 @@ export declare namespace cosmwasm {
             };
             cosmwasm: {
                 wasm: {
-                    v1: _234.MsgClientImpl;
+                    v1: _235.MsgClientImpl;
                 };
             };
         }>;
@@ -2026,17 +2026,17 @@ export declare namespace cosmwasm {
             cosmwasm: {
                 wasm: {
                     v1: {
-                        contractInfo(request: _105.QueryContractInfoRequest): Promise<_105.QueryContractInfoResponse>;
-                        contractHistory(request: _105.QueryContractHistoryRequest): Promise<_105.QueryContractHistoryResponse>;
-                        contractsByCode(request: _105.QueryContractsByCodeRequest): Promise<_105.QueryContractsByCodeResponse>;
-                        allContractState(request: _105.QueryAllContractStateRequest): Promise<_105.QueryAllContractStateResponse>;
-                        rawContractState(request: _105.QueryRawContractStateRequest): Promise<_105.QueryRawContractStateResponse>;
-                        smartContractState(request: _105.QuerySmartContractStateRequest): Promise<_105.QuerySmartContractStateResponse>;
-                        code(request: _105.QueryCodeRequest): Promise<_105.QueryCodeResponse>;
-                        codes(request?: _105.QueryCodesRequest): Promise<_105.QueryCodesResponse>;
-                        pinnedCodes(request?: _105.QueryPinnedCodesRequest): Promise<_105.QueryPinnedCodesResponse>;
-                        params(request?: _105.QueryParamsRequest): Promise<_105.QueryParamsResponse>;
-                        contractsByCreator(request: _105.QueryContractsByCreatorRequest): Promise<_105.QueryContractsByCreatorResponse>;
+                        contractInfo(request: _106.QueryContractInfoRequest): Promise<_106.QueryContractInfoResponse>;
+                        contractHistory(request: _106.QueryContractHistoryRequest): Promise<_106.QueryContractHistoryResponse>;
+                        contractsByCode(request: _106.QueryContractsByCodeRequest): Promise<_106.QueryContractsByCodeResponse>;
+                        allContractState(request: _106.QueryAllContractStateRequest): Promise<_106.QueryAllContractStateResponse>;
+                        rawContractState(request: _106.QueryRawContractStateRequest): Promise<_106.QueryRawContractStateResponse>;
+                        smartContractState(request: _106.QuerySmartContractStateRequest): Promise<_106.QuerySmartContractStateResponse>;
+                        code(request: _106.QueryCodeRequest): Promise<_106.QueryCodeResponse>;
+                        codes(request?: _106.QueryCodesRequest): Promise<_106.QueryCodesResponse>;
+                        pinnedCodes(request?: _106.QueryPinnedCodesRequest): Promise<_106.QueryPinnedCodesResponse>;
+                        params(request?: _106.QueryParamsRequest): Promise<_106.QueryParamsResponse>;
+                        contractsByCreator(request: _106.QueryContractsByCreatorRequest): Promise<_106.QueryContractsByCreatorResponse>;
                     };
                 };
             };
@@ -2090,7 +2090,7 @@ export declare namespace cosmwasm {
             };
             cosmwasm: {
                 wasm: {
-                    v1: _232.LCDQueryClient;
+                    v1: _233.LCDQueryClient;
                 };
             };
         }>;

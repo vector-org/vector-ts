@@ -2,13 +2,13 @@ import { Action } from "./claim_record";
 import { Coin } from "../../../cosmos/base/v1beta1/coin";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
-/** MsgType to claim the catdrop reward for action PROFILE and CLOWDER */
+/** MsgType to claim a catdrop quest reward */
 export interface MsgClaimFor {
     sender: string;
     address: string;
     action: Action;
 }
-/** Msg response for claiming the catdrop reward for action PROFILE and CLOWDER */
+/** Msg response for claiming a catdrop quest reward */
 export interface MsgClaimForResponse {
     address: string;
     /** total initial claimable amount for the user */

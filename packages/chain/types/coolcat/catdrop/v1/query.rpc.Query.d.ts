@@ -1,6 +1,6 @@
 import { Rpc } from "../../../helpers";
 import { QueryClient } from "@cosmjs/stargate";
-import { QueryModuleAccountBalanceRequest, QueryModuleAccountBalanceResponse, QueryParamsRequest, QueryParamsResponse, QueryClaimRecordRequest, QueryClaimRecordResponse, QueryClaimableForActionRequest, QueryClaimableForActionResponse, QueryTotalClaimableRequest, QueryTotalClaimableResponse } from "./query";
+import { QueryModuleAccountBalanceRequest, QueryModuleAccountBalanceResponse, QueryParamsRequest, QueryParamsResponse, QueryClaimRecordRequest, QueryClaimRecordResponse, QueryHookRecordRequest, QueryHookRecordResponse, QueryClaimableForActionRequest, QueryClaimableForActionResponse, QueryTotalClaimableRequest, QueryTotalClaimableResponse } from "./query";
 /** Query defines the gRPC querier service. */
 export interface Query {
     /** Queries the unclaimed amount of CCAT in the catdrop module */
@@ -9,6 +9,8 @@ export interface Query {
     params(request?: QueryParamsRequest): Promise<QueryParamsResponse>;
     /** Queries the claim record for a provided address */
     claimRecord(request: QueryClaimRecordRequest): Promise<QueryClaimRecordResponse>;
+    /** Queries the claim record for a provided address */
+    hookRecord(request: QueryHookRecordRequest): Promise<QueryHookRecordResponse>;
     /** Queries the reward for a single provided action for a provided address */
     claimableForAction(request: QueryClaimableForActionRequest): Promise<QueryClaimableForActionResponse>;
     /** Queries the total reward for a provided address */
@@ -20,6 +22,7 @@ export declare class QueryClientImpl implements Query {
     moduleAccountBalance: (request?: QueryModuleAccountBalanceRequest) => Promise<QueryModuleAccountBalanceResponse>;
     params: (request?: QueryParamsRequest) => Promise<QueryParamsResponse>;
     claimRecord: (request: QueryClaimRecordRequest) => Promise<QueryClaimRecordResponse>;
+    hookRecord: (request: QueryHookRecordRequest) => Promise<QueryHookRecordResponse>;
     claimableForAction: (request: QueryClaimableForActionRequest) => Promise<QueryClaimableForActionResponse>;
     totalClaimable: (request: QueryTotalClaimableRequest) => Promise<QueryTotalClaimableResponse>;
 }
@@ -27,6 +30,7 @@ export declare const createRpcQueryExtension: (base: QueryClient) => {
     moduleAccountBalance(request?: QueryModuleAccountBalanceRequest): Promise<QueryModuleAccountBalanceResponse>;
     params(request?: QueryParamsRequest): Promise<QueryParamsResponse>;
     claimRecord(request: QueryClaimRecordRequest): Promise<QueryClaimRecordResponse>;
+    hookRecord(request: QueryHookRecordRequest): Promise<QueryHookRecordResponse>;
     claimableForAction(request: QueryClaimableForActionRequest): Promise<QueryClaimableForActionResponse>;
     totalClaimable(request: QueryTotalClaimableRequest): Promise<QueryTotalClaimableResponse>;
 };

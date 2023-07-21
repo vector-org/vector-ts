@@ -3,27 +3,28 @@ import * as _2 from "./alloc/v1/params";
 import * as _3 from "./alloc/v1/query";
 import * as _4 from "./catdrop/v1/claim_record";
 import * as _5 from "./catdrop/v1/genesis";
-import * as _6 from "./catdrop/v1/params";
-import * as _7 from "./catdrop/v1/query";
-import * as _8 from "./catdrop/v1/tx";
-import * as _9 from "./mint/v1/genesis";
-import * as _10 from "./mint/v1/mint";
-import * as _11 from "./mint/v1/query";
-import * as _162 from "./alloc/v1/query.lcd";
-import * as _163 from "./catdrop/v1/query.lcd";
-import * as _164 from "./mint/v1/query.lcd";
-import * as _165 from "./alloc/v1/query.rpc.Query";
-import * as _166 from "./catdrop/v1/query.rpc.Query";
-import * as _167 from "./mint/v1/query.rpc.Query";
-import * as _168 from "./catdrop/v1/tx.rpc.msg";
+import * as _6 from "./catdrop/v1/hook_record";
+import * as _7 from "./catdrop/v1/params";
+import * as _8 from "./catdrop/v1/query";
+import * as _9 from "./catdrop/v1/tx";
+import * as _10 from "./mint/v1/genesis";
+import * as _11 from "./mint/v1/mint";
+import * as _12 from "./mint/v1/query";
+import * as _163 from "./alloc/v1/query.lcd";
+import * as _164 from "./catdrop/v1/query.lcd";
+import * as _165 from "./mint/v1/query.lcd";
+import * as _166 from "./alloc/v1/query.rpc.Query";
+import * as _167 from "./catdrop/v1/query.rpc.Query";
+import * as _168 from "./mint/v1/query.rpc.Query";
+import * as _169 from "./catdrop/v1/tx.rpc.msg";
 export declare namespace coolcat {
     namespace alloc {
         const v1: {
-            QueryClientImpl: typeof _165.QueryClientImpl;
+            QueryClientImpl: typeof _166.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 params(request?: _3.QueryParamsRequest): Promise<_3.QueryParamsResponse>;
             };
-            LCDQueryClient: typeof _162.LCDQueryClient;
+            LCDQueryClient: typeof _163.LCDQueryClient;
             QueryParamsRequest: {
                 encode(_: _3.QueryParamsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
                 decode(input: Uint8Array | import("..").BinaryReader, length?: number): _3.QueryParamsRequest;
@@ -81,33 +82,34 @@ export declare namespace coolcat {
     }
     namespace catdrop {
         const v1: {
-            MsgClientImpl: typeof _168.MsgClientImpl;
-            QueryClientImpl: typeof _166.QueryClientImpl;
+            MsgClientImpl: typeof _169.MsgClientImpl;
+            QueryClientImpl: typeof _167.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                moduleAccountBalance(request?: _7.QueryModuleAccountBalanceRequest): Promise<_7.QueryModuleAccountBalanceResponse>;
-                params(request?: _7.QueryParamsRequest): Promise<_7.QueryParamsResponse>;
-                claimRecord(request: _7.QueryClaimRecordRequest): Promise<_7.QueryClaimRecordResponse>;
-                claimableForAction(request: _7.QueryClaimableForActionRequest): Promise<_7.QueryClaimableForActionResponse>;
-                totalClaimable(request: _7.QueryTotalClaimableRequest): Promise<_7.QueryTotalClaimableResponse>;
+                moduleAccountBalance(request?: _8.QueryModuleAccountBalanceRequest): Promise<_8.QueryModuleAccountBalanceResponse>;
+                params(request?: _8.QueryParamsRequest): Promise<_8.QueryParamsResponse>;
+                claimRecord(request: _8.QueryClaimRecordRequest): Promise<_8.QueryClaimRecordResponse>;
+                hookRecord(request: _8.QueryHookRecordRequest): Promise<_8.QueryHookRecordResponse>;
+                claimableForAction(request: _8.QueryClaimableForActionRequest): Promise<_8.QueryClaimableForActionResponse>;
+                totalClaimable(request: _8.QueryTotalClaimableRequest): Promise<_8.QueryTotalClaimableResponse>;
             };
-            LCDQueryClient: typeof _163.LCDQueryClient;
+            LCDQueryClient: typeof _164.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
             load: (protoRegistry: import("@cosmjs/proto-signing").Registry) => void;
             MessageComposer: {
                 encoded: {
-                    claimFor(value: _8.MsgClaimFor): {
+                    claimFor(value: _9.MsgClaimFor): {
                         typeUrl: string;
                         value: Uint8Array;
                     };
                 };
                 withTypeUrl: {
-                    claimFor(value: _8.MsgClaimFor): {
+                    claimFor(value: _9.MsgClaimFor): {
                         typeUrl: string;
-                        value: _8.MsgClaimFor;
+                        value: _9.MsgClaimFor;
                     };
                 };
                 toJSON: {
-                    claimFor(value: _8.MsgClaimFor): {
+                    claimFor(value: _9.MsgClaimFor): {
                         typeUrl: string;
                         value: unknown;
                     };
@@ -115,20 +117,20 @@ export declare namespace coolcat {
                 fromJSON: {
                     claimFor(value: any): {
                         typeUrl: string;
-                        value: _8.MsgClaimFor;
+                        value: _9.MsgClaimFor;
                     };
                 };
                 fromPartial: {
-                    claimFor(value: _8.MsgClaimFor): {
+                    claimFor(value: _9.MsgClaimFor): {
                         typeUrl: string;
-                        value: _8.MsgClaimFor;
+                        value: _9.MsgClaimFor;
                     };
                 };
             };
             AminoConverter: {
                 "/coolcat.catdrop.v1.MsgClaimFor": {
                     aminoType: string;
-                    toAmino: ({ sender, address, action }: _8.MsgClaimFor) => {
+                    toAmino: ({ sender, address, action }: _9.MsgClaimFor) => {
                         sender: string;
                         address: string;
                         action: number;
@@ -137,64 +139,64 @@ export declare namespace coolcat {
                         sender: string;
                         address: string;
                         action: number;
-                    }) => _8.MsgClaimFor;
+                    }) => _9.MsgClaimFor;
                 };
             };
             MsgClaimFor: {
-                encode(message: _8.MsgClaimFor, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.MsgClaimFor;
-                fromJSON(object: any): _8.MsgClaimFor;
-                toJSON(message: _8.MsgClaimFor): unknown;
+                encode(message: _9.MsgClaimFor, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _9.MsgClaimFor;
+                fromJSON(object: any): _9.MsgClaimFor;
+                toJSON(message: _9.MsgClaimFor): unknown;
                 fromPartial(object: {
                     sender?: string;
                     address?: string;
                     action?: _4.Action;
-                }): _8.MsgClaimFor;
+                }): _9.MsgClaimFor;
             };
             MsgClaimForResponse: {
-                encode(message: _8.MsgClaimForResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.MsgClaimForResponse;
-                fromJSON(object: any): _8.MsgClaimForResponse;
-                toJSON(message: _8.MsgClaimForResponse): unknown;
+                encode(message: _9.MsgClaimForResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _9.MsgClaimForResponse;
+                fromJSON(object: any): _9.MsgClaimForResponse;
+                toJSON(message: _9.MsgClaimForResponse): unknown;
                 fromPartial(object: {
                     address?: string;
                     claimedAmount?: {
                         denom?: string;
                         amount?: string;
                     }[];
-                }): _8.MsgClaimForResponse;
+                }): _9.MsgClaimForResponse;
             };
             QueryModuleAccountBalanceRequest: {
-                encode(_: _7.QueryModuleAccountBalanceRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _7.QueryModuleAccountBalanceRequest;
-                fromJSON(_: any): _7.QueryModuleAccountBalanceRequest;
-                toJSON(_: _7.QueryModuleAccountBalanceRequest): unknown;
-                fromPartial(_: {}): _7.QueryModuleAccountBalanceRequest;
+                encode(_: _8.QueryModuleAccountBalanceRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryModuleAccountBalanceRequest;
+                fromJSON(_: any): _8.QueryModuleAccountBalanceRequest;
+                toJSON(_: _8.QueryModuleAccountBalanceRequest): unknown;
+                fromPartial(_: {}): _8.QueryModuleAccountBalanceRequest;
             };
             QueryModuleAccountBalanceResponse: {
-                encode(message: _7.QueryModuleAccountBalanceResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _7.QueryModuleAccountBalanceResponse;
-                fromJSON(object: any): _7.QueryModuleAccountBalanceResponse;
-                toJSON(message: _7.QueryModuleAccountBalanceResponse): unknown;
+                encode(message: _8.QueryModuleAccountBalanceResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryModuleAccountBalanceResponse;
+                fromJSON(object: any): _8.QueryModuleAccountBalanceResponse;
+                toJSON(message: _8.QueryModuleAccountBalanceResponse): unknown;
                 fromPartial(object: {
                     moduleAccountBalance?: {
                         denom?: string;
                         amount?: string;
                     }[];
-                }): _7.QueryModuleAccountBalanceResponse;
+                }): _8.QueryModuleAccountBalanceResponse;
             };
             QueryParamsRequest: {
-                encode(_: _7.QueryParamsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _7.QueryParamsRequest;
-                fromJSON(_: any): _7.QueryParamsRequest;
-                toJSON(_: _7.QueryParamsRequest): unknown;
-                fromPartial(_: {}): _7.QueryParamsRequest;
+                encode(_: _8.QueryParamsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryParamsRequest;
+                fromJSON(_: any): _8.QueryParamsRequest;
+                toJSON(_: _8.QueryParamsRequest): unknown;
+                fromPartial(_: {}): _8.QueryParamsRequest;
             };
             QueryParamsResponse: {
-                encode(message: _7.QueryParamsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _7.QueryParamsResponse;
-                fromJSON(object: any): _7.QueryParamsResponse;
-                toJSON(message: _7.QueryParamsResponse): unknown;
+                encode(message: _8.QueryParamsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryParamsResponse;
+                fromJSON(object: any): _8.QueryParamsResponse;
+                toJSON(message: _8.QueryParamsResponse): unknown;
                 fromPartial(object: {
                     params?: {
                         airdropEnabled?: boolean;
@@ -211,27 +213,27 @@ export declare namespace coolcat {
                             nanos?: number;
                         };
                         claimDenom?: string;
-                        allowedClaimers?: {
+                        claimableContracts?: {
                             contractAddress?: string;
                             action?: _4.Action;
                         }[];
                     };
-                }): _7.QueryParamsResponse;
+                }): _8.QueryParamsResponse;
             };
             QueryClaimRecordRequest: {
-                encode(message: _7.QueryClaimRecordRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _7.QueryClaimRecordRequest;
-                fromJSON(object: any): _7.QueryClaimRecordRequest;
-                toJSON(message: _7.QueryClaimRecordRequest): unknown;
+                encode(message: _8.QueryClaimRecordRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryClaimRecordRequest;
+                fromJSON(object: any): _8.QueryClaimRecordRequest;
+                toJSON(message: _8.QueryClaimRecordRequest): unknown;
                 fromPartial(object: {
                     address?: string;
-                }): _7.QueryClaimRecordRequest;
+                }): _8.QueryClaimRecordRequest;
             };
             QueryClaimRecordResponse: {
-                encode(message: _7.QueryClaimRecordResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _7.QueryClaimRecordResponse;
-                fromJSON(object: any): _7.QueryClaimRecordResponse;
-                toJSON(message: _7.QueryClaimRecordResponse): unknown;
+                encode(message: _8.QueryClaimRecordResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryClaimRecordResponse;
+                fromJSON(object: any): _8.QueryClaimRecordResponse;
+                toJSON(message: _8.QueryClaimRecordResponse): unknown;
                 fromPartial(object: {
                     claimRecord?: {
                         address?: string;
@@ -241,66 +243,87 @@ export declare namespace coolcat {
                         }[];
                         actionCompleted?: boolean[];
                     };
-                }): _7.QueryClaimRecordResponse;
+                }): _8.QueryClaimRecordResponse;
+            };
+            QueryHookRecordRequest: {
+                encode(message: _8.QueryHookRecordRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryHookRecordRequest;
+                fromJSON(object: any): _8.QueryHookRecordRequest;
+                toJSON(message: _8.QueryHookRecordRequest): unknown;
+                fromPartial(object: {
+                    address?: string;
+                }): _8.QueryHookRecordRequest;
+            };
+            QueryHookRecordResponse: {
+                encode(message: _8.QueryHookRecordResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryHookRecordResponse;
+                fromJSON(object: any): _8.QueryHookRecordResponse;
+                toJSON(message: _8.QueryHookRecordResponse): unknown;
+                fromPartial(object: {
+                    hookRecord?: {
+                        address?: string;
+                        hookTriggered?: boolean[];
+                    };
+                }): _8.QueryHookRecordResponse;
             };
             QueryClaimableForActionRequest: {
-                encode(message: _7.QueryClaimableForActionRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _7.QueryClaimableForActionRequest;
-                fromJSON(object: any): _7.QueryClaimableForActionRequest;
-                toJSON(message: _7.QueryClaimableForActionRequest): unknown;
+                encode(message: _8.QueryClaimableForActionRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryClaimableForActionRequest;
+                fromJSON(object: any): _8.QueryClaimableForActionRequest;
+                toJSON(message: _8.QueryClaimableForActionRequest): unknown;
                 fromPartial(object: {
                     address?: string;
                     action?: _4.Action;
-                }): _7.QueryClaimableForActionRequest;
+                }): _8.QueryClaimableForActionRequest;
             };
             QueryClaimableForActionResponse: {
-                encode(message: _7.QueryClaimableForActionResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _7.QueryClaimableForActionResponse;
-                fromJSON(object: any): _7.QueryClaimableForActionResponse;
-                toJSON(message: _7.QueryClaimableForActionResponse): unknown;
+                encode(message: _8.QueryClaimableForActionResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryClaimableForActionResponse;
+                fromJSON(object: any): _8.QueryClaimableForActionResponse;
+                toJSON(message: _8.QueryClaimableForActionResponse): unknown;
                 fromPartial(object: {
                     coins?: {
                         denom?: string;
                         amount?: string;
                     }[];
-                }): _7.QueryClaimableForActionResponse;
+                }): _8.QueryClaimableForActionResponse;
             };
             QueryTotalClaimableRequest: {
-                encode(message: _7.QueryTotalClaimableRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _7.QueryTotalClaimableRequest;
-                fromJSON(object: any): _7.QueryTotalClaimableRequest;
-                toJSON(message: _7.QueryTotalClaimableRequest): unknown;
+                encode(message: _8.QueryTotalClaimableRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryTotalClaimableRequest;
+                fromJSON(object: any): _8.QueryTotalClaimableRequest;
+                toJSON(message: _8.QueryTotalClaimableRequest): unknown;
                 fromPartial(object: {
                     address?: string;
-                }): _7.QueryTotalClaimableRequest;
+                }): _8.QueryTotalClaimableRequest;
             };
             QueryTotalClaimableResponse: {
-                encode(message: _7.QueryTotalClaimableResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _7.QueryTotalClaimableResponse;
-                fromJSON(object: any): _7.QueryTotalClaimableResponse;
-                toJSON(message: _7.QueryTotalClaimableResponse): unknown;
+                encode(message: _8.QueryTotalClaimableResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryTotalClaimableResponse;
+                fromJSON(object: any): _8.QueryTotalClaimableResponse;
+                toJSON(message: _8.QueryTotalClaimableResponse): unknown;
                 fromPartial(object: {
                     coins?: {
                         denom?: string;
                         amount?: string;
                     }[];
-                }): _7.QueryTotalClaimableResponse;
+                }): _8.QueryTotalClaimableResponse;
             };
-            ClaimAuthorization: {
-                encode(message: _6.ClaimAuthorization, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _6.ClaimAuthorization;
-                fromJSON(object: any): _6.ClaimAuthorization;
-                toJSON(message: _6.ClaimAuthorization): unknown;
+            ClaimableContract: {
+                encode(message: _7.ClaimableContract, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _7.ClaimableContract;
+                fromJSON(object: any): _7.ClaimableContract;
+                toJSON(message: _7.ClaimableContract): unknown;
                 fromPartial(object: {
                     contractAddress?: string;
                     action?: _4.Action;
-                }): _6.ClaimAuthorization;
+                }): _7.ClaimableContract;
             };
             Params: {
-                encode(message: _6.Params, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _6.Params;
-                fromJSON(object: any): _6.Params;
-                toJSON(message: _6.Params): unknown;
+                encode(message: _7.Params, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _7.Params;
+                fromJSON(object: any): _7.Params;
+                toJSON(message: _7.Params): unknown;
                 fromPartial(object: {
                     airdropEnabled?: boolean;
                     airdropStartTime?: {
@@ -316,11 +339,21 @@ export declare namespace coolcat {
                         nanos?: number;
                     };
                     claimDenom?: string;
-                    allowedClaimers?: {
+                    claimableContracts?: {
                         contractAddress?: string;
                         action?: _4.Action;
                     }[];
-                }): _6.Params;
+                }): _7.Params;
+            };
+            HookRecord: {
+                encode(message: _6.HookRecord, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _6.HookRecord;
+                fromJSON(object: any): _6.HookRecord;
+                toJSON(message: _6.HookRecord): unknown;
+                fromPartial(object: {
+                    address?: string;
+                    hookTriggered?: boolean[];
+                }): _6.HookRecord;
             };
             GenesisState: {
                 encode(message: _5.GenesisState, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
@@ -347,7 +380,7 @@ export declare namespace coolcat {
                             nanos?: number;
                         };
                         claimDenom?: string;
-                        allowedClaimers?: {
+                        claimableContracts?: {
                             contractAddress?: string;
                             action?: _4.Action;
                         }[];
@@ -359,6 +392,10 @@ export declare namespace coolcat {
                             amount?: string;
                         }[];
                         actionCompleted?: boolean[];
+                    }[];
+                    hookRecords?: {
+                        address?: string;
+                        hookTriggered?: boolean[];
                     }[];
                 }): _5.GenesisState;
             };
@@ -383,91 +420,91 @@ export declare namespace coolcat {
     }
     namespace mint {
         const v1: {
-            QueryClientImpl: typeof _167.QueryClientImpl;
+            QueryClientImpl: typeof _168.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                params(request?: _11.QueryParamsRequest): Promise<_11.QueryParamsResponse>;
-                inflation(request?: _11.QueryInflationRequest): Promise<_11.QueryInflationResponse>;
-                annualProvisions(request?: _11.QueryAnnualProvisionsRequest): Promise<_11.QueryAnnualProvisionsResponse>;
+                params(request?: _12.QueryParamsRequest): Promise<_12.QueryParamsResponse>;
+                inflation(request?: _12.QueryInflationRequest): Promise<_12.QueryInflationResponse>;
+                annualProvisions(request?: _12.QueryAnnualProvisionsRequest): Promise<_12.QueryAnnualProvisionsResponse>;
             };
-            LCDQueryClient: typeof _164.LCDQueryClient;
+            LCDQueryClient: typeof _165.LCDQueryClient;
             QueryParamsRequest: {
-                encode(_: _11.QueryParamsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _11.QueryParamsRequest;
-                fromJSON(_: any): _11.QueryParamsRequest;
-                toJSON(_: _11.QueryParamsRequest): unknown;
-                fromPartial(_: {}): _11.QueryParamsRequest;
+                encode(_: _12.QueryParamsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _12.QueryParamsRequest;
+                fromJSON(_: any): _12.QueryParamsRequest;
+                toJSON(_: _12.QueryParamsRequest): unknown;
+                fromPartial(_: {}): _12.QueryParamsRequest;
             };
             QueryParamsResponse: {
-                encode(message: _11.QueryParamsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _11.QueryParamsResponse;
-                fromJSON(object: any): _11.QueryParamsResponse;
-                toJSON(message: _11.QueryParamsResponse): unknown;
+                encode(message: _12.QueryParamsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _12.QueryParamsResponse;
+                fromJSON(object: any): _12.QueryParamsResponse;
+                toJSON(message: _12.QueryParamsResponse): unknown;
                 fromPartial(object: {
                     params?: {
                         mintDenom?: string;
                         blocksPerYear?: bigint;
                     };
-                }): _11.QueryParamsResponse;
+                }): _12.QueryParamsResponse;
             };
             QueryInflationRequest: {
-                encode(_: _11.QueryInflationRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _11.QueryInflationRequest;
-                fromJSON(_: any): _11.QueryInflationRequest;
-                toJSON(_: _11.QueryInflationRequest): unknown;
-                fromPartial(_: {}): _11.QueryInflationRequest;
+                encode(_: _12.QueryInflationRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _12.QueryInflationRequest;
+                fromJSON(_: any): _12.QueryInflationRequest;
+                toJSON(_: _12.QueryInflationRequest): unknown;
+                fromPartial(_: {}): _12.QueryInflationRequest;
             };
             QueryInflationResponse: {
-                encode(message: _11.QueryInflationResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _11.QueryInflationResponse;
-                fromJSON(object: any): _11.QueryInflationResponse;
-                toJSON(message: _11.QueryInflationResponse): unknown;
+                encode(message: _12.QueryInflationResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _12.QueryInflationResponse;
+                fromJSON(object: any): _12.QueryInflationResponse;
+                toJSON(message: _12.QueryInflationResponse): unknown;
                 fromPartial(object: {
                     inflation?: Uint8Array;
-                }): _11.QueryInflationResponse;
+                }): _12.QueryInflationResponse;
             };
             QueryAnnualProvisionsRequest: {
-                encode(_: _11.QueryAnnualProvisionsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _11.QueryAnnualProvisionsRequest;
-                fromJSON(_: any): _11.QueryAnnualProvisionsRequest;
-                toJSON(_: _11.QueryAnnualProvisionsRequest): unknown;
-                fromPartial(_: {}): _11.QueryAnnualProvisionsRequest;
+                encode(_: _12.QueryAnnualProvisionsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _12.QueryAnnualProvisionsRequest;
+                fromJSON(_: any): _12.QueryAnnualProvisionsRequest;
+                toJSON(_: _12.QueryAnnualProvisionsRequest): unknown;
+                fromPartial(_: {}): _12.QueryAnnualProvisionsRequest;
             };
             QueryAnnualProvisionsResponse: {
-                encode(message: _11.QueryAnnualProvisionsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _11.QueryAnnualProvisionsResponse;
-                fromJSON(object: any): _11.QueryAnnualProvisionsResponse;
-                toJSON(message: _11.QueryAnnualProvisionsResponse): unknown;
+                encode(message: _12.QueryAnnualProvisionsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _12.QueryAnnualProvisionsResponse;
+                fromJSON(object: any): _12.QueryAnnualProvisionsResponse;
+                toJSON(message: _12.QueryAnnualProvisionsResponse): unknown;
                 fromPartial(object: {
                     annualProvisions?: Uint8Array;
-                }): _11.QueryAnnualProvisionsResponse;
+                }): _12.QueryAnnualProvisionsResponse;
             };
             Minter: {
-                encode(message: _10.Minter, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _10.Minter;
-                fromJSON(object: any): _10.Minter;
-                toJSON(message: _10.Minter): unknown;
+                encode(message: _11.Minter, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _11.Minter;
+                fromJSON(object: any): _11.Minter;
+                toJSON(message: _11.Minter): unknown;
                 fromPartial(object: {
                     inflation?: string;
                     phase?: bigint;
                     startPhaseBlock?: bigint;
                     annualProvisions?: string;
-                }): _10.Minter;
+                }): _11.Minter;
             };
             Params: {
-                encode(message: _10.Params, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _10.Params;
-                fromJSON(object: any): _10.Params;
-                toJSON(message: _10.Params): unknown;
+                encode(message: _11.Params, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _11.Params;
+                fromJSON(object: any): _11.Params;
+                toJSON(message: _11.Params): unknown;
                 fromPartial(object: {
                     mintDenom?: string;
                     blocksPerYear?: bigint;
-                }): _10.Params;
+                }): _11.Params;
             };
             GenesisState: {
-                encode(message: _9.GenesisState, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _9.GenesisState;
-                fromJSON(object: any): _9.GenesisState;
-                toJSON(message: _9.GenesisState): unknown;
+                encode(message: _10.GenesisState, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _10.GenesisState;
+                fromJSON(object: any): _10.GenesisState;
+                toJSON(message: _10.GenesisState): unknown;
                 fromPartial(object: {
                     minter?: {
                         inflation?: string;
@@ -479,7 +516,7 @@ export declare namespace coolcat {
                         mintDenom?: string;
                         blocksPerYear?: bigint;
                     };
-                }): _9.GenesisState;
+                }): _10.GenesisState;
             };
         };
     }
@@ -489,7 +526,7 @@ export declare namespace coolcat {
         }) => Promise<{
             coolcat: {
                 catdrop: {
-                    v1: _168.MsgClientImpl;
+                    v1: _169.MsgClientImpl;
                 };
             };
             cosmos: {
@@ -537,18 +574,19 @@ export declare namespace coolcat {
                 };
                 catdrop: {
                     v1: {
-                        moduleAccountBalance(request?: _7.QueryModuleAccountBalanceRequest): Promise<_7.QueryModuleAccountBalanceResponse>;
-                        params(request?: _7.QueryParamsRequest): Promise<_7.QueryParamsResponse>;
-                        claimRecord(request: _7.QueryClaimRecordRequest): Promise<_7.QueryClaimRecordResponse>;
-                        claimableForAction(request: _7.QueryClaimableForActionRequest): Promise<_7.QueryClaimableForActionResponse>;
-                        totalClaimable(request: _7.QueryTotalClaimableRequest): Promise<_7.QueryTotalClaimableResponse>;
+                        moduleAccountBalance(request?: _8.QueryModuleAccountBalanceRequest): Promise<_8.QueryModuleAccountBalanceResponse>;
+                        params(request?: _8.QueryParamsRequest): Promise<_8.QueryParamsResponse>;
+                        claimRecord(request: _8.QueryClaimRecordRequest): Promise<_8.QueryClaimRecordResponse>;
+                        hookRecord(request: _8.QueryHookRecordRequest): Promise<_8.QueryHookRecordResponse>;
+                        claimableForAction(request: _8.QueryClaimableForActionRequest): Promise<_8.QueryClaimableForActionResponse>;
+                        totalClaimable(request: _8.QueryTotalClaimableRequest): Promise<_8.QueryTotalClaimableResponse>;
                     };
                 };
                 mint: {
                     v1: {
-                        params(request?: _11.QueryParamsRequest): Promise<_11.QueryParamsResponse>;
-                        inflation(request?: _11.QueryInflationRequest): Promise<_11.QueryInflationResponse>;
-                        annualProvisions(request?: _11.QueryAnnualProvisionsRequest): Promise<_11.QueryAnnualProvisionsResponse>;
+                        params(request?: _12.QueryParamsRequest): Promise<_12.QueryParamsResponse>;
+                        inflation(request?: _12.QueryInflationRequest): Promise<_12.QueryInflationResponse>;
+                        annualProvisions(request?: _12.QueryAnnualProvisionsRequest): Promise<_12.QueryAnnualProvisionsResponse>;
                     };
                 };
             };
@@ -721,13 +759,13 @@ export declare namespace coolcat {
         }) => Promise<{
             coolcat: {
                 alloc: {
-                    v1: _162.LCDQueryClient;
-                };
-                catdrop: {
                     v1: _163.LCDQueryClient;
                 };
-                mint: {
+                catdrop: {
                     v1: _164.LCDQueryClient;
+                };
+                mint: {
+                    v1: _165.LCDQueryClient;
                 };
             };
             cosmos: {

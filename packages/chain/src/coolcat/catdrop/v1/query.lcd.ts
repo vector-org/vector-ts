@@ -1,5 +1,5 @@
 import { LCDClient } from "@osmonauts/lcd";
-import { QueryModuleAccountBalanceRequest, QueryModuleAccountBalanceResponse, QueryParamsRequest, QueryParamsResponse, QueryClaimRecordRequest, QueryClaimRecordResponse, QueryClaimableForActionRequest, QueryClaimableForActionResponse, QueryTotalClaimableRequest, QueryTotalClaimableResponse } from "./query";
+import { QueryModuleAccountBalanceRequest, QueryModuleAccountBalanceResponse, QueryParamsRequest, QueryParamsResponse, QueryClaimRecordRequest, QueryClaimRecordResponse, QueryHookRecordRequest, QueryHookRecordResponse, QueryClaimableForActionRequest, QueryClaimableForActionResponse, QueryTotalClaimableRequest, QueryTotalClaimableResponse } from "./query";
 export class LCDQueryClient {
   req: LCDClient;
   constructor({
@@ -23,6 +23,11 @@ export class LCDQueryClient {
   claimRecord = async (params: QueryClaimRecordRequest): Promise<QueryClaimRecordResponse> => {
     const endpoint = `coolcat/catdrop/v1/claim_record/${params.address}`;
     return QueryClaimRecordResponse.fromJSON(await this.req.get<QueryClaimRecordResponse>(endpoint));
+  };
+  /* Queries the claim record for a provided address */
+  hookRecord = async (params: QueryHookRecordRequest): Promise<QueryHookRecordResponse> => {
+    const endpoint = `coolcat/catdrop/v1/hook_record/${params.address}`;
+    return QueryHookRecordResponse.fromJSON(await this.req.get<QueryHookRecordResponse>(endpoint));
   };
   /* Queries the reward for a single provided action for a provided address */
   claimableForAction = async (params: QueryClaimableForActionRequest): Promise<QueryClaimableForActionResponse> => {

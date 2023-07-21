@@ -1,6 +1,7 @@
 import { Coin } from "../../../cosmos/base/v1beta1/coin";
 import { Params } from "./params";
 import { ClaimRecord } from "./claim_record";
+import { HookRecord } from "./hook_record";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 /** GenesisState defines the claim module's genesis state. */
@@ -11,6 +12,8 @@ export interface GenesisState {
     params: Params;
     /** list of claim records, one for every airdrop recipient */
     claimRecords: ClaimRecord[];
+    /** list of hook records, one for every airdrop recipient */
+    hookRecords: HookRecord[];
 }
 export declare const GenesisState: {
     encode(message: GenesisState, writer?: BinaryWriter): BinaryWriter;

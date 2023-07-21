@@ -13,14 +13,14 @@ service Msg {
   rpc ClaimFor(MsgClaimFor) returns (MsgClaimForResponse);
 }
 
-// MsgType to claim the catdrop reward for action PROFILE and CLOWDER
+// MsgType to claim a catdrop quest reward
 message MsgClaimFor {
   string sender = 1;
   string address = 2;
   Action action = 3;
 }
 
-// Msg response for claiming the catdrop reward for action PROFILE and CLOWDER
+// Msg response for claiming a catdrop quest reward
 message MsgClaimForResponse {
   string address = 1;
   // total initial claimable amount for the user

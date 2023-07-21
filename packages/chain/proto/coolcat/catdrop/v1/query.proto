@@ -5,6 +5,7 @@ import "gogoproto/gogo.proto";
 import "google/api/annotations.proto";
 import "cosmos/base/v1beta1/coin.proto";
 import "coolcat/catdrop/v1/claim_record.proto";
+import "coolcat/catdrop/v1/hook_record.proto";
 import "coolcat/catdrop/v1/params.proto";
 
 option go_package = "github.com/coolcat-network/coolcat/v1/x/catdrop/types";
@@ -23,6 +24,10 @@ service Query {
   // Queries the claim record for a provided address
   rpc ClaimRecord(QueryClaimRecordRequest) returns (QueryClaimRecordResponse) {
     option (google.api.http).get = "/coolcat/catdrop/v1/claim_record/{address}";
+  }
+  // Queries the claim record for a provided address
+  rpc HookRecord(QueryHookRecordRequest) returns (QueryHookRecordResponse) {
+    option (google.api.http).get = "/coolcat/catdrop/v1/hook_record/{address}";
   }
   // Queries the reward for a single provided action for a provided address
   rpc ClaimableForAction(QueryClaimableForActionRequest)
@@ -71,6 +76,21 @@ message QueryClaimRecordRequest {
 message QueryClaimRecordResponse {
   ClaimRecord claim_record = 1 [
     (gogoproto.moretags) = "yaml:\"claim_record\"",
+    (gogoproto.nullable) = false
+  ];
+}
+
+// QueryClaimRecordRequest is the request type for the Query/ClaimRecord RPC
+// method.
+message QueryHookRecordRequest {
+  string address = 1 [ (gogoproto.moretags) = "yaml:\"sender\"" ];
+}
+
+// QueryClaimRecordResponse is the response type for the Query/ClaimRecord RPC
+// method.
+message QueryHookRecordResponse {
+  HookRecord hook_record = 1 [
+    (gogoproto.moretags) = "yaml:\"hook_record\"",
     (gogoproto.nullable) = false
   ];
 }

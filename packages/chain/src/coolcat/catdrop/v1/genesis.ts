@@ -1,6 +1,7 @@
 import { Coin } from "../../../cosmos/base/v1beta1/coin";
 import { Params } from "./params";
 import { ClaimRecord } from "./claim_record";
+import { HookRecord } from "./hook_record";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial } from "../../../helpers";
 /** GenesisState defines the claim module's genesis state. */
@@ -11,12 +12,15 @@ export interface GenesisState {
   params: Params;
   /** list of claim records, one for every airdrop recipient */
   claimRecords: ClaimRecord[];
+  /** list of hook records, one for every airdrop recipient */
+  hookRecords: HookRecord[];
 }
 function createBaseGenesisState(): GenesisState {
   return {
     moduleAccountBalance: undefined,
     params: Params.fromPartial({}),
-    claimRecords: []
+    claimRecords: [],
+    hookRecords: []
   };
 }
 export const GenesisState = {
@@ -29,6 +33,9 @@ export const GenesisState = {
     }
     for (const v of message.claimRecords) {
       ClaimRecord.encode(v!, writer.uint32(26).fork()).ldelim();
+    }
+    for (const v of message.hookRecords) {
+      HookRecord.encode(v!, writer.uint32(34).fork()).ldelim();
     }
     return writer;
   },
@@ -48,6 +55,9 @@ export const GenesisState = {
         case 3:
           message.claimRecords.push(ClaimRecord.decode(reader, reader.uint32()));
           break;
+        case 4:
+          message.hookRecords.push(HookRecord.decode(reader, reader.uint32()));
+          break;
         default:
           reader.skipType(tag & 7);
           break;
@@ -59,7 +69,8 @@ export const GenesisState = {
     return {
       moduleAccountBalance: isSet(object.moduleAccountBalance) ? Coin.fromJSON(object.moduleAccountBalance) : undefined,
       params: isSet(object.params) ? Params.fromJSON(object.params) : undefined,
-      claimRecords: Array.isArray(object?.claimRecords) ? object.claimRecords.map((e: any) => ClaimRecord.fromJSON(e)) : []
+      claimRecords: Array.isArray(object?.claimRecords) ? object.claimRecords.map((e: any) => ClaimRecord.fromJSON(e)) : [],
+      hookRecords: Array.isArray(object?.hookRecords) ? object.hookRecords.map((e: any) => HookRecord.fromJSON(e)) : []
     };
   },
   toJSON(message: GenesisState): unknown {
@@ -71,6 +82,11 @@ export const GenesisState = {
     } else {
       obj.claimRecords = [];
     }
+    if (message.hookRecords) {
+      obj.hookRecords = message.hookRecords.map(e => e ? HookRecord.toJSON(e) : undefined);
+    } else {
+      obj.hookRecords = [];
+    }
     return obj;
   },
   fromPartial(object: DeepPartial<GenesisState>): GenesisState {
@@ -78,6 +94,7 @@ export const GenesisState = {
     message.moduleAccountBalance = object.moduleAccountBalance !== undefined && object.moduleAccountBalance !== null ? Coin.fromPartial(object.moduleAccountBalance) : undefined;
     message.params = object.params !== undefined && object.params !== null ? Params.fromPartial(object.params) : undefined;
     message.claimRecords = object.claimRecords?.map(e => ClaimRecord.fromPartial(e)) || [];
+    message.hookRecords = object.hookRecords?.map(e => HookRecord.fromPartial(e)) || [];
     return message;
   }
 };

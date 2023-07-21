@@ -4,6 +4,7 @@ package coolcat.catdrop.v1;
 import "gogoproto/gogo.proto";
 import "cosmos/base/v1beta1/coin.proto";
 import "coolcat/catdrop/v1/claim_record.proto";
+import "coolcat/catdrop/v1/hook_record.proto";
 import "coolcat/catdrop/v1/params.proto";
 
 option go_package = "github.com/coolcat-network/coolcat/v1/x/catdrop/types";
@@ -25,6 +26,12 @@ message GenesisState {
   // list of claim records, one for every airdrop recipient
   repeated ClaimRecord claim_records = 3 [
     (gogoproto.moretags) = "yaml:\"claim_records\"",
+    (gogoproto.nullable) = false
+  ];
+
+  // list of hook records, one for every airdrop recipient
+  repeated HookRecord hook_records = 4 [
+    (gogoproto.moretags) = "yaml:\"hook_records\"",
     (gogoproto.nullable) = false
   ];
 }

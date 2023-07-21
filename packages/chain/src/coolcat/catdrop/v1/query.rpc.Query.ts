@@ -1,7 +1,7 @@
 import { Rpc } from "../../../helpers";
 import { BinaryReader } from "../../../binary";
 import { QueryClient, createProtobufRpcClient } from "@cosmjs/stargate";
-import { QueryModuleAccountBalanceRequest, QueryModuleAccountBalanceResponse, QueryParamsRequest, QueryParamsResponse, QueryClaimRecordRequest, QueryClaimRecordResponse, QueryClaimableForActionRequest, QueryClaimableForActionResponse, QueryTotalClaimableRequest, QueryTotalClaimableResponse } from "./query";
+import { QueryModuleAccountBalanceRequest, QueryModuleAccountBalanceResponse, QueryParamsRequest, QueryParamsResponse, QueryClaimRecordRequest, QueryClaimRecordResponse, QueryHookRecordRequest, QueryHookRecordResponse, QueryClaimableForActionRequest, QueryClaimableForActionResponse, QueryTotalClaimableRequest, QueryTotalClaimableResponse } from "./query";
 /** Query defines the gRPC querier service. */
 export interface Query {
   /** Queries the unclaimed amount of CCAT in the catdrop module */
@@ -10,6 +10,8 @@ export interface Query {
   params(request?: QueryParamsRequest): Promise<QueryParamsResponse>;
   /** Queries the claim record for a provided address */
   claimRecord(request: QueryClaimRecordRequest): Promise<QueryClaimRecordResponse>;
+  /** Queries the claim record for a provided address */
+  hookRecord(request: QueryHookRecordRequest): Promise<QueryHookRecordResponse>;
   /** Queries the reward for a single provided action for a provided address */
   claimableForAction(request: QueryClaimableForActionRequest): Promise<QueryClaimableForActionResponse>;
   /** Queries the total reward for a provided address */
@@ -38,6 +40,12 @@ export class QueryClientImpl implements Query {
     const promise = this.rpc.request("coolcat.catdrop.v1.Query", "ClaimRecord", data);
     return promise.then(data => QueryClaimRecordResponse.decode(new BinaryReader(data)));
   };
+  /* Queries the claim record for a provided address */
+  hookRecord = async (request: QueryHookRecordRequest): Promise<QueryHookRecordResponse> => {
+    const data = QueryHookRecordRequest.encode(request).finish();
+    const promise = this.rpc.request("coolcat.catdrop.v1.Query", "HookRecord", data);
+    return promise.then(data => QueryHookRecordResponse.decode(new BinaryReader(data)));
+  };
   /* Queries the reward for a single provided action for a provided address */
   claimableForAction = async (request: QueryClaimableForActionRequest): Promise<QueryClaimableForActionResponse> => {
     const data = QueryClaimableForActionRequest.encode(request).finish();
@@ -63,6 +71,9 @@ export const createRpcQueryExtension = (base: QueryClient) => {
     },
     claimRecord(request: QueryClaimRecordRequest): Promise<QueryClaimRecordResponse> {
       return queryService.claimRecord(request);
+    },
+    hookRecord(request: QueryHookRecordRequest): Promise<QueryHookRecordResponse> {
+      return queryService.hookRecord(request);
     },
     claimableForAction(request: QueryClaimableForActionRequest): Promise<QueryClaimableForActionResponse> {
       return queryService.claimableForAction(request);

@@ -1,6 +1,7 @@
 import { Action, ClaimRecord } from "./claim_record";
 import { Coin } from "../../../cosmos/base/v1beta1/coin";
 import { Params } from "./params";
+import { HookRecord } from "./hook_record";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { DeepPartial } from "../../../helpers";
 /** QueryParamsRequest is the request type for the Query/Params RPC method. */
@@ -32,6 +33,20 @@ export interface QueryClaimRecordRequest {
  */
 export interface QueryClaimRecordResponse {
     claimRecord: ClaimRecord;
+}
+/**
+ * QueryClaimRecordRequest is the request type for the Query/ClaimRecord RPC
+ * method.
+ */
+export interface QueryHookRecordRequest {
+    address: string;
+}
+/**
+ * QueryClaimRecordResponse is the response type for the Query/ClaimRecord RPC
+ * method.
+ */
+export interface QueryHookRecordResponse {
+    hookRecord: HookRecord;
 }
 /**
  * QueryClaimableForActionRequest is the request type for the
@@ -103,6 +118,20 @@ export declare const QueryClaimRecordResponse: {
     fromJSON(object: any): QueryClaimRecordResponse;
     toJSON(message: QueryClaimRecordResponse): unknown;
     fromPartial(object: DeepPartial<QueryClaimRecordResponse>): QueryClaimRecordResponse;
+};
+export declare const QueryHookRecordRequest: {
+    encode(message: QueryHookRecordRequest, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryHookRecordRequest;
+    fromJSON(object: any): QueryHookRecordRequest;
+    toJSON(message: QueryHookRecordRequest): unknown;
+    fromPartial(object: DeepPartial<QueryHookRecordRequest>): QueryHookRecordRequest;
+};
+export declare const QueryHookRecordResponse: {
+    encode(message: QueryHookRecordResponse, writer?: BinaryWriter): BinaryWriter;
+    decode(input: BinaryReader | Uint8Array, length?: number): QueryHookRecordResponse;
+    fromJSON(object: any): QueryHookRecordResponse;
+    toJSON(message: QueryHookRecordResponse): unknown;
+    fromPartial(object: DeepPartial<QueryHookRecordResponse>): QueryHookRecordResponse;
 };
 export declare const QueryClaimableForActionRequest: {
     encode(message: QueryClaimableForActionRequest, writer?: BinaryWriter): BinaryWriter;

@@ -1,54 +1,54 @@
-import * as _109 from "./api/expr/v1alpha1/checked";
-import * as _110 from "./api/expr/v1alpha1/eval";
-import * as _111 from "./api/expr/v1alpha1/explain";
-import * as _112 from "./api/expr/v1alpha1/syntax";
-import * as _113 from "./api/expr/v1alpha1/value";
-import * as _114 from "./api/expr/v1beta1/decl";
-import * as _115 from "./api/expr/v1beta1/eval";
-import * as _116 from "./api/expr/v1beta1/expr";
-import * as _117 from "./api/expr/v1beta1/source";
-import * as _118 from "./api/expr/v1beta1/value";
-import * as _119 from "./bytestream/bytestream";
-import * as _120 from "./geo/type/viewport";
-import * as _121 from "./longrunning/operations";
-import * as _122 from "./rpc/code";
-import * as _123 from "./rpc/error_details";
-import * as _124 from "./rpc/status";
-import * as _125 from "./type/calendar_period";
-import * as _126 from "./type/color";
-import * as _127 from "./type/date";
-import * as _128 from "./type/datetime";
-import * as _129 from "./type/dayofweek";
-import * as _130 from "./type/decimal";
-import * as _131 from "./type/expr";
-import * as _132 from "./type/fraction";
-import * as _133 from "./type/interval";
-import * as _134 from "./type/latlng";
-import * as _135 from "./type/localized_text";
-import * as _136 from "./type/money";
-import * as _137 from "./type/month";
-import * as _138 from "./type/phone_number";
-import * as _139 from "./type/postal_address";
-import * as _140 from "./type/quaternion";
-import * as _141 from "./type/timeofday";
-import * as _142 from "./protobuf/descriptor";
-import * as _143 from "./protobuf/duration";
-import * as _144 from "./protobuf/timestamp";
-import * as _145 from "./protobuf/any";
-import * as _146 from "./protobuf/empty";
-import * as _147 from "./protobuf/struct";
-import * as _148 from "./protobuf/wrappers";
+import * as _110 from "./api/expr/v1alpha1/checked";
+import * as _111 from "./api/expr/v1alpha1/eval";
+import * as _112 from "./api/expr/v1alpha1/explain";
+import * as _113 from "./api/expr/v1alpha1/syntax";
+import * as _114 from "./api/expr/v1alpha1/value";
+import * as _115 from "./api/expr/v1beta1/decl";
+import * as _116 from "./api/expr/v1beta1/eval";
+import * as _117 from "./api/expr/v1beta1/expr";
+import * as _118 from "./api/expr/v1beta1/source";
+import * as _119 from "./api/expr/v1beta1/value";
+import * as _120 from "./bytestream/bytestream";
+import * as _121 from "./geo/type/viewport";
+import * as _122 from "./longrunning/operations";
+import * as _123 from "./rpc/code";
+import * as _124 from "./rpc/error_details";
+import * as _125 from "./rpc/status";
+import * as _126 from "./type/calendar_period";
+import * as _127 from "./type/color";
+import * as _128 from "./type/date";
+import * as _129 from "./type/datetime";
+import * as _130 from "./type/dayofweek";
+import * as _131 from "./type/decimal";
+import * as _132 from "./type/expr";
+import * as _133 from "./type/fraction";
+import * as _134 from "./type/interval";
+import * as _135 from "./type/latlng";
+import * as _136 from "./type/localized_text";
+import * as _137 from "./type/money";
+import * as _138 from "./type/month";
+import * as _139 from "./type/phone_number";
+import * as _140 from "./type/postal_address";
+import * as _141 from "./type/quaternion";
+import * as _142 from "./type/timeofday";
+import * as _143 from "./protobuf/descriptor";
+import * as _144 from "./protobuf/duration";
+import * as _145 from "./protobuf/timestamp";
+import * as _146 from "./protobuf/any";
+import * as _147 from "./protobuf/empty";
+import * as _148 from "./protobuf/struct";
+import * as _149 from "./protobuf/wrappers";
 export declare namespace google {
     namespace api {
         namespace expr {
             const v1alpha1: {
                 Value: {
-                    encode(message: _113.Value, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.Value;
-                    fromJSON(object: any): _113.Value;
-                    toJSON(message: _113.Value): unknown;
+                    encode(message: _114.Value, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _114.Value;
+                    fromJSON(object: any): _114.Value;
+                    toJSON(message: _114.Value): unknown;
                     fromPartial(object: {
-                        nullValue?: _147.NullValue;
+                        nullValue?: _148.NullValue;
                         boolValue?: boolean;
                         int64Value?: bigint;
                         uint64Value?: bigint;
@@ -73,26 +73,26 @@ export declare namespace google {
                             values?: any[];
                         };
                         typeValue?: string;
-                    }): _113.Value;
+                    }): _114.Value;
                 };
                 EnumValue: {
-                    encode(message: _113.EnumValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.EnumValue;
-                    fromJSON(object: any): _113.EnumValue;
-                    toJSON(message: _113.EnumValue): unknown;
+                    encode(message: _114.EnumValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _114.EnumValue;
+                    fromJSON(object: any): _114.EnumValue;
+                    toJSON(message: _114.EnumValue): unknown;
                     fromPartial(object: {
                         type?: string;
                         value?: number;
-                    }): _113.EnumValue;
+                    }): _114.EnumValue;
                 };
                 ListValue: {
-                    encode(message: _113.ListValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.ListValue;
-                    fromJSON(object: any): _113.ListValue;
-                    toJSON(message: _113.ListValue): unknown;
+                    encode(message: _114.ListValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _114.ListValue;
+                    fromJSON(object: any): _114.ListValue;
+                    toJSON(message: _114.ListValue): unknown;
                     fromPartial(object: {
                         values?: {
-                            nullValue?: _147.NullValue;
+                            nullValue?: _148.NullValue;
                             boolValue?: boolean;
                             int64Value?: bigint;
                             uint64Value?: bigint;
@@ -116,17 +116,17 @@ export declare namespace google {
                             listValue?: any;
                             typeValue?: string;
                         }[];
-                    }): _113.ListValue;
+                    }): _114.ListValue;
                 };
                 MapValue: {
-                    encode(message: _113.MapValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.MapValue;
-                    fromJSON(object: any): _113.MapValue;
-                    toJSON(message: _113.MapValue): unknown;
+                    encode(message: _114.MapValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _114.MapValue;
+                    fromJSON(object: any): _114.MapValue;
+                    toJSON(message: _114.MapValue): unknown;
                     fromPartial(object: {
                         entries?: {
                             key?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -148,7 +148,7 @@ export declare namespace google {
                                 typeValue?: string;
                             };
                             value?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -170,16 +170,16 @@ export declare namespace google {
                                 typeValue?: string;
                             };
                         }[];
-                    }): _113.MapValue;
+                    }): _114.MapValue;
                 };
                 MapValue_Entry: {
-                    encode(message: _113.MapValue_Entry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.MapValue_Entry;
-                    fromJSON(object: any): _113.MapValue_Entry;
-                    toJSON(message: _113.MapValue_Entry): unknown;
+                    encode(message: _114.MapValue_Entry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _114.MapValue_Entry;
+                    fromJSON(object: any): _114.MapValue_Entry;
+                    toJSON(message: _114.MapValue_Entry): unknown;
                     fromPartial(object: {
                         key?: {
-                            nullValue?: _147.NullValue;
+                            nullValue?: _148.NullValue;
                             boolValue?: boolean;
                             int64Value?: bigint;
                             uint64Value?: bigint;
@@ -203,7 +203,7 @@ export declare namespace google {
                             typeValue?: string;
                         };
                         value?: {
-                            nullValue?: _147.NullValue;
+                            nullValue?: _148.NullValue;
                             boolValue?: boolean;
                             int64Value?: bigint;
                             uint64Value?: bigint;
@@ -226,18 +226,18 @@ export declare namespace google {
                             };
                             typeValue?: string;
                         };
-                    }): _113.MapValue_Entry;
+                    }): _114.MapValue_Entry;
                 };
                 ParsedExpr: {
-                    encode(message: _112.ParsedExpr, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _112.ParsedExpr;
-                    fromJSON(object: any): _112.ParsedExpr;
-                    toJSON(message: _112.ParsedExpr): unknown;
+                    encode(message: _113.ParsedExpr, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.ParsedExpr;
+                    fromJSON(object: any): _113.ParsedExpr;
+                    toJSON(message: _113.ParsedExpr): unknown;
                     fromPartial(object: {
                         expr?: {
                             id?: bigint;
                             constExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -297,17 +297,17 @@ export declare namespace google {
                             positions?: {};
                             macroCalls?: {};
                         };
-                    }): _112.ParsedExpr;
+                    }): _113.ParsedExpr;
                 };
                 Expr: {
-                    encode(message: _112.Expr, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _112.Expr;
-                    fromJSON(object: any): _112.Expr;
-                    toJSON(message: _112.Expr): unknown;
+                    encode(message: _113.Expr, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.Expr;
+                    fromJSON(object: any): _113.Expr;
+                    toJSON(message: _113.Expr): unknown;
                     fromPartial(object: {
                         id?: bigint;
                         constExpr?: {
-                            nullValue?: _147.NullValue;
+                            nullValue?: _148.NullValue;
                             boolValue?: boolean;
                             int64Value?: bigint;
                             uint64Value?: bigint;
@@ -359,27 +359,27 @@ export declare namespace google {
                             loopStep?: any;
                             result?: any;
                         };
-                    }): _112.Expr;
+                    }): _113.Expr;
                 };
                 Expr_Ident: {
-                    encode(message: _112.Expr_Ident, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _112.Expr_Ident;
-                    fromJSON(object: any): _112.Expr_Ident;
-                    toJSON(message: _112.Expr_Ident): unknown;
+                    encode(message: _113.Expr_Ident, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.Expr_Ident;
+                    fromJSON(object: any): _113.Expr_Ident;
+                    toJSON(message: _113.Expr_Ident): unknown;
                     fromPartial(object: {
                         name?: string;
-                    }): _112.Expr_Ident;
+                    }): _113.Expr_Ident;
                 };
                 Expr_Select: {
-                    encode(message: _112.Expr_Select, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _112.Expr_Select;
-                    fromJSON(object: any): _112.Expr_Select;
-                    toJSON(message: _112.Expr_Select): unknown;
+                    encode(message: _113.Expr_Select, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.Expr_Select;
+                    fromJSON(object: any): _113.Expr_Select;
+                    toJSON(message: _113.Expr_Select): unknown;
                     fromPartial(object: {
                         operand?: {
                             id?: bigint;
                             constExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -430,18 +430,18 @@ export declare namespace google {
                         };
                         field?: string;
                         testOnly?: boolean;
-                    }): _112.Expr_Select;
+                    }): _113.Expr_Select;
                 };
                 Expr_Call: {
-                    encode(message: _112.Expr_Call, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _112.Expr_Call;
-                    fromJSON(object: any): _112.Expr_Call;
-                    toJSON(message: _112.Expr_Call): unknown;
+                    encode(message: _113.Expr_Call, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.Expr_Call;
+                    fromJSON(object: any): _113.Expr_Call;
+                    toJSON(message: _113.Expr_Call): unknown;
                     fromPartial(object: {
                         target?: {
                             id?: bigint;
                             constExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -494,7 +494,7 @@ export declare namespace google {
                         args?: {
                             id?: bigint;
                             constExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -543,18 +543,18 @@ export declare namespace google {
                                 result?: any;
                             };
                         }[];
-                    }): _112.Expr_Call;
+                    }): _113.Expr_Call;
                 };
                 Expr_CreateList: {
-                    encode(message: _112.Expr_CreateList, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _112.Expr_CreateList;
-                    fromJSON(object: any): _112.Expr_CreateList;
-                    toJSON(message: _112.Expr_CreateList): unknown;
+                    encode(message: _113.Expr_CreateList, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.Expr_CreateList;
+                    fromJSON(object: any): _113.Expr_CreateList;
+                    toJSON(message: _113.Expr_CreateList): unknown;
                     fromPartial(object: {
                         elements?: {
                             id?: bigint;
                             constExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -605,13 +605,13 @@ export declare namespace google {
                             };
                         }[];
                         optionalIndices?: number[];
-                    }): _112.Expr_CreateList;
+                    }): _113.Expr_CreateList;
                 };
                 Expr_CreateStruct: {
-                    encode(message: _112.Expr_CreateStruct, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _112.Expr_CreateStruct;
-                    fromJSON(object: any): _112.Expr_CreateStruct;
-                    toJSON(message: _112.Expr_CreateStruct): unknown;
+                    encode(message: _113.Expr_CreateStruct, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.Expr_CreateStruct;
+                    fromJSON(object: any): _113.Expr_CreateStruct;
+                    toJSON(message: _113.Expr_CreateStruct): unknown;
                     fromPartial(object: {
                         messageName?: string;
                         entries?: {
@@ -620,7 +620,7 @@ export declare namespace google {
                             mapKey?: {
                                 id?: bigint;
                                 constExpr?: {
-                                    nullValue?: _147.NullValue;
+                                    nullValue?: _148.NullValue;
                                     boolValue?: boolean;
                                     int64Value?: bigint;
                                     uint64Value?: bigint;
@@ -667,7 +667,7 @@ export declare namespace google {
                             value?: {
                                 id?: bigint;
                                 constExpr?: {
-                                    nullValue?: _147.NullValue;
+                                    nullValue?: _148.NullValue;
                                     boolValue?: boolean;
                                     int64Value?: bigint;
                                     uint64Value?: bigint;
@@ -713,20 +713,20 @@ export declare namespace google {
                             };
                             optionalEntry?: boolean;
                         }[];
-                    }): _112.Expr_CreateStruct;
+                    }): _113.Expr_CreateStruct;
                 };
                 Expr_CreateStruct_Entry: {
-                    encode(message: _112.Expr_CreateStruct_Entry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _112.Expr_CreateStruct_Entry;
-                    fromJSON(object: any): _112.Expr_CreateStruct_Entry;
-                    toJSON(message: _112.Expr_CreateStruct_Entry): unknown;
+                    encode(message: _113.Expr_CreateStruct_Entry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.Expr_CreateStruct_Entry;
+                    fromJSON(object: any): _113.Expr_CreateStruct_Entry;
+                    toJSON(message: _113.Expr_CreateStruct_Entry): unknown;
                     fromPartial(object: {
                         id?: bigint;
                         fieldKey?: string;
                         mapKey?: {
                             id?: bigint;
                             constExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -776,7 +776,7 @@ export declare namespace google {
                         value?: {
                             id?: bigint;
                             constExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -824,19 +824,19 @@ export declare namespace google {
                             };
                         };
                         optionalEntry?: boolean;
-                    }): _112.Expr_CreateStruct_Entry;
+                    }): _113.Expr_CreateStruct_Entry;
                 };
                 Expr_Comprehension: {
-                    encode(message: _112.Expr_Comprehension, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _112.Expr_Comprehension;
-                    fromJSON(object: any): _112.Expr_Comprehension;
-                    toJSON(message: _112.Expr_Comprehension): unknown;
+                    encode(message: _113.Expr_Comprehension, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.Expr_Comprehension;
+                    fromJSON(object: any): _113.Expr_Comprehension;
+                    toJSON(message: _113.Expr_Comprehension): unknown;
                     fromPartial(object: {
                         iterVar?: string;
                         iterRange?: {
                             id?: bigint;
                             constExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -885,7 +885,7 @@ export declare namespace google {
                         accuInit?: {
                             id?: bigint;
                             constExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -933,7 +933,7 @@ export declare namespace google {
                         loopCondition?: {
                             id?: bigint;
                             constExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -981,7 +981,7 @@ export declare namespace google {
                         loopStep?: {
                             id?: bigint;
                             constExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -1029,7 +1029,7 @@ export declare namespace google {
                         result?: {
                             id?: bigint;
                             constExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -1074,15 +1074,15 @@ export declare namespace google {
                             };
                             comprehensionExpr?: any;
                         };
-                    }): _112.Expr_Comprehension;
+                    }): _113.Expr_Comprehension;
                 };
                 Constant: {
-                    encode(message: _112.Constant, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _112.Constant;
-                    fromJSON(object: any): _112.Constant;
-                    toJSON(message: _112.Constant): unknown;
+                    encode(message: _113.Constant, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.Constant;
+                    fromJSON(object: any): _113.Constant;
+                    toJSON(message: _113.Constant): unknown;
                     fromPartial(object: {
-                        nullValue?: _147.NullValue;
+                        nullValue?: _148.NullValue;
                         boolValue?: boolean;
                         int64Value?: bigint;
                         uint64Value?: bigint;
@@ -1097,29 +1097,29 @@ export declare namespace google {
                             seconds?: bigint;
                             nanos?: number;
                         };
-                    }): _112.Constant;
+                    }): _113.Constant;
                 };
                 SourceInfo_PositionsEntry: {
-                    encode(message: _112.SourceInfo_PositionsEntry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _112.SourceInfo_PositionsEntry;
-                    fromJSON(object: any): _112.SourceInfo_PositionsEntry;
-                    toJSON(message: _112.SourceInfo_PositionsEntry): unknown;
+                    encode(message: _113.SourceInfo_PositionsEntry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.SourceInfo_PositionsEntry;
+                    fromJSON(object: any): _113.SourceInfo_PositionsEntry;
+                    toJSON(message: _113.SourceInfo_PositionsEntry): unknown;
                     fromPartial(object: {
                         key?: bigint;
                         value?: number;
-                    }): _112.SourceInfo_PositionsEntry;
+                    }): _113.SourceInfo_PositionsEntry;
                 };
                 SourceInfo_MacroCallsEntry: {
-                    encode(message: _112.SourceInfo_MacroCallsEntry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _112.SourceInfo_MacroCallsEntry;
-                    fromJSON(object: any): _112.SourceInfo_MacroCallsEntry;
-                    toJSON(message: _112.SourceInfo_MacroCallsEntry): unknown;
+                    encode(message: _113.SourceInfo_MacroCallsEntry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.SourceInfo_MacroCallsEntry;
+                    fromJSON(object: any): _113.SourceInfo_MacroCallsEntry;
+                    toJSON(message: _113.SourceInfo_MacroCallsEntry): unknown;
                     fromPartial(object: {
                         key?: bigint;
                         value?: {
                             id?: bigint;
                             constExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -1172,41 +1172,41 @@ export declare namespace google {
                                 result?: any;
                             };
                         };
-                    }): _112.SourceInfo_MacroCallsEntry;
+                    }): _113.SourceInfo_MacroCallsEntry;
                 };
                 SourceInfo: {
-                    encode(message: _112.SourceInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _112.SourceInfo;
-                    fromJSON(object: any): _112.SourceInfo;
-                    toJSON(message: _112.SourceInfo): unknown;
+                    encode(message: _113.SourceInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.SourceInfo;
+                    fromJSON(object: any): _113.SourceInfo;
+                    toJSON(message: _113.SourceInfo): unknown;
                     fromPartial(object: {
                         syntaxVersion?: string;
                         location?: string;
                         lineOffsets?: number[];
                         positions?: {};
                         macroCalls?: {};
-                    }): _112.SourceInfo;
+                    }): _113.SourceInfo;
                 };
                 SourcePosition: {
-                    encode(message: _112.SourcePosition, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _112.SourcePosition;
-                    fromJSON(object: any): _112.SourcePosition;
-                    toJSON(message: _112.SourcePosition): unknown;
+                    encode(message: _113.SourcePosition, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _113.SourcePosition;
+                    fromJSON(object: any): _113.SourcePosition;
+                    toJSON(message: _113.SourcePosition): unknown;
                     fromPartial(object: {
                         location?: string;
                         offset?: number;
                         line?: number;
                         column?: number;
-                    }): _112.SourcePosition;
+                    }): _113.SourcePosition;
                 };
                 Explain: {
-                    encode(message: _111.Explain, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _111.Explain;
-                    fromJSON(object: any): _111.Explain;
-                    toJSON(message: _111.Explain): unknown;
+                    encode(message: _112.Explain, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _112.Explain;
+                    fromJSON(object: any): _112.Explain;
+                    toJSON(message: _112.Explain): unknown;
                     fromPartial(object: {
                         values?: {
-                            nullValue?: _147.NullValue;
+                            nullValue?: _148.NullValue;
                             boolValue?: boolean;
                             int64Value?: bigint;
                             uint64Value?: bigint;
@@ -1236,27 +1236,27 @@ export declare namespace google {
                             id?: bigint;
                             valueIndex?: number;
                         }[];
-                    }): _111.Explain;
+                    }): _112.Explain;
                 };
                 Explain_ExprStep: {
-                    encode(message: _111.Explain_ExprStep, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _111.Explain_ExprStep;
-                    fromJSON(object: any): _111.Explain_ExprStep;
-                    toJSON(message: _111.Explain_ExprStep): unknown;
+                    encode(message: _112.Explain_ExprStep, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _112.Explain_ExprStep;
+                    fromJSON(object: any): _112.Explain_ExprStep;
+                    toJSON(message: _112.Explain_ExprStep): unknown;
                     fromPartial(object: {
                         id?: bigint;
                         valueIndex?: number;
-                    }): _111.Explain_ExprStep;
+                    }): _112.Explain_ExprStep;
                 };
                 EvalState: {
-                    encode(message: _110.EvalState, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.EvalState;
-                    fromJSON(object: any): _110.EvalState;
-                    toJSON(message: _110.EvalState): unknown;
+                    encode(message: _111.EvalState, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _111.EvalState;
+                    fromJSON(object: any): _111.EvalState;
+                    toJSON(message: _111.EvalState): unknown;
                     fromPartial(object: {
                         values?: {
                             value?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -1300,26 +1300,26 @@ export declare namespace google {
                             expr?: bigint;
                             value?: bigint;
                         }[];
-                    }): _110.EvalState;
+                    }): _111.EvalState;
                 };
                 EvalState_Result: {
-                    encode(message: _110.EvalState_Result, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.EvalState_Result;
-                    fromJSON(object: any): _110.EvalState_Result;
-                    toJSON(message: _110.EvalState_Result): unknown;
+                    encode(message: _111.EvalState_Result, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _111.EvalState_Result;
+                    fromJSON(object: any): _111.EvalState_Result;
+                    toJSON(message: _111.EvalState_Result): unknown;
                     fromPartial(object: {
                         expr?: bigint;
                         value?: bigint;
-                    }): _110.EvalState_Result;
+                    }): _111.EvalState_Result;
                 };
                 ExprValue: {
-                    encode(message: _110.ExprValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.ExprValue;
-                    fromJSON(object: any): _110.ExprValue;
-                    toJSON(message: _110.ExprValue): unknown;
+                    encode(message: _111.ExprValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _111.ExprValue;
+                    fromJSON(object: any): _111.ExprValue;
+                    toJSON(message: _111.ExprValue): unknown;
                     fromPartial(object: {
                         value?: {
-                            nullValue?: _147.NullValue;
+                            nullValue?: _148.NullValue;
                             boolValue?: boolean;
                             int64Value?: bigint;
                             uint64Value?: bigint;
@@ -1358,13 +1358,13 @@ export declare namespace google {
                         unknown?: {
                             exprs?: bigint[];
                         };
-                    }): _110.ExprValue;
+                    }): _111.ExprValue;
                 };
                 ErrorSet: {
-                    encode(message: _110.ErrorSet, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.ErrorSet;
-                    fromJSON(object: any): _110.ErrorSet;
-                    toJSON(message: _110.ErrorSet): unknown;
+                    encode(message: _111.ErrorSet, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _111.ErrorSet;
+                    fromJSON(object: any): _111.ErrorSet;
+                    toJSON(message: _111.ErrorSet): unknown;
                     fromPartial(object: {
                         errors?: {
                             code?: number;
@@ -1374,35 +1374,35 @@ export declare namespace google {
                                 value?: Uint8Array;
                             }[];
                         }[];
-                    }): _110.ErrorSet;
+                    }): _111.ErrorSet;
                 };
                 UnknownSet: {
-                    encode(message: _110.UnknownSet, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.UnknownSet;
-                    fromJSON(object: any): _110.UnknownSet;
-                    toJSON(message: _110.UnknownSet): unknown;
+                    encode(message: _111.UnknownSet, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _111.UnknownSet;
+                    fromJSON(object: any): _111.UnknownSet;
+                    toJSON(message: _111.UnknownSet): unknown;
                     fromPartial(object: {
                         exprs?: bigint[];
-                    }): _110.UnknownSet;
+                    }): _111.UnknownSet;
                 };
-                type_PrimitiveTypeFromJSON(object: any): _109.Type_PrimitiveType;
-                type_PrimitiveTypeToJSON(object: _109.Type_PrimitiveType): string;
-                type_WellKnownTypeFromJSON(object: any): _109.Type_WellKnownType;
-                type_WellKnownTypeToJSON(object: _109.Type_WellKnownType): string;
-                Type_PrimitiveType: typeof _109.Type_PrimitiveType;
-                Type_WellKnownType: typeof _109.Type_WellKnownType;
+                type_PrimitiveTypeFromJSON(object: any): _110.Type_PrimitiveType;
+                type_PrimitiveTypeToJSON(object: _110.Type_PrimitiveType): string;
+                type_WellKnownTypeFromJSON(object: any): _110.Type_WellKnownType;
+                type_WellKnownTypeToJSON(object: _110.Type_WellKnownType): string;
+                Type_PrimitiveType: typeof _110.Type_PrimitiveType;
+                Type_WellKnownType: typeof _110.Type_WellKnownType;
                 CheckedExpr_ReferenceMapEntry: {
-                    encode(message: _109.CheckedExpr_ReferenceMapEntry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _109.CheckedExpr_ReferenceMapEntry;
-                    fromJSON(object: any): _109.CheckedExpr_ReferenceMapEntry;
-                    toJSON(message: _109.CheckedExpr_ReferenceMapEntry): unknown;
+                    encode(message: _110.CheckedExpr_ReferenceMapEntry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.CheckedExpr_ReferenceMapEntry;
+                    fromJSON(object: any): _110.CheckedExpr_ReferenceMapEntry;
+                    toJSON(message: _110.CheckedExpr_ReferenceMapEntry): unknown;
                     fromPartial(object: {
                         key?: bigint;
                         value?: {
                             name?: string;
                             overloadId?: string[];
                             value?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -1419,21 +1419,21 @@ export declare namespace google {
                                 };
                             };
                         };
-                    }): _109.CheckedExpr_ReferenceMapEntry;
+                    }): _110.CheckedExpr_ReferenceMapEntry;
                 };
                 CheckedExpr_TypeMapEntry: {
-                    encode(message: _109.CheckedExpr_TypeMapEntry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _109.CheckedExpr_TypeMapEntry;
-                    fromJSON(object: any): _109.CheckedExpr_TypeMapEntry;
-                    toJSON(message: _109.CheckedExpr_TypeMapEntry): unknown;
+                    encode(message: _110.CheckedExpr_TypeMapEntry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.CheckedExpr_TypeMapEntry;
+                    fromJSON(object: any): _110.CheckedExpr_TypeMapEntry;
+                    toJSON(message: _110.CheckedExpr_TypeMapEntry): unknown;
                     fromPartial(object: {
                         key?: bigint;
                         value?: {
                             dyn?: {};
-                            null?: _147.NullValue;
-                            primitive?: _109.Type_PrimitiveType;
-                            wrapper?: _109.Type_PrimitiveType;
-                            wellKnown?: _109.Type_WellKnownType;
+                            null?: _148.NullValue;
+                            primitive?: _110.Type_PrimitiveType;
+                            wrapper?: _110.Type_PrimitiveType;
+                            wellKnown?: _110.Type_WellKnownType;
                             listType?: {
                                 elemType?: any;
                             };
@@ -1454,13 +1454,13 @@ export declare namespace google {
                                 parameterTypes?: any[];
                             };
                         };
-                    }): _109.CheckedExpr_TypeMapEntry;
+                    }): _110.CheckedExpr_TypeMapEntry;
                 };
                 CheckedExpr: {
-                    encode(message: _109.CheckedExpr, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _109.CheckedExpr;
-                    fromJSON(object: any): _109.CheckedExpr;
-                    toJSON(message: _109.CheckedExpr): unknown;
+                    encode(message: _110.CheckedExpr, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.CheckedExpr;
+                    fromJSON(object: any): _110.CheckedExpr;
+                    toJSON(message: _110.CheckedExpr): unknown;
                     fromPartial(object: {
                         referenceMap?: {};
                         typeMap?: {};
@@ -1475,7 +1475,7 @@ export declare namespace google {
                         expr?: {
                             id?: bigint;
                             constExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -1528,19 +1528,19 @@ export declare namespace google {
                                 result?: any;
                             };
                         };
-                    }): _109.CheckedExpr;
+                    }): _110.CheckedExpr;
                 };
                 Type: {
-                    encode(message: _109.Type, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _109.Type;
-                    fromJSON(object: any): _109.Type;
-                    toJSON(message: _109.Type): unknown;
+                    encode(message: _110.Type, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.Type;
+                    fromJSON(object: any): _110.Type;
+                    toJSON(message: _110.Type): unknown;
                     fromPartial(object: {
                         dyn?: {};
-                        null?: _147.NullValue;
-                        primitive?: _109.Type_PrimitiveType;
-                        wrapper?: _109.Type_PrimitiveType;
-                        wellKnown?: _109.Type_WellKnownType;
+                        null?: _148.NullValue;
+                        primitive?: _110.Type_PrimitiveType;
+                        wrapper?: _110.Type_PrimitiveType;
+                        wellKnown?: _110.Type_WellKnownType;
                         listType?: {
                             elemType?: any;
                         };
@@ -1560,20 +1560,20 @@ export declare namespace google {
                             name?: string;
                             parameterTypes?: any[];
                         };
-                    }): _109.Type;
+                    }): _110.Type;
                 };
                 Type_ListType: {
-                    encode(message: _109.Type_ListType, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _109.Type_ListType;
-                    fromJSON(object: any): _109.Type_ListType;
-                    toJSON(message: _109.Type_ListType): unknown;
+                    encode(message: _110.Type_ListType, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.Type_ListType;
+                    fromJSON(object: any): _110.Type_ListType;
+                    toJSON(message: _110.Type_ListType): unknown;
                     fromPartial(object: {
                         elemType?: {
                             dyn?: {};
-                            null?: _147.NullValue;
-                            primitive?: _109.Type_PrimitiveType;
-                            wrapper?: _109.Type_PrimitiveType;
-                            wellKnown?: _109.Type_WellKnownType;
+                            null?: _148.NullValue;
+                            primitive?: _110.Type_PrimitiveType;
+                            wrapper?: _110.Type_PrimitiveType;
+                            wellKnown?: _110.Type_WellKnownType;
                             listType?: any;
                             mapType?: {
                                 keyType?: any;
@@ -1592,20 +1592,20 @@ export declare namespace google {
                                 parameterTypes?: any[];
                             };
                         };
-                    }): _109.Type_ListType;
+                    }): _110.Type_ListType;
                 };
                 Type_MapType: {
-                    encode(message: _109.Type_MapType, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _109.Type_MapType;
-                    fromJSON(object: any): _109.Type_MapType;
-                    toJSON(message: _109.Type_MapType): unknown;
+                    encode(message: _110.Type_MapType, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.Type_MapType;
+                    fromJSON(object: any): _110.Type_MapType;
+                    toJSON(message: _110.Type_MapType): unknown;
                     fromPartial(object: {
                         keyType?: {
                             dyn?: {};
-                            null?: _147.NullValue;
-                            primitive?: _109.Type_PrimitiveType;
-                            wrapper?: _109.Type_PrimitiveType;
-                            wellKnown?: _109.Type_WellKnownType;
+                            null?: _148.NullValue;
+                            primitive?: _110.Type_PrimitiveType;
+                            wrapper?: _110.Type_PrimitiveType;
+                            wellKnown?: _110.Type_WellKnownType;
                             listType?: {
                                 elemType?: any;
                             };
@@ -1625,10 +1625,10 @@ export declare namespace google {
                         };
                         valueType?: {
                             dyn?: {};
-                            null?: _147.NullValue;
-                            primitive?: _109.Type_PrimitiveType;
-                            wrapper?: _109.Type_PrimitiveType;
-                            wellKnown?: _109.Type_WellKnownType;
+                            null?: _148.NullValue;
+                            primitive?: _110.Type_PrimitiveType;
+                            wrapper?: _110.Type_PrimitiveType;
+                            wellKnown?: _110.Type_WellKnownType;
                             listType?: {
                                 elemType?: any;
                             };
@@ -1646,20 +1646,20 @@ export declare namespace google {
                                 parameterTypes?: any[];
                             };
                         };
-                    }): _109.Type_MapType;
+                    }): _110.Type_MapType;
                 };
                 Type_FunctionType: {
-                    encode(message: _109.Type_FunctionType, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _109.Type_FunctionType;
-                    fromJSON(object: any): _109.Type_FunctionType;
-                    toJSON(message: _109.Type_FunctionType): unknown;
+                    encode(message: _110.Type_FunctionType, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.Type_FunctionType;
+                    fromJSON(object: any): _110.Type_FunctionType;
+                    toJSON(message: _110.Type_FunctionType): unknown;
                     fromPartial(object: {
                         resultType?: {
                             dyn?: {};
-                            null?: _147.NullValue;
-                            primitive?: _109.Type_PrimitiveType;
-                            wrapper?: _109.Type_PrimitiveType;
-                            wellKnown?: _109.Type_WellKnownType;
+                            null?: _148.NullValue;
+                            primitive?: _110.Type_PrimitiveType;
+                            wrapper?: _110.Type_PrimitiveType;
+                            wellKnown?: _110.Type_WellKnownType;
                             listType?: {
                                 elemType?: any;
                             };
@@ -1679,10 +1679,10 @@ export declare namespace google {
                         };
                         argTypes?: {
                             dyn?: {};
-                            null?: _147.NullValue;
-                            primitive?: _109.Type_PrimitiveType;
-                            wrapper?: _109.Type_PrimitiveType;
-                            wellKnown?: _109.Type_WellKnownType;
+                            null?: _148.NullValue;
+                            primitive?: _110.Type_PrimitiveType;
+                            wrapper?: _110.Type_PrimitiveType;
+                            wellKnown?: _110.Type_WellKnownType;
                             listType?: {
                                 elemType?: any;
                             };
@@ -1700,21 +1700,21 @@ export declare namespace google {
                                 parameterTypes?: any[];
                             };
                         }[];
-                    }): _109.Type_FunctionType;
+                    }): _110.Type_FunctionType;
                 };
                 Type_AbstractType: {
-                    encode(message: _109.Type_AbstractType, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _109.Type_AbstractType;
-                    fromJSON(object: any): _109.Type_AbstractType;
-                    toJSON(message: _109.Type_AbstractType): unknown;
+                    encode(message: _110.Type_AbstractType, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.Type_AbstractType;
+                    fromJSON(object: any): _110.Type_AbstractType;
+                    toJSON(message: _110.Type_AbstractType): unknown;
                     fromPartial(object: {
                         name?: string;
                         parameterTypes?: {
                             dyn?: {};
-                            null?: _147.NullValue;
-                            primitive?: _109.Type_PrimitiveType;
-                            wrapper?: _109.Type_PrimitiveType;
-                            wellKnown?: _109.Type_WellKnownType;
+                            null?: _148.NullValue;
+                            primitive?: _110.Type_PrimitiveType;
+                            wrapper?: _110.Type_PrimitiveType;
+                            wellKnown?: _110.Type_WellKnownType;
                             listType?: {
                                 elemType?: any;
                             };
@@ -1732,22 +1732,22 @@ export declare namespace google {
                             error?: {};
                             abstractType?: any;
                         }[];
-                    }): _109.Type_AbstractType;
+                    }): _110.Type_AbstractType;
                 };
                 Decl: {
-                    encode(message: _109.Decl, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _109.Decl;
-                    fromJSON(object: any): _109.Decl;
-                    toJSON(message: _109.Decl): unknown;
+                    encode(message: _110.Decl, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.Decl;
+                    fromJSON(object: any): _110.Decl;
+                    toJSON(message: _110.Decl): unknown;
                     fromPartial(object: {
                         name?: string;
                         ident?: {
                             type?: {
                                 dyn?: {};
-                                null?: _147.NullValue;
-                                primitive?: _109.Type_PrimitiveType;
-                                wrapper?: _109.Type_PrimitiveType;
-                                wellKnown?: _109.Type_WellKnownType;
+                                null?: _148.NullValue;
+                                primitive?: _110.Type_PrimitiveType;
+                                wrapper?: _110.Type_PrimitiveType;
+                                wellKnown?: _110.Type_WellKnownType;
                                 listType?: {
                                     elemType?: any;
                                 };
@@ -1769,7 +1769,7 @@ export declare namespace google {
                                 };
                             };
                             value?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -1792,10 +1792,10 @@ export declare namespace google {
                                 overloadId?: string;
                                 params?: {
                                     dyn?: {};
-                                    null?: _147.NullValue;
-                                    primitive?: _109.Type_PrimitiveType;
-                                    wrapper?: _109.Type_PrimitiveType;
-                                    wellKnown?: _109.Type_WellKnownType;
+                                    null?: _148.NullValue;
+                                    primitive?: _110.Type_PrimitiveType;
+                                    wrapper?: _110.Type_PrimitiveType;
+                                    wellKnown?: _110.Type_WellKnownType;
                                     listType?: {
                                         elemType?: any;
                                     };
@@ -1819,10 +1819,10 @@ export declare namespace google {
                                 typeParams?: string[];
                                 resultType?: {
                                     dyn?: {};
-                                    null?: _147.NullValue;
-                                    primitive?: _109.Type_PrimitiveType;
-                                    wrapper?: _109.Type_PrimitiveType;
-                                    wellKnown?: _109.Type_WellKnownType;
+                                    null?: _148.NullValue;
+                                    primitive?: _110.Type_PrimitiveType;
+                                    wrapper?: _110.Type_PrimitiveType;
+                                    wellKnown?: _110.Type_WellKnownType;
                                     listType?: {
                                         elemType?: any;
                                     };
@@ -1847,20 +1847,20 @@ export declare namespace google {
                                 doc?: string;
                             }[];
                         };
-                    }): _109.Decl;
+                    }): _110.Decl;
                 };
                 Decl_IdentDecl: {
-                    encode(message: _109.Decl_IdentDecl, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _109.Decl_IdentDecl;
-                    fromJSON(object: any): _109.Decl_IdentDecl;
-                    toJSON(message: _109.Decl_IdentDecl): unknown;
+                    encode(message: _110.Decl_IdentDecl, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.Decl_IdentDecl;
+                    fromJSON(object: any): _110.Decl_IdentDecl;
+                    toJSON(message: _110.Decl_IdentDecl): unknown;
                     fromPartial(object: {
                         type?: {
                             dyn?: {};
-                            null?: _147.NullValue;
-                            primitive?: _109.Type_PrimitiveType;
-                            wrapper?: _109.Type_PrimitiveType;
-                            wellKnown?: _109.Type_WellKnownType;
+                            null?: _148.NullValue;
+                            primitive?: _110.Type_PrimitiveType;
+                            wrapper?: _110.Type_PrimitiveType;
+                            wellKnown?: _110.Type_WellKnownType;
                             listType?: {
                                 elemType?: any;
                             };
@@ -1882,7 +1882,7 @@ export declare namespace google {
                             };
                         };
                         value?: {
-                            nullValue?: _147.NullValue;
+                            nullValue?: _148.NullValue;
                             boolValue?: boolean;
                             int64Value?: bigint;
                             uint64Value?: bigint;
@@ -1899,22 +1899,22 @@ export declare namespace google {
                             };
                         };
                         doc?: string;
-                    }): _109.Decl_IdentDecl;
+                    }): _110.Decl_IdentDecl;
                 };
                 Decl_FunctionDecl: {
-                    encode(message: _109.Decl_FunctionDecl, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _109.Decl_FunctionDecl;
-                    fromJSON(object: any): _109.Decl_FunctionDecl;
-                    toJSON(message: _109.Decl_FunctionDecl): unknown;
+                    encode(message: _110.Decl_FunctionDecl, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.Decl_FunctionDecl;
+                    fromJSON(object: any): _110.Decl_FunctionDecl;
+                    toJSON(message: _110.Decl_FunctionDecl): unknown;
                     fromPartial(object: {
                         overloads?: {
                             overloadId?: string;
                             params?: {
                                 dyn?: {};
-                                null?: _147.NullValue;
-                                primitive?: _109.Type_PrimitiveType;
-                                wrapper?: _109.Type_PrimitiveType;
-                                wellKnown?: _109.Type_WellKnownType;
+                                null?: _148.NullValue;
+                                primitive?: _110.Type_PrimitiveType;
+                                wrapper?: _110.Type_PrimitiveType;
+                                wellKnown?: _110.Type_WellKnownType;
                                 listType?: {
                                     elemType?: any;
                                 };
@@ -1938,10 +1938,10 @@ export declare namespace google {
                             typeParams?: string[];
                             resultType?: {
                                 dyn?: {};
-                                null?: _147.NullValue;
-                                primitive?: _109.Type_PrimitiveType;
-                                wrapper?: _109.Type_PrimitiveType;
-                                wellKnown?: _109.Type_WellKnownType;
+                                null?: _148.NullValue;
+                                primitive?: _110.Type_PrimitiveType;
+                                wrapper?: _110.Type_PrimitiveType;
+                                wellKnown?: _110.Type_WellKnownType;
                                 listType?: {
                                     elemType?: any;
                                 };
@@ -1965,21 +1965,21 @@ export declare namespace google {
                             isInstanceFunction?: boolean;
                             doc?: string;
                         }[];
-                    }): _109.Decl_FunctionDecl;
+                    }): _110.Decl_FunctionDecl;
                 };
                 Decl_FunctionDecl_Overload: {
-                    encode(message: _109.Decl_FunctionDecl_Overload, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _109.Decl_FunctionDecl_Overload;
-                    fromJSON(object: any): _109.Decl_FunctionDecl_Overload;
-                    toJSON(message: _109.Decl_FunctionDecl_Overload): unknown;
+                    encode(message: _110.Decl_FunctionDecl_Overload, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.Decl_FunctionDecl_Overload;
+                    fromJSON(object: any): _110.Decl_FunctionDecl_Overload;
+                    toJSON(message: _110.Decl_FunctionDecl_Overload): unknown;
                     fromPartial(object: {
                         overloadId?: string;
                         params?: {
                             dyn?: {};
-                            null?: _147.NullValue;
-                            primitive?: _109.Type_PrimitiveType;
-                            wrapper?: _109.Type_PrimitiveType;
-                            wellKnown?: _109.Type_WellKnownType;
+                            null?: _148.NullValue;
+                            primitive?: _110.Type_PrimitiveType;
+                            wrapper?: _110.Type_PrimitiveType;
+                            wellKnown?: _110.Type_WellKnownType;
                             listType?: {
                                 elemType?: any;
                             };
@@ -2003,10 +2003,10 @@ export declare namespace google {
                         typeParams?: string[];
                         resultType?: {
                             dyn?: {};
-                            null?: _147.NullValue;
-                            primitive?: _109.Type_PrimitiveType;
-                            wrapper?: _109.Type_PrimitiveType;
-                            wellKnown?: _109.Type_WellKnownType;
+                            null?: _148.NullValue;
+                            primitive?: _110.Type_PrimitiveType;
+                            wrapper?: _110.Type_PrimitiveType;
+                            wellKnown?: _110.Type_WellKnownType;
                             listType?: {
                                 elemType?: any;
                             };
@@ -2029,18 +2029,18 @@ export declare namespace google {
                         };
                         isInstanceFunction?: boolean;
                         doc?: string;
-                    }): _109.Decl_FunctionDecl_Overload;
+                    }): _110.Decl_FunctionDecl_Overload;
                 };
                 Reference: {
-                    encode(message: _109.Reference, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _109.Reference;
-                    fromJSON(object: any): _109.Reference;
-                    toJSON(message: _109.Reference): unknown;
+                    encode(message: _110.Reference, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _110.Reference;
+                    fromJSON(object: any): _110.Reference;
+                    toJSON(message: _110.Reference): unknown;
                     fromPartial(object: {
                         name?: string;
                         overloadId?: string[];
                         value?: {
-                            nullValue?: _147.NullValue;
+                            nullValue?: _148.NullValue;
                             boolValue?: boolean;
                             int64Value?: bigint;
                             uint64Value?: bigint;
@@ -2056,17 +2056,17 @@ export declare namespace google {
                                 nanos?: number;
                             };
                         };
-                    }): _109.Reference;
+                    }): _110.Reference;
                 };
             };
             const v1beta1: {
                 Value: {
-                    encode(message: _118.Value, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _118.Value;
-                    fromJSON(object: any): _118.Value;
-                    toJSON(message: _118.Value): unknown;
+                    encode(message: _119.Value, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _119.Value;
+                    fromJSON(object: any): _119.Value;
+                    toJSON(message: _119.Value): unknown;
                     fromPartial(object: {
-                        nullValue?: _147.NullValue;
+                        nullValue?: _148.NullValue;
                         boolValue?: boolean;
                         int64Value?: bigint;
                         uint64Value?: bigint;
@@ -2091,26 +2091,26 @@ export declare namespace google {
                             values?: any[];
                         };
                         typeValue?: string;
-                    }): _118.Value;
+                    }): _119.Value;
                 };
                 EnumValue: {
-                    encode(message: _118.EnumValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _118.EnumValue;
-                    fromJSON(object: any): _118.EnumValue;
-                    toJSON(message: _118.EnumValue): unknown;
+                    encode(message: _119.EnumValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _119.EnumValue;
+                    fromJSON(object: any): _119.EnumValue;
+                    toJSON(message: _119.EnumValue): unknown;
                     fromPartial(object: {
                         type?: string;
                         value?: number;
-                    }): _118.EnumValue;
+                    }): _119.EnumValue;
                 };
                 ListValue: {
-                    encode(message: _118.ListValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _118.ListValue;
-                    fromJSON(object: any): _118.ListValue;
-                    toJSON(message: _118.ListValue): unknown;
+                    encode(message: _119.ListValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _119.ListValue;
+                    fromJSON(object: any): _119.ListValue;
+                    toJSON(message: _119.ListValue): unknown;
                     fromPartial(object: {
                         values?: {
-                            nullValue?: _147.NullValue;
+                            nullValue?: _148.NullValue;
                             boolValue?: boolean;
                             int64Value?: bigint;
                             uint64Value?: bigint;
@@ -2134,17 +2134,17 @@ export declare namespace google {
                             listValue?: any;
                             typeValue?: string;
                         }[];
-                    }): _118.ListValue;
+                    }): _119.ListValue;
                 };
                 MapValue: {
-                    encode(message: _118.MapValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _118.MapValue;
-                    fromJSON(object: any): _118.MapValue;
-                    toJSON(message: _118.MapValue): unknown;
+                    encode(message: _119.MapValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _119.MapValue;
+                    fromJSON(object: any): _119.MapValue;
+                    toJSON(message: _119.MapValue): unknown;
                     fromPartial(object: {
                         entries?: {
                             key?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -2166,7 +2166,7 @@ export declare namespace google {
                                 typeValue?: string;
                             };
                             value?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -2188,16 +2188,16 @@ export declare namespace google {
                                 typeValue?: string;
                             };
                         }[];
-                    }): _118.MapValue;
+                    }): _119.MapValue;
                 };
                 MapValue_Entry: {
-                    encode(message: _118.MapValue_Entry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _118.MapValue_Entry;
-                    fromJSON(object: any): _118.MapValue_Entry;
-                    toJSON(message: _118.MapValue_Entry): unknown;
+                    encode(message: _119.MapValue_Entry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _119.MapValue_Entry;
+                    fromJSON(object: any): _119.MapValue_Entry;
+                    toJSON(message: _119.MapValue_Entry): unknown;
                     fromPartial(object: {
                         key?: {
-                            nullValue?: _147.NullValue;
+                            nullValue?: _148.NullValue;
                             boolValue?: boolean;
                             int64Value?: bigint;
                             uint64Value?: bigint;
@@ -2221,7 +2221,7 @@ export declare namespace google {
                             typeValue?: string;
                         };
                         value?: {
-                            nullValue?: _147.NullValue;
+                            nullValue?: _148.NullValue;
                             boolValue?: boolean;
                             int64Value?: bigint;
                             uint64Value?: bigint;
@@ -2244,53 +2244,53 @@ export declare namespace google {
                             };
                             typeValue?: string;
                         };
-                    }): _118.MapValue_Entry;
+                    }): _119.MapValue_Entry;
                 };
                 SourceInfo_PositionsEntry: {
-                    encode(message: _117.SourceInfo_PositionsEntry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _117.SourceInfo_PositionsEntry;
-                    fromJSON(object: any): _117.SourceInfo_PositionsEntry;
-                    toJSON(message: _117.SourceInfo_PositionsEntry): unknown;
+                    encode(message: _118.SourceInfo_PositionsEntry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _118.SourceInfo_PositionsEntry;
+                    fromJSON(object: any): _118.SourceInfo_PositionsEntry;
+                    toJSON(message: _118.SourceInfo_PositionsEntry): unknown;
                     fromPartial(object: {
                         key?: number;
                         value?: number;
-                    }): _117.SourceInfo_PositionsEntry;
+                    }): _118.SourceInfo_PositionsEntry;
                 };
                 SourceInfo: {
-                    encode(message: _117.SourceInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _117.SourceInfo;
-                    fromJSON(object: any): _117.SourceInfo;
-                    toJSON(message: _117.SourceInfo): unknown;
+                    encode(message: _118.SourceInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _118.SourceInfo;
+                    fromJSON(object: any): _118.SourceInfo;
+                    toJSON(message: _118.SourceInfo): unknown;
                     fromPartial(object: {
                         location?: string;
                         lineOffsets?: number[];
                         positions?: {
                             [x: number]: number;
                         };
-                    }): _117.SourceInfo;
+                    }): _118.SourceInfo;
                 };
                 SourcePosition: {
-                    encode(message: _117.SourcePosition, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _117.SourcePosition;
-                    fromJSON(object: any): _117.SourcePosition;
-                    toJSON(message: _117.SourcePosition): unknown;
+                    encode(message: _118.SourcePosition, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _118.SourcePosition;
+                    fromJSON(object: any): _118.SourcePosition;
+                    toJSON(message: _118.SourcePosition): unknown;
                     fromPartial(object: {
                         location?: string;
                         offset?: number;
                         line?: number;
                         column?: number;
-                    }): _117.SourcePosition;
+                    }): _118.SourcePosition;
                 };
                 ParsedExpr: {
-                    encode(message: _116.ParsedExpr, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _116.ParsedExpr;
-                    fromJSON(object: any): _116.ParsedExpr;
-                    toJSON(message: _116.ParsedExpr): unknown;
+                    encode(message: _117.ParsedExpr, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _117.ParsedExpr;
+                    fromJSON(object: any): _117.ParsedExpr;
+                    toJSON(message: _117.ParsedExpr): unknown;
                     fromPartial(object: {
                         expr?: {
                             id?: number;
                             literalExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -2341,17 +2341,17 @@ export declare namespace google {
                             };
                         };
                         syntaxVersion?: string;
-                    }): _116.ParsedExpr;
+                    }): _117.ParsedExpr;
                 };
                 Expr: {
-                    encode(message: _116.Expr, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _116.Expr;
-                    fromJSON(object: any): _116.Expr;
-                    toJSON(message: _116.Expr): unknown;
+                    encode(message: _117.Expr, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _117.Expr;
+                    fromJSON(object: any): _117.Expr;
+                    toJSON(message: _117.Expr): unknown;
                     fromPartial(object: {
                         id?: number;
                         literalExpr?: {
-                            nullValue?: _147.NullValue;
+                            nullValue?: _148.NullValue;
                             boolValue?: boolean;
                             int64Value?: bigint;
                             uint64Value?: bigint;
@@ -2393,27 +2393,27 @@ export declare namespace google {
                             loopStep?: any;
                             result?: any;
                         };
-                    }): _116.Expr;
+                    }): _117.Expr;
                 };
                 Expr_Ident: {
-                    encode(message: _116.Expr_Ident, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _116.Expr_Ident;
-                    fromJSON(object: any): _116.Expr_Ident;
-                    toJSON(message: _116.Expr_Ident): unknown;
+                    encode(message: _117.Expr_Ident, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _117.Expr_Ident;
+                    fromJSON(object: any): _117.Expr_Ident;
+                    toJSON(message: _117.Expr_Ident): unknown;
                     fromPartial(object: {
                         name?: string;
-                    }): _116.Expr_Ident;
+                    }): _117.Expr_Ident;
                 };
                 Expr_Select: {
-                    encode(message: _116.Expr_Select, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _116.Expr_Select;
-                    fromJSON(object: any): _116.Expr_Select;
-                    toJSON(message: _116.Expr_Select): unknown;
+                    encode(message: _117.Expr_Select, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _117.Expr_Select;
+                    fromJSON(object: any): _117.Expr_Select;
+                    toJSON(message: _117.Expr_Select): unknown;
                     fromPartial(object: {
                         operand?: {
                             id?: number;
                             literalExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -2454,18 +2454,18 @@ export declare namespace google {
                         };
                         field?: string;
                         testOnly?: boolean;
-                    }): _116.Expr_Select;
+                    }): _117.Expr_Select;
                 };
                 Expr_Call: {
-                    encode(message: _116.Expr_Call, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _116.Expr_Call;
-                    fromJSON(object: any): _116.Expr_Call;
-                    toJSON(message: _116.Expr_Call): unknown;
+                    encode(message: _117.Expr_Call, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _117.Expr_Call;
+                    fromJSON(object: any): _117.Expr_Call;
+                    toJSON(message: _117.Expr_Call): unknown;
                     fromPartial(object: {
                         target?: {
                             id?: number;
                             literalExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -2508,7 +2508,7 @@ export declare namespace google {
                         args?: {
                             id?: number;
                             literalExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -2547,18 +2547,18 @@ export declare namespace google {
                                 result?: any;
                             };
                         }[];
-                    }): _116.Expr_Call;
+                    }): _117.Expr_Call;
                 };
                 Expr_CreateList: {
-                    encode(message: _116.Expr_CreateList, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _116.Expr_CreateList;
-                    fromJSON(object: any): _116.Expr_CreateList;
-                    toJSON(message: _116.Expr_CreateList): unknown;
+                    encode(message: _117.Expr_CreateList, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _117.Expr_CreateList;
+                    fromJSON(object: any): _117.Expr_CreateList;
+                    toJSON(message: _117.Expr_CreateList): unknown;
                     fromPartial(object: {
                         elements?: {
                             id?: number;
                             literalExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -2599,13 +2599,13 @@ export declare namespace google {
                                 result?: any;
                             };
                         }[];
-                    }): _116.Expr_CreateList;
+                    }): _117.Expr_CreateList;
                 };
                 Expr_CreateStruct: {
-                    encode(message: _116.Expr_CreateStruct, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _116.Expr_CreateStruct;
-                    fromJSON(object: any): _116.Expr_CreateStruct;
-                    toJSON(message: _116.Expr_CreateStruct): unknown;
+                    encode(message: _117.Expr_CreateStruct, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _117.Expr_CreateStruct;
+                    fromJSON(object: any): _117.Expr_CreateStruct;
+                    toJSON(message: _117.Expr_CreateStruct): unknown;
                     fromPartial(object: {
                         type?: string;
                         entries?: {
@@ -2614,7 +2614,7 @@ export declare namespace google {
                             mapKey?: {
                                 id?: number;
                                 literalExpr?: {
-                                    nullValue?: _147.NullValue;
+                                    nullValue?: _148.NullValue;
                                     boolValue?: boolean;
                                     int64Value?: bigint;
                                     uint64Value?: bigint;
@@ -2652,7 +2652,7 @@ export declare namespace google {
                             value?: {
                                 id?: number;
                                 literalExpr?: {
-                                    nullValue?: _147.NullValue;
+                                    nullValue?: _148.NullValue;
                                     boolValue?: boolean;
                                     int64Value?: bigint;
                                     uint64Value?: bigint;
@@ -2688,20 +2688,20 @@ export declare namespace google {
                                 };
                             };
                         }[];
-                    }): _116.Expr_CreateStruct;
+                    }): _117.Expr_CreateStruct;
                 };
                 Expr_CreateStruct_Entry: {
-                    encode(message: _116.Expr_CreateStruct_Entry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _116.Expr_CreateStruct_Entry;
-                    fromJSON(object: any): _116.Expr_CreateStruct_Entry;
-                    toJSON(message: _116.Expr_CreateStruct_Entry): unknown;
+                    encode(message: _117.Expr_CreateStruct_Entry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _117.Expr_CreateStruct_Entry;
+                    fromJSON(object: any): _117.Expr_CreateStruct_Entry;
+                    toJSON(message: _117.Expr_CreateStruct_Entry): unknown;
                     fromPartial(object: {
                         id?: number;
                         fieldKey?: string;
                         mapKey?: {
                             id?: number;
                             literalExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -2742,7 +2742,7 @@ export declare namespace google {
                         value?: {
                             id?: number;
                             literalExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -2780,19 +2780,19 @@ export declare namespace google {
                                 result?: any;
                             };
                         };
-                    }): _116.Expr_CreateStruct_Entry;
+                    }): _117.Expr_CreateStruct_Entry;
                 };
                 Expr_Comprehension: {
-                    encode(message: _116.Expr_Comprehension, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _116.Expr_Comprehension;
-                    fromJSON(object: any): _116.Expr_Comprehension;
-                    toJSON(message: _116.Expr_Comprehension): unknown;
+                    encode(message: _117.Expr_Comprehension, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _117.Expr_Comprehension;
+                    fromJSON(object: any): _117.Expr_Comprehension;
+                    toJSON(message: _117.Expr_Comprehension): unknown;
                     fromPartial(object: {
                         iterVar?: string;
                         iterRange?: {
                             id?: number;
                             literalExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -2831,7 +2831,7 @@ export declare namespace google {
                         accuInit?: {
                             id?: number;
                             literalExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -2869,7 +2869,7 @@ export declare namespace google {
                         loopCondition?: {
                             id?: number;
                             literalExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -2907,7 +2907,7 @@ export declare namespace google {
                         loopStep?: {
                             id?: number;
                             literalExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -2945,7 +2945,7 @@ export declare namespace google {
                         result?: {
                             id?: number;
                             literalExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -2980,32 +2980,32 @@ export declare namespace google {
                             };
                             comprehensionExpr?: any;
                         };
-                    }): _116.Expr_Comprehension;
+                    }): _117.Expr_Comprehension;
                 };
                 Literal: {
-                    encode(message: _116.Literal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _116.Literal;
-                    fromJSON(object: any): _116.Literal;
-                    toJSON(message: _116.Literal): unknown;
+                    encode(message: _117.Literal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _117.Literal;
+                    fromJSON(object: any): _117.Literal;
+                    toJSON(message: _117.Literal): unknown;
                     fromPartial(object: {
-                        nullValue?: _147.NullValue;
+                        nullValue?: _148.NullValue;
                         boolValue?: boolean;
                         int64Value?: bigint;
                         uint64Value?: bigint;
                         doubleValue?: number;
                         stringValue?: string;
                         bytesValue?: Uint8Array;
-                    }): _116.Literal;
+                    }): _117.Literal;
                 };
                 EvalState: {
-                    encode(message: _115.EvalState, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _115.EvalState;
-                    fromJSON(object: any): _115.EvalState;
-                    toJSON(message: _115.EvalState): unknown;
+                    encode(message: _116.EvalState, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _116.EvalState;
+                    fromJSON(object: any): _116.EvalState;
+                    toJSON(message: _116.EvalState): unknown;
                     fromPartial(object: {
                         values?: {
                             value?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -3053,28 +3053,28 @@ export declare namespace google {
                             };
                             value?: number;
                         }[];
-                    }): _115.EvalState;
+                    }): _116.EvalState;
                 };
                 EvalState_Result: {
-                    encode(message: _115.EvalState_Result, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _115.EvalState_Result;
-                    fromJSON(object: any): _115.EvalState_Result;
-                    toJSON(message: _115.EvalState_Result): unknown;
+                    encode(message: _116.EvalState_Result, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _116.EvalState_Result;
+                    fromJSON(object: any): _116.EvalState_Result;
+                    toJSON(message: _116.EvalState_Result): unknown;
                     fromPartial(object: {
                         expr?: {
                             id?: number;
                         };
                         value?: number;
-                    }): _115.EvalState_Result;
+                    }): _116.EvalState_Result;
                 };
                 ExprValue: {
-                    encode(message: _115.ExprValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _115.ExprValue;
-                    fromJSON(object: any): _115.ExprValue;
-                    toJSON(message: _115.ExprValue): unknown;
+                    encode(message: _116.ExprValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _116.ExprValue;
+                    fromJSON(object: any): _116.ExprValue;
+                    toJSON(message: _116.ExprValue): unknown;
                     fromPartial(object: {
                         value?: {
-                            nullValue?: _147.NullValue;
+                            nullValue?: _148.NullValue;
                             boolValue?: boolean;
                             int64Value?: bigint;
                             uint64Value?: bigint;
@@ -3115,13 +3115,13 @@ export declare namespace google {
                                 id?: number;
                             }[];
                         };
-                    }): _115.ExprValue;
+                    }): _116.ExprValue;
                 };
                 ErrorSet: {
-                    encode(message: _115.ErrorSet, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _115.ErrorSet;
-                    fromJSON(object: any): _115.ErrorSet;
-                    toJSON(message: _115.ErrorSet): unknown;
+                    encode(message: _116.ErrorSet, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _116.ErrorSet;
+                    fromJSON(object: any): _116.ErrorSet;
+                    toJSON(message: _116.ErrorSet): unknown;
                     fromPartial(object: {
                         errors?: {
                             code?: number;
@@ -3131,33 +3131,33 @@ export declare namespace google {
                                 value?: Uint8Array;
                             }[];
                         }[];
-                    }): _115.ErrorSet;
+                    }): _116.ErrorSet;
                 };
                 UnknownSet: {
-                    encode(message: _115.UnknownSet, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _115.UnknownSet;
-                    fromJSON(object: any): _115.UnknownSet;
-                    toJSON(message: _115.UnknownSet): unknown;
+                    encode(message: _116.UnknownSet, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _116.UnknownSet;
+                    fromJSON(object: any): _116.UnknownSet;
+                    toJSON(message: _116.UnknownSet): unknown;
                     fromPartial(object: {
                         exprs?: {
                             id?: number;
                         }[];
-                    }): _115.UnknownSet;
+                    }): _116.UnknownSet;
                 };
                 IdRef: {
-                    encode(message: _115.IdRef, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _115.IdRef;
-                    fromJSON(object: any): _115.IdRef;
-                    toJSON(message: _115.IdRef): unknown;
+                    encode(message: _116.IdRef, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _116.IdRef;
+                    fromJSON(object: any): _116.IdRef;
+                    toJSON(message: _116.IdRef): unknown;
                     fromPartial(object: {
                         id?: number;
-                    }): _115.IdRef;
+                    }): _116.IdRef;
                 };
                 Decl: {
-                    encode(message: _114.Decl, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _114.Decl;
-                    fromJSON(object: any): _114.Decl;
-                    toJSON(message: _114.Decl): unknown;
+                    encode(message: _115.Decl, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _115.Decl;
+                    fromJSON(object: any): _115.Decl;
+                    toJSON(message: _115.Decl): unknown;
                     fromPartial(object: {
                         id?: number;
                         name?: string;
@@ -3171,7 +3171,7 @@ export declare namespace google {
                             value?: {
                                 id?: number;
                                 literalExpr?: {
-                                    nullValue?: _147.NullValue;
+                                    nullValue?: _148.NullValue;
                                     boolValue?: boolean;
                                     int64Value?: bigint;
                                     uint64Value?: bigint;
@@ -3225,7 +3225,7 @@ export declare namespace google {
                                 value?: {
                                     id?: number;
                                     literalExpr?: {
-                                        nullValue?: _147.NullValue;
+                                        nullValue?: _148.NullValue;
                                         boolValue?: boolean;
                                         int64Value?: bigint;
                                         uint64Value?: bigint;
@@ -3276,24 +3276,24 @@ export declare namespace google {
                             };
                             receiverFunction?: boolean;
                         };
-                    }): _114.Decl;
+                    }): _115.Decl;
                 };
                 DeclType: {
-                    encode(message: _114.DeclType, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _114.DeclType;
-                    fromJSON(object: any): _114.DeclType;
-                    toJSON(message: _114.DeclType): unknown;
+                    encode(message: _115.DeclType, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _115.DeclType;
+                    fromJSON(object: any): _115.DeclType;
+                    toJSON(message: _115.DeclType): unknown;
                     fromPartial(object: {
                         id?: number;
                         type?: string;
                         typeParams?: any[];
-                    }): _114.DeclType;
+                    }): _115.DeclType;
                 };
                 IdentDecl: {
-                    encode(message: _114.IdentDecl, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _114.IdentDecl;
-                    fromJSON(object: any): _114.IdentDecl;
-                    toJSON(message: _114.IdentDecl): unknown;
+                    encode(message: _115.IdentDecl, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _115.IdentDecl;
+                    fromJSON(object: any): _115.IdentDecl;
+                    toJSON(message: _115.IdentDecl): unknown;
                     fromPartial(object: {
                         type?: {
                             id?: number;
@@ -3303,7 +3303,7 @@ export declare namespace google {
                         value?: {
                             id?: number;
                             literalExpr?: {
-                                nullValue?: _147.NullValue;
+                                nullValue?: _148.NullValue;
                                 boolValue?: boolean;
                                 int64Value?: bigint;
                                 uint64Value?: bigint;
@@ -3346,13 +3346,13 @@ export declare namespace google {
                                 result?: any;
                             };
                         };
-                    }): _114.IdentDecl;
+                    }): _115.IdentDecl;
                 };
                 FunctionDecl: {
-                    encode(message: _114.FunctionDecl, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _114.FunctionDecl;
-                    fromJSON(object: any): _114.FunctionDecl;
-                    toJSON(message: _114.FunctionDecl): unknown;
+                    encode(message: _115.FunctionDecl, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                    decode(input: Uint8Array | import("..").BinaryReader, length?: number): _115.FunctionDecl;
+                    fromJSON(object: any): _115.FunctionDecl;
+                    toJSON(message: _115.FunctionDecl): unknown;
                     fromPartial(object: {
                         args?: {
                             type?: {
@@ -3363,7 +3363,7 @@ export declare namespace google {
                             value?: {
                                 id?: number;
                                 literalExpr?: {
-                                    nullValue?: _147.NullValue;
+                                    nullValue?: _148.NullValue;
                                     boolValue?: boolean;
                                     int64Value?: bigint;
                                     uint64Value?: bigint;
@@ -3413,80 +3413,80 @@ export declare namespace google {
                             typeParams?: any[];
                         };
                         receiverFunction?: boolean;
-                    }): _114.FunctionDecl;
+                    }): _115.FunctionDecl;
                 };
             };
         }
     }
     const bytestream: {
         ReadRequest: {
-            encode(message: _119.ReadRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _119.ReadRequest;
-            fromJSON(object: any): _119.ReadRequest;
-            toJSON(message: _119.ReadRequest): unknown;
+            encode(message: _120.ReadRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _120.ReadRequest;
+            fromJSON(object: any): _120.ReadRequest;
+            toJSON(message: _120.ReadRequest): unknown;
             fromPartial(object: {
                 resourceName?: string;
                 readOffset?: bigint;
                 readLimit?: bigint;
-            }): _119.ReadRequest;
+            }): _120.ReadRequest;
         };
         ReadResponse: {
-            encode(message: _119.ReadResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _119.ReadResponse;
-            fromJSON(object: any): _119.ReadResponse;
-            toJSON(message: _119.ReadResponse): unknown;
+            encode(message: _120.ReadResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _120.ReadResponse;
+            fromJSON(object: any): _120.ReadResponse;
+            toJSON(message: _120.ReadResponse): unknown;
             fromPartial(object: {
                 data?: Uint8Array;
-            }): _119.ReadResponse;
+            }): _120.ReadResponse;
         };
         WriteRequest: {
-            encode(message: _119.WriteRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _119.WriteRequest;
-            fromJSON(object: any): _119.WriteRequest;
-            toJSON(message: _119.WriteRequest): unknown;
+            encode(message: _120.WriteRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _120.WriteRequest;
+            fromJSON(object: any): _120.WriteRequest;
+            toJSON(message: _120.WriteRequest): unknown;
             fromPartial(object: {
                 resourceName?: string;
                 writeOffset?: bigint;
                 finishWrite?: boolean;
                 data?: Uint8Array;
-            }): _119.WriteRequest;
+            }): _120.WriteRequest;
         };
         WriteResponse: {
-            encode(message: _119.WriteResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _119.WriteResponse;
-            fromJSON(object: any): _119.WriteResponse;
-            toJSON(message: _119.WriteResponse): unknown;
+            encode(message: _120.WriteResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _120.WriteResponse;
+            fromJSON(object: any): _120.WriteResponse;
+            toJSON(message: _120.WriteResponse): unknown;
             fromPartial(object: {
                 committedSize?: bigint;
-            }): _119.WriteResponse;
+            }): _120.WriteResponse;
         };
         QueryWriteStatusRequest: {
-            encode(message: _119.QueryWriteStatusRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _119.QueryWriteStatusRequest;
-            fromJSON(object: any): _119.QueryWriteStatusRequest;
-            toJSON(message: _119.QueryWriteStatusRequest): unknown;
+            encode(message: _120.QueryWriteStatusRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _120.QueryWriteStatusRequest;
+            fromJSON(object: any): _120.QueryWriteStatusRequest;
+            toJSON(message: _120.QueryWriteStatusRequest): unknown;
             fromPartial(object: {
                 resourceName?: string;
-            }): _119.QueryWriteStatusRequest;
+            }): _120.QueryWriteStatusRequest;
         };
         QueryWriteStatusResponse: {
-            encode(message: _119.QueryWriteStatusResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _119.QueryWriteStatusResponse;
-            fromJSON(object: any): _119.QueryWriteStatusResponse;
-            toJSON(message: _119.QueryWriteStatusResponse): unknown;
+            encode(message: _120.QueryWriteStatusResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _120.QueryWriteStatusResponse;
+            fromJSON(object: any): _120.QueryWriteStatusResponse;
+            toJSON(message: _120.QueryWriteStatusResponse): unknown;
             fromPartial(object: {
                 committedSize?: bigint;
                 complete?: boolean;
-            }): _119.QueryWriteStatusResponse;
+            }): _120.QueryWriteStatusResponse;
         };
     };
     namespace geo {
         const type: {
             Viewport: {
-                encode(message: _120.Viewport, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _120.Viewport;
-                fromJSON(object: any): _120.Viewport;
-                toJSON(message: _120.Viewport): unknown;
+                encode(message: _121.Viewport, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _121.Viewport;
+                fromJSON(object: any): _121.Viewport;
+                toJSON(message: _121.Viewport): unknown;
                 fromPartial(object: {
                     low?: {
                         latitude?: number;
@@ -3496,16 +3496,16 @@ export declare namespace google {
                         latitude?: number;
                         longitude?: number;
                     };
-                }): _120.Viewport;
+                }): _121.Viewport;
             };
         };
     }
     const longrunning: {
         Operation: {
-            encode(message: _121.Operation, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _121.Operation;
-            fromJSON(object: any): _121.Operation;
-            toJSON(message: _121.Operation): unknown;
+            encode(message: _122.Operation, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _122.Operation;
+            fromJSON(object: any): _122.Operation;
+            toJSON(message: _122.Operation): unknown;
             fromPartial(object: {
                 name?: string;
                 metadata?: {
@@ -3525,34 +3525,34 @@ export declare namespace google {
                     typeUrl?: string;
                     value?: Uint8Array;
                 };
-            }): _121.Operation;
+            }): _122.Operation;
         };
         GetOperationRequest: {
-            encode(message: _121.GetOperationRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _121.GetOperationRequest;
-            fromJSON(object: any): _121.GetOperationRequest;
-            toJSON(message: _121.GetOperationRequest): unknown;
+            encode(message: _122.GetOperationRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _122.GetOperationRequest;
+            fromJSON(object: any): _122.GetOperationRequest;
+            toJSON(message: _122.GetOperationRequest): unknown;
             fromPartial(object: {
                 name?: string;
-            }): _121.GetOperationRequest;
+            }): _122.GetOperationRequest;
         };
         ListOperationsRequest: {
-            encode(message: _121.ListOperationsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _121.ListOperationsRequest;
-            fromJSON(object: any): _121.ListOperationsRequest;
-            toJSON(message: _121.ListOperationsRequest): unknown;
+            encode(message: _122.ListOperationsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _122.ListOperationsRequest;
+            fromJSON(object: any): _122.ListOperationsRequest;
+            toJSON(message: _122.ListOperationsRequest): unknown;
             fromPartial(object: {
                 name?: string;
                 filter?: string;
                 pageSize?: number;
                 pageToken?: string;
-            }): _121.ListOperationsRequest;
+            }): _122.ListOperationsRequest;
         };
         ListOperationsResponse: {
-            encode(message: _121.ListOperationsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _121.ListOperationsResponse;
-            fromJSON(object: any): _121.ListOperationsResponse;
-            toJSON(message: _121.ListOperationsResponse): unknown;
+            encode(message: _122.ListOperationsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _122.ListOperationsResponse;
+            fromJSON(object: any): _122.ListOperationsResponse;
+            toJSON(message: _122.ListOperationsResponse): unknown;
             fromPartial(object: {
                 operations?: {
                     name?: string;
@@ -3575,56 +3575,56 @@ export declare namespace google {
                     };
                 }[];
                 nextPageToken?: string;
-            }): _121.ListOperationsResponse;
+            }): _122.ListOperationsResponse;
         };
         CancelOperationRequest: {
-            encode(message: _121.CancelOperationRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _121.CancelOperationRequest;
-            fromJSON(object: any): _121.CancelOperationRequest;
-            toJSON(message: _121.CancelOperationRequest): unknown;
+            encode(message: _122.CancelOperationRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _122.CancelOperationRequest;
+            fromJSON(object: any): _122.CancelOperationRequest;
+            toJSON(message: _122.CancelOperationRequest): unknown;
             fromPartial(object: {
                 name?: string;
-            }): _121.CancelOperationRequest;
+            }): _122.CancelOperationRequest;
         };
         DeleteOperationRequest: {
-            encode(message: _121.DeleteOperationRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _121.DeleteOperationRequest;
-            fromJSON(object: any): _121.DeleteOperationRequest;
-            toJSON(message: _121.DeleteOperationRequest): unknown;
+            encode(message: _122.DeleteOperationRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _122.DeleteOperationRequest;
+            fromJSON(object: any): _122.DeleteOperationRequest;
+            toJSON(message: _122.DeleteOperationRequest): unknown;
             fromPartial(object: {
                 name?: string;
-            }): _121.DeleteOperationRequest;
+            }): _122.DeleteOperationRequest;
         };
         WaitOperationRequest: {
-            encode(message: _121.WaitOperationRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _121.WaitOperationRequest;
-            fromJSON(object: any): _121.WaitOperationRequest;
-            toJSON(message: _121.WaitOperationRequest): unknown;
+            encode(message: _122.WaitOperationRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _122.WaitOperationRequest;
+            fromJSON(object: any): _122.WaitOperationRequest;
+            toJSON(message: _122.WaitOperationRequest): unknown;
             fromPartial(object: {
                 name?: string;
                 timeout?: {
                     seconds?: bigint;
                     nanos?: number;
                 };
-            }): _121.WaitOperationRequest;
+            }): _122.WaitOperationRequest;
         };
         OperationInfo: {
-            encode(message: _121.OperationInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _121.OperationInfo;
-            fromJSON(object: any): _121.OperationInfo;
-            toJSON(message: _121.OperationInfo): unknown;
+            encode(message: _122.OperationInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _122.OperationInfo;
+            fromJSON(object: any): _122.OperationInfo;
+            toJSON(message: _122.OperationInfo): unknown;
             fromPartial(object: {
                 responseType?: string;
                 metadataType?: string;
-            }): _121.OperationInfo;
+            }): _122.OperationInfo;
         };
     };
     const rpc: {
         Status: {
-            encode(message: _124.Status, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _124.Status;
-            fromJSON(object: any): _124.Status;
-            toJSON(message: _124.Status): unknown;
+            encode(message: _125.Status, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _125.Status;
+            fromJSON(object: any): _125.Status;
+            toJSON(message: _125.Status): unknown;
             fromPartial(object: {
                 code?: number;
                 message?: string;
@@ -3632,209 +3632,209 @@ export declare namespace google {
                     typeUrl?: string;
                     value?: Uint8Array;
                 }[];
-            }): _124.Status;
+            }): _125.Status;
         };
         ErrorInfo_MetadataEntry: {
-            encode(message: _123.ErrorInfo_MetadataEntry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _123.ErrorInfo_MetadataEntry;
-            fromJSON(object: any): _123.ErrorInfo_MetadataEntry;
-            toJSON(message: _123.ErrorInfo_MetadataEntry): unknown;
+            encode(message: _124.ErrorInfo_MetadataEntry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _124.ErrorInfo_MetadataEntry;
+            fromJSON(object: any): _124.ErrorInfo_MetadataEntry;
+            toJSON(message: _124.ErrorInfo_MetadataEntry): unknown;
             fromPartial(object: {
                 key?: string;
                 value?: string;
-            }): _123.ErrorInfo_MetadataEntry;
+            }): _124.ErrorInfo_MetadataEntry;
         };
         ErrorInfo: {
-            encode(message: _123.ErrorInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _123.ErrorInfo;
-            fromJSON(object: any): _123.ErrorInfo;
-            toJSON(message: _123.ErrorInfo): unknown;
+            encode(message: _124.ErrorInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _124.ErrorInfo;
+            fromJSON(object: any): _124.ErrorInfo;
+            toJSON(message: _124.ErrorInfo): unknown;
             fromPartial(object: {
                 reason?: string;
                 domain?: string;
                 metadata?: {
                     [x: string]: string;
                 };
-            }): _123.ErrorInfo;
+            }): _124.ErrorInfo;
         };
         RetryInfo: {
-            encode(message: _123.RetryInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _123.RetryInfo;
-            fromJSON(object: any): _123.RetryInfo;
-            toJSON(message: _123.RetryInfo): unknown;
+            encode(message: _124.RetryInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _124.RetryInfo;
+            fromJSON(object: any): _124.RetryInfo;
+            toJSON(message: _124.RetryInfo): unknown;
             fromPartial(object: {
                 retryDelay?: {
                     seconds?: bigint;
                     nanos?: number;
                 };
-            }): _123.RetryInfo;
+            }): _124.RetryInfo;
         };
         DebugInfo: {
-            encode(message: _123.DebugInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _123.DebugInfo;
-            fromJSON(object: any): _123.DebugInfo;
-            toJSON(message: _123.DebugInfo): unknown;
+            encode(message: _124.DebugInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _124.DebugInfo;
+            fromJSON(object: any): _124.DebugInfo;
+            toJSON(message: _124.DebugInfo): unknown;
             fromPartial(object: {
                 stackEntries?: string[];
                 detail?: string;
-            }): _123.DebugInfo;
+            }): _124.DebugInfo;
         };
         QuotaFailure: {
-            encode(message: _123.QuotaFailure, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _123.QuotaFailure;
-            fromJSON(object: any): _123.QuotaFailure;
-            toJSON(message: _123.QuotaFailure): unknown;
+            encode(message: _124.QuotaFailure, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _124.QuotaFailure;
+            fromJSON(object: any): _124.QuotaFailure;
+            toJSON(message: _124.QuotaFailure): unknown;
             fromPartial(object: {
                 violations?: {
                     subject?: string;
                     description?: string;
                 }[];
-            }): _123.QuotaFailure;
+            }): _124.QuotaFailure;
         };
         QuotaFailure_Violation: {
-            encode(message: _123.QuotaFailure_Violation, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _123.QuotaFailure_Violation;
-            fromJSON(object: any): _123.QuotaFailure_Violation;
-            toJSON(message: _123.QuotaFailure_Violation): unknown;
+            encode(message: _124.QuotaFailure_Violation, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _124.QuotaFailure_Violation;
+            fromJSON(object: any): _124.QuotaFailure_Violation;
+            toJSON(message: _124.QuotaFailure_Violation): unknown;
             fromPartial(object: {
                 subject?: string;
                 description?: string;
-            }): _123.QuotaFailure_Violation;
+            }): _124.QuotaFailure_Violation;
         };
         PreconditionFailure: {
-            encode(message: _123.PreconditionFailure, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _123.PreconditionFailure;
-            fromJSON(object: any): _123.PreconditionFailure;
-            toJSON(message: _123.PreconditionFailure): unknown;
+            encode(message: _124.PreconditionFailure, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _124.PreconditionFailure;
+            fromJSON(object: any): _124.PreconditionFailure;
+            toJSON(message: _124.PreconditionFailure): unknown;
             fromPartial(object: {
                 violations?: {
                     type?: string;
                     subject?: string;
                     description?: string;
                 }[];
-            }): _123.PreconditionFailure;
+            }): _124.PreconditionFailure;
         };
         PreconditionFailure_Violation: {
-            encode(message: _123.PreconditionFailure_Violation, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _123.PreconditionFailure_Violation;
-            fromJSON(object: any): _123.PreconditionFailure_Violation;
-            toJSON(message: _123.PreconditionFailure_Violation): unknown;
+            encode(message: _124.PreconditionFailure_Violation, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _124.PreconditionFailure_Violation;
+            fromJSON(object: any): _124.PreconditionFailure_Violation;
+            toJSON(message: _124.PreconditionFailure_Violation): unknown;
             fromPartial(object: {
                 type?: string;
                 subject?: string;
                 description?: string;
-            }): _123.PreconditionFailure_Violation;
+            }): _124.PreconditionFailure_Violation;
         };
         BadRequest: {
-            encode(message: _123.BadRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _123.BadRequest;
-            fromJSON(object: any): _123.BadRequest;
-            toJSON(message: _123.BadRequest): unknown;
+            encode(message: _124.BadRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _124.BadRequest;
+            fromJSON(object: any): _124.BadRequest;
+            toJSON(message: _124.BadRequest): unknown;
             fromPartial(object: {
                 fieldViolations?: {
                     field?: string;
                     description?: string;
                 }[];
-            }): _123.BadRequest;
+            }): _124.BadRequest;
         };
         BadRequest_FieldViolation: {
-            encode(message: _123.BadRequest_FieldViolation, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _123.BadRequest_FieldViolation;
-            fromJSON(object: any): _123.BadRequest_FieldViolation;
-            toJSON(message: _123.BadRequest_FieldViolation): unknown;
+            encode(message: _124.BadRequest_FieldViolation, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _124.BadRequest_FieldViolation;
+            fromJSON(object: any): _124.BadRequest_FieldViolation;
+            toJSON(message: _124.BadRequest_FieldViolation): unknown;
             fromPartial(object: {
                 field?: string;
                 description?: string;
-            }): _123.BadRequest_FieldViolation;
+            }): _124.BadRequest_FieldViolation;
         };
         RequestInfo: {
-            encode(message: _123.RequestInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _123.RequestInfo;
-            fromJSON(object: any): _123.RequestInfo;
-            toJSON(message: _123.RequestInfo): unknown;
+            encode(message: _124.RequestInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _124.RequestInfo;
+            fromJSON(object: any): _124.RequestInfo;
+            toJSON(message: _124.RequestInfo): unknown;
             fromPartial(object: {
                 requestId?: string;
                 servingData?: string;
-            }): _123.RequestInfo;
+            }): _124.RequestInfo;
         };
         ResourceInfo: {
-            encode(message: _123.ResourceInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _123.ResourceInfo;
-            fromJSON(object: any): _123.ResourceInfo;
-            toJSON(message: _123.ResourceInfo): unknown;
+            encode(message: _124.ResourceInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _124.ResourceInfo;
+            fromJSON(object: any): _124.ResourceInfo;
+            toJSON(message: _124.ResourceInfo): unknown;
             fromPartial(object: {
                 resourceType?: string;
                 resourceName?: string;
                 owner?: string;
                 description?: string;
-            }): _123.ResourceInfo;
+            }): _124.ResourceInfo;
         };
         Help: {
-            encode(message: _123.Help, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _123.Help;
-            fromJSON(object: any): _123.Help;
-            toJSON(message: _123.Help): unknown;
+            encode(message: _124.Help, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _124.Help;
+            fromJSON(object: any): _124.Help;
+            toJSON(message: _124.Help): unknown;
             fromPartial(object: {
                 links?: {
                     description?: string;
                     url?: string;
                 }[];
-            }): _123.Help;
+            }): _124.Help;
         };
         Help_Link: {
-            encode(message: _123.Help_Link, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _123.Help_Link;
-            fromJSON(object: any): _123.Help_Link;
-            toJSON(message: _123.Help_Link): unknown;
+            encode(message: _124.Help_Link, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _124.Help_Link;
+            fromJSON(object: any): _124.Help_Link;
+            toJSON(message: _124.Help_Link): unknown;
             fromPartial(object: {
                 description?: string;
                 url?: string;
-            }): _123.Help_Link;
+            }): _124.Help_Link;
         };
         LocalizedMessage: {
-            encode(message: _123.LocalizedMessage, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _123.LocalizedMessage;
-            fromJSON(object: any): _123.LocalizedMessage;
-            toJSON(message: _123.LocalizedMessage): unknown;
+            encode(message: _124.LocalizedMessage, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _124.LocalizedMessage;
+            fromJSON(object: any): _124.LocalizedMessage;
+            toJSON(message: _124.LocalizedMessage): unknown;
             fromPartial(object: {
                 locale?: string;
                 message?: string;
-            }): _123.LocalizedMessage;
+            }): _124.LocalizedMessage;
         };
-        codeFromJSON(object: any): _122.Code;
-        codeToJSON(object: _122.Code): string;
-        Code: typeof _122.Code;
+        codeFromJSON(object: any): _123.Code;
+        codeToJSON(object: _123.Code): string;
+        Code: typeof _123.Code;
     };
     const type: {
         TimeOfDay: {
-            encode(message: _141.TimeOfDay, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _141.TimeOfDay;
-            fromJSON(object: any): _141.TimeOfDay;
-            toJSON(message: _141.TimeOfDay): unknown;
+            encode(message: _142.TimeOfDay, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.TimeOfDay;
+            fromJSON(object: any): _142.TimeOfDay;
+            toJSON(message: _142.TimeOfDay): unknown;
             fromPartial(object: {
                 hours?: number;
                 minutes?: number;
                 seconds?: number;
                 nanos?: number;
-            }): _141.TimeOfDay;
+            }): _142.TimeOfDay;
         };
         Quaternion: {
-            encode(message: _140.Quaternion, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _140.Quaternion;
-            fromJSON(object: any): _140.Quaternion;
-            toJSON(message: _140.Quaternion): unknown;
+            encode(message: _141.Quaternion, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _141.Quaternion;
+            fromJSON(object: any): _141.Quaternion;
+            toJSON(message: _141.Quaternion): unknown;
             fromPartial(object: {
                 x?: number;
                 y?: number;
                 z?: number;
                 w?: number;
-            }): _140.Quaternion;
+            }): _141.Quaternion;
         };
         PostalAddress: {
-            encode(message: _139.PostalAddress, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _139.PostalAddress;
-            fromJSON(object: any): _139.PostalAddress;
-            toJSON(message: _139.PostalAddress): unknown;
+            encode(message: _140.PostalAddress, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _140.PostalAddress;
+            fromJSON(object: any): _140.PostalAddress;
+            toJSON(message: _140.PostalAddress): unknown;
             fromPartial(object: {
                 revision?: number;
                 regionCode?: string;
@@ -3847,13 +3847,13 @@ export declare namespace google {
                 addressLines?: string[];
                 recipients?: string[];
                 organization?: string;
-            }): _139.PostalAddress;
+            }): _140.PostalAddress;
         };
         PhoneNumber: {
-            encode(message: _138.PhoneNumber, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _138.PhoneNumber;
-            fromJSON(object: any): _138.PhoneNumber;
-            toJSON(message: _138.PhoneNumber): unknown;
+            encode(message: _139.PhoneNumber, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _139.PhoneNumber;
+            fromJSON(object: any): _139.PhoneNumber;
+            toJSON(message: _139.PhoneNumber): unknown;
             fromPartial(object: {
                 e164Number?: string;
                 shortCode?: {
@@ -3861,57 +3861,57 @@ export declare namespace google {
                     number?: string;
                 };
                 extension?: string;
-            }): _138.PhoneNumber;
+            }): _139.PhoneNumber;
         };
         PhoneNumber_ShortCode: {
-            encode(message: _138.PhoneNumber_ShortCode, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _138.PhoneNumber_ShortCode;
-            fromJSON(object: any): _138.PhoneNumber_ShortCode;
-            toJSON(message: _138.PhoneNumber_ShortCode): unknown;
+            encode(message: _139.PhoneNumber_ShortCode, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _139.PhoneNumber_ShortCode;
+            fromJSON(object: any): _139.PhoneNumber_ShortCode;
+            toJSON(message: _139.PhoneNumber_ShortCode): unknown;
             fromPartial(object: {
                 regionCode?: string;
                 number?: string;
-            }): _138.PhoneNumber_ShortCode;
+            }): _139.PhoneNumber_ShortCode;
         };
-        monthFromJSON(object: any): _137.Month;
-        monthToJSON(object: _137.Month): string;
-        Month: typeof _137.Month;
+        monthFromJSON(object: any): _138.Month;
+        monthToJSON(object: _138.Month): string;
+        Month: typeof _138.Month;
         Money: {
-            encode(message: _136.Money, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _136.Money;
-            fromJSON(object: any): _136.Money;
-            toJSON(message: _136.Money): unknown;
+            encode(message: _137.Money, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _137.Money;
+            fromJSON(object: any): _137.Money;
+            toJSON(message: _137.Money): unknown;
             fromPartial(object: {
                 currencyCode?: string;
                 units?: bigint;
                 nanos?: number;
-            }): _136.Money;
+            }): _137.Money;
         };
         LocalizedText: {
-            encode(message: _135.LocalizedText, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _135.LocalizedText;
-            fromJSON(object: any): _135.LocalizedText;
-            toJSON(message: _135.LocalizedText): unknown;
+            encode(message: _136.LocalizedText, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _136.LocalizedText;
+            fromJSON(object: any): _136.LocalizedText;
+            toJSON(message: _136.LocalizedText): unknown;
             fromPartial(object: {
                 text?: string;
                 languageCode?: string;
-            }): _135.LocalizedText;
+            }): _136.LocalizedText;
         };
         LatLng: {
-            encode(message: _134.LatLng, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _134.LatLng;
-            fromJSON(object: any): _134.LatLng;
-            toJSON(message: _134.LatLng): unknown;
+            encode(message: _135.LatLng, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _135.LatLng;
+            fromJSON(object: any): _135.LatLng;
+            toJSON(message: _135.LatLng): unknown;
             fromPartial(object: {
                 latitude?: number;
                 longitude?: number;
-            }): _134.LatLng;
+            }): _135.LatLng;
         };
         Interval: {
-            encode(message: _133.Interval, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _133.Interval;
-            fromJSON(object: any): _133.Interval;
-            toJSON(message: _133.Interval): unknown;
+            encode(message: _134.Interval, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _134.Interval;
+            fromJSON(object: any): _134.Interval;
+            toJSON(message: _134.Interval): unknown;
             fromPartial(object: {
                 startTime?: {
                     seconds?: bigint;
@@ -3921,47 +3921,47 @@ export declare namespace google {
                     seconds?: bigint;
                     nanos?: number;
                 };
-            }): _133.Interval;
+            }): _134.Interval;
         };
         Fraction: {
-            encode(message: _132.Fraction, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _132.Fraction;
-            fromJSON(object: any): _132.Fraction;
-            toJSON(message: _132.Fraction): unknown;
+            encode(message: _133.Fraction, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _133.Fraction;
+            fromJSON(object: any): _133.Fraction;
+            toJSON(message: _133.Fraction): unknown;
             fromPartial(object: {
                 numerator?: bigint;
                 denominator?: bigint;
-            }): _132.Fraction;
+            }): _133.Fraction;
         };
         Expr: {
-            encode(message: _131.Expr, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _131.Expr;
-            fromJSON(object: any): _131.Expr;
-            toJSON(message: _131.Expr): unknown;
+            encode(message: _132.Expr, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _132.Expr;
+            fromJSON(object: any): _132.Expr;
+            toJSON(message: _132.Expr): unknown;
             fromPartial(object: {
                 expression?: string;
                 title?: string;
                 description?: string;
                 location?: string;
-            }): _131.Expr;
+            }): _132.Expr;
         };
         Decimal: {
-            encode(message: _130.Decimal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _130.Decimal;
-            fromJSON(object: any): _130.Decimal;
-            toJSON(message: _130.Decimal): unknown;
+            encode(message: _131.Decimal, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _131.Decimal;
+            fromJSON(object: any): _131.Decimal;
+            toJSON(message: _131.Decimal): unknown;
             fromPartial(object: {
                 value?: string;
-            }): _130.Decimal;
+            }): _131.Decimal;
         };
-        dayOfWeekFromJSON(object: any): _129.DayOfWeek;
-        dayOfWeekToJSON(object: _129.DayOfWeek): string;
-        DayOfWeek: typeof _129.DayOfWeek;
+        dayOfWeekFromJSON(object: any): _130.DayOfWeek;
+        dayOfWeekToJSON(object: _130.DayOfWeek): string;
+        DayOfWeek: typeof _130.DayOfWeek;
         DateTime: {
-            encode(message: _128.DateTime, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _128.DateTime;
-            fromJSON(object: any): _128.DateTime;
-            toJSON(message: _128.DateTime): unknown;
+            encode(message: _129.DateTime, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _129.DateTime;
+            fromJSON(object: any): _129.DateTime;
+            toJSON(message: _129.DateTime): unknown;
             fromPartial(object: {
                 year?: number;
                 month?: number;
@@ -3978,34 +3978,34 @@ export declare namespace google {
                     id?: string;
                     version?: string;
                 };
-            }): _128.DateTime;
+            }): _129.DateTime;
         };
         TimeZone: {
-            encode(message: _128.TimeZone, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _128.TimeZone;
-            fromJSON(object: any): _128.TimeZone;
-            toJSON(message: _128.TimeZone): unknown;
+            encode(message: _129.TimeZone, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _129.TimeZone;
+            fromJSON(object: any): _129.TimeZone;
+            toJSON(message: _129.TimeZone): unknown;
             fromPartial(object: {
                 id?: string;
                 version?: string;
-            }): _128.TimeZone;
+            }): _129.TimeZone;
         };
         Date: {
-            encode(message: _127.Date, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _127.Date;
-            fromJSON(object: any): _127.Date;
-            toJSON(message: _127.Date): unknown;
+            encode(message: _128.Date, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _128.Date;
+            fromJSON(object: any): _128.Date;
+            toJSON(message: _128.Date): unknown;
             fromPartial(object: {
                 year?: number;
                 month?: number;
                 day?: number;
-            }): _127.Date;
+            }): _128.Date;
         };
         Color: {
-            encode(message: _126.Color, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _126.Color;
-            fromJSON(object: any): _126.Color;
-            toJSON(message: _126.Color): unknown;
+            encode(message: _127.Color, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _127.Color;
+            fromJSON(object: any): _127.Color;
+            toJSON(message: _127.Color): unknown;
             fromPartial(object: {
                 red?: number;
                 green?: number;
@@ -4013,106 +4013,106 @@ export declare namespace google {
                 alpha?: {
                     value?: number;
                 };
-            }): _126.Color;
+            }): _127.Color;
         };
-        calendarPeriodFromJSON(object: any): _125.CalendarPeriod;
-        calendarPeriodToJSON(object: _125.CalendarPeriod): string;
-        CalendarPeriod: typeof _125.CalendarPeriod;
+        calendarPeriodFromJSON(object: any): _126.CalendarPeriod;
+        calendarPeriodToJSON(object: _126.CalendarPeriod): string;
+        CalendarPeriod: typeof _126.CalendarPeriod;
     };
     const protobuf: {
         DoubleValue: {
-            encode(message: _148.DoubleValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.DoubleValue;
-            fromJSON(object: any): _148.DoubleValue;
-            toJSON(message: _148.DoubleValue): unknown;
+            encode(message: _149.DoubleValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.DoubleValue;
+            fromJSON(object: any): _149.DoubleValue;
+            toJSON(message: _149.DoubleValue): unknown;
             fromPartial(object: {
                 value?: number;
-            }): _148.DoubleValue;
+            }): _149.DoubleValue;
         };
         FloatValue: {
-            encode(message: _148.FloatValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.FloatValue;
-            fromJSON(object: any): _148.FloatValue;
-            toJSON(message: _148.FloatValue): unknown;
+            encode(message: _149.FloatValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.FloatValue;
+            fromJSON(object: any): _149.FloatValue;
+            toJSON(message: _149.FloatValue): unknown;
             fromPartial(object: {
                 value?: number;
-            }): _148.FloatValue;
+            }): _149.FloatValue;
         };
         Int64Value: {
-            encode(message: _148.Int64Value, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.Int64Value;
-            fromJSON(object: any): _148.Int64Value;
-            toJSON(message: _148.Int64Value): unknown;
+            encode(message: _149.Int64Value, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.Int64Value;
+            fromJSON(object: any): _149.Int64Value;
+            toJSON(message: _149.Int64Value): unknown;
             fromPartial(object: {
                 value?: bigint;
-            }): _148.Int64Value;
+            }): _149.Int64Value;
         };
         UInt64Value: {
-            encode(message: _148.UInt64Value, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.UInt64Value;
-            fromJSON(object: any): _148.UInt64Value;
-            toJSON(message: _148.UInt64Value): unknown;
+            encode(message: _149.UInt64Value, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.UInt64Value;
+            fromJSON(object: any): _149.UInt64Value;
+            toJSON(message: _149.UInt64Value): unknown;
             fromPartial(object: {
                 value?: bigint;
-            }): _148.UInt64Value;
+            }): _149.UInt64Value;
         };
         Int32Value: {
-            encode(message: _148.Int32Value, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.Int32Value;
-            fromJSON(object: any): _148.Int32Value;
-            toJSON(message: _148.Int32Value): unknown;
+            encode(message: _149.Int32Value, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.Int32Value;
+            fromJSON(object: any): _149.Int32Value;
+            toJSON(message: _149.Int32Value): unknown;
             fromPartial(object: {
                 value?: number;
-            }): _148.Int32Value;
+            }): _149.Int32Value;
         };
         UInt32Value: {
-            encode(message: _148.UInt32Value, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.UInt32Value;
-            fromJSON(object: any): _148.UInt32Value;
-            toJSON(message: _148.UInt32Value): unknown;
+            encode(message: _149.UInt32Value, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.UInt32Value;
+            fromJSON(object: any): _149.UInt32Value;
+            toJSON(message: _149.UInt32Value): unknown;
             fromPartial(object: {
                 value?: number;
-            }): _148.UInt32Value;
+            }): _149.UInt32Value;
         };
         BoolValue: {
-            encode(message: _148.BoolValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.BoolValue;
-            fromJSON(object: any): _148.BoolValue;
-            toJSON(message: _148.BoolValue): unknown;
+            encode(message: _149.BoolValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.BoolValue;
+            fromJSON(object: any): _149.BoolValue;
+            toJSON(message: _149.BoolValue): unknown;
             fromPartial(object: {
                 value?: boolean;
-            }): _148.BoolValue;
+            }): _149.BoolValue;
         };
         StringValue: {
-            encode(message: _148.StringValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.StringValue;
-            fromJSON(object: any): _148.StringValue;
-            toJSON(message: _148.StringValue): unknown;
+            encode(message: _149.StringValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.StringValue;
+            fromJSON(object: any): _149.StringValue;
+            toJSON(message: _149.StringValue): unknown;
             fromPartial(object: {
                 value?: string;
-            }): _148.StringValue;
+            }): _149.StringValue;
         };
         BytesValue: {
-            encode(message: _148.BytesValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.BytesValue;
-            fromJSON(object: any): _148.BytesValue;
-            toJSON(message: _148.BytesValue): unknown;
+            encode(message: _149.BytesValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _149.BytesValue;
+            fromJSON(object: any): _149.BytesValue;
+            toJSON(message: _149.BytesValue): unknown;
             fromPartial(object: {
                 value?: Uint8Array;
-            }): _148.BytesValue;
+            }): _149.BytesValue;
         };
-        nullValueFromJSON(object: any): _147.NullValue;
-        nullValueToJSON(object: _147.NullValue): string;
-        NullValue: typeof _147.NullValue;
+        nullValueFromJSON(object: any): _148.NullValue;
+        nullValueToJSON(object: _148.NullValue): string;
+        NullValue: typeof _148.NullValue;
         Struct_FieldsEntry: {
-            encode(message: _147.Struct_FieldsEntry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _147.Struct_FieldsEntry;
-            fromJSON(object: any): _147.Struct_FieldsEntry;
-            toJSON(message: _147.Struct_FieldsEntry): unknown;
+            encode(message: _148.Struct_FieldsEntry, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.Struct_FieldsEntry;
+            fromJSON(object: any): _148.Struct_FieldsEntry;
+            toJSON(message: _148.Struct_FieldsEntry): unknown;
             fromPartial(object: {
                 key?: string;
                 value?: {
-                    nullValue?: _147.NullValue;
+                    nullValue?: _148.NullValue;
                     numberValue?: number;
                     stringValue?: string;
                     boolValue?: boolean;
@@ -4125,17 +4125,17 @@ export declare namespace google {
                         values?: any[];
                     };
                 };
-            }): _147.Struct_FieldsEntry;
+            }): _148.Struct_FieldsEntry;
         };
         Struct: {
-            encode(message: _147.Struct, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _147.Struct;
-            fromJSON(object: any): _147.Struct;
-            toJSON(message: _147.Struct): unknown;
+            encode(message: _148.Struct, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.Struct;
+            fromJSON(object: any): _148.Struct;
+            toJSON(message: _148.Struct): unknown;
             fromPartial(object: {
                 fields?: {
                     [x: string]: {
-                        nullValue?: _147.NullValue;
+                        nullValue?: _148.NullValue;
                         numberValue?: number;
                         stringValue?: string;
                         boolValue?: boolean;
@@ -4145,15 +4145,15 @@ export declare namespace google {
                         };
                     };
                 };
-            }): _147.Struct;
+            }): _148.Struct;
         };
         Value: {
-            encode(message: _147.Value, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _147.Value;
-            fromJSON(object: any): _147.Value;
-            toJSON(message: _147.Value): unknown;
+            encode(message: _148.Value, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.Value;
+            fromJSON(object: any): _148.Value;
+            toJSON(message: _148.Value): unknown;
             fromPartial(object: {
-                nullValue?: _147.NullValue;
+                nullValue?: _148.NullValue;
                 numberValue?: number;
                 stringValue?: string;
                 boolValue?: boolean;
@@ -4165,16 +4165,16 @@ export declare namespace google {
                 listValue?: {
                     values?: any[];
                 };
-            }): _147.Value;
+            }): _148.Value;
         };
         ListValue: {
-            encode(message: _147.ListValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _147.ListValue;
-            fromJSON(object: any): _147.ListValue;
-            toJSON(message: _147.ListValue): unknown;
+            encode(message: _148.ListValue, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _148.ListValue;
+            fromJSON(object: any): _148.ListValue;
+            toJSON(message: _148.ListValue): unknown;
             fromPartial(object: {
                 values?: {
-                    nullValue?: _147.NullValue;
+                    nullValue?: _148.NullValue;
                     numberValue?: number;
                     stringValue?: string;
                     boolValue?: boolean;
@@ -4185,68 +4185,68 @@ export declare namespace google {
                     };
                     listValue?: any;
                 }[];
-            }): _147.ListValue;
+            }): _148.ListValue;
         };
         Empty: {
-            encode(_: _146.Empty, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _146.Empty;
-            fromJSON(_: any): _146.Empty;
-            toJSON(_: _146.Empty): unknown;
-            fromPartial(_: {}): _146.Empty;
+            encode(_: _147.Empty, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _147.Empty;
+            fromJSON(_: any): _147.Empty;
+            toJSON(_: _147.Empty): unknown;
+            fromPartial(_: {}): _147.Empty;
         };
         Any: {
-            encode(message: _145.Any, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _145.Any;
-            fromJSON(object: any): _145.Any;
-            toJSON(message: _145.Any): unknown;
+            encode(message: _146.Any, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _146.Any;
+            fromJSON(object: any): _146.Any;
+            toJSON(message: _146.Any): unknown;
             fromPartial(object: {
                 typeUrl?: string;
                 value?: Uint8Array;
-            }): _145.Any;
+            }): _146.Any;
         };
         Timestamp: {
-            encode(message: _144.Timestamp, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _144.Timestamp;
-            fromJSON(object: any): _144.Timestamp;
-            toJSON(message: _144.Timestamp): unknown;
+            encode(message: _145.Timestamp, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _145.Timestamp;
+            fromJSON(object: any): _145.Timestamp;
+            toJSON(message: _145.Timestamp): unknown;
             fromPartial(object: {
                 seconds?: bigint;
                 nanos?: number;
-            }): _144.Timestamp;
+            }): _145.Timestamp;
         };
         Duration: {
-            encode(message: _143.Duration, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.Duration;
-            fromJSON(object: any): _143.Duration;
-            toJSON(message: _143.Duration): unknown;
+            encode(message: _144.Duration, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _144.Duration;
+            fromJSON(object: any): _144.Duration;
+            toJSON(message: _144.Duration): unknown;
             fromPartial(object: {
                 seconds?: bigint;
                 nanos?: number;
-            }): _143.Duration;
+            }): _144.Duration;
         };
-        fieldDescriptorProto_TypeFromJSON(object: any): _142.FieldDescriptorProto_Type;
-        fieldDescriptorProto_TypeToJSON(object: _142.FieldDescriptorProto_Type): string;
-        fieldDescriptorProto_LabelFromJSON(object: any): _142.FieldDescriptorProto_Label;
-        fieldDescriptorProto_LabelToJSON(object: _142.FieldDescriptorProto_Label): string;
-        fileOptions_OptimizeModeFromJSON(object: any): _142.FileOptions_OptimizeMode;
-        fileOptions_OptimizeModeToJSON(object: _142.FileOptions_OptimizeMode): string;
-        fieldOptions_CTypeFromJSON(object: any): _142.FieldOptions_CType;
-        fieldOptions_CTypeToJSON(object: _142.FieldOptions_CType): string;
-        fieldOptions_JSTypeFromJSON(object: any): _142.FieldOptions_JSType;
-        fieldOptions_JSTypeToJSON(object: _142.FieldOptions_JSType): string;
-        methodOptions_IdempotencyLevelFromJSON(object: any): _142.MethodOptions_IdempotencyLevel;
-        methodOptions_IdempotencyLevelToJSON(object: _142.MethodOptions_IdempotencyLevel): string;
-        FieldDescriptorProto_Type: typeof _142.FieldDescriptorProto_Type;
-        FieldDescriptorProto_Label: typeof _142.FieldDescriptorProto_Label;
-        FileOptions_OptimizeMode: typeof _142.FileOptions_OptimizeMode;
-        FieldOptions_CType: typeof _142.FieldOptions_CType;
-        FieldOptions_JSType: typeof _142.FieldOptions_JSType;
-        MethodOptions_IdempotencyLevel: typeof _142.MethodOptions_IdempotencyLevel;
+        fieldDescriptorProto_TypeFromJSON(object: any): _143.FieldDescriptorProto_Type;
+        fieldDescriptorProto_TypeToJSON(object: _143.FieldDescriptorProto_Type): string;
+        fieldDescriptorProto_LabelFromJSON(object: any): _143.FieldDescriptorProto_Label;
+        fieldDescriptorProto_LabelToJSON(object: _143.FieldDescriptorProto_Label): string;
+        fileOptions_OptimizeModeFromJSON(object: any): _143.FileOptions_OptimizeMode;
+        fileOptions_OptimizeModeToJSON(object: _143.FileOptions_OptimizeMode): string;
+        fieldOptions_CTypeFromJSON(object: any): _143.FieldOptions_CType;
+        fieldOptions_CTypeToJSON(object: _143.FieldOptions_CType): string;
+        fieldOptions_JSTypeFromJSON(object: any): _143.FieldOptions_JSType;
+        fieldOptions_JSTypeToJSON(object: _143.FieldOptions_JSType): string;
+        methodOptions_IdempotencyLevelFromJSON(object: any): _143.MethodOptions_IdempotencyLevel;
+        methodOptions_IdempotencyLevelToJSON(object: _143.MethodOptions_IdempotencyLevel): string;
+        FieldDescriptorProto_Type: typeof _143.FieldDescriptorProto_Type;
+        FieldDescriptorProto_Label: typeof _143.FieldDescriptorProto_Label;
+        FileOptions_OptimizeMode: typeof _143.FileOptions_OptimizeMode;
+        FieldOptions_CType: typeof _143.FieldOptions_CType;
+        FieldOptions_JSType: typeof _143.FieldOptions_JSType;
+        MethodOptions_IdempotencyLevel: typeof _143.MethodOptions_IdempotencyLevel;
         FileDescriptorSet: {
-            encode(message: _142.FileDescriptorSet, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.FileDescriptorSet;
-            fromJSON(object: any): _142.FileDescriptorSet;
-            toJSON(message: _142.FileDescriptorSet): unknown;
+            encode(message: _143.FileDescriptorSet, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.FileDescriptorSet;
+            fromJSON(object: any): _143.FileDescriptorSet;
+            toJSON(message: _143.FileDescriptorSet): unknown;
             fromPartial(object: {
                 file?: {
                     name?: string;
@@ -4259,17 +4259,17 @@ export declare namespace google {
                         field?: {
                             name?: string;
                             number?: number;
-                            label?: _142.FieldDescriptorProto_Label;
-                            type?: _142.FieldDescriptorProto_Type;
+                            label?: _143.FieldDescriptorProto_Label;
+                            type?: _143.FieldDescriptorProto_Type;
                             typeName?: string;
                             extendee?: string;
                             defaultValue?: string;
                             oneofIndex?: number;
                             jsonName?: string;
                             options?: {
-                                ctype?: _142.FieldOptions_CType;
+                                ctype?: _143.FieldOptions_CType;
                                 packed?: boolean;
-                                jstype?: _142.FieldOptions_JSType;
+                                jstype?: _143.FieldOptions_JSType;
                                 lazy?: boolean;
                                 deprecated?: boolean;
                                 weak?: boolean;
@@ -4290,17 +4290,17 @@ export declare namespace google {
                         extension?: {
                             name?: string;
                             number?: number;
-                            label?: _142.FieldDescriptorProto_Label;
-                            type?: _142.FieldDescriptorProto_Type;
+                            label?: _143.FieldDescriptorProto_Label;
+                            type?: _143.FieldDescriptorProto_Type;
                             typeName?: string;
                             extendee?: string;
                             defaultValue?: string;
                             oneofIndex?: number;
                             jsonName?: string;
                             options?: {
-                                ctype?: _142.FieldOptions_CType;
+                                ctype?: _143.FieldOptions_CType;
                                 packed?: boolean;
-                                jstype?: _142.FieldOptions_JSType;
+                                jstype?: _143.FieldOptions_JSType;
                                 lazy?: boolean;
                                 deprecated?: boolean;
                                 weak?: boolean;
@@ -4472,7 +4472,7 @@ export declare namespace google {
                             outputType?: string;
                             options?: {
                                 deprecated?: boolean;
-                                idempotencyLevel?: _142.MethodOptions_IdempotencyLevel;
+                                idempotencyLevel?: _143.MethodOptions_IdempotencyLevel;
                                 uninterpretedOption?: {
                                     name?: {
                                         namePart?: string;
@@ -4508,17 +4508,17 @@ export declare namespace google {
                     extension?: {
                         name?: string;
                         number?: number;
-                        label?: _142.FieldDescriptorProto_Label;
-                        type?: _142.FieldDescriptorProto_Type;
+                        label?: _143.FieldDescriptorProto_Label;
+                        type?: _143.FieldDescriptorProto_Type;
                         typeName?: string;
                         extendee?: string;
                         defaultValue?: string;
                         oneofIndex?: number;
                         jsonName?: string;
                         options?: {
-                            ctype?: _142.FieldOptions_CType;
+                            ctype?: _143.FieldOptions_CType;
                             packed?: boolean;
-                            jstype?: _142.FieldOptions_JSType;
+                            jstype?: _143.FieldOptions_JSType;
                             lazy?: boolean;
                             deprecated?: boolean;
                             weak?: boolean;
@@ -4542,7 +4542,7 @@ export declare namespace google {
                         javaMultipleFiles?: boolean;
                         javaGenerateEqualsAndHash?: boolean;
                         javaStringCheckUtf8?: boolean;
-                        optimizeFor?: _142.FileOptions_OptimizeMode;
+                        optimizeFor?: _143.FileOptions_OptimizeMode;
                         goPackage?: string;
                         ccGenericServices?: boolean;
                         javaGenericServices?: boolean;
@@ -4581,13 +4581,13 @@ export declare namespace google {
                     };
                     syntax?: string;
                 }[];
-            }): _142.FileDescriptorSet;
+            }): _143.FileDescriptorSet;
         };
         FileDescriptorProto: {
-            encode(message: _142.FileDescriptorProto, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.FileDescriptorProto;
-            fromJSON(object: any): _142.FileDescriptorProto;
-            toJSON(message: _142.FileDescriptorProto): unknown;
+            encode(message: _143.FileDescriptorProto, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.FileDescriptorProto;
+            fromJSON(object: any): _143.FileDescriptorProto;
+            toJSON(message: _143.FileDescriptorProto): unknown;
             fromPartial(object: {
                 name?: string;
                 package?: string;
@@ -4599,17 +4599,17 @@ export declare namespace google {
                     field?: {
                         name?: string;
                         number?: number;
-                        label?: _142.FieldDescriptorProto_Label;
-                        type?: _142.FieldDescriptorProto_Type;
+                        label?: _143.FieldDescriptorProto_Label;
+                        type?: _143.FieldDescriptorProto_Type;
                         typeName?: string;
                         extendee?: string;
                         defaultValue?: string;
                         oneofIndex?: number;
                         jsonName?: string;
                         options?: {
-                            ctype?: _142.FieldOptions_CType;
+                            ctype?: _143.FieldOptions_CType;
                             packed?: boolean;
-                            jstype?: _142.FieldOptions_JSType;
+                            jstype?: _143.FieldOptions_JSType;
                             lazy?: boolean;
                             deprecated?: boolean;
                             weak?: boolean;
@@ -4630,17 +4630,17 @@ export declare namespace google {
                     extension?: {
                         name?: string;
                         number?: number;
-                        label?: _142.FieldDescriptorProto_Label;
-                        type?: _142.FieldDescriptorProto_Type;
+                        label?: _143.FieldDescriptorProto_Label;
+                        type?: _143.FieldDescriptorProto_Type;
                         typeName?: string;
                         extendee?: string;
                         defaultValue?: string;
                         oneofIndex?: number;
                         jsonName?: string;
                         options?: {
-                            ctype?: _142.FieldOptions_CType;
+                            ctype?: _143.FieldOptions_CType;
                             packed?: boolean;
-                            jstype?: _142.FieldOptions_JSType;
+                            jstype?: _143.FieldOptions_JSType;
                             lazy?: boolean;
                             deprecated?: boolean;
                             weak?: boolean;
@@ -4812,7 +4812,7 @@ export declare namespace google {
                         outputType?: string;
                         options?: {
                             deprecated?: boolean;
-                            idempotencyLevel?: _142.MethodOptions_IdempotencyLevel;
+                            idempotencyLevel?: _143.MethodOptions_IdempotencyLevel;
                             uninterpretedOption?: {
                                 name?: {
                                     namePart?: string;
@@ -4848,17 +4848,17 @@ export declare namespace google {
                 extension?: {
                     name?: string;
                     number?: number;
-                    label?: _142.FieldDescriptorProto_Label;
-                    type?: _142.FieldDescriptorProto_Type;
+                    label?: _143.FieldDescriptorProto_Label;
+                    type?: _143.FieldDescriptorProto_Type;
                     typeName?: string;
                     extendee?: string;
                     defaultValue?: string;
                     oneofIndex?: number;
                     jsonName?: string;
                     options?: {
-                        ctype?: _142.FieldOptions_CType;
+                        ctype?: _143.FieldOptions_CType;
                         packed?: boolean;
-                        jstype?: _142.FieldOptions_JSType;
+                        jstype?: _143.FieldOptions_JSType;
                         lazy?: boolean;
                         deprecated?: boolean;
                         weak?: boolean;
@@ -4882,7 +4882,7 @@ export declare namespace google {
                     javaMultipleFiles?: boolean;
                     javaGenerateEqualsAndHash?: boolean;
                     javaStringCheckUtf8?: boolean;
-                    optimizeFor?: _142.FileOptions_OptimizeMode;
+                    optimizeFor?: _143.FileOptions_OptimizeMode;
                     goPackage?: string;
                     ccGenericServices?: boolean;
                     javaGenericServices?: boolean;
@@ -4920,29 +4920,29 @@ export declare namespace google {
                     }[];
                 };
                 syntax?: string;
-            }): _142.FileDescriptorProto;
+            }): _143.FileDescriptorProto;
         };
         DescriptorProto: {
-            encode(message: _142.DescriptorProto, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.DescriptorProto;
-            fromJSON(object: any): _142.DescriptorProto;
-            toJSON(message: _142.DescriptorProto): unknown;
+            encode(message: _143.DescriptorProto, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.DescriptorProto;
+            fromJSON(object: any): _143.DescriptorProto;
+            toJSON(message: _143.DescriptorProto): unknown;
             fromPartial(object: {
                 name?: string;
                 field?: {
                     name?: string;
                     number?: number;
-                    label?: _142.FieldDescriptorProto_Label;
-                    type?: _142.FieldDescriptorProto_Type;
+                    label?: _143.FieldDescriptorProto_Label;
+                    type?: _143.FieldDescriptorProto_Type;
                     typeName?: string;
                     extendee?: string;
                     defaultValue?: string;
                     oneofIndex?: number;
                     jsonName?: string;
                     options?: {
-                        ctype?: _142.FieldOptions_CType;
+                        ctype?: _143.FieldOptions_CType;
                         packed?: boolean;
-                        jstype?: _142.FieldOptions_JSType;
+                        jstype?: _143.FieldOptions_JSType;
                         lazy?: boolean;
                         deprecated?: boolean;
                         weak?: boolean;
@@ -4963,17 +4963,17 @@ export declare namespace google {
                 extension?: {
                     name?: string;
                     number?: number;
-                    label?: _142.FieldDescriptorProto_Label;
-                    type?: _142.FieldDescriptorProto_Type;
+                    label?: _143.FieldDescriptorProto_Label;
+                    type?: _143.FieldDescriptorProto_Type;
                     typeName?: string;
                     extendee?: string;
                     defaultValue?: string;
                     oneofIndex?: number;
                     jsonName?: string;
                     options?: {
-                        ctype?: _142.FieldOptions_CType;
+                        ctype?: _143.FieldOptions_CType;
                         packed?: boolean;
-                        jstype?: _142.FieldOptions_JSType;
+                        jstype?: _143.FieldOptions_JSType;
                         lazy?: boolean;
                         deprecated?: boolean;
                         weak?: boolean;
@@ -5093,13 +5093,13 @@ export declare namespace google {
                     end?: number;
                 }[];
                 reservedName?: string[];
-            }): _142.DescriptorProto;
+            }): _143.DescriptorProto;
         };
         DescriptorProto_ExtensionRange: {
-            encode(message: _142.DescriptorProto_ExtensionRange, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.DescriptorProto_ExtensionRange;
-            fromJSON(object: any): _142.DescriptorProto_ExtensionRange;
-            toJSON(message: _142.DescriptorProto_ExtensionRange): unknown;
+            encode(message: _143.DescriptorProto_ExtensionRange, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.DescriptorProto_ExtensionRange;
+            fromJSON(object: any): _143.DescriptorProto_ExtensionRange;
+            toJSON(message: _143.DescriptorProto_ExtensionRange): unknown;
             fromPartial(object: {
                 start?: number;
                 end?: number;
@@ -5117,23 +5117,23 @@ export declare namespace google {
                         aggregateValue?: string;
                     }[];
                 };
-            }): _142.DescriptorProto_ExtensionRange;
+            }): _143.DescriptorProto_ExtensionRange;
         };
         DescriptorProto_ReservedRange: {
-            encode(message: _142.DescriptorProto_ReservedRange, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.DescriptorProto_ReservedRange;
-            fromJSON(object: any): _142.DescriptorProto_ReservedRange;
-            toJSON(message: _142.DescriptorProto_ReservedRange): unknown;
+            encode(message: _143.DescriptorProto_ReservedRange, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.DescriptorProto_ReservedRange;
+            fromJSON(object: any): _143.DescriptorProto_ReservedRange;
+            toJSON(message: _143.DescriptorProto_ReservedRange): unknown;
             fromPartial(object: {
                 start?: number;
                 end?: number;
-            }): _142.DescriptorProto_ReservedRange;
+            }): _143.DescriptorProto_ReservedRange;
         };
         ExtensionRangeOptions: {
-            encode(message: _142.ExtensionRangeOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ExtensionRangeOptions;
-            fromJSON(object: any): _142.ExtensionRangeOptions;
-            toJSON(message: _142.ExtensionRangeOptions): unknown;
+            encode(message: _143.ExtensionRangeOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.ExtensionRangeOptions;
+            fromJSON(object: any): _143.ExtensionRangeOptions;
+            toJSON(message: _143.ExtensionRangeOptions): unknown;
             fromPartial(object: {
                 uninterpretedOption?: {
                     name?: {
@@ -5147,27 +5147,27 @@ export declare namespace google {
                     stringValue?: Uint8Array;
                     aggregateValue?: string;
                 }[];
-            }): _142.ExtensionRangeOptions;
+            }): _143.ExtensionRangeOptions;
         };
         FieldDescriptorProto: {
-            encode(message: _142.FieldDescriptorProto, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.FieldDescriptorProto;
-            fromJSON(object: any): _142.FieldDescriptorProto;
-            toJSON(message: _142.FieldDescriptorProto): unknown;
+            encode(message: _143.FieldDescriptorProto, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.FieldDescriptorProto;
+            fromJSON(object: any): _143.FieldDescriptorProto;
+            toJSON(message: _143.FieldDescriptorProto): unknown;
             fromPartial(object: {
                 name?: string;
                 number?: number;
-                label?: _142.FieldDescriptorProto_Label;
-                type?: _142.FieldDescriptorProto_Type;
+                label?: _143.FieldDescriptorProto_Label;
+                type?: _143.FieldDescriptorProto_Type;
                 typeName?: string;
                 extendee?: string;
                 defaultValue?: string;
                 oneofIndex?: number;
                 jsonName?: string;
                 options?: {
-                    ctype?: _142.FieldOptions_CType;
+                    ctype?: _143.FieldOptions_CType;
                     packed?: boolean;
-                    jstype?: _142.FieldOptions_JSType;
+                    jstype?: _143.FieldOptions_JSType;
                     lazy?: boolean;
                     deprecated?: boolean;
                     weak?: boolean;
@@ -5184,13 +5184,13 @@ export declare namespace google {
                         aggregateValue?: string;
                     }[];
                 };
-            }): _142.FieldDescriptorProto;
+            }): _143.FieldDescriptorProto;
         };
         OneofDescriptorProto: {
-            encode(message: _142.OneofDescriptorProto, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.OneofDescriptorProto;
-            fromJSON(object: any): _142.OneofDescriptorProto;
-            toJSON(message: _142.OneofDescriptorProto): unknown;
+            encode(message: _143.OneofDescriptorProto, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.OneofDescriptorProto;
+            fromJSON(object: any): _143.OneofDescriptorProto;
+            toJSON(message: _143.OneofDescriptorProto): unknown;
             fromPartial(object: {
                 name?: string;
                 options?: {
@@ -5207,13 +5207,13 @@ export declare namespace google {
                         aggregateValue?: string;
                     }[];
                 };
-            }): _142.OneofDescriptorProto;
+            }): _143.OneofDescriptorProto;
         };
         EnumDescriptorProto: {
-            encode(message: _142.EnumDescriptorProto, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.EnumDescriptorProto;
-            fromJSON(object: any): _142.EnumDescriptorProto;
-            toJSON(message: _142.EnumDescriptorProto): unknown;
+            encode(message: _143.EnumDescriptorProto, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.EnumDescriptorProto;
+            fromJSON(object: any): _143.EnumDescriptorProto;
+            toJSON(message: _143.EnumDescriptorProto): unknown;
             fromPartial(object: {
                 name?: string;
                 value?: {
@@ -5256,23 +5256,23 @@ export declare namespace google {
                     end?: number;
                 }[];
                 reservedName?: string[];
-            }): _142.EnumDescriptorProto;
+            }): _143.EnumDescriptorProto;
         };
         EnumDescriptorProto_EnumReservedRange: {
-            encode(message: _142.EnumDescriptorProto_EnumReservedRange, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.EnumDescriptorProto_EnumReservedRange;
-            fromJSON(object: any): _142.EnumDescriptorProto_EnumReservedRange;
-            toJSON(message: _142.EnumDescriptorProto_EnumReservedRange): unknown;
+            encode(message: _143.EnumDescriptorProto_EnumReservedRange, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.EnumDescriptorProto_EnumReservedRange;
+            fromJSON(object: any): _143.EnumDescriptorProto_EnumReservedRange;
+            toJSON(message: _143.EnumDescriptorProto_EnumReservedRange): unknown;
             fromPartial(object: {
                 start?: number;
                 end?: number;
-            }): _142.EnumDescriptorProto_EnumReservedRange;
+            }): _143.EnumDescriptorProto_EnumReservedRange;
         };
         EnumValueDescriptorProto: {
-            encode(message: _142.EnumValueDescriptorProto, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.EnumValueDescriptorProto;
-            fromJSON(object: any): _142.EnumValueDescriptorProto;
-            toJSON(message: _142.EnumValueDescriptorProto): unknown;
+            encode(message: _143.EnumValueDescriptorProto, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.EnumValueDescriptorProto;
+            fromJSON(object: any): _143.EnumValueDescriptorProto;
+            toJSON(message: _143.EnumValueDescriptorProto): unknown;
             fromPartial(object: {
                 name?: string;
                 number?: number;
@@ -5291,13 +5291,13 @@ export declare namespace google {
                         aggregateValue?: string;
                     }[];
                 };
-            }): _142.EnumValueDescriptorProto;
+            }): _143.EnumValueDescriptorProto;
         };
         ServiceDescriptorProto: {
-            encode(message: _142.ServiceDescriptorProto, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ServiceDescriptorProto;
-            fromJSON(object: any): _142.ServiceDescriptorProto;
-            toJSON(message: _142.ServiceDescriptorProto): unknown;
+            encode(message: _143.ServiceDescriptorProto, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.ServiceDescriptorProto;
+            fromJSON(object: any): _143.ServiceDescriptorProto;
+            toJSON(message: _143.ServiceDescriptorProto): unknown;
             fromPartial(object: {
                 name?: string;
                 method?: {
@@ -5306,7 +5306,7 @@ export declare namespace google {
                     outputType?: string;
                     options?: {
                         deprecated?: boolean;
-                        idempotencyLevel?: _142.MethodOptions_IdempotencyLevel;
+                        idempotencyLevel?: _143.MethodOptions_IdempotencyLevel;
                         uninterpretedOption?: {
                             name?: {
                                 namePart?: string;
@@ -5338,20 +5338,20 @@ export declare namespace google {
                         aggregateValue?: string;
                     }[];
                 };
-            }): _142.ServiceDescriptorProto;
+            }): _143.ServiceDescriptorProto;
         };
         MethodDescriptorProto: {
-            encode(message: _142.MethodDescriptorProto, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.MethodDescriptorProto;
-            fromJSON(object: any): _142.MethodDescriptorProto;
-            toJSON(message: _142.MethodDescriptorProto): unknown;
+            encode(message: _143.MethodDescriptorProto, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.MethodDescriptorProto;
+            fromJSON(object: any): _143.MethodDescriptorProto;
+            toJSON(message: _143.MethodDescriptorProto): unknown;
             fromPartial(object: {
                 name?: string;
                 inputType?: string;
                 outputType?: string;
                 options?: {
                     deprecated?: boolean;
-                    idempotencyLevel?: _142.MethodOptions_IdempotencyLevel;
+                    idempotencyLevel?: _143.MethodOptions_IdempotencyLevel;
                     uninterpretedOption?: {
                         name?: {
                             namePart?: string;
@@ -5367,20 +5367,20 @@ export declare namespace google {
                 };
                 clientStreaming?: boolean;
                 serverStreaming?: boolean;
-            }): _142.MethodDescriptorProto;
+            }): _143.MethodDescriptorProto;
         };
         FileOptions: {
-            encode(message: _142.FileOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.FileOptions;
-            fromJSON(object: any): _142.FileOptions;
-            toJSON(message: _142.FileOptions): unknown;
+            encode(message: _143.FileOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.FileOptions;
+            fromJSON(object: any): _143.FileOptions;
+            toJSON(message: _143.FileOptions): unknown;
             fromPartial(object: {
                 javaPackage?: string;
                 javaOuterClassname?: string;
                 javaMultipleFiles?: boolean;
                 javaGenerateEqualsAndHash?: boolean;
                 javaStringCheckUtf8?: boolean;
-                optimizeFor?: _142.FileOptions_OptimizeMode;
+                optimizeFor?: _143.FileOptions_OptimizeMode;
                 goPackage?: string;
                 ccGenericServices?: boolean;
                 javaGenericServices?: boolean;
@@ -5407,13 +5407,13 @@ export declare namespace google {
                     stringValue?: Uint8Array;
                     aggregateValue?: string;
                 }[];
-            }): _142.FileOptions;
+            }): _143.FileOptions;
         };
         MessageOptions: {
-            encode(message: _142.MessageOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.MessageOptions;
-            fromJSON(object: any): _142.MessageOptions;
-            toJSON(message: _142.MessageOptions): unknown;
+            encode(message: _143.MessageOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.MessageOptions;
+            fromJSON(object: any): _143.MessageOptions;
+            toJSON(message: _143.MessageOptions): unknown;
             fromPartial(object: {
                 messageSetWireFormat?: boolean;
                 noStandardDescriptorAccessor?: boolean;
@@ -5431,17 +5431,17 @@ export declare namespace google {
                     stringValue?: Uint8Array;
                     aggregateValue?: string;
                 }[];
-            }): _142.MessageOptions;
+            }): _143.MessageOptions;
         };
         FieldOptions: {
-            encode(message: _142.FieldOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.FieldOptions;
-            fromJSON(object: any): _142.FieldOptions;
-            toJSON(message: _142.FieldOptions): unknown;
+            encode(message: _143.FieldOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.FieldOptions;
+            fromJSON(object: any): _143.FieldOptions;
+            toJSON(message: _143.FieldOptions): unknown;
             fromPartial(object: {
-                ctype?: _142.FieldOptions_CType;
+                ctype?: _143.FieldOptions_CType;
                 packed?: boolean;
-                jstype?: _142.FieldOptions_JSType;
+                jstype?: _143.FieldOptions_JSType;
                 lazy?: boolean;
                 deprecated?: boolean;
                 weak?: boolean;
@@ -5457,13 +5457,13 @@ export declare namespace google {
                     stringValue?: Uint8Array;
                     aggregateValue?: string;
                 }[];
-            }): _142.FieldOptions;
+            }): _143.FieldOptions;
         };
         OneofOptions: {
-            encode(message: _142.OneofOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.OneofOptions;
-            fromJSON(object: any): _142.OneofOptions;
-            toJSON(message: _142.OneofOptions): unknown;
+            encode(message: _143.OneofOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.OneofOptions;
+            fromJSON(object: any): _143.OneofOptions;
+            toJSON(message: _143.OneofOptions): unknown;
             fromPartial(object: {
                 uninterpretedOption?: {
                     name?: {
@@ -5477,13 +5477,13 @@ export declare namespace google {
                     stringValue?: Uint8Array;
                     aggregateValue?: string;
                 }[];
-            }): _142.OneofOptions;
+            }): _143.OneofOptions;
         };
         EnumOptions: {
-            encode(message: _142.EnumOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.EnumOptions;
-            fromJSON(object: any): _142.EnumOptions;
-            toJSON(message: _142.EnumOptions): unknown;
+            encode(message: _143.EnumOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.EnumOptions;
+            fromJSON(object: any): _143.EnumOptions;
+            toJSON(message: _143.EnumOptions): unknown;
             fromPartial(object: {
                 allowAlias?: boolean;
                 deprecated?: boolean;
@@ -5499,13 +5499,13 @@ export declare namespace google {
                     stringValue?: Uint8Array;
                     aggregateValue?: string;
                 }[];
-            }): _142.EnumOptions;
+            }): _143.EnumOptions;
         };
         EnumValueOptions: {
-            encode(message: _142.EnumValueOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.EnumValueOptions;
-            fromJSON(object: any): _142.EnumValueOptions;
-            toJSON(message: _142.EnumValueOptions): unknown;
+            encode(message: _143.EnumValueOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.EnumValueOptions;
+            fromJSON(object: any): _143.EnumValueOptions;
+            toJSON(message: _143.EnumValueOptions): unknown;
             fromPartial(object: {
                 deprecated?: boolean;
                 uninterpretedOption?: {
@@ -5520,13 +5520,13 @@ export declare namespace google {
                     stringValue?: Uint8Array;
                     aggregateValue?: string;
                 }[];
-            }): _142.EnumValueOptions;
+            }): _143.EnumValueOptions;
         };
         ServiceOptions: {
-            encode(message: _142.ServiceOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.ServiceOptions;
-            fromJSON(object: any): _142.ServiceOptions;
-            toJSON(message: _142.ServiceOptions): unknown;
+            encode(message: _143.ServiceOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.ServiceOptions;
+            fromJSON(object: any): _143.ServiceOptions;
+            toJSON(message: _143.ServiceOptions): unknown;
             fromPartial(object: {
                 deprecated?: boolean;
                 uninterpretedOption?: {
@@ -5541,16 +5541,16 @@ export declare namespace google {
                     stringValue?: Uint8Array;
                     aggregateValue?: string;
                 }[];
-            }): _142.ServiceOptions;
+            }): _143.ServiceOptions;
         };
         MethodOptions: {
-            encode(message: _142.MethodOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.MethodOptions;
-            fromJSON(object: any): _142.MethodOptions;
-            toJSON(message: _142.MethodOptions): unknown;
+            encode(message: _143.MethodOptions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.MethodOptions;
+            fromJSON(object: any): _143.MethodOptions;
+            toJSON(message: _143.MethodOptions): unknown;
             fromPartial(object: {
                 deprecated?: boolean;
-                idempotencyLevel?: _142.MethodOptions_IdempotencyLevel;
+                idempotencyLevel?: _143.MethodOptions_IdempotencyLevel;
                 uninterpretedOption?: {
                     name?: {
                         namePart?: string;
@@ -5563,13 +5563,13 @@ export declare namespace google {
                     stringValue?: Uint8Array;
                     aggregateValue?: string;
                 }[];
-            }): _142.MethodOptions;
+            }): _143.MethodOptions;
         };
         UninterpretedOption: {
-            encode(message: _142.UninterpretedOption, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.UninterpretedOption;
-            fromJSON(object: any): _142.UninterpretedOption;
-            toJSON(message: _142.UninterpretedOption): unknown;
+            encode(message: _143.UninterpretedOption, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.UninterpretedOption;
+            fromJSON(object: any): _143.UninterpretedOption;
+            toJSON(message: _143.UninterpretedOption): unknown;
             fromPartial(object: {
                 name?: {
                     namePart?: string;
@@ -5581,23 +5581,23 @@ export declare namespace google {
                 doubleValue?: number;
                 stringValue?: Uint8Array;
                 aggregateValue?: string;
-            }): _142.UninterpretedOption;
+            }): _143.UninterpretedOption;
         };
         UninterpretedOption_NamePart: {
-            encode(message: _142.UninterpretedOption_NamePart, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.UninterpretedOption_NamePart;
-            fromJSON(object: any): _142.UninterpretedOption_NamePart;
-            toJSON(message: _142.UninterpretedOption_NamePart): unknown;
+            encode(message: _143.UninterpretedOption_NamePart, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.UninterpretedOption_NamePart;
+            fromJSON(object: any): _143.UninterpretedOption_NamePart;
+            toJSON(message: _143.UninterpretedOption_NamePart): unknown;
             fromPartial(object: {
                 namePart?: string;
                 isExtension?: boolean;
-            }): _142.UninterpretedOption_NamePart;
+            }): _143.UninterpretedOption_NamePart;
         };
         SourceCodeInfo: {
-            encode(message: _142.SourceCodeInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.SourceCodeInfo;
-            fromJSON(object: any): _142.SourceCodeInfo;
-            toJSON(message: _142.SourceCodeInfo): unknown;
+            encode(message: _143.SourceCodeInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.SourceCodeInfo;
+            fromJSON(object: any): _143.SourceCodeInfo;
+            toJSON(message: _143.SourceCodeInfo): unknown;
             fromPartial(object: {
                 location?: {
                     path?: number[];
@@ -5606,26 +5606,26 @@ export declare namespace google {
                     trailingComments?: string;
                     leadingDetachedComments?: string[];
                 }[];
-            }): _142.SourceCodeInfo;
+            }): _143.SourceCodeInfo;
         };
         SourceCodeInfo_Location: {
-            encode(message: _142.SourceCodeInfo_Location, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.SourceCodeInfo_Location;
-            fromJSON(object: any): _142.SourceCodeInfo_Location;
-            toJSON(message: _142.SourceCodeInfo_Location): unknown;
+            encode(message: _143.SourceCodeInfo_Location, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.SourceCodeInfo_Location;
+            fromJSON(object: any): _143.SourceCodeInfo_Location;
+            toJSON(message: _143.SourceCodeInfo_Location): unknown;
             fromPartial(object: {
                 path?: number[];
                 span?: number[];
                 leadingComments?: string;
                 trailingComments?: string;
                 leadingDetachedComments?: string[];
-            }): _142.SourceCodeInfo_Location;
+            }): _143.SourceCodeInfo_Location;
         };
         GeneratedCodeInfo: {
-            encode(message: _142.GeneratedCodeInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.GeneratedCodeInfo;
-            fromJSON(object: any): _142.GeneratedCodeInfo;
-            toJSON(message: _142.GeneratedCodeInfo): unknown;
+            encode(message: _143.GeneratedCodeInfo, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.GeneratedCodeInfo;
+            fromJSON(object: any): _143.GeneratedCodeInfo;
+            toJSON(message: _143.GeneratedCodeInfo): unknown;
             fromPartial(object: {
                 annotation?: {
                     path?: number[];
@@ -5633,19 +5633,19 @@ export declare namespace google {
                     begin?: number;
                     end?: number;
                 }[];
-            }): _142.GeneratedCodeInfo;
+            }): _143.GeneratedCodeInfo;
         };
         GeneratedCodeInfo_Annotation: {
-            encode(message: _142.GeneratedCodeInfo_Annotation, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _142.GeneratedCodeInfo_Annotation;
-            fromJSON(object: any): _142.GeneratedCodeInfo_Annotation;
-            toJSON(message: _142.GeneratedCodeInfo_Annotation): unknown;
+            encode(message: _143.GeneratedCodeInfo_Annotation, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+            decode(input: Uint8Array | import("..").BinaryReader, length?: number): _143.GeneratedCodeInfo_Annotation;
+            fromJSON(object: any): _143.GeneratedCodeInfo_Annotation;
+            toJSON(message: _143.GeneratedCodeInfo_Annotation): unknown;
             fromPartial(object: {
                 path?: number[];
                 sourceFile?: string;
                 begin?: number;
                 end?: number;
-            }): _142.GeneratedCodeInfo_Annotation;
+            }): _143.GeneratedCodeInfo_Annotation;
         };
     };
 }

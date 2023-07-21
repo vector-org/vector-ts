@@ -1,0 +1,17 @@
+syntax = "proto3";
+package coolcat.catdrop.v1;
+
+import "gogoproto/gogo.proto";
+
+option go_package = "github.com/coolcat-network/coolcat/v1/x/catdrop/types";
+
+// Shows how many hooks this user has triggered.
+message HookRecord {
+  // address of claim user
+  string address = 1 [ (gogoproto.moretags) = "yaml:\"address\"" ];
+
+  // true if action is completed
+  // index of bool in array refers to action enum #
+  repeated bool hook_triggered = 2
+      [ (gogoproto.moretags) = "yaml:\"action_completed\"" ];
+}

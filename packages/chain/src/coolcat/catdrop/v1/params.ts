@@ -4,7 +4,7 @@ import { Duration } from "../../../google/protobuf/duration";
 import { BinaryReader, BinaryWriter } from "../../../binary";
 import { isSet, DeepPartial, fromJsonTimestamp, fromTimestamp } from "../../../helpers";
 /** contract_address = Profile / Clowder, Action === correct action */
-export interface ClaimAuthorization {
+export interface ClaimableContract {
   contractAddress: string;
   action: Action;
 }
@@ -17,16 +17,16 @@ export interface Params {
   /** denom of claimable asset */
   claimDenom: string;
   /** list of contracts and their allowed claim actions */
-  allowedClaimers: ClaimAuthorization[];
+  claimableContracts: ClaimableContract[];
 }
-function createBaseClaimAuthorization(): ClaimAuthorization {
+function createBaseClaimableContract(): ClaimableContract {
   return {
     contractAddress: "",
     action: 0
   };
 }
-export const ClaimAuthorization = {
-  encode(message: ClaimAuthorization, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
+export const ClaimableContract = {
+  encode(message: ClaimableContract, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.contractAddress !== "") {
       writer.uint32(10).string(message.contractAddress);
     }
@@ -35,10 +35,10 @@ export const ClaimAuthorization = {
     }
     return writer;
   },
-  decode(input: BinaryReader | Uint8Array, length?: number): ClaimAuthorization {
+  decode(input: BinaryReader | Uint8Array, length?: number): ClaimableContract {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseClaimAuthorization();
+    const message = createBaseClaimableContract();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -55,20 +55,20 @@ export const ClaimAuthorization = {
     }
     return message;
   },
-  fromJSON(object: any): ClaimAuthorization {
+  fromJSON(object: any): ClaimableContract {
     return {
       contractAddress: isSet(object.contractAddress) ? String(object.contractAddress) : "",
       action: isSet(object.action) ? actionFromJSON(object.action) : -1
     };
   },
-  toJSON(message: ClaimAuthorization): unknown {
+  toJSON(message: ClaimableContract): unknown {
     const obj: any = {};
     message.contractAddress !== undefined && (obj.contractAddress = message.contractAddress);
     message.action !== undefined && (obj.action = actionToJSON(message.action));
     return obj;
   },
-  fromPartial(object: DeepPartial<ClaimAuthorization>): ClaimAuthorization {
-    const message = createBaseClaimAuthorization();
+  fromPartial(object: DeepPartial<ClaimableContract>): ClaimableContract {
+    const message = createBaseClaimableContract();
     message.contractAddress = object.contractAddress ?? "";
     message.action = object.action ?? 0;
     return message;
@@ -81,7 +81,7 @@ function createBaseParams(): Params {
     durationUntilDecay: undefined,
     durationOfDecay: undefined,
     claimDenom: "",
-    allowedClaimers: []
+    claimableContracts: []
   };
 }
 export const Params = {
@@ -101,8 +101,8 @@ export const Params = {
     if (message.claimDenom !== "") {
       writer.uint32(42).string(message.claimDenom);
     }
-    for (const v of message.allowedClaimers) {
-      ClaimAuthorization.encode(v!, writer.uint32(50).fork()).ldelim();
+    for (const v of message.claimableContracts) {
+      ClaimableContract.encode(v!, writer.uint32(50).fork()).ldelim();
     }
     return writer;
   },
@@ -129,7 +129,7 @@ export const Params = {
           message.claimDenom = reader.string();
           break;
         case 6:
-          message.allowedClaimers.push(ClaimAuthorization.decode(reader, reader.uint32()));
+          message.claimableContracts.push(ClaimableContract.decode(reader, reader.uint32()));
           break;
         default:
           reader.skipType(tag & 7);
@@ -145,7 +145,7 @@ export const Params = {
       durationUntilDecay: isSet(object.durationUntilDecay) ? Duration.fromJSON(object.durationUntilDecay) : undefined,
       durationOfDecay: isSet(object.durationOfDecay) ? Duration.fromJSON(object.durationOfDecay) : undefined,
       claimDenom: isSet(object.claimDenom) ? String(object.claimDenom) : "",
-      allowedClaimers: Array.isArray(object?.allowedClaimers) ? object.allowedClaimers.map((e: any) => ClaimAuthorization.fromJSON(e)) : []
+      claimableContracts: Array.isArray(object?.claimableContracts) ? object.claimableContracts.map((e: any) => ClaimableContract.fromJSON(e)) : []
     };
   },
   toJSON(message: Params): unknown {
@@ -155,10 +155,10 @@ export const Params = {
     message.durationUntilDecay !== undefined && (obj.durationUntilDecay = message.durationUntilDecay ? Duration.toJSON(message.durationUntilDecay) : undefined);
     message.durationOfDecay !== undefined && (obj.durationOfDecay = message.durationOfDecay ? Duration.toJSON(message.durationOfDecay) : undefined);
     message.claimDenom !== undefined && (obj.claimDenom = message.claimDenom);
-    if (message.allowedClaimers) {
-      obj.allowedClaimers = message.allowedClaimers.map(e => e ? ClaimAuthorization.toJSON(e) : undefined);
+    if (message.claimableContracts) {
+      obj.claimableContracts = message.claimableContracts.map(e => e ? ClaimableContract.toJSON(e) : undefined);
     } else {
-      obj.allowedClaimers = [];
+      obj.claimableContracts = [];
     }
     return obj;
   },
@@ -169,7 +169,7 @@ export const Params = {
     message.durationUntilDecay = object.durationUntilDecay !== undefined && object.durationUntilDecay !== null ? Duration.fromPartial(object.durationUntilDecay) : undefined;
     message.durationOfDecay = object.durationOfDecay !== undefined && object.durationOfDecay !== null ? Duration.fromPartial(object.durationOfDecay) : undefined;
     message.claimDenom = object.claimDenom ?? "";
-    message.allowedClaimers = object.allowedClaimers?.map(e => ClaimAuthorization.fromPartial(e)) || [];
+    message.claimableContracts = object.claimableContracts?.map(e => ClaimableContract.fromPartial(e)) || [];
     return message;
   }
 };

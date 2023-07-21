@@ -13,6 +13,7 @@ export declare const createRPCQueryClient: ({ rpcEndpoint }: {
                 moduleAccountBalance(request?: import("./catdrop/v1/query").QueryModuleAccountBalanceRequest): Promise<import("./catdrop/v1/query").QueryModuleAccountBalanceResponse>;
                 params(request?: import("./catdrop/v1/query").QueryParamsRequest): Promise<import("./catdrop/v1/query").QueryParamsResponse>;
                 claimRecord(request: import("./catdrop/v1/query").QueryClaimRecordRequest): Promise<import("./catdrop/v1/query").QueryClaimRecordResponse>;
+                hookRecord(request: import("./catdrop/v1/query").QueryHookRecordRequest): Promise<import("./catdrop/v1/query").QueryHookRecordResponse>;
                 claimableForAction(request: import("./catdrop/v1/query").QueryClaimableForActionRequest): Promise<import("./catdrop/v1/query").QueryClaimableForActionResponse>;
                 totalClaimable(request: import("./catdrop/v1/query").QueryTotalClaimableRequest): Promise<import("./catdrop/v1/query").QueryTotalClaimableResponse>;
             };

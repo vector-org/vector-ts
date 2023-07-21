@@ -9,7 +9,7 @@ import "coolcat/catdrop/v1/claim_record.proto";
 option go_package = "github.com/coolcat-network/coolcat/v1/x/catdrop/types";
 
 // contract_address = Profile / Clowder, Action === correct action
-message ClaimAuthorization {
+message ClaimableContract {
   string contract_address = 1
       [ (gogoproto.moretags) = "yaml:\"contract_address\"" ];
   Action action = 2 [ (gogoproto.moretags) = "yaml:\"action\"" ];
@@ -42,9 +42,9 @@ message Params {
   string claim_denom = 5;
 
   // list of contracts and their allowed claim actions
-  repeated ClaimAuthorization allowed_claimers = 6 [
+  repeated ClaimableContract claimable_contracts = 6 [
     (gogoproto.nullable) = false,
-    (gogoproto.jsontag) = "allowed_claimers",
-    (gogoproto.moretags) = "yaml:\"allowed_claimers\""
+    (gogoproto.jsontag) = "claimable_contracts",
+    (gogoproto.moretags) = "yaml:\"claimable_contracts\""
   ];
 }
