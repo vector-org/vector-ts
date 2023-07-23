@@ -4,14 +4,12 @@ import { HttpEndpoint } from "@cosmjs/tendermint-rpc";
 export declare const coolcatAminoConverters: {
     "/coolcat.catdrop.v1.MsgClaimFor": {
         aminoType: string;
-        toAmino: ({ sender, address, action }: import("./catdrop/v1/tx").MsgClaimFor) => {
+        toAmino: ({ sender, action }: import("./catdrop/v1/tx").MsgClaimFor) => {
             sender: string;
-            address: string;
             action: number;
         };
-        fromAmino: ({ sender, address, action }: {
+        fromAmino: ({ sender, action }: {
             sender: string;
-            address: string;
             action: number;
         }) => import("./catdrop/v1/tx").MsgClaimFor;
     };

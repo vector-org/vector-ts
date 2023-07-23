@@ -4,16 +4,8 @@ package coolcat.catdrop.v1;
 import "gogoproto/gogo.proto";
 import "google/protobuf/duration.proto";
 import "google/protobuf/timestamp.proto";
-import "coolcat/catdrop/v1/claim_record.proto";
 
 option go_package = "github.com/coolcat-network/coolcat/v1/x/catdrop/types";
-
-// contract_address = Profile / Clowder, Action === correct action
-message ClaimableContract {
-  string contract_address = 1
-      [ (gogoproto.moretags) = "yaml:\"contract_address\"" ];
-  Action action = 2 [ (gogoproto.moretags) = "yaml:\"action\"" ];
-}
 
 // Params defines the claim module's parameters.
 message Params {
@@ -40,11 +32,4 @@ message Params {
 
   // denom of claimable asset
   string claim_denom = 5;
-
-  // list of contracts and their allowed claim actions
-  repeated ClaimableContract claimable_contracts = 6 [
-    (gogoproto.nullable) = false,
-    (gogoproto.jsontag) = "claimable_contracts",
-    (gogoproto.moretags) = "yaml:\"claimable_contracts\""
-  ];
 }

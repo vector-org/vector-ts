@@ -4,14 +4,13 @@ export interface MsgClaimForAminoType extends AminoMsg {
     type: "/coolcat.catdrop.v1.MsgClaimFor";
     value: {
         sender: string;
-        address: string;
         action: number;
     };
 }
 export declare const AminoConverter: {
     "/coolcat.catdrop.v1.MsgClaimFor": {
         aminoType: string;
-        toAmino: ({ sender, address, action }: MsgClaimFor) => MsgClaimForAminoType["value"];
-        fromAmino: ({ sender, address, action }: MsgClaimForAminoType["value"]) => MsgClaimFor;
+        toAmino: ({ sender, action }: MsgClaimFor) => MsgClaimForAminoType["value"];
+        fromAmino: ({ sender, action }: MsgClaimForAminoType["value"]) => MsgClaimFor;
     };
 };

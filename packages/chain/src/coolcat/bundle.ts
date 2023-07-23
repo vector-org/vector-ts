@@ -10,26 +10,26 @@ import * as _9 from "./catdrop/v1/tx";
 import * as _10 from "./mint/v1/genesis";
 import * as _11 from "./mint/v1/mint";
 import * as _12 from "./mint/v1/query";
-import * as _161 from "./catdrop/v1/tx.amino";
-import * as _162 from "./catdrop/v1/tx.registry";
-import * as _163 from "./alloc/v1/query.lcd";
-import * as _164 from "./catdrop/v1/query.lcd";
-import * as _165 from "./mint/v1/query.lcd";
-import * as _166 from "./alloc/v1/query.rpc.Query";
-import * as _167 from "./catdrop/v1/query.rpc.Query";
-import * as _168 from "./mint/v1/query.rpc.Query";
-import * as _169 from "./catdrop/v1/tx.rpc.msg";
-import * as _236 from "./lcd";
-import * as _237 from "./rpc.query";
-import * as _238 from "./rpc.tx";
+import * as _165 from "./catdrop/v1/tx.amino";
+import * as _166 from "./catdrop/v1/tx.registry";
+import * as _167 from "./alloc/v1/query.lcd";
+import * as _168 from "./catdrop/v1/query.lcd";
+import * as _169 from "./mint/v1/query.lcd";
+import * as _170 from "./alloc/v1/query.rpc.Query";
+import * as _171 from "./catdrop/v1/query.rpc.Query";
+import * as _172 from "./mint/v1/query.rpc.Query";
+import * as _173 from "./catdrop/v1/tx.rpc.msg";
+import * as _245 from "./lcd";
+import * as _246 from "./rpc.query";
+import * as _247 from "./rpc.tx";
 export namespace coolcat {
   export namespace alloc {
     export const v1 = {
       ..._1,
       ..._2,
       ..._3,
-      ..._163,
-      ..._166
+      ..._167,
+      ..._170
     };
   }
   export namespace catdrop {
@@ -40,11 +40,11 @@ export namespace coolcat {
       ..._7,
       ..._8,
       ..._9,
-      ..._161,
-      ..._162,
-      ..._164,
-      ..._167,
-      ..._169
+      ..._165,
+      ..._166,
+      ..._168,
+      ..._171,
+      ..._173
     };
   }
   export namespace mint {
@@ -52,13 +52,13 @@ export namespace coolcat {
       ..._10,
       ..._11,
       ..._12,
-      ..._165,
-      ..._168
+      ..._169,
+      ..._172
     };
   }
   export const ClientFactory = {
-    ..._236,
-    ..._237,
-    ..._238
+    ..._245,
+    ..._246,
+    ..._247
   };
 }

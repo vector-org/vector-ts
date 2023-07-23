@@ -5,14 +5,14 @@ import * as _105 from "./wasm/v1/proposal";
 import * as _106 from "./wasm/v1/query";
 import * as _107 from "./wasm/v1/tx";
 import * as _108 from "./wasm/v1/types";
-import * as _233 from "./wasm/v1/query.lcd";
-import * as _234 from "./wasm/v1/query.rpc.Query";
-import * as _235 from "./wasm/v1/tx.rpc.msg";
+import * as _237 from "./wasm/v1/query.lcd";
+import * as _238 from "./wasm/v1/query.rpc.Query";
+import * as _239 from "./wasm/v1/tx.rpc.msg";
 export declare namespace cosmwasm {
     namespace wasm {
         const v1: {
-            MsgClientImpl: typeof _235.MsgClientImpl;
-            QueryClientImpl: typeof _234.QueryClientImpl;
+            MsgClientImpl: typeof _239.MsgClientImpl;
+            QueryClientImpl: typeof _238.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
                 contractInfo(request: _106.QueryContractInfoRequest): Promise<_106.QueryContractInfoResponse>;
                 contractHistory(request: _106.QueryContractHistoryRequest): Promise<_106.QueryContractHistoryResponse>;
@@ -26,7 +26,7 @@ export declare namespace cosmwasm {
                 params(request?: _106.QueryParamsRequest): Promise<_106.QueryParamsResponse>;
                 contractsByCreator(request: _106.QueryContractsByCreatorRequest): Promise<_106.QueryContractsByCreatorResponse>;
             };
-            LCDQueryClient: typeof _233.LCDQueryClient;
+            LCDQueryClient: typeof _237.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
             load: (protoRegistry: import("@cosmjs/proto-signing").Registry) => void;
             MessageComposer: {
@@ -1853,7 +1853,7 @@ export declare namespace cosmwasm {
             };
             cosmwasm: {
                 wasm: {
-                    v1: _235.MsgClientImpl;
+                    v1: _239.MsgClientImpl;
                 };
             };
         }>;
@@ -2090,7 +2090,7 @@ export declare namespace cosmwasm {
             };
             cosmwasm: {
                 wasm: {
-                    v1: _233.LCDQueryClient;
+                    v1: _237.LCDQueryClient;
                 };
             };
         }>;

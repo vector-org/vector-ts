@@ -5,12 +5,12 @@ import { DeepPartial } from "../../../helpers";
 /** MsgType to claim a catdrop quest reward */
 export interface MsgClaimFor {
     sender: string;
-    address: string;
     action: Action;
 }
 /** Msg response for claiming a catdrop quest reward */
 export interface MsgClaimForResponse {
     address: string;
+    action: Action;
     /** total initial claimable amount for the user */
     claimedAmount: Coin[];
 }

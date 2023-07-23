@@ -1,498 +1,459 @@
-import * as _1 from "./alloc/v1/genesis";
-import * as _2 from "./alloc/v1/params";
-import * as _3 from "./alloc/v1/query";
-import * as _4 from "./catdrop/v1/claim_record";
-import * as _5 from "./catdrop/v1/genesis";
-import * as _6 from "./catdrop/v1/hook_record";
-import * as _7 from "./catdrop/v1/params";
-import * as _8 from "./catdrop/v1/query";
-import * as _9 from "./catdrop/v1/tx";
-import * as _10 from "./mint/v1/genesis";
-import * as _11 from "./mint/v1/mint";
-import * as _12 from "./mint/v1/query";
-import * as _167 from "./alloc/v1/query.lcd";
-import * as _168 from "./catdrop/v1/query.lcd";
-import * as _169 from "./mint/v1/query.lcd";
-import * as _170 from "./alloc/v1/query.rpc.Query";
-import * as _171 from "./catdrop/v1/query.rpc.Query";
-import * as _172 from "./mint/v1/query.rpc.Query";
-import * as _173 from "./catdrop/v1/tx.rpc.msg";
-export declare namespace coolcat {
-    namespace alloc {
-        const v1: {
-            QueryClientImpl: typeof _170.QueryClientImpl;
+import * as _150 from "./tokenfactory/v1beta1/genesis";
+import * as _151 from "./tokenfactory/v1beta1/query";
+import * as _152 from "./tokenfactory/v1beta1/tokenfactory";
+import * as _153 from "./tokenfactory/v1beta1/tx";
+import * as _242 from "./tokenfactory/v1beta1/query.lcd";
+import * as _243 from "./tokenfactory/v1beta1/query.rpc.Query";
+import * as _244 from "./tokenfactory/v1beta1/tx.rpc.msg";
+export declare namespace osmosis {
+    namespace tokenfactory {
+        const v1beta1: {
+            MsgClientImpl: typeof _244.MsgClientImpl;
+            QueryClientImpl: typeof _243.QueryClientImpl;
             createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                params(request?: _3.QueryParamsRequest): Promise<_3.QueryParamsResponse>;
+                params(request?: _151.QueryParamsRequest): Promise<_151.QueryParamsResponse>;
+                denomAuthorityMetadata(request: _151.QueryDenomAuthorityMetadataRequest): Promise<_151.QueryDenomAuthorityMetadataResponse>;
+                denomsFromCreator(request: _151.QueryDenomsFromCreatorRequest): Promise<_151.QueryDenomsFromCreatorResponse>;
             };
-            LCDQueryClient: typeof _167.LCDQueryClient;
-            QueryParamsRequest: {
-                encode(_: _3.QueryParamsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _3.QueryParamsRequest;
-                fromJSON(_: any): _3.QueryParamsRequest;
-                toJSON(_: _3.QueryParamsRequest): unknown;
-                fromPartial(_: {}): _3.QueryParamsRequest;
-            };
-            QueryParamsResponse: {
-                encode(message: _3.QueryParamsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _3.QueryParamsResponse;
-                fromJSON(object: any): _3.QueryParamsResponse;
-                toJSON(message: _3.QueryParamsResponse): unknown;
-                fromPartial(object: {
-                    params?: {
-                        distributionProportions?: {
-                            communityPool?: string;
-                        };
-                    };
-                }): _3.QueryParamsResponse;
-            };
-            DistributionProportions: {
-                encode(message: _2.DistributionProportions, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _2.DistributionProportions;
-                fromJSON(object: any): _2.DistributionProportions;
-                toJSON(message: _2.DistributionProportions): unknown;
-                fromPartial(object: {
-                    communityPool?: string;
-                }): _2.DistributionProportions;
-            };
-            Params: {
-                encode(message: _2.Params, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _2.Params;
-                fromJSON(object: any): _2.Params;
-                toJSON(message: _2.Params): unknown;
-                fromPartial(object: {
-                    distributionProportions?: {
-                        communityPool?: string;
-                    };
-                }): _2.Params;
-            };
-            GenesisState: {
-                encode(message: _1.GenesisState, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _1.GenesisState;
-                fromJSON(object: any): _1.GenesisState;
-                toJSON(message: _1.GenesisState): unknown;
-                fromPartial(object: {
-                    params?: {
-                        distributionProportions?: {
-                            communityPool?: string;
-                        };
-                    };
-                }): _1.GenesisState;
-            };
-        };
-    }
-    namespace catdrop {
-        const v1: {
-            MsgClientImpl: typeof _173.MsgClientImpl;
-            QueryClientImpl: typeof _171.QueryClientImpl;
-            createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                moduleAccountBalance(request?: _8.QueryModuleAccountBalanceRequest): Promise<_8.QueryModuleAccountBalanceResponse>;
-                params(request?: _8.QueryParamsRequest): Promise<_8.QueryParamsResponse>;
-                claimRecord(request: _8.QueryClaimRecordRequest): Promise<_8.QueryClaimRecordResponse>;
-                hookRecord(request: _8.QueryHookRecordRequest): Promise<_8.QueryHookRecordResponse>;
-                claimableForAction(request: _8.QueryClaimableForActionRequest): Promise<_8.QueryClaimableForActionResponse>;
-                totalClaimable(request: _8.QueryTotalClaimableRequest): Promise<_8.QueryTotalClaimableResponse>;
-            };
-            LCDQueryClient: typeof _168.LCDQueryClient;
+            LCDQueryClient: typeof _242.LCDQueryClient;
             registry: readonly [string, import("@cosmjs/proto-signing").GeneratedType][];
             load: (protoRegistry: import("@cosmjs/proto-signing").Registry) => void;
             MessageComposer: {
                 encoded: {
-                    claimFor(value: _9.MsgClaimFor): {
+                    createDenom(value: _153.MsgCreateDenom): {
+                        typeUrl: string;
+                        value: Uint8Array;
+                    };
+                    mint(value: _153.MsgMint): {
+                        typeUrl: string;
+                        value: Uint8Array;
+                    };
+                    burn(value: _153.MsgBurn): {
+                        typeUrl: string;
+                        value: Uint8Array;
+                    };
+                    changeAdmin(value: _153.MsgChangeAdmin): {
+                        typeUrl: string;
+                        value: Uint8Array;
+                    };
+                    setDenomMetadata(value: _153.MsgSetDenomMetadata): {
                         typeUrl: string;
                         value: Uint8Array;
                     };
                 };
                 withTypeUrl: {
-                    claimFor(value: _9.MsgClaimFor): {
+                    createDenom(value: _153.MsgCreateDenom): {
                         typeUrl: string;
-                        value: _9.MsgClaimFor;
+                        value: _153.MsgCreateDenom;
+                    };
+                    mint(value: _153.MsgMint): {
+                        typeUrl: string;
+                        value: _153.MsgMint;
+                    };
+                    burn(value: _153.MsgBurn): {
+                        typeUrl: string;
+                        value: _153.MsgBurn;
+                    };
+                    changeAdmin(value: _153.MsgChangeAdmin): {
+                        typeUrl: string;
+                        value: _153.MsgChangeAdmin;
+                    };
+                    setDenomMetadata(value: _153.MsgSetDenomMetadata): {
+                        typeUrl: string;
+                        value: _153.MsgSetDenomMetadata;
                     };
                 };
                 toJSON: {
-                    claimFor(value: _9.MsgClaimFor): {
+                    createDenom(value: _153.MsgCreateDenom): {
+                        typeUrl: string;
+                        value: unknown;
+                    };
+                    mint(value: _153.MsgMint): {
+                        typeUrl: string;
+                        value: unknown;
+                    };
+                    burn(value: _153.MsgBurn): {
+                        typeUrl: string;
+                        value: unknown;
+                    };
+                    changeAdmin(value: _153.MsgChangeAdmin): {
+                        typeUrl: string;
+                        value: unknown;
+                    };
+                    setDenomMetadata(value: _153.MsgSetDenomMetadata): {
                         typeUrl: string;
                         value: unknown;
                     };
                 };
                 fromJSON: {
-                    claimFor(value: any): {
+                    createDenom(value: any): {
                         typeUrl: string;
-                        value: _9.MsgClaimFor;
+                        value: _153.MsgCreateDenom;
+                    };
+                    mint(value: any): {
+                        typeUrl: string;
+                        value: _153.MsgMint;
+                    };
+                    burn(value: any): {
+                        typeUrl: string;
+                        value: _153.MsgBurn;
+                    };
+                    changeAdmin(value: any): {
+                        typeUrl: string;
+                        value: _153.MsgChangeAdmin;
+                    };
+                    setDenomMetadata(value: any): {
+                        typeUrl: string;
+                        value: _153.MsgSetDenomMetadata;
                     };
                 };
                 fromPartial: {
-                    claimFor(value: _9.MsgClaimFor): {
+                    createDenom(value: _153.MsgCreateDenom): {
                         typeUrl: string;
-                        value: _9.MsgClaimFor;
+                        value: _153.MsgCreateDenom;
+                    };
+                    mint(value: _153.MsgMint): {
+                        typeUrl: string;
+                        value: _153.MsgMint;
+                    };
+                    burn(value: _153.MsgBurn): {
+                        typeUrl: string;
+                        value: _153.MsgBurn;
+                    };
+                    changeAdmin(value: _153.MsgChangeAdmin): {
+                        typeUrl: string;
+                        value: _153.MsgChangeAdmin;
+                    };
+                    setDenomMetadata(value: _153.MsgSetDenomMetadata): {
+                        typeUrl: string;
+                        value: _153.MsgSetDenomMetadata;
                     };
                 };
             };
             AminoConverter: {
-                "/coolcat.catdrop.v1.MsgClaimFor": {
+                "/osmosis.tokenfactory.v1beta1.MsgCreateDenom": {
                     aminoType: string;
-                    toAmino: ({ sender, action }: _9.MsgClaimFor) => {
+                    toAmino: ({ sender, subdenom }: _153.MsgCreateDenom) => {
                         sender: string;
-                        action: number;
+                        subdenom: string;
                     };
-                    fromAmino: ({ sender, action }: {
+                    fromAmino: ({ sender, subdenom }: {
                         sender: string;
-                        action: number;
-                    }) => _9.MsgClaimFor;
+                        subdenom: string;
+                    }) => _153.MsgCreateDenom;
+                };
+                "/osmosis.tokenfactory.v1beta1.MsgMint": {
+                    aminoType: string;
+                    toAmino: ({ sender, amount, mintToAddress }: _153.MsgMint) => {
+                        sender: string;
+                        amount: {
+                            denom: string;
+                            amount: string;
+                        };
+                        mintToAddress: string;
+                    };
+                    fromAmino: ({ sender, amount, mintToAddress }: {
+                        sender: string;
+                        amount: {
+                            denom: string;
+                            amount: string;
+                        };
+                        mintToAddress: string;
+                    }) => _153.MsgMint;
+                };
+                "/osmosis.tokenfactory.v1beta1.MsgBurn": {
+                    aminoType: string;
+                    toAmino: ({ sender, amount, burnFromAddress }: _153.MsgBurn) => {
+                        sender: string;
+                        amount: {
+                            denom: string;
+                            amount: string;
+                        };
+                        burnFromAddress: string;
+                    };
+                    fromAmino: ({ sender, amount, burnFromAddress }: {
+                        sender: string;
+                        amount: {
+                            denom: string;
+                            amount: string;
+                        };
+                        burnFromAddress: string;
+                    }) => _153.MsgBurn;
+                };
+                "/osmosis.tokenfactory.v1beta1.MsgChangeAdmin": {
+                    aminoType: string;
+                    toAmino: ({ sender, denom, newAdmin }: _153.MsgChangeAdmin) => {
+                        sender: string;
+                        denom: string;
+                        new_admin: string;
+                    };
+                    fromAmino: ({ sender, denom, new_admin }: {
+                        sender: string;
+                        denom: string;
+                        new_admin: string;
+                    }) => _153.MsgChangeAdmin;
+                };
+                "/osmosis.tokenfactory.v1beta1.MsgSetDenomMetadata": {
+                    aminoType: string;
+                    toAmino: ({ sender, metadata }: _153.MsgSetDenomMetadata) => {
+                        sender: string;
+                        metadata: {
+                            description: string;
+                            denom_units: {
+                                denom: string;
+                                exponent: number;
+                                aliases: string[];
+                            }[];
+                            base: string;
+                            display: string;
+                            name: string;
+                            symbol: string;
+                            uri: string;
+                            uri_hash: string;
+                        };
+                    };
+                    fromAmino: ({ sender, metadata }: {
+                        sender: string;
+                        metadata: {
+                            description: string;
+                            denom_units: {
+                                denom: string;
+                                exponent: number;
+                                aliases: string[];
+                            }[];
+                            base: string;
+                            display: string;
+                            name: string;
+                            symbol: string;
+                            uri: string;
+                            uri_hash: string;
+                        };
+                    }) => _153.MsgSetDenomMetadata;
                 };
             };
-            MsgClaimFor: {
-                encode(message: _9.MsgClaimFor, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _9.MsgClaimFor;
-                fromJSON(object: any): _9.MsgClaimFor;
-                toJSON(message: _9.MsgClaimFor): unknown;
+            MsgCreateDenom: {
+                encode(message: _153.MsgCreateDenom, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _153.MsgCreateDenom;
+                fromJSON(object: any): _153.MsgCreateDenom;
+                toJSON(message: _153.MsgCreateDenom): unknown;
                 fromPartial(object: {
                     sender?: string;
-                    action?: _4.Action;
-                }): _9.MsgClaimFor;
+                    subdenom?: string;
+                }): _153.MsgCreateDenom;
             };
-            MsgClaimForResponse: {
-                encode(message: _9.MsgClaimForResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _9.MsgClaimForResponse;
-                fromJSON(object: any): _9.MsgClaimForResponse;
-                toJSON(message: _9.MsgClaimForResponse): unknown;
+            MsgCreateDenomResponse: {
+                encode(message: _153.MsgCreateDenomResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _153.MsgCreateDenomResponse;
+                fromJSON(object: any): _153.MsgCreateDenomResponse;
+                toJSON(message: _153.MsgCreateDenomResponse): unknown;
                 fromPartial(object: {
-                    address?: string;
-                    action?: _4.Action;
-                    claimedAmount?: {
+                    newTokenDenom?: string;
+                }): _153.MsgCreateDenomResponse;
+            };
+            MsgMint: {
+                encode(message: _153.MsgMint, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _153.MsgMint;
+                fromJSON(object: any): _153.MsgMint;
+                toJSON(message: _153.MsgMint): unknown;
+                fromPartial(object: {
+                    sender?: string;
+                    amount?: {
+                        denom?: string;
+                        amount?: string;
+                    };
+                    mintToAddress?: string;
+                }): _153.MsgMint;
+            };
+            MsgMintResponse: {
+                encode(_: _153.MsgMintResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _153.MsgMintResponse;
+                fromJSON(_: any): _153.MsgMintResponse;
+                toJSON(_: _153.MsgMintResponse): unknown;
+                fromPartial(_: {}): _153.MsgMintResponse;
+            };
+            MsgBurn: {
+                encode(message: _153.MsgBurn, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _153.MsgBurn;
+                fromJSON(object: any): _153.MsgBurn;
+                toJSON(message: _153.MsgBurn): unknown;
+                fromPartial(object: {
+                    sender?: string;
+                    amount?: {
+                        denom?: string;
+                        amount?: string;
+                    };
+                    burnFromAddress?: string;
+                }): _153.MsgBurn;
+            };
+            MsgBurnResponse: {
+                encode(_: _153.MsgBurnResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _153.MsgBurnResponse;
+                fromJSON(_: any): _153.MsgBurnResponse;
+                toJSON(_: _153.MsgBurnResponse): unknown;
+                fromPartial(_: {}): _153.MsgBurnResponse;
+            };
+            MsgChangeAdmin: {
+                encode(message: _153.MsgChangeAdmin, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _153.MsgChangeAdmin;
+                fromJSON(object: any): _153.MsgChangeAdmin;
+                toJSON(message: _153.MsgChangeAdmin): unknown;
+                fromPartial(object: {
+                    sender?: string;
+                    denom?: string;
+                    newAdmin?: string;
+                }): _153.MsgChangeAdmin;
+            };
+            MsgChangeAdminResponse: {
+                encode(_: _153.MsgChangeAdminResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _153.MsgChangeAdminResponse;
+                fromJSON(_: any): _153.MsgChangeAdminResponse;
+                toJSON(_: _153.MsgChangeAdminResponse): unknown;
+                fromPartial(_: {}): _153.MsgChangeAdminResponse;
+            };
+            MsgSetDenomMetadata: {
+                encode(message: _153.MsgSetDenomMetadata, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _153.MsgSetDenomMetadata;
+                fromJSON(object: any): _153.MsgSetDenomMetadata;
+                toJSON(message: _153.MsgSetDenomMetadata): unknown;
+                fromPartial(object: {
+                    sender?: string;
+                    metadata?: {
+                        description?: string;
+                        denomUnits?: {
+                            denom?: string;
+                            exponent?: number;
+                            aliases?: string[];
+                        }[];
+                        base?: string;
+                        display?: string;
+                        name?: string;
+                        symbol?: string;
+                        uri?: string;
+                        uriHash?: string;
+                    };
+                }): _153.MsgSetDenomMetadata;
+            };
+            MsgSetDenomMetadataResponse: {
+                encode(_: _153.MsgSetDenomMetadataResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _153.MsgSetDenomMetadataResponse;
+                fromJSON(_: any): _153.MsgSetDenomMetadataResponse;
+                toJSON(_: _153.MsgSetDenomMetadataResponse): unknown;
+                fromPartial(_: {}): _153.MsgSetDenomMetadataResponse;
+            };
+            DenomAuthorityMetadata: {
+                encode(message: _152.DenomAuthorityMetadata, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _152.DenomAuthorityMetadata;
+                fromJSON(object: any): _152.DenomAuthorityMetadata;
+                toJSON(message: _152.DenomAuthorityMetadata): unknown;
+                fromPartial(object: {
+                    admin?: string;
+                }): _152.DenomAuthorityMetadata;
+            };
+            Params: {
+                encode(message: _152.Params, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _152.Params;
+                fromJSON(object: any): _152.Params;
+                toJSON(message: _152.Params): unknown;
+                fromPartial(object: {
+                    denomCreationFee?: {
                         denom?: string;
                         amount?: string;
                     }[];
-                }): _9.MsgClaimForResponse;
-            };
-            QueryModuleAccountBalanceRequest: {
-                encode(_: _8.QueryModuleAccountBalanceRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryModuleAccountBalanceRequest;
-                fromJSON(_: any): _8.QueryModuleAccountBalanceRequest;
-                toJSON(_: _8.QueryModuleAccountBalanceRequest): unknown;
-                fromPartial(_: {}): _8.QueryModuleAccountBalanceRequest;
-            };
-            QueryModuleAccountBalanceResponse: {
-                encode(message: _8.QueryModuleAccountBalanceResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryModuleAccountBalanceResponse;
-                fromJSON(object: any): _8.QueryModuleAccountBalanceResponse;
-                toJSON(message: _8.QueryModuleAccountBalanceResponse): unknown;
-                fromPartial(object: {
-                    moduleAccountBalance?: {
-                        denom?: string;
-                        amount?: string;
-                    }[];
-                }): _8.QueryModuleAccountBalanceResponse;
+                    denomCreationGasConsume?: bigint;
+                }): _152.Params;
             };
             QueryParamsRequest: {
-                encode(_: _8.QueryParamsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryParamsRequest;
-                fromJSON(_: any): _8.QueryParamsRequest;
-                toJSON(_: _8.QueryParamsRequest): unknown;
-                fromPartial(_: {}): _8.QueryParamsRequest;
+                encode(_: _151.QueryParamsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _151.QueryParamsRequest;
+                fromJSON(_: any): _151.QueryParamsRequest;
+                toJSON(_: _151.QueryParamsRequest): unknown;
+                fromPartial(_: {}): _151.QueryParamsRequest;
             };
             QueryParamsResponse: {
-                encode(message: _8.QueryParamsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryParamsResponse;
-                fromJSON(object: any): _8.QueryParamsResponse;
-                toJSON(message: _8.QueryParamsResponse): unknown;
+                encode(message: _151.QueryParamsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _151.QueryParamsResponse;
+                fromJSON(object: any): _151.QueryParamsResponse;
+                toJSON(message: _151.QueryParamsResponse): unknown;
                 fromPartial(object: {
                     params?: {
-                        airdropEnabled?: boolean;
-                        airdropStartTime?: {
-                            seconds?: bigint;
-                            nanos?: number;
-                        };
-                        durationUntilDecay?: {
-                            seconds?: bigint;
-                            nanos?: number;
-                        };
-                        durationOfDecay?: {
-                            seconds?: bigint;
-                            nanos?: number;
-                        };
-                        claimDenom?: string;
-                    };
-                }): _8.QueryParamsResponse;
-            };
-            QueryClaimRecordRequest: {
-                encode(message: _8.QueryClaimRecordRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryClaimRecordRequest;
-                fromJSON(object: any): _8.QueryClaimRecordRequest;
-                toJSON(message: _8.QueryClaimRecordRequest): unknown;
-                fromPartial(object: {
-                    address?: string;
-                }): _8.QueryClaimRecordRequest;
-            };
-            QueryClaimRecordResponse: {
-                encode(message: _8.QueryClaimRecordResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryClaimRecordResponse;
-                fromJSON(object: any): _8.QueryClaimRecordResponse;
-                toJSON(message: _8.QueryClaimRecordResponse): unknown;
-                fromPartial(object: {
-                    claimRecord?: {
-                        address?: string;
-                        initialClaimableAmount?: {
+                        denomCreationFee?: {
                             denom?: string;
                             amount?: string;
                         }[];
-                        actionCompleted?: boolean[];
+                        denomCreationGasConsume?: bigint;
                     };
-                }): _8.QueryClaimRecordResponse;
+                }): _151.QueryParamsResponse;
             };
-            QueryHookRecordRequest: {
-                encode(message: _8.QueryHookRecordRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryHookRecordRequest;
-                fromJSON(object: any): _8.QueryHookRecordRequest;
-                toJSON(message: _8.QueryHookRecordRequest): unknown;
+            QueryDenomAuthorityMetadataRequest: {
+                encode(message: _151.QueryDenomAuthorityMetadataRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _151.QueryDenomAuthorityMetadataRequest;
+                fromJSON(object: any): _151.QueryDenomAuthorityMetadataRequest;
+                toJSON(message: _151.QueryDenomAuthorityMetadataRequest): unknown;
                 fromPartial(object: {
-                    address?: string;
-                }): _8.QueryHookRecordRequest;
+                    denom?: string;
+                }): _151.QueryDenomAuthorityMetadataRequest;
             };
-            QueryHookRecordResponse: {
-                encode(message: _8.QueryHookRecordResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryHookRecordResponse;
-                fromJSON(object: any): _8.QueryHookRecordResponse;
-                toJSON(message: _8.QueryHookRecordResponse): unknown;
+            QueryDenomAuthorityMetadataResponse: {
+                encode(message: _151.QueryDenomAuthorityMetadataResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _151.QueryDenomAuthorityMetadataResponse;
+                fromJSON(object: any): _151.QueryDenomAuthorityMetadataResponse;
+                toJSON(message: _151.QueryDenomAuthorityMetadataResponse): unknown;
                 fromPartial(object: {
-                    hookRecord?: {
-                        address?: string;
-                        hookTriggered?: boolean[];
+                    authorityMetadata?: {
+                        admin?: string;
                     };
-                }): _8.QueryHookRecordResponse;
+                }): _151.QueryDenomAuthorityMetadataResponse;
             };
-            QueryClaimableForActionRequest: {
-                encode(message: _8.QueryClaimableForActionRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryClaimableForActionRequest;
-                fromJSON(object: any): _8.QueryClaimableForActionRequest;
-                toJSON(message: _8.QueryClaimableForActionRequest): unknown;
+            QueryDenomsFromCreatorRequest: {
+                encode(message: _151.QueryDenomsFromCreatorRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _151.QueryDenomsFromCreatorRequest;
+                fromJSON(object: any): _151.QueryDenomsFromCreatorRequest;
+                toJSON(message: _151.QueryDenomsFromCreatorRequest): unknown;
                 fromPartial(object: {
-                    address?: string;
-                    action?: _4.Action;
-                }): _8.QueryClaimableForActionRequest;
+                    creator?: string;
+                }): _151.QueryDenomsFromCreatorRequest;
             };
-            QueryClaimableForActionResponse: {
-                encode(message: _8.QueryClaimableForActionResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryClaimableForActionResponse;
-                fromJSON(object: any): _8.QueryClaimableForActionResponse;
-                toJSON(message: _8.QueryClaimableForActionResponse): unknown;
+            QueryDenomsFromCreatorResponse: {
+                encode(message: _151.QueryDenomsFromCreatorResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _151.QueryDenomsFromCreatorResponse;
+                fromJSON(object: any): _151.QueryDenomsFromCreatorResponse;
+                toJSON(message: _151.QueryDenomsFromCreatorResponse): unknown;
                 fromPartial(object: {
-                    coins?: {
-                        denom?: string;
-                        amount?: string;
-                    }[];
-                }): _8.QueryClaimableForActionResponse;
-            };
-            QueryTotalClaimableRequest: {
-                encode(message: _8.QueryTotalClaimableRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryTotalClaimableRequest;
-                fromJSON(object: any): _8.QueryTotalClaimableRequest;
-                toJSON(message: _8.QueryTotalClaimableRequest): unknown;
-                fromPartial(object: {
-                    address?: string;
-                }): _8.QueryTotalClaimableRequest;
-            };
-            QueryTotalClaimableResponse: {
-                encode(message: _8.QueryTotalClaimableResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _8.QueryTotalClaimableResponse;
-                fromJSON(object: any): _8.QueryTotalClaimableResponse;
-                toJSON(message: _8.QueryTotalClaimableResponse): unknown;
-                fromPartial(object: {
-                    coins?: {
-                        denom?: string;
-                        amount?: string;
-                    }[];
-                }): _8.QueryTotalClaimableResponse;
-            };
-            Params: {
-                encode(message: _7.Params, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _7.Params;
-                fromJSON(object: any): _7.Params;
-                toJSON(message: _7.Params): unknown;
-                fromPartial(object: {
-                    airdropEnabled?: boolean;
-                    airdropStartTime?: {
-                        seconds?: bigint;
-                        nanos?: number;
-                    };
-                    durationUntilDecay?: {
-                        seconds?: bigint;
-                        nanos?: number;
-                    };
-                    durationOfDecay?: {
-                        seconds?: bigint;
-                        nanos?: number;
-                    };
-                    claimDenom?: string;
-                }): _7.Params;
-            };
-            HookRecord: {
-                encode(message: _6.HookRecord, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _6.HookRecord;
-                fromJSON(object: any): _6.HookRecord;
-                toJSON(message: _6.HookRecord): unknown;
-                fromPartial(object: {
-                    address?: string;
-                    hookTriggered?: boolean[];
-                }): _6.HookRecord;
+                    denoms?: string[];
+                }): _151.QueryDenomsFromCreatorResponse;
             };
             GenesisState: {
-                encode(message: _5.GenesisState, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _5.GenesisState;
-                fromJSON(object: any): _5.GenesisState;
-                toJSON(message: _5.GenesisState): unknown;
+                encode(message: _150.GenesisState, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _150.GenesisState;
+                fromJSON(object: any): _150.GenesisState;
+                toJSON(message: _150.GenesisState): unknown;
                 fromPartial(object: {
-                    moduleAccountBalance?: {
-                        denom?: string;
-                        amount?: string;
-                    };
                     params?: {
-                        airdropEnabled?: boolean;
-                        airdropStartTime?: {
-                            seconds?: bigint;
-                            nanos?: number;
-                        };
-                        durationUntilDecay?: {
-                            seconds?: bigint;
-                            nanos?: number;
-                        };
-                        durationOfDecay?: {
-                            seconds?: bigint;
-                            nanos?: number;
-                        };
-                        claimDenom?: string;
-                    };
-                    claimRecords?: {
-                        address?: string;
-                        initialClaimableAmount?: {
+                        denomCreationFee?: {
                             denom?: string;
                             amount?: string;
                         }[];
-                        actionCompleted?: boolean[];
-                    }[];
-                    hookRecords?: {
-                        address?: string;
-                        hookTriggered?: boolean[];
-                    }[];
-                }): _5.GenesisState;
-            };
-            actionFromJSON(object: any): _4.Action;
-            actionToJSON(object: _4.Action): string;
-            Action: typeof _4.Action;
-            ClaimRecord: {
-                encode(message: _4.ClaimRecord, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _4.ClaimRecord;
-                fromJSON(object: any): _4.ClaimRecord;
-                toJSON(message: _4.ClaimRecord): unknown;
-                fromPartial(object: {
-                    address?: string;
-                    initialClaimableAmount?: {
+                        denomCreationGasConsume?: bigint;
+                    };
+                    factoryDenoms?: {
                         denom?: string;
-                        amount?: string;
+                        authorityMetadata?: {
+                            admin?: string;
+                        };
                     }[];
-                    actionCompleted?: boolean[];
-                }): _4.ClaimRecord;
+                }): _150.GenesisState;
             };
-        };
-    }
-    namespace mint {
-        const v1: {
-            QueryClientImpl: typeof _172.QueryClientImpl;
-            createRpcQueryExtension: (base: import("@cosmjs/stargate").QueryClient) => {
-                params(request?: _12.QueryParamsRequest): Promise<_12.QueryParamsResponse>;
-                inflation(request?: _12.QueryInflationRequest): Promise<_12.QueryInflationResponse>;
-                annualProvisions(request?: _12.QueryAnnualProvisionsRequest): Promise<_12.QueryAnnualProvisionsResponse>;
-            };
-            LCDQueryClient: typeof _169.LCDQueryClient;
-            QueryParamsRequest: {
-                encode(_: _12.QueryParamsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _12.QueryParamsRequest;
-                fromJSON(_: any): _12.QueryParamsRequest;
-                toJSON(_: _12.QueryParamsRequest): unknown;
-                fromPartial(_: {}): _12.QueryParamsRequest;
-            };
-            QueryParamsResponse: {
-                encode(message: _12.QueryParamsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _12.QueryParamsResponse;
-                fromJSON(object: any): _12.QueryParamsResponse;
-                toJSON(message: _12.QueryParamsResponse): unknown;
+            GenesisDenom: {
+                encode(message: _150.GenesisDenom, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
+                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _150.GenesisDenom;
+                fromJSON(object: any): _150.GenesisDenom;
+                toJSON(message: _150.GenesisDenom): unknown;
                 fromPartial(object: {
-                    params?: {
-                        mintDenom?: string;
-                        blocksPerYear?: bigint;
+                    denom?: string;
+                    authorityMetadata?: {
+                        admin?: string;
                     };
-                }): _12.QueryParamsResponse;
-            };
-            QueryInflationRequest: {
-                encode(_: _12.QueryInflationRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _12.QueryInflationRequest;
-                fromJSON(_: any): _12.QueryInflationRequest;
-                toJSON(_: _12.QueryInflationRequest): unknown;
-                fromPartial(_: {}): _12.QueryInflationRequest;
-            };
-            QueryInflationResponse: {
-                encode(message: _12.QueryInflationResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _12.QueryInflationResponse;
-                fromJSON(object: any): _12.QueryInflationResponse;
-                toJSON(message: _12.QueryInflationResponse): unknown;
-                fromPartial(object: {
-                    inflation?: Uint8Array;
-                }): _12.QueryInflationResponse;
-            };
-            QueryAnnualProvisionsRequest: {
-                encode(_: _12.QueryAnnualProvisionsRequest, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _12.QueryAnnualProvisionsRequest;
-                fromJSON(_: any): _12.QueryAnnualProvisionsRequest;
-                toJSON(_: _12.QueryAnnualProvisionsRequest): unknown;
-                fromPartial(_: {}): _12.QueryAnnualProvisionsRequest;
-            };
-            QueryAnnualProvisionsResponse: {
-                encode(message: _12.QueryAnnualProvisionsResponse, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _12.QueryAnnualProvisionsResponse;
-                fromJSON(object: any): _12.QueryAnnualProvisionsResponse;
-                toJSON(message: _12.QueryAnnualProvisionsResponse): unknown;
-                fromPartial(object: {
-                    annualProvisions?: Uint8Array;
-                }): _12.QueryAnnualProvisionsResponse;
-            };
-            Minter: {
-                encode(message: _11.Minter, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _11.Minter;
-                fromJSON(object: any): _11.Minter;
-                toJSON(message: _11.Minter): unknown;
-                fromPartial(object: {
-                    inflation?: string;
-                    phase?: bigint;
-                    startPhaseBlock?: bigint;
-                    annualProvisions?: string;
-                }): _11.Minter;
-            };
-            Params: {
-                encode(message: _11.Params, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _11.Params;
-                fromJSON(object: any): _11.Params;
-                toJSON(message: _11.Params): unknown;
-                fromPartial(object: {
-                    mintDenom?: string;
-                    blocksPerYear?: bigint;
-                }): _11.Params;
-            };
-            GenesisState: {
-                encode(message: _10.GenesisState, writer?: import("..").BinaryWriter): import("..").BinaryWriter;
-                decode(input: Uint8Array | import("..").BinaryReader, length?: number): _10.GenesisState;
-                fromJSON(object: any): _10.GenesisState;
-                toJSON(message: _10.GenesisState): unknown;
-                fromPartial(object: {
-                    minter?: {
-                        inflation?: string;
-                        phase?: bigint;
-                        startPhaseBlock?: bigint;
-                        annualProvisions?: string;
-                    };
-                    params?: {
-                        mintDenom?: string;
-                        blocksPerYear?: bigint;
-                    };
-                }): _10.GenesisState;
+                }): _150.GenesisDenom;
             };
         };
     }
@@ -500,11 +461,6 @@ export declare namespace coolcat {
         createRPCMsgClient: ({ rpc }: {
             rpc: import("../helpers").Rpc;
         }) => Promise<{
-            coolcat: {
-                catdrop: {
-                    v1: _173.MsgClientImpl;
-                };
-            };
             cosmos: {
                 auth: {
                     v1beta1: import("../cosmos/auth/v1beta1/tx.rpc.msg").MsgClientImpl;
@@ -538,34 +494,15 @@ export declare namespace coolcat {
                     v1beta1: import("../cosmos/upgrade/v1beta1/tx.rpc.msg").MsgClientImpl;
                 };
             };
+            osmosis: {
+                tokenfactory: {
+                    v1beta1: _244.MsgClientImpl;
+                };
+            };
         }>;
         createRPCQueryClient: ({ rpcEndpoint }: {
             rpcEndpoint: string | import("@cosmjs/tendermint-rpc").HttpEndpoint;
         }) => Promise<{
-            coolcat: {
-                alloc: {
-                    v1: {
-                        params(request?: _3.QueryParamsRequest): Promise<_3.QueryParamsResponse>;
-                    };
-                };
-                catdrop: {
-                    v1: {
-                        moduleAccountBalance(request?: _8.QueryModuleAccountBalanceRequest): Promise<_8.QueryModuleAccountBalanceResponse>;
-                        params(request?: _8.QueryParamsRequest): Promise<_8.QueryParamsResponse>;
-                        claimRecord(request: _8.QueryClaimRecordRequest): Promise<_8.QueryClaimRecordResponse>;
-                        hookRecord(request: _8.QueryHookRecordRequest): Promise<_8.QueryHookRecordResponse>;
-                        claimableForAction(request: _8.QueryClaimableForActionRequest): Promise<_8.QueryClaimableForActionResponse>;
-                        totalClaimable(request: _8.QueryTotalClaimableRequest): Promise<_8.QueryTotalClaimableResponse>;
-                    };
-                };
-                mint: {
-                    v1: {
-                        params(request?: _12.QueryParamsRequest): Promise<_12.QueryParamsResponse>;
-                        inflation(request?: _12.QueryInflationRequest): Promise<_12.QueryInflationResponse>;
-                        annualProvisions(request?: _12.QueryAnnualProvisionsRequest): Promise<_12.QueryAnnualProvisionsResponse>;
-                    };
-                };
-            };
             cosmos: {
                 auth: {
                     v1beta1: {
@@ -729,21 +666,19 @@ export declare namespace coolcat {
                     };
                 };
             };
+            osmosis: {
+                tokenfactory: {
+                    v1beta1: {
+                        params(request?: _151.QueryParamsRequest): Promise<_151.QueryParamsResponse>;
+                        denomAuthorityMetadata(request: _151.QueryDenomAuthorityMetadataRequest): Promise<_151.QueryDenomAuthorityMetadataResponse>;
+                        denomsFromCreator(request: _151.QueryDenomsFromCreatorRequest): Promise<_151.QueryDenomsFromCreatorResponse>;
+                    };
+                };
+            };
         }>;
         createLCDClient: ({ restEndpoint }: {
             restEndpoint: string;
         }) => Promise<{
-            coolcat: {
-                alloc: {
-                    v1: _167.LCDQueryClient;
-                };
-                catdrop: {
-                    v1: _168.LCDQueryClient;
-                };
-                mint: {
-                    v1: _169.LCDQueryClient;
-                };
-            };
             cosmos: {
                 auth: {
                     v1beta1: import("../cosmos/auth/v1beta1/query.lcd").LCDQueryClient;
@@ -786,6 +721,11 @@ export declare namespace coolcat {
                 };
                 upgrade: {
                     v1beta1: import("../cosmos/upgrade/v1beta1/query.lcd").LCDQueryClient;
+                };
+            };
+            osmosis: {
+                tokenfactory: {
+                    v1beta1: _242.LCDQueryClient;
                 };
             };
         }>;

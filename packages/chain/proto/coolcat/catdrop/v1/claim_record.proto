@@ -8,7 +8,6 @@ option go_package = "github.com/coolcat-network/coolcat/v1/x/catdrop/types";
 
 // Provides one of the 4 categories of the initial catdrop
 enum Action {
-  // Check if this address voted on a gov proposal
   option (gogoproto.goproto_enum_prefix) = false;
   // Check if this address voted on a gov proposal
   ACTION_VOTE_UNSPECIFIED = 0;

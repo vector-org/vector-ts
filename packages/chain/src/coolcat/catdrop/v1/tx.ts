@@ -5,19 +5,18 @@ import { isSet, DeepPartial } from "../../../helpers";
 /** MsgType to claim a catdrop quest reward */
 export interface MsgClaimFor {
   sender: string;
-  address: string;
   action: Action;
 }
 /** Msg response for claiming a catdrop quest reward */
 export interface MsgClaimForResponse {
   address: string;
+  action: Action;
   /** total initial claimable amount for the user */
   claimedAmount: Coin[];
 }
 function createBaseMsgClaimFor(): MsgClaimFor {
   return {
     sender: "",
-    address: "",
     action: 0
   };
 }
@@ -25,9 +24,6 @@ export const MsgClaimFor = {
   encode(message: MsgClaimFor, writer: BinaryWriter = BinaryWriter.create()): BinaryWriter {
     if (message.sender !== "") {
       writer.uint32(10).string(message.sender);
-    }
-    if (message.address !== "") {
-      writer.uint32(18).string(message.address);
     }
     if (message.action !== 0) {
       writer.uint32(24).int32(message.action);
@@ -44,9 +40,6 @@ export const MsgClaimFor = {
         case 1:
           message.sender = reader.string();
           break;
-        case 2:
-          message.address = reader.string();
-          break;
         case 3:
           message.action = (reader.int32() as any);
           break;
@@ -60,21 +53,18 @@ export const MsgClaimFor = {
   fromJSON(object: any): MsgClaimFor {
     return {
       sender: isSet(object.sender) ? String(object.sender) : "",
-      address: isSet(object.address) ? String(object.address) : "",
       action: isSet(object.action) ? actionFromJSON(object.action) : -1
     };
   },
   toJSON(message: MsgClaimFor): unknown {
     const obj: any = {};
     message.sender !== undefined && (obj.sender = message.sender);
-    message.address !== undefined && (obj.address = message.address);
     message.action !== undefined && (obj.action = actionToJSON(message.action));
     return obj;
   },
   fromPartial(object: DeepPartial<MsgClaimFor>): MsgClaimFor {
     const message = createBaseMsgClaimFor();
     message.sender = object.sender ?? "";
-    message.address = object.address ?? "";
     message.action = object.action ?? 0;
     return message;
   }
@@ -82,6 +72,7 @@ export const MsgClaimFor = {
 function createBaseMsgClaimForResponse(): MsgClaimForResponse {
   return {
     address: "",
+    action: 0,
     claimedAmount: []
   };
 }
@@ -90,8 +81,11 @@ export const MsgClaimForResponse = {
     if (message.address !== "") {
       writer.uint32(10).string(message.address);
     }
+    if (message.action !== 0) {
+      writer.uint32(16).int32(message.action);
+    }
     for (const v of message.claimedAmount) {
-      Coin.encode(v!, writer.uint32(18).fork()).ldelim();
+      Coin.encode(v!, writer.uint32(26).fork()).ldelim();
     }
     return writer;
   },
@@ -106,6 +100,9 @@ export const MsgClaimForResponse = {
           message.address = reader.string();
           break;
         case 2:
+          message.action = (reader.int32() as any);
+          break;
+        case 3:
           message.claimedAmount.push(Coin.decode(reader, reader.uint32()));
           break;
         default:
@@ -118,12 +115,14 @@ export const MsgClaimForResponse = {
   fromJSON(object: any): MsgClaimForResponse {
     return {
       address: isSet(object.address) ? String(object.address) : "",
+      action: isSet(object.action) ? actionFromJSON(object.action) : -1,
       claimedAmount: Array.isArray(object?.claimedAmount) ? object.claimedAmount.map((e: any) => Coin.fromJSON(e)) : []
     };
   },
   toJSON(message: MsgClaimForResponse): unknown {
     const obj: any = {};
     message.address !== undefined && (obj.address = message.address);
+    message.action !== undefined && (obj.action = actionToJSON(message.action));
     if (message.claimedAmount) {
       obj.claimedAmount = message.claimedAmount.map(e => e ? Coin.toJSON(e) : undefined);
     } else {
@@ -134,6 +133,7 @@ export const MsgClaimForResponse = {
   fromPartial(object: DeepPartial<MsgClaimForResponse>): MsgClaimForResponse {
     const message = createBaseMsgClaimForResponse();
     message.address = object.address ?? "";
+    message.action = object.action ?? 0;
     message.claimedAmount = object.claimedAmount?.map(e => Coin.fromPartial(e)) || [];
     return message;
   }

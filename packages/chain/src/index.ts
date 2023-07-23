@@ -14,6 +14,8 @@ export * from "./cosmwasm/bundle";
 export * from "./cosmwasm/client";
 export * from "./gogoproto/bundle";
 export * from "./google/bundle";
+export * from "./osmosis/bundle";
+export * from "./osmosis/client";
 export * from "./tendermint/bundle";
 export * from "./extern";
 export * from "./varint";
