@@ -74,7 +74,7 @@
     "long": "^5.2.3",
     "prettier": "^2.7.1",
     "regenerator-runtime": "^0.13.11",
-    "rimraf": "^5.0.1",
+    "rimraf": "^6.0.1",
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
   },
