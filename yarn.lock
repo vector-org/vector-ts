@@ -7163,8 +7163,8 @@ __metadata:
   linkType: hard
 
 "babel-watch@npm:^7.8.0":
-  version: 7.8.0
-  resolution: "babel-watch@npm:7.8.0"
+  version: 7.8.1
+  resolution: "babel-watch@npm:7.8.1"
   dependencies:
     chalk: ^4.1.0
     chokidar: ^3.4.3
@@ -7180,7 +7180,7 @@ __metadata:
     "@babel/core": ^7.0.0
   bin:
     babel-watch: babel-watch.js
-  checksum: 0ffe63b457dc658323a33c0b7f6bc260dcdbdddc20b5a20956d97b0af3c3ceff295f068ef782b0ffcf589e3d666b064d05f60c3f10fd0622329b7cd8127be346
+  checksum: fc674520c56a9ab2b188a17f6c009ec57a176dbe330d678bd8c4c9824df3a67fd8fdb3b7119bf63353ad45d5bc6795eb2bfb83f1c5b6b5cff52f31e86ce5fbc8
   languageName: node
   linkType: hard
 
