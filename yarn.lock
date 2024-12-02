@@ -752,6 +752,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helper-plugin-utils@npm:^7.25.9":
+  version: 7.25.9
+  resolution: "@babel/helper-plugin-utils@npm:7.25.9"
+  checksum: e19ec8acf0b696756e6d84531f532c5fe508dce57aa68c75572a77798bd04587a844a9a6c8ea7d62d673e21fdc174d091c9097fb29aea1c1b49f9c6eaa80f022
+  languageName: node
+  linkType: hard
+
 "@babel/helper-remap-async-to-generator@npm:^7.18.6, @babel/helper-remap-async-to-generator@npm:^7.18.9":
   version: 7.18.9
   resolution: "@babel/helper-remap-async-to-generator@npm:7.18.9"
@@ -1231,15 +1238,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-export-default-from@npm:7.22.5":
-  version: 7.22.5
-  resolution: "@babel/plugin-proposal-export-default-from@npm:7.22.5"
+"@babel/plugin-proposal-export-default-from@npm:7.25.9":
+  version: 7.25.9
+  resolution: "@babel/plugin-proposal-export-default-from@npm:7.25.9"
   dependencies:
-    "@babel/helper-plugin-utils": ^7.22.5
-    "@babel/plugin-syntax-export-default-from": ^7.22.5
+    "@babel/helper-plugin-utils": ^7.25.9
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: fc0ddcebdd1991ad4c82a3a797b7c8ef21bb76dc09df52a58f23a648bfa0db5c3cd580ade9ac28fcecdb1b3cd61f53fbee504b0d99c689929c33da0a7dd4e4f4
+  checksum: 0fb96b1229ed15ecfb09e6bf40be2da249007155a3deca53d319420a4d3c028c884e888c447898cbcdaa079165e045a8317be6a9205bef0041e7333822a40da9
   languageName: node
   linkType: hard
 
@@ -1522,17 +1528,6 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 4258156553d825abb2ebac920eae6837087b485eb8e0011e05ad1e57004a03441335325feb18185ffbfa0c33a340673e7ab79549080ff2beb4607f88936fedf2
-  languageName: node
-  linkType: hard
-
-"@babel/plugin-syntax-export-default-from@npm:^7.22.5":
-  version: 7.22.5
-  resolution: "@babel/plugin-syntax-export-default-from@npm:7.22.5"
-  dependencies:
-    "@babel/helper-plugin-utils": ^7.22.5
-  peerDependencies:
-    "@babel/core": ^7.0.0-0
-  checksum: 5b66dea77f9e8e6307b01827a229a49bd98f0928e21bffadf538201fd2705838e621bc80d712fbe48f9f6b1348b78aa95c1e5d5ab75773521ccc399d26152de7
   languageName: node
   linkType: hard
 
@@ -3641,7 +3636,7 @@ __metadata:
     "@babel/eslint-parser": ^7.22.7
     "@babel/node": ^7.22.6
     "@babel/plugin-proposal-class-properties": 7.18.6
-    "@babel/plugin-proposal-export-default-from": 7.22.5
+    "@babel/plugin-proposal-export-default-from": 7.25.9
     "@babel/plugin-proposal-nullish-coalescing-operator": 7.18.6
     "@babel/plugin-proposal-numeric-separator": 7.18.6
     "@babel/plugin-proposal-object-rest-spread": 7.20.7
@@ -3689,7 +3684,7 @@ __metadata:
     "@babel/eslint-parser": ^7.22.7
     "@babel/node": ^7.22.6
     "@babel/plugin-proposal-class-properties": 7.18.6
-    "@babel/plugin-proposal-export-default-from": 7.22.5
+    "@babel/plugin-proposal-export-default-from": 7.25.9
     "@babel/plugin-proposal-nullish-coalescing-operator": 7.18.6
     "@babel/plugin-proposal-numeric-separator": 7.18.6
     "@babel/plugin-proposal-object-rest-spread": 7.20.7
@@ -3751,7 +3746,7 @@ __metadata:
     "@babel/eslint-parser": ^7.22.7
     "@babel/node": ^7.22.6
     "@babel/plugin-proposal-class-properties": 7.18.6
-    "@babel/plugin-proposal-export-default-from": 7.22.5
+    "@babel/plugin-proposal-export-default-from": 7.25.9
     "@babel/plugin-proposal-object-rest-spread": 7.20.7
     "@babel/plugin-transform-runtime": 7.22.7
     "@babel/preset-env": 7.22.7
